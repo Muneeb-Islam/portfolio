@@ -109,7 +109,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/Hair-beauty.png" className="img-fluid" alt="..." />
+          <img src="/assets/hair-beauty.png" className="img-fluid" alt="..." />
           <div className="pos-content">
             <img src="/assets/women.png" alt="" className="img-fluid" />
             <h3>Hair And Beauty</h3>
@@ -121,7 +121,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/Fitness.png" className="img-fluid" alt="..." />
+          <img src="/assets/fitness.png" className="img-fluid" alt="..." />
           <div className="pos-content">
             <img src="/assets/weights.png" alt="" className="img-fluid" />
             <h3>Fitness</h3>
@@ -147,7 +147,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/Education.png" className="img-fluid" alt="..." />
+          <img src="/assets/education.png" className="img-fluid" alt="..." />
           <div className="pos-content">
             <img src="/assets/school.png" alt="" className="img-fluid" />
             <h3>Education</h3>

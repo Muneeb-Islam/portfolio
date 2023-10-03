@@ -6,8 +6,7 @@ const Why_chooseSection = () => {
       <div className="row justify-content-center text-center">
         <div className="col-lg-7">
           <span>WHY CHOOSE US</span>
-          <h2>Email Campaigns</h2>
-          <p>Instead of working hard and generating long coats, use our pre-built website templates that support email campaigns. Inform all your users with just one click using Email cub. </p>
+          <h2>How Ghy Help of Your Business Grow And Successful</h2>
         </div>
       </div>
       <div className="row mt-50 text-center">
@@ -15,9 +14,9 @@ const Why_chooseSection = () => {
           <div className="choose-card">
             <div className="elementor-icon-box-icon"> <span className="elementor-icon"> <img src="/assets/email-marketing.png"
                   className="img-fluid" alt=""  /> </span></div>
-            <h3>IT Design Project</h3>
+            <h3>Email Campaigns</h3>
             <br />
-            <p>Design and propose product improvements through periodical and accurate testing.</p>
+            <p>Instead of working hard and generating long coats, use our pre-built website templates that support email campaigns. Inform all your users with just one click using Email cub. .</p>
 
           </div>
         </div>
