@@ -9,9 +9,9 @@ const Header = () => {
             <div className="col-lg-5">
                 <ul
                     className="mb-0 list-unstyled d-lg-flex justify-content-center justify-content-lg-start align-items-center">
-                    <li className="border-line me-4"><a href="#"
+                    <li className="border-line me-4"><a
                             className="me-lg-4 d-flex justify-content-center  align-items-baseline"><i
-                                className="fa-solid fa-location-dot me-2"></i> Saeed center, office # 1, Meta logix</a></li>
+                                className="fa-solid fa-location-dot me-2"></i>Ireland,  24 Tech Roqad st Ny 10023 </a></li>
                     <li><a href="mailto:vissioon@support.com"
                             className="d-flex justify-content-center align-items-baseline"><i
                                 className="fa-regular fa-envelope me-2"></i>vissioon@support.com</a></li>
@@ -21,7 +21,7 @@ const Header = () => {
             <div
                 className="col-lg-5 pt-2 pt-lg-0 d-lg-flex justify-content-center justify-content-lg-end align-items-center">
                 <ul className="mb-0 list-unstyled">
-                    <li className="border-line me-4"><a href="#"
+                    <li className="border-line me-4"><a
                             className="me-lg-4 d-flex justify-content-center align-items-baseline"><i
                                 className="fa-regular fa-clock me-2"></i> Office Hour : 09:00am - 6:00pm</a></li>
 

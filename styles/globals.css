@@ -68,9 +68,8 @@ p {
 
 .navbar_wrapper .navbar-nav .nav-item .nav-link::before,
 .top_services_wrapper .client-card .client-img .its-pos-img,
-.top_services_wrapper .hexagon,
-.video-icon,
-.chhose-btn , .top_navbar{
+.top_services_wrapper .hexagon,.chhose-btn ,
+.video-icon{
   background: rgb(0, 102, 204);
 }
 
@@ -130,16 +129,19 @@ a,
 end general css 
 --------------------------------------------------------*/
 /* top_navbar_starts */
+
 .top_navbar
 {
     padding: 0.5rem 1rem;
+    background:  #1f243d;
 }
 
-.top_navbar a
+.top_navbar a, .top_navbar 
 {
     color: #CBD0E3;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-decoration: none;
+    font-weight: 400;
 }
 
 .top_navbar .border-line

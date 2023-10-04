@@ -5,7 +5,7 @@ const Why_chooseSection = () => {
     <div className="container-fluid">
       <div className="row justify-content-center text-center">
         <div className="col-lg-7">
-          <span>WHY CHOOSE US</span>
+          {/* <span>WHY CHOOSE US</span> */}
           <h2>How Ghy Help of Your Business Grow And Successful</h2>
         </div>
       </div>
