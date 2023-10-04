@@ -63,8 +63,11 @@ const Why_chooseSection = () => {
           <div className="col-md-8 col-lg-6 text-center text-md-start">
             <h2>
               Agency Excited With Our Solutions</h2>
-            <div className="chhose-btn">
-              <a href="" className="read-btn">READ MORE <i className="fa-solid fa-arrow-right ms-1"></i></a>
+            <div className="row justify-content-center justify-content-lg-start">
+            <div className="col-11 col-md-8 position-relative">
+             <a href="" className="read-btn">READ MORE <i className="fa-solid fa-arrow-right ms-1"></i></a>
+            <span className="chhose-btn"></span>
+             </div>
             </div>
           </div>
         </div>

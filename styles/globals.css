@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: #b0bfdf;
+
   line-height: 24px;
   background: #f2f5f6;
 }
@@ -43,39 +43,86 @@ h3 {
 
 span {
   font-size: 0.938rem;
-  color: #7A88C2;
   letter-spacing: 0.125rem;
   font-weight: 600;
 }
-h3{
+
+h3 {
   font-size: 1.25rem;
 }
+
 p {
   margin-bottom: 0;
 }
 
+
+.about_wrapper .read-more:hover,
+.now-order-btn a:hover,
+
+.elementor-icon,
+.footer_wrapper .btn_subscribe,
+.contact_form_wrapper .contact-card .send-message,
+.about_wrapper .read-more,
+.now-order-btn a,
+.banner_wrapper .get-started,
+
+.navbar_wrapper .navbar-nav .nav-item .nav-link::before,
+.top_services_wrapper .client-card .client-img .its-pos-img,
+.top_services_wrapper .hexagon,
+.video-icon,
+.chhose-btn {
+  background: rgb(0, 102, 204);
+}
+
+span,
+.about_wrapper .about-card i,
+.experience_wrapper i,
+.footer_wrapper a:hover,
+.footer_wrapper .footer-links li a:hover,
+.footer_wrapper input,
+.contact_form_wrapper .contact-card input,
+.contact_form_wrapper .contact-card textarea,
+.choose-us span,
+.redlight-pricing-card:hover .plan-per-text h2,
+.footer_wrapper .bottom-footer p span ,.navbar_wrapper .navbar-nav .nav-item .nav-link:hover,
+.navbar_wrapper .navbar-nav .nav-item .nav-link.active{
+  color: rgb(0, 102, 204)
+}
+
+.banner_wrapper .get-started:hover,
+.about_wrapper .read-more:hover,
+.now-order-btn a:hover,
 .footer_wrapper .btn_subscribe:hover,
 .contact_form_wrapper .contact-card .send-message:hover,
-.about_wrapper .read-more:hover , .now-order-btn a:hover, .redlight-pricing-card:hover .elementor-icon, .top_services_wrapper .elementor-icon,.footer_wrapper .btn_subscribe, .contact_form_wrapper .contact-card .send-message,.about_wrapper .read-more, .now-order-btn a  ,.banner_wrapper .get-started,  .choose-card:hover .elementor-icon, .navbar_wrapper .navbar-nav .nav-item .nav-link::before{
-  background: #5E6FB5;
+.banner_wrapper .get-started:hover,
+.choose-card:hover .elementor-icon,
+.top_services_wrapper .elementor-icon:hover,
+.redlight-pricing-card:hover .elementor-icon,
+.redlight-pricing-card:hover .now-order-btn a, .chhose-btn:hover {
+  background-color: rgb(25, 139, 168);
 }
-.choose-us span, .redlight-pricing-card:hover .plan-per-text h2{
-  color: #ee6196;
 
+.pricing .plan-per-text h2{
+  color: rgb(25, 139, 168);
 }
 
-.elementor-icon, .top_services_wrapper .elementor-icon:hover, .redlight-pricing-card:hover .now-order-btn a {
-  background-color: #ee6196;
-}
-.explore-wrapper span,.choose-us span{
+
+
+.explore-wrapper span,
+.choose-us span {
   font-weight: 600;
   font-size: 0.938rem;
   letter-spacing: 0.125rem;
 }
-.choose-us h2{
+
+.choose-us h2 {
   margin-top: 1rem;
 }
-a, .choose-us .choose-card h3, .choose-us h2,  .chhose-btn .read-btn{
+
+a,
+.choose-us .choose-card h3,
+.choose-us h2,
+.chhose-btn .read-btn {
   color: #fff;
 }
 
@@ -87,15 +134,10 @@ end general css
   border-bottom: 0.063rem solid #e5e5e5;
 }
 
-.navbar_wrapper .navbar
-{
+.navbar_wrapper .navbar {
   padding: 0;
 }
 
-.navbar_wrapper .navbar-nav .nav-item .nav-link:hover,
-.navbar_wrapper .navbar-nav .nav-item .nav-link.active, .pricing  .plan-per-text  h2 {
-  color: #6777B9;
-}
 
 
 .navbar_wrapper .navbar-nav .nav-item .nav-link::before {
@@ -133,7 +175,7 @@ end general css
 
 @media (max-width:62rem) {
   .navbar_wrapper .navbar-nav .nav-item .nav-link {
-      padding: 0.5rem 0;
+    padding: 0.5rem 0;
 
   }
 }
@@ -164,9 +206,6 @@ end general css
   border-radius: 0.75rem;
 }
 
-.banner_wrapper .get-started:hover {
-  background: #5E6FB5;
-}
 
 .banner_wrapper .pos-shape {
   position: absolute;
@@ -178,7 +217,7 @@ end general css
 
 @media (max-width:70rem) {
   .banner_wrapper .pos-shape {
-      display: none;
+    display: none;
   }
 }
 
@@ -186,7 +225,8 @@ end general css
 
 
 /* About_start */
-.about_wrapper, .explore-wrapper {
+.about_wrapper,
+.explore-wrapper {
   padding-top: 5rem;
 }
 
@@ -209,10 +249,10 @@ end general css
 .about_wrapper .about-card i {
   font-size: 3rem;
   margin-right: 1rem;
-  color: #5E6FB5;
 }
 
-.about_wrapper .read-more , .now-order-btn a{
+.about_wrapper .read-more,
+.now-order-btn a {
   display: inline-block;
   border-radius: 0.75rem;
   padding: 0.8rem 2.25rem;
@@ -234,7 +274,6 @@ end general css
 
 .experience_wrapper p {
   font-weight: 300;
-  color: #677289;
 }
 
 .experience_wrapper ul li {
@@ -254,10 +293,6 @@ end general css
 
 .experience_wrapper .bottom-icon i {
   font-size: 4rem;
-}
-
-.experience_wrapper i {
-  color: #5E6FB5;
 }
 
 /* Experience_ends */
@@ -309,7 +344,6 @@ end general css
   border-radius: 3.125rem;
   font-size: 2rem;
   text-align: center;
-  background-color: #5e6fb5;
 }
 
 .top_services_wrapper .client-card .testimonial-details span {
@@ -361,7 +395,6 @@ end general css
 .top_services_wrapper .hexagon {
   width: 8rem;
   height: 7rem;
-  background: #5E6FB5;
   margin: 0 auto 1.5rem;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   display: flex;
@@ -369,12 +402,12 @@ end general css
   align-items: center;
 }
 
-@media (max-width: 23.5rem)
-{
+@media (max-width: 23.5rem) {
   .top_services_wrapper .client-card {
-      padding: 2rem 2rem;
+    padding: 2rem 2rem;
   }
 }
+
 /* top_services_ends */
 
 .brand_logos_wrapper {
@@ -397,10 +430,6 @@ end general css
   position: relative;
 }
 
-.footer_wrapper a:hover,
-.footer_wrapper .footer-links li a:hover {
-  color: #52619F;
-}
 
 .footer_wrapper .main-para {
   padding-right: 4.375rem;
@@ -450,16 +479,12 @@ end general css
 }
 
 
-.footer_wrapper .bottom-footer p span {
-  color: #C85686;
-}
 
 .footer_wrapper input {
   font-size: 0.875rem;
   padding: 0.813rem 1.3rem;
   border-radius: 0.625rem;
   border: 0.063rem solid #e8ecef;
-  color: #677289;
 }
 
 
@@ -484,35 +509,35 @@ end general css
 
 @media (max-width:62rem) {
   .footer_wrapper .news-letter {
-      padding-left: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .footer_wrapper .main-para {
-      padding-right: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .footer_wrapper .links-list {
-      border-left: none;
-      border-right: none;
-      padding: 0;
+    border-left: none;
+    border-right: none;
+    padding: 0;
   }
 }
 
 /* Footer_ends */
 
 /* Contact_form_starts */
-.contact_form_wrapper
-{
+.contact_form_wrapper {
   padding-top: 4rem;
   background: url(/assets/merge-test.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.contact_form_wrapper h2
-{
+
+.contact_form_wrapper h2 {
   margin-top: 1rem;
 }
+
 .contact_form_wrapper .contact-card {
 
   background: url(/assets/form-bg.jpg);
@@ -530,7 +555,6 @@ end general css
   padding: 0.813rem 1.3rem;
   border-radius: 0.625rem;
   border: 0.063rem solid #e8ecef;
-  color: #677289;
   margin-top: 2.813rem;
 }
 
@@ -538,7 +562,7 @@ end general css
 .contact_form_wrapper .contact-card textarea:focus {
   box-shadow: none;
   outline: none;
-  border-color: #5e6fb5;
+  border-color: rgb(0, 102, 204);
 }
 
 
@@ -556,13 +580,14 @@ end general css
 
 @media (max-width:62rem) {
   .contact_form_wrapper .contact-card {
-      padding: 0 1rem 1rem;
+    padding: 0 1rem 1rem;
   }
 
   .contact_form_wrapper.contact-card img {
-      border-radius: 0.625rem;
+    border-radius: 0.625rem;
   }
 }
+
 /* Contact_form_ends */
 /* Services_start */
 .services_wrapper {
@@ -581,7 +606,8 @@ end general css
   z-index: 1;
 }
 
-.services_wrapper .pos-content img, .overlay img {
+.services_wrapper .pos-content img,
+.overlay img {
   width: 3.125rem;
 }
 
@@ -590,17 +616,7 @@ end general css
   margin-top: 1rem;
 }
 
-/* .services_wrapper .item:after {
-  height: 15.625rem;
-  max-height: 100%;
-  width: calc(100% - 1rem);
-  content: '';
-  bottom: 0;
-  background: linear-gradient(0deg, #14225c 0%, rgba(255, 255, 255, 0) 100%);
-  position: absolute;
-  border-radius: 0.75rem;
-} */
- .overlay {
+.overlay {
   position: absolute;
   bottom: 50%;
   transform: translate(10px, 50%);
@@ -609,20 +625,22 @@ end general css
   background-color: transparent;
   width: 80%;
   height: 0;
-    border-radius: 20px;
+  border-radius: 20px;
   overflow: hidden;
   transition: 0.5s ease;
   margin: auto;
 }
- .img-div:hover .overlay {
+
+.img-div:hover .overlay {
   height: auto;
   padding: 20px;
   background-color: #fff;
 }
 
- .img-div:hover .overlay p {
+.img-div:hover .overlay p {
   margin-bottom: 0rem;
 }
+
 /* .img-div:focus .overlay {
   position: absolute;
   bottom: 0%;
@@ -632,38 +650,45 @@ end general css
   transform: translate(-50%, -40%);
 }
   */
-.img-div:hover .pos-content{
+.img-div:hover .pos-content {
   display: none;
 }
+
 /* Services_end */
 
-.slick-prev{
-  left: 21px!important;
+.slick-prev {
+  left: 21px !important;
   z-index: 999;
-}
-.slick-next{
-  right: 21px!important;
-  z-index: 999;
-}
-.slick-prev:before, .slick-next:before{
-  font-family: none!important;
 }
 
-.slick-prev:before, .slick-next:before{
-  top: 50%;
-    transform: translate(50%, -50%);
-    position: absolute;
+.slick-next {
+  right: 21px !important;
+  z-index: 999;
 }
-.slick-prev, .slick-next{
-  width: 39px!important;
-  height: 41px!important;
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: none !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  top: 50%;
+  transform: translate(50%, -50%);
+  position: absolute;
+}
+
+.slick-prev,
+.slick-next {
+  width: 39px !important;
+  height: 41px !important;
 }
 
 /* ---------------------------------------------
 start choose us
 --------------------------------------------------- */
 
-.choose-us{
+.choose-us {
   background: url(/assets/choose-back.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -671,7 +696,9 @@ start choose us
   padding: 110px 30px 230px;
   position: relative;
   margin-bottom: 17rem;
+  margin-top: 6rem;
 }
+
 .choose-us .choose-card {
   /* margin: 0 0 100px; */
   padding: 85px 30px 40px;
@@ -681,9 +708,13 @@ start choose us
   border-color: #ffffff50;
   border-radius: 10px;
   height: 100%;
-}
 
-.elementor-icon-box-icon{
+  
+}
+.top_services_wrapper,.choose-us .choose-card, .footer_wrapper{
+  color: #b0bfdf;
+}
+.elementor-icon-box-icon {
   position: absolute;
   top: -63px;
   left: 0;
@@ -698,110 +729,134 @@ start choose us
   -webkit-mask-repeat: no-repeat;
   transition: all .3s ease;
   display: inline-block;
-    line-height: 1;
-    text-align: center;
+  line-height: 1;
+  text-align: center;
 
 }
-.elementor-icon  img{
-    height: 120px;
-    display: block;
-    padding: 33px;
+
+.elementor-icon img {
+  height: 120px;
+  display: block;
+  padding: 33px;
 }
-.choose-us h3{
+
+.choose-us h3 {
   margin-bottom: 0rem;
 }
-.choose-us .choose-card:hover, .choose-us .choose-card:hover h3{
-  color:#212529;
+
+.choose-us .choose-card:hover,
+.choose-us .choose-card:hover h3 {
+  color: #212529;
 }
-.choose-us .choose-card:hover{
+
+.choose-us .choose-card:hover {
   background: #fff;
 }
 
-.choose-us .back-img{
+.choose-us .back-img {
   background: url(/assets/image_2023_10_03T04_39_35_281Z.png) no-repeat;
   background-size: cover;
-  padding-top: 90px; 
+  padding-top: 90px;
   position: absolute;
-    width: 94%;
-    left: 0;
-    right: 0;
-    bottom: -13rem;
-    margin: auto;
-    border-radius: 10px;
+  width: 94%;
+  left: 0;
+  right: 0;
+  bottom: -13rem;
+  margin: auto;
+  border-radius: 10px;
 
 }
-.mt-50{
+
+.read-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
+  z-index: 999;
+}
+
+.mt-50 {
   padding-top: 8rem;
 }
-.mb-50{
+
+.mb-50 {
   padding-bottom: 4rem;
 }
-.video-icon{
+
+.video-icon {
   width: 80px;
-    height: 80px;
-  background-color: #ee6196;
+  height: 80px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
 }
-.chhose-btn .read-btn{
+
+.chhose-btn .read-btn {
   font-weight: 600;
   font-size: 14px;
 }
-.btn-close{
-background-image: url(/assets/close.png)!important;
-opacity: 1;
+
+.btn-close {
+  background-image: url(/assets/close.png) !important;
+  opacity: 1;
 }
 
-  .modal.show .modal-dialog{
+.modal.show .modal-dialog {
   margin: auto;
 }
- .modal-body {
+
+.modal-body {
   padding: 0rem;
   text-align: end;
 }
-.modal-content{
-  background-color: transparent!important;
+
+.modal-content {
+  background-color: transparent !important;
 }
 
- .btn-close:focus {
+.btn-close:focus {
   box-shadow: none;
 }
-.chhose-btn{
-  width: 60%;
+
+.chhose-btn {
   height: 12rem;
   transform: skew(18deg);
-  background: #5e6fb5;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 1.5rem;
 }
 
-@media(max-width:991px){
-  .mb-50{
+@media(max-width:991px) {
+  .mb-50 {
     padding-bottom: 7rem;
   }
+
   .choose-us {
     margin-top: 3rem;
+  }
 }
-}
-@media(max-width:766px){
-  .chhose-btn{
+
+@media(max-width:766px) {
+  .chhose-btn {
     margin: auto;
   }
-  .choose-us .back-img{
+
+  .choose-us .back-img {
     bottom: -16rem;
   }
-  .choose-us{
+
+  .choose-us {
     padding: 110px 30px 155px;
     margin-bottom: 19rem;
   }
 }
-@media(max-width:475px){
-  .chhose-btn{
+
+@media(max-width:475px) {
+  .chhose-btn {
     width: 84%;
   }
 }
@@ -812,55 +867,65 @@ opacity: 1;
 /* ---------------------------------------------
 start explore
 --------------------------------------------------- */
-.explore-wrapper h2{
+.explore-wrapper h2 {
   margin: 0.8rem 0rem 1.4rem 0rem;
 }
-.explore-wrapper .card{
-border-radius: 10px;
-overflow: hidden;
-border: none;
-box-shadow: 0 0 20px rgba(0,0,0,.07);
+
+.explore-wrapper .card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .07);
 }
-.card img{
-  transition: opacity 1s,transform 1s;
+
+.card img {
+  transition: opacity 1s, transform 1s;
   height: 218px;
   object-fit: cover;
 }
-.card img:hover{
-  transform: scale3d(1.1,1.1,1);
+
+.card img:hover {
+  transform: scale3d(1.1, 1.1, 1);
   opacity: .85;
 }
-.explore-wrapper .card h3{
+
+.explore-wrapper .card h3 {
   margin-top: 0.8rem;
 }
-.card-body{
+
+.card-body {
   padding: 2rem 0rem;
 }
-.explore-wrapper .card a span , .card-body-links span{
+
+.explore-wrapper .card a span,
+.card-body-links span {
   color: #212529;
   font-size: 12px;
   opacity: 0.4;
 }
+
 .explore-wrapper a:last-of-type {
-opacity: 1;
+  opacity: 1;
 }
+
 /* ---------------------------------------------
 end explore
 --------------------------------------------------- */
 /* price section   */
-.pricing{
+.pricing {
   color: #000;
 }
+
 .pricing .redlight-pricing-card h3,
 .pricing .plan-per-text h2 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .pricing .pricing-main p {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.pricing h3{
+.pricing h3 {
   margin-top: 1rem;
 }
 
@@ -869,26 +934,28 @@ end explore
 .pricing .plan-per-para p,
 .pricing .redlight-pricing-card h3,
 .pricing .pricing-main h1 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .pricing .redlight-pricing-card {
-    background-color: #ffff;
-    border-radius: 0.313rem;
-    padding: 3rem  2rem;
-    border-bottom: 0.188rem solid #C85686;
-    position: relative;
+  background-color: #ffff;
+  border-radius: 0.313rem;
+  padding: 3rem 2rem;
+  border-bottom: 0.188rem solid rgb(0, 102, 204);
+  position: relative;
 }
 
 .pricing .redlight-pricing-card:hover {
-    border-bottom: 0.188rem solid #6777B9;
+  border-bottom: 0.188rem solid  rgb(25, 139, 168); 
 }
 
-@media(max-width:600px){
-  h1{
+@media(max-width:600px) {
+  h1 {
     font-size: 2rem;
   }
-h2, .top_services_wrapper .client-card h3{
-  font-size: 22px;
-}
+
+  h2,
+  .top_services_wrapper .client-card h3 {
+    font-size: 22px;
+  }
 }
