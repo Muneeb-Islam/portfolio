@@ -20,7 +20,7 @@ return (
                     <div
                         className="d-flex align-items-baseline plan-per-text mt-3">
                         <h2>$5000</h2>
-                        <h4>/Month</h4>
+                        {/* <h4>/Month</h4> */}
                     </div>
                     <ul className="p-0 mt-3 mb-5">
                         <li>Built-in Web Pages </li>
@@ -34,7 +34,7 @@ return (
                     </ul>
 
                     <div className="now-order-btn">
-                        <a href="#">Register Now</a>
+                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@ return (
                     <div
                         className="d-flex align-items-baseline plan-per-text mt-3">
                         <h2>$7000</h2>
-                        <h4>/Month</h4>
+                        {/* <h4>/Month</h4> */}
                     </div>
                     <ul className="p-0 mt-3 mb-5">
                         <li>Built-in Web Pages </li>
@@ -61,7 +61,7 @@ return (
                         <li><del>Built-in Web Pages</del></li>
                     </ul>
                     <div className="now-order-btn">
-                        <a href="#">Register Now</a>
+                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ return (
                     <div
                         className="d-flex  align-items-baseline plan-per-text mt-3">
                         <h2>$10000</h2>
-                        <h4>/Month</h4>
+                        {/* <h4>/Month</h4> */}
                     </div>
                     <ul className="p-0 mt-3 mb-5">
                         <li>Built-in Web Pages </li>
@@ -88,7 +88,7 @@ return (
                         <li>Built-in Web Pages</li>
                     </ul>
                     <div className="now-order-btn">
-                        <a href="#">Register Now</a>
+                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>

@@ -30,7 +30,7 @@ infinite: true,
 speed: 500,
 slidesToShow: 3,
 slidesToScroll: 1,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
       pauseOnHover: true,
       nextArrow: <SampleNextArrow />,
@@ -47,7 +47,7 @@ responsive: [
     }
   },
   {
-    breakpoint: 600,
+    breakpoint: 992,
     settings: {
       slidesToShow: 2,
       slidesToScroll: 2,
@@ -66,7 +66,16 @@ responsive: [
 return (
 <section className="services_wrapper overflow-hidden">
   <div className="container-fluid">
-    <div className="row justify-content-between align-s-center">
+   <div className="row justify-content-center">
+   <div className="col-lg-7 text-center">
+   <span>OUR SERVICES</span>
+        <h2>Explore Our Comprehensive Range Of IT Services</h2>
+        <p>At Vision, we take pride in offering a diverse range of IT services designed to meet your unique needs.
+          Whether you are a small business or a large enterprise, we have the expertise and solutions to make your
+          digital presence stand out and improve your operations.</p>
+      </div>
+   </div>
+    {/* <div className="row justify-content-between align-s-center">
       <div className="col-lg-6 ps-lg-4 text-center text-lg-start">
         <span>OUR SERVICES</span>
         <h2>Explore Our Comprehensive Range Of IT Services</h2>
@@ -77,12 +86,12 @@ return (
           digital presence stand out and improve your operations.</p>
 
       </div>
-    </div>
+    </div> */}
 
     <div id="service-slider" className=" pt-5">
       <Slider {...settings}>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/life-coaching.png" className="img-fluid" alt="..." />
+          <img src="/assets/life-coaching.png" className="img-fluid w-100" alt="..." />
 
           <div className="pos-content">
             <img src="/assets/coaching.png" alt="" className="img-fluid" />
@@ -96,7 +105,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/6.png" className="img-fluid" alt="..." />
+          <img src="/assets/6.png" className="img-fluid w-100" alt="..." />
           <div className="pos-content">
             <img src="/assets/consulting.png" alt="" className="img-fluid" />
             <h3>Business Consulting</h3>
@@ -109,7 +118,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/hair-beauty.png" className="img-fluid" alt="..." />
+          <img src="/assets/hair-beauty.png" className="img-fluid w-100" alt="..." />
           <div className="pos-content">
             <img src="/assets/women.png" alt="" className="img-fluid" />
             <h3>Hair And Beauty</h3>
@@ -121,7 +130,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/fitness.png" className="img-fluid" alt="..." />
+          <img src="/assets/fitness.png" className="img-fluid w-100" alt="..." />
           <div className="pos-content">
             <img src="/assets/weights.png" alt="" className="img-fluid" />
             <h3>Fitness</h3>
@@ -134,7 +143,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/Health.png" className="img-fluid" alt="..." />
+          <img src="/assets/Health.png" className="img-fluid w-100" alt="..." />
           <div className="pos-content">
             <img src="/assets/healthcare.png" alt="" className="img-fluid" />
             <h3>Health</h3>
@@ -147,7 +156,7 @@ return (
           </div>
         </div>
         <div className=" px-2 position-relative img-div">
-          <img src="/assets/education.png" className="img-fluid" alt="..." />
+          <img src="/assets/education.png" className="img-fluid w-100" alt="..." />
           <div className="pos-content">
             <img src="/assets/school.png" alt="" className="img-fluid" />
             <h3>Education</h3>
