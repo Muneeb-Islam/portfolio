@@ -1,7 +1,7 @@
 const Footer = () => {
   return ( 
     <section className="footer_wrapper">
-    <div className="container-fluid">
+    <div className="container">
         <div className="row justify-content-center px-lg-4">
             <div className="col-lg-3  main-para text-center text-lg-start">
                 <a href="#home"><img src="assets/vision-white.png" alt="" className="img-fluid" /></a>
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
 
         <div className="row justify-content-between align-items-center bottom-footer px-lg-4">
-            <div className="col-lg-4 text-center text-lg-start">
+            <div className="col-lg-5 text-center text-lg-start">
                 <p>Copyright © 2023 <span>vission.</span> All Rights Reserved.</p>
             </div>
             <div className="col-lg-4 pt-4 pt-lg-0">

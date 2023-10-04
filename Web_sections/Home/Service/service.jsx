@@ -8,7 +8,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "#7A88C2", borderRadius:"10px"}}
+      style={{ ...style, display: "block", borderRadius:"10px"}}
       onClick={onClick}
     />
   );
@@ -18,7 +18,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "#7A88C2", borderRadius:"10px" }}
+      style={{ ...style, display: "block", borderRadius:"10px" }}
       onClick={onClick}
     />
   );
@@ -65,12 +65,12 @@ responsive: [
 };
 return (
 <section className="services_wrapper overflow-hidden">
-  <div className="container-fluid">
+  <div className="container">
    <div className="row justify-content-center">
-   <div className="col-lg-7 text-center">
-   <span>OUR SERVICES</span>
-        <h2>Explore Our Comprehensive Range Of IT Services</h2>
-        <p>At Vision, we take pride in offering a diverse range of IT services designed to meet your unique needs.
+   <div className="col-lg-8 text-center">
+   <span className="animate__animated animate__fadeInDown">OUR SERVICES</span>
+        <h2 className="animate__animated animate__fadeInDown animate__delay-1s">Explore Our Comprehensive Range Of IT Services</h2>
+        <p className="animate__animated animate__fadeInDown animate__delay-1s">At Vision, we take pride in offering a diverse range of IT services designed to meet your unique needs.
           Whether you are a small business or a large enterprise, we have the expertise and solutions to make your
           digital presence stand out and improve your operations.</p>
       </div>

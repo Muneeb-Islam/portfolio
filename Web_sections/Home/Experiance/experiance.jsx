@@ -2,7 +2,7 @@
 const ExperianceSection = () => {
   return (
     <section className="experience_wrapper" id="why_us">
-    <div className="container-fluid">
+    <div className="container">
         <div className="row justify-content-center align-items-center px-lg-4">
             <div className="col-lg-6 text-center text-lg-start">
                 <h2>Why Choose Us?</h2>

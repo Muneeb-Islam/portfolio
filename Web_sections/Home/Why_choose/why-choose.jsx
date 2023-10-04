@@ -2,7 +2,7 @@
 const Why_chooseSection = () => {
   return (
     <section className="choose-us ">
-    <div className="container-fluid">
+    <div className="container">
       <div className="row justify-content-center text-center">
         <div className="col-lg-7">
           {/* <span>WHY CHOOSE US</span> */}

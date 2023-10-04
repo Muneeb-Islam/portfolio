@@ -2,7 +2,7 @@
 const AboutSection = () => {
   return (
     <section className="about_wrapper" id="about_wrapper">
-        <div className="container-fluid">
+        <div className="container">
             <div className="row justify-content-center align-items-center">
                 <div className="col-lg-6 pe-lg-5 text-center text-lg-start">
                     <img src="assets/about.jpg" alt="" className="img-fluid" />

@@ -3,7 +3,7 @@ const Top_ServiceSection = () => {
 
 return (
 <section className="top_services_wrapper">
-    <div className="contaner-fluid">
+    <div className="container">
         <div className="client-card">
             <div className="row justify-content-between">
                 <div className="col-lg-5 text-center text-lg-start">

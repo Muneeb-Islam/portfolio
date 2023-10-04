@@ -2,7 +2,7 @@
 const Brans_LogoSection = () => {
   return (
     <section className="brand_logos_wrapper">
-    <div className="container-fluid">
+    <div className="container">
         <div className="row justify-content-center align-items-center brand-logos px-lg-5">
                     <div className="col-4 col-md-2">
                         <img src="/assets/brand-2.png" className="img-fluid" alt="..." />

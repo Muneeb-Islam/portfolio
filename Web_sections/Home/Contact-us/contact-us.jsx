@@ -3,7 +3,7 @@ const ContactSection = () => {
 
 return (
 <section className="contact_form_wrapper" id="contact_form_wrapper">
-    <div className="container-fluid">
+    <div className="container">
         <div className="row justify-content-center">
             <div className="col-lg-7 text-center">
                 <span>CONTACT US</span>
