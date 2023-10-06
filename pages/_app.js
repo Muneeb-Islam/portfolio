@@ -26,10 +26,18 @@ export default function App({ Component, pageProps }) {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
-        <link
+        {/* <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        ></link>
         <link href="/assets/fav-icon.png" rel="icon" type="image/x-icon"></link>
       </Head>
       <Component {...pageProps} />

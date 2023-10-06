@@ -88,7 +88,7 @@ return (
             </div>
             <div className="col-md-4 col-lg-2 pt-5 pt-md-0 hover-effect">
             <span className="elementor-icon"><img src="/assets/menu.png" alt="" className="img-fluid" /></span>
-                <h3>Payment Processing Solutions</h3>
+                <h3>Payment Processing</h3>
                 <p>Accept payments in-store and online with ease, improving the checkout experience.</p>
             </div>
             <div className="col-md-4 col-lg-2 pt-5 pt-lg-0 hover-effect">

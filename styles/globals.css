@@ -130,7 +130,9 @@ a,
 end general css 
 --------------------------------------------------------*/
 /* top_navbar_starts */
-
+header, .services_wrapper, .about_wrapper{
+  background: #fff;
+}
 .top_navbar
 {
     padding: 0.5rem 1rem;
@@ -303,8 +305,7 @@ end general css
 }
 
 @media (max-width:75rem) {
-  .navbar_wrapper .border-line,
-  .navbar_wrapper .get-quote-btn {
+  .navbar_wrapper .border-line {
       display: none;
   }
 }
@@ -361,7 +362,9 @@ end general css
 .explore-wrapper {
   padding-top: 5rem;
 }
-
+.about_wrapper{
+  padding-bottom: 6rem;
+}
 .about_wrapper p {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
@@ -396,7 +399,7 @@ end general css
 /* Experience_starts */
 
 .experience_wrapper {
-  background: #F2F5F6;
+  /* background: #F2F5F6; */
   padding: 2rem 0 10rem;
 }
 
@@ -797,10 +800,12 @@ end general css
 
 .slick-prev:before,
 .slick-next:before {
-  font-family: none !important;
+  font-family: Font Awesome\ 6 Free!important;
   color: black!important;
 }
-
+.slick-prev:before, .slick-next:before{
+  transform: translate(79%, -50%)!important;
+}
 .slick-prev:before,
 .slick-next:before {
   top: 50%;
@@ -829,7 +834,7 @@ start choose us
   padding: 110px 30px 230px;
   position: relative;
   margin-bottom: 17rem;
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
 }
 
 .choose-us .choose-card {
@@ -968,8 +973,11 @@ start choose us
     padding-bottom: 7rem;
   }
 
-  .choose-us {
+  /* .choose-us {
     margin-top: 3rem;
+  } */
+  .about_wrapper{
+    padding-bottom: 3rem;
   }
 }
 

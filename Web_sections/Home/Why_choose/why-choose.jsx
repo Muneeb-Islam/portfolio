@@ -16,7 +16,7 @@ const Why_chooseSection = () => {
                   className="img-fluid" alt=""  /> </span></div>
             <h3>Email Campaigns</h3>
             <br />
-            <p>Instead of working hard and generating long coats, use our pre-built website templates that support email campaigns. Inform all your users with just one click using Email cub. .</p>
+            <p>Skip hard work, use templates with Email cub for one-click user notifications.</p>
 
           </div>
         </div>
@@ -26,7 +26,7 @@ const Why_chooseSection = () => {
                   className="img-fluid" alt=""  /> </span></div>
             <h3>CRM Solutions</h3>
             <br />
-            <p>Streamline customer interactions and enhance efficiency in managing client data. We customize CRM systems to align with your unique business processes and objectives.</p>
+            <p>Optimize customer interactions and streamline client data management through tailored CRM system customization.</p>
 
           </div>
         </div>
@@ -36,7 +36,7 @@ const Why_chooseSection = () => {
                   className="img-fluid" alt=""  /> </span></div>
             <h3>CMS Solutions</h3>
             <br />
-            <p>Easily update and maintain your website's content without the need for technical expertise. Our CMS is designed for users of all skill levels, from beginners to experts.</p>
+            <p>Effortlessly manage website content for all skill levels with our user-friendly CMS.</p>
 
           </div>
         </div>
@@ -46,7 +46,7 @@ const Why_chooseSection = () => {
                   className="img-fluid" alt=""  /> </span></div>
             <h3>Calendar Management</h3>
             <br />
-            <p>Manage appointments, bookings, and client meetings seamlessly. Reclaim control of your schedule, reduce stress, and enhance your productivity with our Calendar Management. </p>
+            <p>Streamline scheduling, reduce stress, boost productivity with Calendar Management.</p>
 
           </div>
         </div>
