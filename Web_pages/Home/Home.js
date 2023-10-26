@@ -21,7 +21,7 @@ export default function HomePage() {
       <ServiceSection />
       <AboutSection />
       <Why_chooseSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <ExploreSection />
       <ExperianceSection />
       <Top_ServiceSection />

@@ -1,17 +1,16 @@
 body {
   font-family: 'Roboto', sans-serif;
-
   line-height: 24px;
   background: #f2f5f6;
+  color: #677289;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
   font-weight: 700;
 }
 
-a:hover {
+a, a:hover {
   color: #fff;
 }
 
@@ -23,12 +22,12 @@ h3 {
 
 h1 {
   font-size: 4rem;
-  color: #07132B;
+  /* color: #07132B; */
   margin-bottom: 0;
   line-height: 1;
 }
 
-h2,
+h1,h2,
 h3 {
   color: #212529;
 }
@@ -84,7 +83,7 @@ span,
 .choose-us span,
 .redlight-pricing-card:hover .plan-per-text h2,
 .footer_wrapper .bottom-footer p span ,.navbar_wrapper .navbar-nav .nav-item .nav-link:hover,
-.navbar_wrapper .navbar-nav .nav-item .nav-link.active, .navbar_wrapper .contact-info a{
+.navbar_wrapper .navbar-nav .nav-item .nav-link.active, .navbar_wrapper .contact-info a,.navbar_wrapper i{
   color: rgb(0, 102, 204)
 }
 
@@ -101,12 +100,14 @@ span,
   background-color: rgb(25, 139, 168);
 }
 
-.pricing .plan-per-text h2,.navbar_wrapper i,
-.navbar_wrapper span{
+
+.navbar_wrapper span:hover ,.pricing .plan-per-text h2{
   color: rgb(25, 139, 168);
 }
 
-
+.navbar_wrapper span{
+  color:#677289;
+}
 
 .explore-wrapper span,
 .choose-us span {
@@ -209,7 +210,7 @@ header, .services_wrapper, .about_wrapper{
 }
 
 .navbar_wrapper .contact i {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-right: 0.75rem;
 }
 
@@ -323,6 +324,9 @@ header, .services_wrapper, .about_wrapper{
   background-repeat: no-repeat;
 }
 
+.banner_wrapper .banner-content{
+  padding-top: 7rem;
+}
 .banner_wrapper .banner-content h1 {
   margin-top: 1.125rem;
 }
@@ -338,7 +342,9 @@ header, .services_wrapper, .about_wrapper{
   border-radius: 0.75rem;
   font-size: 0.9rem;
 }
-
+.banner_wrapper span{
+  font-weight: 300;
+}
 
 .banner_wrapper .pos-shape {
   position: absolute;
@@ -1089,10 +1095,7 @@ end explore
 .pricing .redlight-pricing-card:hover {
   border-bottom: 0.188rem solid  rgb(25, 139, 168); 
 }
-@media (min-width: 1400px){
-.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 1290px;
-}}
+
 @media(max-width:600px) {
   h1 {
     font-size: 2rem;
@@ -1103,3 +1106,7 @@ end explore
     font-size: 22px;
   }
 }
+@media (min-width: 1200px){
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 1248px!important;
+  }}
