@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
+import "animate.css/animate.min.css";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -28,16 +29,8 @@ export default function App({ Component, pageProps }) {
         />
         {/* <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        /> */}
-        <link
-          rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
-        ></link>
+        /> */}
         <link href="/assets/fav-icon.png" rel="icon" type="image/x-icon"></link>
       </Head>
       <Component {...pageProps} />

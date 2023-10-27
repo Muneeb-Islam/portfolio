@@ -1,4 +1,7 @@
+
+
 const BannerSection = () => {
+    
 return (
 <section className="banner_wrapper" id="home">
     <div className="container">
