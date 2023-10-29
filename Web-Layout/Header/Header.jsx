@@ -22,12 +22,12 @@ return (
 
                 <div
                     className="col-lg-5 pt-2 pt-lg-0 d-lg-flex justify-content-center justify-content-lg-end align-items-center">
-                    <ul className="mb-0 list-unstyled">
+                    {/* <ul className="mb-0 list-unstyled">
                         <li className="border-line me-4"><a
                                 className="me-lg-4 d-flex justify-content-center align-items-baseline"><i
                                     className="fa-regular fa-clock me-2"></i> Office Hour : 09:00am - 6:00pm</a></li>
 
-                    </ul>
+                    </ul> */}
                     <ul
                         className="mb-0 list-unstyled d-flex justify-content-center justify-content-lg-end align-items-center">
                         <li><a href="https://www.facebook.com/" className="me-4"><i
@@ -62,15 +62,15 @@ return (
                             <a className="nav-link" href="#about_wrapper">ABOUT</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">SERVICES</a>
+                            <a className="nav-link" href="#services">SERVICES</a>
                         </li>
 
                         <li className="nav-item">
                             <a className="nav-link" href="#why_us">WHY US</a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link" href="#price">PLANS</a>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link me-0" href="#contact_form_wrapper">CONTACT</a>
                         </li>

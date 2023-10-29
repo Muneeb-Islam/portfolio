@@ -1,14 +1,22 @@
+import React from 'react'
 
-const AboutSection = () => {
+const isServer = typeof window === 'undefined'
+const WOW = !isServer ? require('wow.js') : null
+
+export default class  AboutSection extends React.Component {
+    componentDidMount() {
+        new WOW().init()
+    }
+    render() {
   return (
     <section className="about_wrapper" id="about_wrapper">
         <div className="container">
             <div className="row justify-content-center align-items-center">
-                <div className="col-lg-6 pe-lg-5 text-center text-lg-start">
+                <div className="col-lg-6 pe-lg-5 text-center text-lg-start wow slideInLeft">
                     <img src="assets/about.jpg" alt="" className="img-fluid" />
                 </div>
 
-                <div className="col-lg-6 text-center text-lg-start pt-5 pt-lg-0 pe-lg-4">
+                <div className="col-lg-6 text-center text-lg-start pt-5 pt-lg-0 pe-lg-4 wow slideInRight">
                     <h2>Empowering You Through Business Consulting</h2>
                     <p>Our business consulting web templates are designed to elevate your business to new heights of success. We take pride in providing the best results. </p>
 
@@ -38,7 +46,8 @@ const AboutSection = () => {
             </div>
         </div>
     </section>
-  );
-  }
+      )
+    }
+}
+
   
-  export default AboutSection;

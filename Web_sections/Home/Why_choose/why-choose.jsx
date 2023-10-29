@@ -1,17 +1,28 @@
 
-const Why_chooseSection = () => {
+import React from 'react'
+
+const isServer = typeof window === 'undefined'
+const WOW = !isServer ? require('wow.js') : null
+
+
+  
+  export default class  Why_chooseSection  extends React.Component {
+  componentDidMount() {
+    new WOW().init()
+}
+render() {
   return (
     <section className="choose-us ">
     <div className="container">
       <div className="row justify-content-center text-center">
-        <div className="col-lg-7">
-          {/* <span>WHY CHOOSE US</span> */}
+        <div className="col-lg-7 wow fadeInDown">
+          <span>WHY CHOOSE US</span>
           <h2>How Ghy Help of Your Business Grow And Successful</h2>
         </div>
       </div>
       <div className="row mt-50 text-center">
-        <div className="col-md-6 col-lg-3 position-relative mb-50">
-          <div className="choose-card">
+        <div className="col-md-6 col-lg-3 position-relative mb-50 wow slideInLeft">
+          <div className="choose-card ">
             <div className="elementor-icon-box-icon"> <span className="elementor-icon"> <img src="/assets/email-marketing.png"
                   className="img-fluid" alt=""  /> </span></div>
             <h3>Email Campaigns</h3>
@@ -20,7 +31,7 @@ const Why_chooseSection = () => {
 
           </div>
         </div>
-        <div className="col-md-6 col-lg-3 position-relative mb-50">
+        <div className="col-md-6 col-lg-3 position-relative mb-50 wow fadeInUp">
           <div className="choose-card">
             <div className="elementor-icon-box-icon"> <span className="elementor-icon"> <img src="/assets/crm.png"
                   className="img-fluid" alt=""  /> </span></div>
@@ -30,7 +41,7 @@ const Why_chooseSection = () => {
 
           </div>
         </div>
-        <div className="col-md-6 col-lg-3 position-relative mb-50">
+        <div className="col-md-6 col-lg-3 position-relative mb-50 wow fadeInDown">
           <div className="choose-card">
             <div className="elementor-icon-box-icon"> <span className="elementor-icon"> <img src="/assets/cms.png"
                   className="img-fluid" alt=""  /> </span></div>
@@ -40,7 +51,7 @@ const Why_chooseSection = () => {
 
           </div>
         </div>
-        <div className="col-md-6 col-lg-3 position-relative mb-50">
+        <div className="col-md-6 col-lg-3 position-relative mb-50 wow slideInRight">
           <div className="choose-card">
             <div className="elementor-icon-box-icon"> <span className="elementor-icon"> <img src="/assets/calendar.png"
                   className="img-fluid" alt=""  /> </span></div>
@@ -93,7 +104,6 @@ const Why_chooseSection = () => {
       </div>
     </div>
   </section>
-  );
-  }
-  
-  export default Why_chooseSection;
+      )
+    }
+}
