@@ -18,9 +18,8 @@ return (
                 <p>With all the competition in the industry, it is wise to ask what makes us so special. Being trusted
                     by many, we provide multiple things that make us stand out among our competitors.</p>
 
-                <div className="row justify-content-center pt-4">
-                    <div className="col-6 col-md-4 col-lg-6 text-start">
-                        <ul className="list-unstyled">
+                <div className="experience-list pt-4 d-block d-md-flex justify-content-md-between">
+                        <ul className="list-unstyled mb-0">
                             <li className="d-flex align-items-baseline"><i
                                     className="fa-solid fa-circle-check me-3"></i> Innovative technologies</li>
                             <li className="d-flex align-items-baseline"><i
@@ -28,8 +27,6 @@ return (
                             <li className="d-flex align-items-baseline"><i
                                     className="fa-solid fa-circle-check me-3"></i> No Expertise required</li>
                         </ul>
-                    </div>
-                    <div className=" col-6 col-md-4 col-lg-6 text-start">
                         <ul className="list-unstyled">
                             <li className="d-flex align-items-baseline"><i
                                     className="fa-solid fa-circle-check me-3"></i> Payment Processing Solutions</li>
@@ -38,7 +35,6 @@ return (
                             <li className="d-flex align-items-baseline"><i
                                     className="fa-solid fa-circle-check me-3"></i> Program Drip System</li>
                         </ul>
-                    </div>
                 </div>
                 <div className="border-line mt-4"></div>
 

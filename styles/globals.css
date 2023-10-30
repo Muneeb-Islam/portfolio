@@ -83,7 +83,7 @@ span,
 .choose-us span,
 .redlight-pricing-card:hover .plan-per-text h2,
 .footer_wrapper .bottom-footer p span ,.navbar_wrapper .navbar-nav .nav-item .nav-link:hover,
-.navbar_wrapper .navbar-nav .nav-item .nav-link.active, .navbar_wrapper .contact-info a,.navbar_wrapper i{
+.navbar_wrapper .navbar-nav .nav-item .nav-link.active,.navbar_wrapper i{
   color: rgb(0, 102, 204)
 }
 
@@ -222,6 +222,7 @@ header, .services_wrapper, .about_wrapper{
 .navbar_wrapper .contact-info a {
   font-weight: 700;
   font-size: 0.8rem;
+  color: red;
 }
 
 .navbar_wrapper .border-line {
@@ -435,6 +436,12 @@ header, .services_wrapper, .about_wrapper{
 
 .experience_wrapper .bottom-icon i {
   font-size: 4rem;
+}
+
+@media(max-width:489px){
+  .experience_wrapper .experience-list {
+justify-content: left;
+  }
 }
 
 /* Experience_ends */
