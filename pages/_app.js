@@ -1,9 +1,21 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
-import "animate.css/animate.min.css";
-
+// import "animate.css/animate.min.css";
+import { _get_website_page } from "../DAL/pages";
+import { useEffect } from "react";
 export default function App({ Component, pageProps }) {
+  const sale_page = async () => {
+    // call DAL function
+    const postData = {
+      page_slug: "home",
+    };
+    const result = await _get_website_page(postData);
+    console.log(result, "--result");
+  };
+  useEffect(() => {
+    sale_page();
+  }, []);
   return (
     <>
       <Head>

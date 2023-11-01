@@ -1,40 +1,69 @@
-import React from 'react'
+import { s3baseUrl } from "@/config/config";
+import { useEffect, useState } from "react";
 
-const isServer = typeof window === 'undefined'
-const WOW = !isServer ? require('wow.js') : null
+const ExploreSection = ({ page_data, benefit }) => {
+  const salePage = page_data.sale_page_detail;
+  const [explore, setExplore] = useState([]);
+  useEffect(() => {
+    let exploreState = benefit.map((val, i) => {
+      if (i == 0) {
+        return {
+          ...val,
+          active: "active",
+        };
+      } else {
+        return {
+          ...val,
+          active: "",
+        };
+      }
+    });
+    setExplore(exploreState);
+  }, []);
+  return (
+    <section className="explore-wrapper text-center">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div
+            className="col-lg-7 wow fadeInUp" >
+            <span>{salePage.template_heading}</span>
+            <div
+             dangerouslySetInnerHTML={{
+              __html: salePage.template_section_text,
+            }}>
 
-
-export default class ExploreSection extends React.Component {
-componentDidMount() {
-new WOW().init()
-}
-render(){
-return (
-<section className="explore-wrapper text-center">
-  <div className="container">
-    <div className="row justify-content-center">
-      <div className="col-lg-7 wow fadeInUp">
-        <span>WE MAKE CONNECTIONS</span>
-        <h2>Explore Our Templates </h2>
-        <p>We provide you with multiple templates that let you make websites like life coaching and Education within a
-          few minutes. </p>
-        {/* <a href="#" className="all-services">ALL PROJECTS<i className="fa-solid fa-arrow-right ms-3"></i></a> */}
-      </div>
-    </div>
-    <div className="row mt-5">
-      <div className="col-md-6 col-lg-4 wow slideInLeft">
-        <div className="card">
-          <img src="/assets/project-1.png" className="img-fluid" alt="" />
-          <div className="card-body">
-            <div className="card-body-links"><a href=""><span> DESIGN</span></a> <span>/ </span><a
-                href=""><span>DEVELOPMENT</span></a></div>
-            <a href="#">
-              <h3>Business Plans</h3>
-            </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="col-md-6 col-lg-4 mt-5 mt-md-0 wow fadeInDown">
+        <div className="row mt-5">
+          {explore.map((items, index) => {
+           return(
+            <>
+             <div className="col-md-6 col-lg-4 wow slideInLeft">
+              <div className="card">
+                <img
+                  src={s3baseUrl + items.image.thumbnail_1}
+                  className="img-fluid"
+                  alt=""
+                />
+                <div className="card-body">
+                  <div
+                    className="card-body-links"
+                    dangerouslySetInnerHTML={{
+                      __html:items.benifits_description_2,
+                    }}
+                  ></div>
+                  <a href="#">
+                    <h3>{items.benifits_description_1}</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            </>
+           )
+          })}
+
+          {/* <div className="col-md-6 col-lg-4 mt-5 mt-md-0 wow fadeInDown">
         <div className="card">
           <img src="/assets/project-2.png" className="img-fluid" alt="" />
           <div className="card-body">
@@ -57,10 +86,11 @@ return (
             </a>
           </div>
         </div>
+      </div> */}
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-)
-}
-}
+    </section>
+  );
+};
+
+export default ExploreSection;

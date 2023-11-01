@@ -410,6 +410,8 @@ header, .services_wrapper, .about_wrapper{
   padding: 2rem 0 10rem;
 }
 
+
+
 .experience_wrapper h2,
 .experience_wrapper p {
   margin-top: 1rem;
@@ -424,6 +426,12 @@ header, .services_wrapper, .about_wrapper{
   font-weight: 400;
   color: #000;
   font-size: 0.938rem;
+  background: url(../public/assets/checked.png) no-repeat left -2px;
+  background-size: 17px;
+  background-position: 0;
+  padding-left: 30px;
+  float: left;
+  width: 50%;
 }
 
 .experience_wrapper ul li i {
@@ -432,15 +440,16 @@ header, .services_wrapper, .about_wrapper{
 
 .experience_wrapper .border-line {
   border: 0.063rem solid #e5e5e5;
+  clear: both;
 }
 
 .experience_wrapper .bottom-icon i {
   font-size: 4rem;
 }
 
-@media(max-width:489px){
-  .experience_wrapper .experience-list {
-justify-content: left;
+@media(max-width:495px){
+  .experience_wrapper ul li {
+    width: 100%;
   }
 }
 
@@ -611,6 +620,8 @@ justify-content: left;
 
 .footer_wrapper .footer-links li {
   line-height: 1.9;
+  float: left;
+  width: 50%;
 }
 
 .footer_wrapper .footer-links li a {
@@ -618,9 +629,7 @@ justify-content: left;
   font-weight: 300;
 }
 
-.footer_wrapper .footer-links:last-of-type {
-  margin-left: 5rem;
-}
+
 
 .footer_wrapper .bottom-footer {
   border-top: 0.063rem solid #e5e5e5;
@@ -692,11 +701,10 @@ justify-content: left;
 
   background: url(/assets/form-bg.jpg);
   background-color: #fff;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  border-radius: 0.75rem;
+  background-position: 100% 100%!important;
+  border-radius: .75rem;
   padding: 0 4rem 1.5rem 0;
-  box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, .07);
+  box-shadow: 0 0 1.25rem 0 rgba(0,0,0,.07);
 }
 
 .contact_form_wrapper .contact-card input,
@@ -1051,11 +1059,12 @@ start explore
   padding: 2rem 0rem;
 }
 
-.explore-wrapper .card a span,
-.card-body-links span {
+/* .explore-wrapper .card a span, */
+.card-body-links p {
   color: #212529;
   font-size: 12px;
   opacity: 0.4;
+  margin-bottom: 0;
 }
 
 .explore-wrapper a:last-of-type {
