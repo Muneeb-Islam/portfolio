@@ -10,6 +10,7 @@ const Footer = ({ page_data}) => {
       background: `url(${
         s3baseUrl + salePage.footer_background_image
       }) no-repeat center`,
+      backgroundSize:"cover",
      
     }}>
       <div className="container">

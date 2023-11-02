@@ -31,7 +31,7 @@ return (
                             {testimonial.map((items, index) =>{
                                 return(
                                     <>
-                                       <div className={`carousel-item ${index===0? "active":""}` } data-bs-interval="2000">
+                                       <div className={`carousel-item ${index===0? "active":""}` } data-bs-interval="3000">
                                <p>{items.description}</p>
 
                                 <div
@@ -67,7 +67,7 @@ return (
             {buisness_strategy.map((items,index) =>{
                 return(
                     <>
-                    <div className="col-md-4 col-lg-2 hover-effect wow slideInRight">
+                    <div className="col-md-4 col-lg-2 hover-effect wow slideInRight mb-5 mb-lg-0 ">
                 <span className="elementor-icon"><img src={s3baseUrl+ items.images.thumbnail_1} alt="" className="img-fluid" /></span>
                 <h3>{items.title}</h3>
                 <div

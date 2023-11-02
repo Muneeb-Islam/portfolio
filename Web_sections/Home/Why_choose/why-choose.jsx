@@ -3,23 +3,7 @@ import { useEffect, useState } from "react";
 
 const Why_chooseSection = ({ page_data, website_program }) => {
   const salePage = page_data.sale_page_detail;
-  const [program, setProgram] = useState([]);
-  useEffect(() => {
-    let programState = website_program.map((val, i) => {
-      if (i == 0) {
-        return {
-          ...val,
-          active: "active",
-        };
-      } else {
-        return {
-          ...val,
-          active: "",
-        };
-      }
-    });
-    setProgram(programState);
-  }, []);
+
   return (
     <section
       className="choose-us "
@@ -42,7 +26,7 @@ const Why_chooseSection = ({ page_data, website_program }) => {
           </div>
         </div>
         <div className="row mt-50 text-center">
-          {program.map((items, index) => {
+          {website_program .map((items, index) => {
             return (
               <>
                 <div className="col-md-6 col-lg-3 position-relative mb-50 wow slideInLeft">

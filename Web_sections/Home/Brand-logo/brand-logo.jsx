@@ -6,8 +6,9 @@ const Brans_LogoSection = ({page_data}) => {
     <section className="brand_logos_wrapper"
     style={{
       background: `url(${
-        s3baseUrl + salePage.banner_background_image
+        s3baseUrl + salePage.brand_background_image
       }) no-repeat center`,
+      backgroundSize:"cover",
      
     }}>
     <div className="container">

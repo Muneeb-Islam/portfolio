@@ -47,7 +47,7 @@ const BannerSection = ({page_data, slider}) => {
                   GET STARTED <i className="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
-              <div className="col-lg-5 pt-5 pt-lg-0 position-relative wow slideInRight1 ">
+              <div className="col-lg-5 pt-5 pt-lg-0  wow slideInRight1 ">
                 <img
                   src={s3baseUrl+  items.images.thumbnail_1}
                   className="img-fluid"

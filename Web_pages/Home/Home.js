@@ -12,7 +12,7 @@ import {
   Why_chooseSection,
 } from "@/Web_sections/Home";
 import ServiceSection from "@/Web_sections/Home/Service/service";
-
+import Animated from "../../Components/AnimatedComponent";
 export default function HomePage({ page_data }) {
   const sale_page = page_data.Sale_page;
   const slider = page_data.slider;
@@ -28,7 +28,6 @@ export default function HomePage({ page_data }) {
     <div>
       <Header page_data={sale_page} />
       <BannerSection page_data={sale_page} slider={slider} />
-
       <ServiceSection
         page_data={sale_page}
         comprehensive_services={comprehensive_services}
@@ -55,6 +54,7 @@ export default function HomePage({ page_data }) {
       <Brans_LogoSection page_data={sale_page} />
       <ContactSection page_data={sale_page} />
       <Footer page_data={sale_page} menu_items={menu_items} />
+      <Animated />
     </div>
   );
 }

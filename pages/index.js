@@ -28,7 +28,6 @@ export default function Home({ page_data }) {
   return (
     <>
       <HeaderController />
-      {/* <AnimatedComponent /> */}
       <HomePage page_data={page_data} />
     </>
   );
