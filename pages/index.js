@@ -2,6 +2,7 @@ import styles from "@/styles/Home.module.css";
 import HeaderController from "@/Components/Header-Controller/HeaderController";
 import HomePage from "@/Web_pages/Home/Home";
 import { _get_website_page } from "../DAL/pages";
+import { s3baseUrl } from "@/config/config";
 export async function getServerSideProps(context) {
   const query = context.query;
   const postData = {
@@ -25,9 +26,19 @@ export async function getServerSideProps(context) {
   }
 }
 export default function Home({ page_data }) {
+  const { brand_favicon, meta_keywords, meta_title, meta_description } =
+    page_data.Sale_page;
+
+  // console.log(page_data, "--page_data");
   return (
     <>
-      <HeaderController />
+      <HeaderController
+        fav_icon={s3baseUrl + brand_favicon}
+        image={s3baseUrl + brand_favicon}
+        title={meta_title}
+        description={meta_description}
+        keywords={meta_keywords}
+      />
       <HomePage page_data={page_data} />
     </>
   );

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const Footer = ({ page_data}) => {
   const salePage = page_data.sale_page_detail;
   const footer_menu = page_data.footer_menu.menu_items;
+  const { footer_logo } = page_data;
  
   return (
     <section className="footer_wrapper" style={{
@@ -17,7 +18,7 @@ const Footer = ({ page_data}) => {
         <div className="row justify-content-center px-lg-4">
           <div className="col-lg-3  main-para text-center text-lg-start">
             <a href="#home">
-              <img src={s3baseUrl+ salePage.footer_logo} alt="" className="img-fluid" />
+              <img src={s3baseUrl+footer_logo} alt="" className="img-fluid" />
             </a>
             <div
               dangerouslySetInnerHTML={{

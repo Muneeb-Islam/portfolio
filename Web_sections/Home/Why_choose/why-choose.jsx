@@ -57,14 +57,14 @@ const Why_chooseSection = ({ page_data, website_program }) => {
         </div>
         <div
           className="row align-items-center justify-content-center back-img"
-          style={{
+         
+        >
+          <div className="col-11 col-lg-11 image-border"  style={{
             background: `url(${
               s3baseUrl + salePage.agency_background_image
             }) no-repeat center`,
             backgroundSize: "cover",
-          }}
-        >
-          <div className="col-11 col-lg-10">
+          }}>
             <div className="row justify-content-between align-items-center">
               <div className="col-md-4 col-lg-4">
                 <a href="" data-bs-toggle="modal" data-bs-target="#myModal">

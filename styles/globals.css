@@ -920,19 +920,18 @@ start choose us
 }
 
 .choose-us .back-img {
-  background: url(/assets/image_2023_10_03T04_39_35_281Z.png) no-repeat;
-  background-size: cover;
-  padding-top: 90px;
   position: absolute;
-  width: 84%;
   left: 0;
   right: 0;
   bottom: -13rem;
   margin: auto;
-  border-radius: 10px;
+ 
 
 }
-
+.choose-us .image-border{
+  border-radius: 10px;
+  padding-top: 90px;
+}
 .read-btn {
   position: absolute;
   top: 50%;

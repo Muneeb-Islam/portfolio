@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
 
-        <title>Vission</title>
+        {/* <title>Vission</title> */}
 
         <link
           rel="stylesheet"
@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
         />
-        <link href="/assets/fav-icon.png" rel="icon" type="image/x-icon"></link>
+        {/* <link href="/assets/fav-icon.png" rel="icon" type="image/x-icon"></link> */}
       </Head>
       <Component {...pageProps} />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></Script>

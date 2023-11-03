@@ -21,7 +21,7 @@ const BannerSection = ({page_data, slider}) => {
           {slider.map((items, index) =>{
             return(
               <>
-               <div className={`carousel-item ${index===0? "active":""}` } data-bs-interval="2000">
+               <div className={`carousel-item ${index===0? "active":""}` } data-bs-interval="4000">
             <div className="row justify-content-between align-items-center">
               <div className="col-lg-5  banner-content">
                <div className="wow slideInDown">
