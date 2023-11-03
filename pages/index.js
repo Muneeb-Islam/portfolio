@@ -6,7 +6,7 @@ import { s3baseUrl } from "@/config/config";
 export async function getServerSideProps(context) {
   const query = context.query;
   const postData = {
-    page_slug: "home",
+    page_slug: "",
   };
   const result = await _get_website_page(postData);
   // console.log(result, "--result--result");
