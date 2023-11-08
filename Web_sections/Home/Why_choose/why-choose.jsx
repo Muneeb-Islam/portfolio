@@ -17,7 +17,7 @@ const Why_chooseSection = ({ page_data, website_program }) => {
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-7 wow fadeInDown">
-            <span> {salePage.choose_us_heading} </span>
+            {/* <span> {salePage.choose_us_heading} </span> */}
             <div
               dangerouslySetInnerHTML={{
                 __html: salePage.why_choose_us_text,

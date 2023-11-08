@@ -23,8 +23,9 @@ return (
                   <div className="it-head pe-3">
                     How can I request a quote for a project?
                   </div>
-                  <i className="fas fa-plus-circle faq-icon-show"></i>
-                  <i className="fas fa-minus-circle faq-icon-close "></i>
+                  <img src="/assets/home-page/plus.png" className="img-fluid  faq-icon-show" alt="" />
+                  <img src="/assets/home-page/minus.png" className="img-fluid  faq-icon-close" alt="" />
+                
                 </div>
               </a>
             </div>
@@ -47,8 +48,8 @@ return (
                   <div className="it-head pe-3">
                     What industries do you serve?
                   </div>
-                  <i className="fas fa-plus-circle faq-icon-show"></i>
-                  <i className="fas fa-minus-circle faq-icon-close "></i>
+                  <img src="/assets/home-page/plus.png" className="img-fluid  faq-icon-show" alt="" />
+                  <img src="/assets/home-page/minus.png" className="img-fluid  faq-icon-close" alt="" />
                 </div>
               </a>
             </div>
@@ -70,8 +71,8 @@ return (
                   <div className="it-head pe-3">
                     What is the typical timeline for a project?
                   </div>
-                  <i className="fas fa-plus-circle faq-icon-show"></i>
-                  <i className="fas fa-minus-circle faq-icon-close "></i>
+                  <img src="/assets/home-page/plus.png" className="img-fluid  faq-icon-show" alt="" />
+                  <img src="/assets/home-page/minus.png" className="img-fluid  faq-icon-close" alt="" />
                 </div>
               </a>
             </div>
@@ -94,8 +95,8 @@ return (
                   <div className="it-head pe-3">
                     Do you provide ongoing support and maintenance?
                   </div>
-                  <i className="fas fa-plus-circle faq-icon-show"></i>
-                  <i className="fas fa-minus-circle faq-icon-close "></i>
+                  <img src="/assets/home-page/plus.png" className="img-fluid  faq-icon-show" alt="" />
+                  <img src="/assets/home-page/minus.png" className="img-fluid  faq-icon-close" alt="" />
                 </div>
               </a>
             </div>

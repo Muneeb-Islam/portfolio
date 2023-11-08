@@ -62,7 +62,7 @@ const ContactSection = ({ page_data }) => {
                     required
                   />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-12">
                   <input
                     type="email"
                     className="form-control"
@@ -70,13 +70,13 @@ const ContactSection = ({ page_data }) => {
                     required
                   />
                 </div>
-                <div className="col-lg-6">
+                {/* <div className="col-lg-6">
                   <input
                     type="text"
                     className="form-control"
                     placeholder="Subject"
                   />
-                </div>
+                </div> */}
 
                 <div className="col-12">
                   <textarea

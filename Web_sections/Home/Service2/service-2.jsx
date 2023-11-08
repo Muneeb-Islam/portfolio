@@ -5,10 +5,8 @@ return (
   <div className="container">
     <div className="row justify-content-center">
       <div className="col-lg-9 wow slideInUp">
-        <h2>Do It All With EngageBay</h2>
-        <p>Stop paying thousands of dollars to dozens of marketing, sales, and support software. Experience the world's
-          most affordable, unified software. EngageBay's all-in-one CRM software is the most comprehensive solution for
-          your business.</p>
+        <h2>Everything You Need, All in Vissioon</h2>
+        <p>Discover the wide array of features that make Vissioon your all-in-one solution for business success. </p>
       </div>
     </div>
     <div className="row pt-80 justify-content-center">
