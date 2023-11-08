@@ -16,7 +16,7 @@ const ContactSection = ({ page_data }) => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-7 text-center">
-            <span>{salePage.contact_us_heading}</span>
+            {/* <span>{salePage.contact_us_heading}</span> */}
             <div
               dangerouslySetInnerHTML={{
                 __html: salePage.contact_us_text,

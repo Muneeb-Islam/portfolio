@@ -22,7 +22,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3.8rem;
+  font-size: 3rem;
   /* color: #07132B; */
   margin-bottom: 0;
   line-height: 1;
@@ -30,12 +30,12 @@ h1 {
 
 h1,h2,
 h3 {
-  color: #212529;
+  color: #000;
 }
 
 h2 {
   font-size: 2.078125rem;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -132,7 +132,7 @@ span,
 a,
 .choose-us .choose-card h3,
 .choose-us h2,
-.chhose-btn .read-btn ,.navbar_wrapper .get-quote-btn i, .choose-us span, .btn-vision{
+.chhose-btn .read-btn ,.navbar_wrapper .get-quote-btn i, .choose-us span, .btn-vision , .btn-vision i{
   color: #fff;
 }
 
@@ -552,10 +552,11 @@ testimonial
 }
 
 .slider_wrapper .client-slider-card {
-  background: #FBFBFF;
+  background: #f3f3f3;
   border-radius: 1.5rem;
   padding: 2rem;
   position: relative;
+  height: 100%;
   clip-path: polygon(93.784% 1.793%, 8.113% 1.793%, 8.113% 1.793%, 7.104% 1.905%, 6.147% 2.229%, 5.255% 2.747%, 4.441% 3.443%, 3.716% 4.298%, 3.095% 5.294%, 2.59% 6.415%, 2.213% 7.642%, 1.978% 8.959%, 1.896% 10.347%, 1.896% 91.447%, 1.896% 91.447%, 1.978% 92.835%, 2.213% 94.151%, 2.59% 95.378%, 3.095% 96.499%, 3.716% 97.496%, 4.441% 98.35%, 5.255% 99.046%, 6.147% 99.564%, 7.104% 99.888%, 8.113% 100%, 49.555% 100%, 49.555% 100%, 50.564% 99.888%, 51.521% 99.564%, 52.413% 99.046%, 53.227% 98.35%, 53.952% 97.496%, 54.573% 96.499%, 55.078% 95.378%, 55.455% 94.151%, 55.69% 92.835%, 55.772% 91.447%, 55.772% 91.447%, 55.853% 90.058%, 56.088% 88.742%, 56.465% 87.514%, 56.97% 86.394%, 57.592% 85.397%, 58.316% 84.543%, 59.13% 83.847%, 60.022% 83.329%, 60.979% 83.005%, 61.988% 82.893%, 93.784% 82.893%, 93.784% 82.893%, 94.793% 82.781%, 95.749% 82.457%, 96.641% 81.939%, 97.456% 81.243%, 98.18% 80.389%, 98.801% 79.392%, 99.307% 78.271%, 99.683% 77.044%, 99.919% 75.728%, 100% 74.34%, 100% 10.347%, 100% 10.347%, 99.919% 8.959%, 99.683% 7.642%, 99.307% 6.415%, 98.801% 5.294%, 98.18% 4.298%, 97.456% 3.443%, 96.641% 2.747%, 95.749% 2.229%, 94.793% 1.905%, 93.784% 1.793%);
 }
 
@@ -602,7 +603,12 @@ testimonial
 }
 
 
-
+.slider_wrapper  .slick-initialized .slick-slide, .slider_wrapper  .slick-slider, .slider_wrapper  .slick-track{
+  display: flex!important;
+}
+.slider_wrapper  .slick-initialized .slick-slide{
+  height: auto!important;
+}
 .slider_wrapper .para-content {
   margin-bottom: 5rem;
 }
@@ -1218,9 +1224,10 @@ start choose us
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 110px 30px 230px;
+  /* padding: 110px 30px 230px; */
+  padding: 40px 0px;
   position: relative;
-  margin-bottom: 17rem;
+  /* margin-bottom: 17rem; */
   /* margin-top: 6rem; */
 }
 
@@ -1356,7 +1363,7 @@ start choose us
 
 @media(max-width:991px) {
   .mb-50 {
-    padding-bottom: 7rem;
+    padding-bottom: 6rem;
   }
   .about_wrapper{
     padding-bottom: 3rem;
@@ -1375,8 +1382,8 @@ start choose us
   }
 
   .choose-us {
-    padding: 34px 10px 155px;
-    margin-bottom: 19rem;
+    padding: 30px 0px 0px ;
+    /* margin-bottom: 19rem; */
   }
   .mt-50 {
     padding-top: 5rem;
@@ -1396,6 +1403,12 @@ start choose us
   }
   .top_services_wrapper{
     padding: 2rem 1rem 6rem;
+  }
+  .mt-90{
+    margin-top: 50px;
+  }
+  .pt-80{
+    padding-top: 50px;
   }
 }
 

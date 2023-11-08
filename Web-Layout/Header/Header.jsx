@@ -135,7 +135,7 @@ const Header = ({ page_data }) => {
                         </div>
                     </div> */}
 
-              <a href="#" className="get-quote-btn mt-3 mt-lg-0">
+              <a href="#" className="btn-vision mt-3 mt-lg-0">
                 {salePage.get_a_quote_text} <i className="fa-solid fa-arrow-right ms-2"></i>
               </a>
             </div>
