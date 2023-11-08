@@ -6,7 +6,7 @@ const Why_chooseSection = ({ page_data, website_program }) => {
 
   return (
     <section
-      className="choose-us "
+      className="choose-us mt-90 "
       style={{
         background: `url(${
           s3baseUrl + salePage.choose_us_background_image

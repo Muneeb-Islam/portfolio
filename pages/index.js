@@ -10,6 +10,7 @@ export async function getServerSideProps(context) {
   };
   const result = await _get_website_page(postData);
   // console.log(result, "--result--result");
+
   if (result.code === 200) {
     return {
       props: {
@@ -29,7 +30,8 @@ export default function Home({ page_data }) {
   const { brand_favicon, meta_keywords, meta_title, meta_description } =
     page_data.Sale_page;
 
-  // console.log(page_data, "--page_data");
+  // const page_component_name = page_data.Sale_page.page_component_name;
+  // console.log(page_component_name, "--page_component_name");
   return (
     <>
       <HeaderController
