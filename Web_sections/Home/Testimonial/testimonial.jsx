@@ -57,7 +57,7 @@ arrows: false
 };
 
 return (
-<section className="slider_wrapper overflow-hidden" id="services">
+<section className="slider_wrapper overflow-hidden pt-90" id="services">
   <div className="container">
     <div className="text-center wow slideInUp">
       <h2>Winning the Confidence of Our Loyal Clients</h2>

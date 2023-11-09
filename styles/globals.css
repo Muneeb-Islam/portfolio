@@ -1,7 +1,7 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Slab', serif;
   line-height: 24px;
-  color: #181818;
+  color: #8b8888;
   overflow-x: hidden;
 }
 
@@ -20,7 +20,6 @@ h1,
 h2,
 h3 {
   font-weight: 500;
-  font-family: 'Roboto Slab', serif;
 }
 
 h1 {
@@ -64,7 +63,7 @@ p {
 }
 
 .pt-90 {
-  padding-top: 100px;
+  padding-top: 100px!important;
 }
 
 .mt-90 {
@@ -86,7 +85,7 @@ p {
 .video-icon,
 .btn-vision,
 .slider_wrapper .slick-dots li.slick-active button,
-.tab-content h2::after {
+.tab-content h2::after, .hows-text h2::after {
   background: rgb(0, 102, 204);
 }
 
@@ -242,7 +241,9 @@ end general css
   margin: 0 1.5rem 0 0;
 
 }
-
+.navbar_wrapper .navbar-nav .nav-item:last-of-type .nav-link{
+  margin: 0;
+}
 .navbar_wrapper .navbar-toggler:focus {
   outline: none;
   border: none;
@@ -441,6 +442,7 @@ end general css
 .btn-vision {
   display: inline-block;
   border: 1px solid #0066cc;
+  box-shadow: 1px 1px 8px 2px rgba(0 0 0/ 0.2);
   border-radius: 5px;
   padding: 14px 40px;
   margin-top: 50px;
@@ -510,12 +512,12 @@ features
   transform: scaleX(1);
 }
 
-.tab-content h2 {
+.tab-content h2, .hows-text h2 {
   position: relative;
   margin-bottom: 40px;
 }
 
-.tab-content h2::after {
+.tab-content h2::after, .hows-text h2::after {
   content: "";
   display: block;
   position: absolute;
@@ -526,15 +528,14 @@ features
   margin-top: 30px;
 }
 
-.features-wrapper h3 {
-  font-size: 0.875rem;
+.features-wrapper h3 ,  .hows-text h3{
+  font-size: 0.975rem;
   padding: 1.8rem 0rem 1rem 0rem;
 }
 
-.features-wrapper ul li {
+.features-wrapper ul li ,  .hows-text ul li{
   line-height: 2;
   font-weight: 400;
-  color: #000;
   font-size: .938rem;
   background: url(../public/assets/home-page/tick.png) no-repeat left -2px;
   background-size: 17px;
@@ -565,7 +566,38 @@ features
     padding-right: 10px;
   }
 }
+   /* -----------------------------------------
+  start hows work
+---------------------------------------------------- */
+.position-img{
+  position: absolute;
+  bottom: -126px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -999;
+}
+.position-img-2{
+ position: absolute;
+ bottom: -126px;
+ right: 50%;
+ transform: translateX(50%);
+ z-index: -999;
+}
+@media(max-width:991px){
+  .position-img,.position-img-2{
+    display: none;
+  }
+  .pt-90 {
+    padding-top: 48px!important;
+}
+}
+@media(max-width: 530px){
 
+  .hows-text ul li{
+    width: 100%;
+  
+  }
+}
 /* -------------------------------------------------
 services
 ----------------------------------------------------------- */
@@ -599,7 +631,7 @@ services
 testimonial
 --------------------------------------------------------- */
 .slider_wrapper {
-  padding: 3rem 0 7rem;
+  padding: 0rem 0 7rem;
 }
 
 .slider_wrapper .done-heading h1 {
@@ -1149,7 +1181,7 @@ faq
   padding: 0.813rem 1.3rem;
   border-radius: 0.625rem;
   border: 0.063rem solid #e8ecef;
-  margin-top: 2.813rem;
+  margin-top: 0.513rem;
 }
 
 .contact_form_wrapper .contact-card input:focus,

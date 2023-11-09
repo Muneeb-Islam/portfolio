@@ -89,8 +89,8 @@ const ContactSection = ({ page_data }) => {
                   ></textarea>
                 </div>
 
-                <div className="col-lg-6 pt-4">
-                  <button className="btn-vision w-100">
+                <div className="col-lg-6 pt-2">
+                  <button className="btn-vision w-100 mt-0">
                     {salePage.contact_us_button_text}{" "}
                     <i className="fa-solid fa-arrow-right ms-2"></i>
                   </button>

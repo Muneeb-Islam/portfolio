@@ -8,6 +8,7 @@ import {
   ExperianceSection,
   ExploreSection,
   FeaturesSection,
+  HowSection,
   PricingSection,
   Service,
   TestimonialSection,
@@ -32,25 +33,27 @@ export default function HomePage({ page_data }) {
     <div>
       <Header page_data={sale_page} />
       <BannerSection />
-      <FeaturesSection />
+      <HowSection />
+      {/* <FeaturesSection /> */}
       <Service />
       {/* <ServiceSection
         page_data={sale_page}
         comprehensive_services={comprehensive_services}
       /> */}
 
-      {website_program && website_program.length > 0 && (
+      {/* {website_program && website_program.length > 0 && (
         <Why_chooseSection
           page_data={sale_page}
           website_program={website_program}
         />
-      )}
-      <AboutSection page_data={sale_page} />
+      )} */}
+      {/* <AboutSection page_data={sale_page} /> */}
       {/* <PricingSection /> */}
 
       {/* <ExploreSection page_data={sale_page} benefit={benefit} /> */}
 
-      <ExperianceSection page_data={sale_page} />
+      {/* <ExperianceSection page_data={sale_page} /> */}
+
       <TestimonialSection />
       <FaqSection />
       {/* <Top_ServiceSection
@@ -58,7 +61,7 @@ export default function HomePage({ page_data }) {
         testimonial={testimonial}
         buisness_strategy={buisness_strategy}
       /> */}
-      {/* <Brans_LogoSection page_data={sale_page} /> */}
+
       <ContactSection page_data={sale_page} />
       <Footer page_data={sale_page} menu_items={menu_items} />
       <Animated />

@@ -2,18 +2,10 @@ const FaqSection = () => {
 
 return (
 
-<section className="faq_23 pt-80">
+<section className="faq_23">
   <div className="container">
-    <div className="row justify-content-center align-items-center">
-      <div className="col-md-6 pe-lg-5 wow slideInLeft">
-        <h2>Frequently <br /> Asked Questions</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.!</p>
-        <div className="position-btn mt-4 mt-lg-0 text-center text-md-start">
-          <a href="#" className="btn-vision">BOOK A CALL</a>
-          <img src="/assets/home-page/faq-1.png" className="img-fluid mt-4 mt-md-0" alt="" />
-        </div>
-      </div>
-      <div className="col-md-6 wow slideInRight">
+    <div className="row justify-content-between align-items-center">   
+      <div className="col-md-6 wow slideInLeft">
         <ul className="accordion accordion-flush list-unstyled" id="it-accordion_G_U_ID">
           <li className="accordion-item ">
             <div className="accordion-header it-faq-style" id="itone_G_U_ID">
@@ -131,6 +123,14 @@ return (
           </li>
 
         </ul>
+      </div>
+      <div className="col-md-6 col-lg-5 wow slideInRight">
+        <h2>Frequently <br /> Asked Questions</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.!</p>
+        <div className="position-btn mt-4 mt-lg-0 text-center text-md-start">
+          <a href="#" className="btn-vision">BOOK A CALL</a>
+          <img src="/assets/home-page/faq-1.png" className="img-fluid mt-4 mt-md-0" alt="" />
+        </div>
       </div>
     </div>
   </div>
