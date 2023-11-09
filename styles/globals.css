@@ -85,7 +85,8 @@ p {
 .chhose-btn,
 .video-icon,
 .btn-vision,
-.slider_wrapper .slick-dots li.slick-active button,.tab-content h2::after  {
+.slider_wrapper .slick-dots li.slick-active button,
+.tab-content h2::after {
   background: rgb(0, 102, 204);
 }
 
@@ -860,7 +861,9 @@ faq
 } */
 
 
-
+.experience_wrapper{
+  padding-top: 4rem;
+}
 .experience_wrapper h2,
 .experience_wrapper p {
   margin-top: 1rem;
