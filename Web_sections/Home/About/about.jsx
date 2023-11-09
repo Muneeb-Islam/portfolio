@@ -51,9 +51,9 @@ const AboutSection = ({ page_data }) => {
                 __html: salePage.about_vision_text,
               }}
             ></div>
-            <a href="#" className="read-more">
+            <a href="#" className="btn-vision">
               {salePage.agency_button_text}
-              <i className="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-arrow-right ms-2"></i>
             </a>
           </div>
         </div>

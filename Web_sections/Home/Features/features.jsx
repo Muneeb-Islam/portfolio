@@ -37,8 +37,8 @@ return (
               visitors into customers, and boosting online sales effortlessly.</p>
             <h3>Funnel’s Popular Features </h3>
             <ul className="list-unstyled">
-              <li>User-friendly funnel builder</li>
-              <li>Payment gateway integration</li>
+              <li>User-friendly Funnel Builder</li>
+              <li>Payment Gateway Integration</li>
               <li>Website Editor</li>
               <li>Works for Every Type of Business </li>
             </ul>
@@ -55,14 +55,14 @@ return (
         <div className="row  align-items-center">
           <div className="col-lg-6 wow slideInLeft">
             <h2>Personal Guidance for Membership Success</h2>
-            <p>Receive personalized support from experienced mentors to enhance your membership offerings and boost
-              customer satisfaction. Let us be your trusted companion on the path to business success.</p>
+            <p>Discover the best in life with our tailored programs and mentorship your path to self-designed success.
+              Effortlessly navigate success principles with our proven step-by-step systems.</p>
             <h3>Top-rated Features</h3>
             <ul className="list-unstyled">
-              <li>Customizable pricing</li>
+              <li>Transform Within, Tailored for All</li>
               <li>Access control</li>
               <li>Mentorship matching</li>
-              <li>Progress tracking</li>
+              <li>Success is 95% attitude, 5% plan</li>
             </ul>
             {/* <a href="#" className="white-btn-with-arrow">Explore Free CRM Features <i
                 className="fa-solid fa-arrow-right ms-2 ms-lg-5"></i></a> */}
@@ -76,14 +76,15 @@ return (
         <div className="row  align-items-center">
           <div className="col-lg-6 wow slideInLeft">
             <h2>Your Path to Pro-Level Sales</h2>
-            <p>Vissioon's Sales Software simplifies contact management, email tracking, mobile access, and appointment
+            <p>Vissioon's Sales Software simplifies contact management, email tracking, Event Management , and
+              appointment
               scheduling, all within one efficient platform. Elevate your sales process with ease.</p>
             <h3>Pro Sales Features</h3>
             <ul className="list-unstyled">
               <li>Contact & lead management</li>
               <li>Deal tracking</li>
               <li>Email integration</li>
-              <li>Mobile Access</li>
+              <li>Event Management </li>
             </ul>
             {/* <a href="#" className="white-btn-with-arrow">Explore Sales Software <i
                 className="fa-solid fa-arrow-right ms-2 ms-lg-5"></i></a> */}
@@ -97,9 +98,8 @@ return (
         <div className="row  align-items-center">
           <div className="col-lg-6 wow slideInLeft">
             <h2>Stay Informed with Real-time Updates</h2>
-            <p>Engage with our vibrant community through the Vissioon News Feed, where you'll get real-time updates on
-              industry trends, business insights, and community news. Stay informed, connected, and thrive in your
-              business journey.</p>
+            <p>Be part of a friendly global group to learn, grow, and succeed together. We share knowledge, support each
+              other, and boost results by working as a team, opening doors to income opportunities</p>
             <h3>Community Features </h3>
             <ul className="list-unstyled">
               <li>Real-Time Updates </li>

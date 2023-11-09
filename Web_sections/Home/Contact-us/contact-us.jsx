@@ -90,9 +90,9 @@ const ContactSection = ({ page_data }) => {
                 </div>
 
                 <div className="col-lg-6 pt-4">
-                  <button className="send-message w-100">
+                  <button className="btn-vision w-100">
                     {salePage.contact_us_button_text}{" "}
-                    <i className="fa-solid fa-arrow-right"></i>
+                    <i className="fa-solid fa-arrow-right ms-2"></i>
                   </button>
                 </div>
               </div>
