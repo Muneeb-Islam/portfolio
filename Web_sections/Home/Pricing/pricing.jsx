@@ -35,7 +35,7 @@ return (
                         <li><i class="fa-solid fa-xmark me-2"></i> Portal Management </li>
                     </ul>
                     <div class="btn-position">
-                        <a href="#" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
+                        <a href="#contact_form_wrapper" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
                     </div>
 
                 </div>
@@ -66,7 +66,7 @@ return (
                         <li><i class="fa-solid fa-check me-2"></i> Portal Management </li>
                     </ul>
                     <div class="btn-position">
-                        <a href="#" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
+                        <a href="#contact_form_wrapper" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
                     </div>
 
                 </div>
@@ -97,7 +97,7 @@ return (
                         <li><i class="fa-solid fa-check me-2"></i> Portal Management </li>
                     </ul>
                     <div class="btn-position">
-                        <a href="#" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
+                        <a href="#contact_form_wrapper" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
                     </div>
 
                 </div>

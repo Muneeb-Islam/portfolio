@@ -21,7 +21,7 @@ return (
           Effortlessly navigate success principles with our proven step-by-step systems.</p>
         <h3>Top Features</h3>
         <ul className="list-unstyled">
-          <li>programme & Lessons Drip</li>
+          <li>Programme & Lessons Drip</li>
           <li>Recording & Groups</li>
           <li>Access Control</li>
           <li>Portal Management </li>

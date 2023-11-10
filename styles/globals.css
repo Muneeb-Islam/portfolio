@@ -106,7 +106,7 @@ span,
 .navbar_wrapper .navbar-nav .nav-item .nav-link.active,
 .navbar_wrapper i,
 .slider_wrapper .client-slider-card i,
-.slider_wrapper .done-heading h1 , .pricing .fa-check  {
+.slider_wrapper .done-heading h1 , .pricing .fa-check ,.slider_wrapper .star-rating i  {
   color: rgb(0, 102, 204)
 }
 
@@ -126,8 +126,7 @@ span,
 .features-wrapper .nav-pills .nav-link:hover,
 .features-wrapper .nav-pills .show>.nav-link:hover,
 .navbar_wrapper span:hover,
-.white-btn-with-arrow,
-.slider_wrapper .star-rating i {
+.white-btn-with-arrow{
   color: rgb(25, 139, 168);
 }
 
@@ -1194,7 +1193,7 @@ faq
   background: url(/assets/form-bg.jpg);
   background-position: 100% 100% !important;
   border-radius: .75rem;
-  padding: 0 4rem 1.5rem 0;
+  padding: 0 4rem 0rem 0;
   box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, .07);
 }
 

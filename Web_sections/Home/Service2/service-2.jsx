@@ -37,7 +37,7 @@ return (
       <div className="col-6 col-md-3 col-lg-2 pt-4 pt-md-0 wow slideInDown">
         <div className="service-card">
           <img src="/assets/home-page/icon-5.png" className="img-fluid" alt="" />
-          <h3>affiliate Management</h3>
+          <h3>Affiliate Management</h3>
         </div>
       </div>
       <div className="col-6 col-md-3 col-lg-2 pt-4 pt-lg-0 wow slideInRight">
