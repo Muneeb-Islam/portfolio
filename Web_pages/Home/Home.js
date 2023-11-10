@@ -3,7 +3,6 @@ import Header from "@/Web-Layout/Header/Header";
 import {
   AboutSection,
   BannerSection,
-  Brans_LogoSection,
   ContactSection,
   ExperianceSection,
   ExploreSection,
@@ -18,6 +17,7 @@ import {
 import ServiceSection from "@/Web_sections/Home/Service/service";
 import Animated from "../../Components/AnimatedComponent";
 import FaqSection from "@/Web_sections/Home/Faq/faq";
+import Brans_LogoSection from "@/Web_sections/Home/Brand-logo/brand-logo";
 export default function HomePage({ page_data }) {
   const sale_page = page_data.Sale_page;
   const slider = page_data.slider;
@@ -36,6 +36,7 @@ export default function HomePage({ page_data }) {
       <HowSection />
       {/* <FeaturesSection /> */}
       <Service />
+      {/* <Brans_LogoSection /> */}
       {/* <ServiceSection
         page_data={sale_page}
         comprehensive_services={comprehensive_services}
@@ -48,7 +49,7 @@ export default function HomePage({ page_data }) {
         />
       )} */}
       {/* <AboutSection page_data={sale_page} /> */}
-      {/* <PricingSection /> */}
+      <PricingSection />
 
       {/* <ExploreSection page_data={sale_page} benefit={benefit} /> */}
 

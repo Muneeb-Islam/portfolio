@@ -2,7 +2,7 @@ const FaqSection = () => {
 
 return (
 
-<section className="faq_23">
+<section className="faq_23" id="faq">
   <div className="container">
     <div className="row justify-content-between align-items-center">   
       <div className="col-md-6 wow slideInLeft">
@@ -128,7 +128,7 @@ return (
         <h2>Frequently <br /> Asked Questions</h2>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.!</p>
         <div className="position-btn mt-4 mt-lg-0 text-center text-md-start">
-          <a href="#" className="btn-vision">BOOK A CALL</a>
+          <a href="#contact_form_wrapper" className="btn-vision">BOOK A CALL</a>
           <img src="/assets/home-page/faq-1.png" className="img-fluid mt-4 mt-md-0" alt="" />
         </div>
       </div>

@@ -1,7 +1,7 @@
 const Services = () => {
 return (
 
-<section className="services pt-90 text-center">
+<section className="services pt-90 text-center" id="why_us">
   <div className="container">
     <div className="row justify-content-center">
       <div className="col-lg-9 wow slideInUp">
@@ -13,7 +13,7 @@ return (
       <div className="col-6 col-md-3 col-lg-2 wow slideInLeft">
         <div className="service-card">
           <img src="/assets/home-page/icon-1.png" className="img-fluid" alt="" />
-          <h3>Automations</h3>
+          <h3>Email Automation</h3>
         </div>
       </div>
       {/* <div className="col-6 col-md-3 col-lg-2 wow slideInUp">
@@ -25,7 +25,7 @@ return (
       <div className="col-6 col-md-3 col-lg-2  pt-md-0 wow slideInDown">
         <div className="service-card">
           <img src="/assets/home-page/icon-3.png" className="img-fluid" alt="" />
-          <h3>Company Management</h3>
+          <h3>Portal Management</h3>
         </div>
       </div>
       <div className="col-6 col-md-3 col-lg-2 pt-4 pt-md-0 wow slideInUp">
@@ -37,7 +37,7 @@ return (
       <div className="col-6 col-md-3 col-lg-2 pt-4 pt-md-0 wow slideInDown">
         <div className="service-card">
           <img src="/assets/home-page/icon-5.png" className="img-fluid" alt="" />
-          <h3>Deal Management</h3>
+          <h3>affiliate Management</h3>
         </div>
       </div>
       <div className="col-6 col-md-3 col-lg-2 pt-4 pt-lg-0 wow slideInRight">
@@ -46,13 +46,13 @@ return (
           <h3>Email Broadcast</h3>
         </div>
       </div>
-      <div className="col-6 col-md-3 col-lg-2 pt-4 pt-lg-0 wow slideInLeft">
+      {/* <div className="col-6 col-md-3 col-lg-2 pt-4 pt-lg-0 wow slideInLeft">
         <div className="service-card">
           <img src="/assets/home-page/icon-7.png" className="img-fluid" alt="" />
           <h3>Email Sequance</h3>
         </div>
-      </div>
-      <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInUp">
+      </div> */}
+      <div className="col-6 col-md-3 col-lg-2 pt-4 pt-lg-0 wow slideInUp">
         <div className="service-card">
           <img src="/assets/home-page/icon-8.png" className="img-fluid" alt="" />
           <h3>Email Template Builder</h3>
@@ -91,7 +91,7 @@ return (
       <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInUp">
         <div className="service-card">
           <img src="/assets/home-page/icon-14.png" className="img-fluid" alt="" />
-          <h3>Calender</h3>
+          <h3>Calender Management</h3>
         </div>
       </div>
       <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInDown">
@@ -115,7 +115,7 @@ return (
       <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInRight">
         <div className="service-card">
           <img src="/assets/home-page/icon-18.png" className="img-fluid" alt="" />
-          <h3>Segmentation</h3>
+          <h3>Drip system</h3>
         </div>
       </div>
       <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInLeft">
@@ -133,16 +133,16 @@ return (
       <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInDown">
         <div className="service-card">
           <img src="/assets/home-page/icon-21.png" className="img-fluid" alt="" />
-          <h3>Social Post Sechedule</h3>
+          <h3>Community</h3>
         </div>
       </div>
 
-      <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInUp">
+      {/* <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInUp">
         <div className="service-card">
           <img src="/assets/home-page/icon-22.png" className="img-fluid" alt="" />
           <h3>Social Suits</h3>
         </div>
-      </div>
+      </div> */}
       {/* <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInDown">
         <div className="service-card">
           <img src="/assets/home-page/icon-23.png" className="img-fluid" alt="" />
@@ -173,12 +173,12 @@ return (
           <h3>Web Analytics</h3>
         </div>
       </div>
-      <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInUp">
+      {/* <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInUp">
         <div className="service-card">
           <img src="/assets/home-page/icon-28.png" className="img-fluid" alt="" />
           <h3>A/B Landing Pages</h3>
         </div>
-      </div>
+      </div> */}
       {/* <div className="col-6 col-md-3 col-lg-2 pt-4 wow slideInDown">
         <div className="service-card">
           <img src="/assets/home-page/icon-29.png" className="img-fluid" alt="" />

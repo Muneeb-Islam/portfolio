@@ -1,95 +1,105 @@
 const PricingSection = () => {
 
 return (
-<section className="pricing main_section" id="price">
-    <div className="container">
-        <div className="row justify-content-center">
-            <div className="col-lg-5 text-center">
-                <h2>Your Pricing Plan</h2>
-                <p>We give you three pricing plans so you do not have to pay for something you do not want.
-                </p>
+<section className="pricing pt-90" id="price">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <h2>Flexible Pricing Plan</h2>
             </div>
         </div>
-        <div className="row justify-content-center pt-4">
-            <div className="col-md-6 col-lg-4 pt-4">
-                <div className=" redlight-pricing-card h-100">
-                    <span className="elementor-icon"> <img src="/assets/pricing-plan-icon1.png" alt=""
-                            className="img-fluid" /></span>
-
-                    <h3>Beginner</h3>
-                    <div
-                        className="d-flex align-items-baseline plan-per-text mt-3">
-                        <h2>$5000</h2>
-                        {/* <h4>/Month</h4> */}
+        <div class="row justify-content-center wb-payment-plans">
+            <div class="col-md-6 col-lg-4 pt-5 wow slideInLeft">
+                <div class=" nexora-price-card wb-plan-card h-100">
+                    <div class="outer-card-div">
+                        <div class="box-div">Basic</div>
                     </div>
-                    <ul className="p-0 mt-3 mb-5">
-                        <li>Built-in Web Pages </li>
-                        <li> Community Building</li>
-                        <li>Content Management System (CMS)</li>
-                        <li> Program Drip system</li>
-                        <li><del>Business Growth</del></li>
-                        <li><del>Business Consulting</del></li>
-                        <li><del>Email Campaigns</del></li>
-                        <li><del>Built-in Web Pages</del></li>
+                    <div class="d-flex justify-content-center align-items-baseline ">
+                        <h2 class="ms-3">$49</h2>
+                        <span>/Month</span>
+                    </div>
+                    <p>Design your perfect plan that adjusts effortlessly to your dreams</p>
+                    <div class="top-border mt-4"></div>
+                    <ul class="list-unstyled card-list mt-3">
+                        <li> <i class="fa-solid fa-check me-2"></i>Programme Drip System</li>
+                        <li><i class="fa-solid fa-xmark me-2"></i>Community</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Built-in Sales Funnel & Pages</li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Groups & Recordings </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Website Editor & Hosting </li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Subscriptions </li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Live Event Hosting </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Payment Gateway Integration</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Attach Domain & Publish</li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Affiliates Commission </li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Support Tickets Services</li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Portal Management </li>
                     </ul>
-
-                    <div className="now-order-btn">
-                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
+                    <div class="btn-position">
+                        <a href="#" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
                     </div>
+
                 </div>
             </div>
-
-            <div className="col-md-6 col-lg-4 pt-4">
-                <div className=" redlight-pricing-card h-100">
-                    <span className="elementor-icon"> <img src="/assets/price-2.png" alt=""
-                            className="img-fluid" /></span>
-
-                    <h3>Business</h3>
-                    <div
-                        className="d-flex align-items-baseline plan-per-text mt-3">
-                        <h2>$7000</h2>
-                        {/* <h4>/Month</h4> */}
+            <div class="col-md-6 col-lg-4 pt-5 wow slideInUp">
+                <div class=" nexora-price-card wb-plan-card h-100">
+                    <div class="outer-card-div">
+                        <div class="box-div">Ultra</div>
                     </div>
-                    <ul className="p-0 mt-3 mb-5">
-                        <li>Built-in Web Pages </li>
-                        <li> Community Building</li>
-                        <li>Content Management System (CMS)</li>
-                        <li> Program Drip system</li>
-                        <li>Business Growth</li>
-                        <li>Business Consulting</li>
-                        <li><del>Email Campaigns</del></li>
-                        <li><del>Built-in Web Pages</del></li>
+                    <div class="d-flex justify-content-center align-items-baseline ">
+                        <h2 class="ms-3">$59</h2>
+                        <span>/Month</span>
+                    </div>
+                    <p>Design your perfect plan that adjusts effortlessly to your dreams</p>
+                    <div class="top-border mt-4"></div>
+                    <ul class="list-unstyled card-list mt-3">
+                        <li> <i class="fa-solid fa-check me-2"></i>Programme Drip System</li>
+                        <li><i class="fa-solid fa-xmark me-2"></i>Community</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Built-in Sales Funnel & Pages</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Groups & Recordings </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Website Editor & Hosting </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Subscriptions </li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Live Event Hosting </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Payment Gateway Integration</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Attach Domain & Publish</li>
+                        <li><i class="fa-solid fa-xmark me-2"></i> Affiliates Commission </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Support Tickets Services</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Portal Management </li>
                     </ul>
-                    <div className="now-order-btn">
-                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
+                    <div class="btn-position">
+                        <a href="#" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
                     </div>
+
                 </div>
             </div>
-
-            <div className="col-md-6 col-lg-4 pt-4">
-                <div className=" redlight-pricing-card h-100">
-                    <span className="elementor-icon"> <img src="/assets/price-3.png" alt=""
-                            className="img-fluid" /></span>
-
-                    <h3>Exclusive</h3>
-                    <div
-                        className="d-flex  align-items-baseline plan-per-text mt-3">
-                        <h2>$10000</h2>
-                        {/* <h4>/Month</h4> */}
+            <div class="col-md-6 col-lg-4 pt-5 wow slideInRight">
+                <div class=" nexora-price-card wb-plan-card h-100">
+                    <div class="outer-card-div">
+                        <div class="box-div">Pro</div>
                     </div>
-                    <ul className="p-0 mt-3 mb-5">
-                        <li>Built-in Web Pages </li>
-                        <li> Community Building</li>
-                        <li>Content Management System (CMS)</li>
-                        <li> Program Drip system</li>
-                        <li>Business Growth</li>
-                        <li>Business Consulting</li>
-                        <li>Email Campaigns</li>
-                        <li>Built-in Web Pages</li>
+                    <div class="d-flex justify-content-center align-items-baseline ">
+                        <h2 class="ms-3">$69</h2>
+                        <span>/Month</span>
+                    </div>
+                    <p>Design your perfect plan that adjusts effortlessly to your dreams</p>
+                    <div class="top-border mt-4"></div>
+                    <ul class="list-unstyled card-list mt-3">
+                        <li> <i class="fa-solid fa-check me-2"></i>Programme Drip System</li>
+                        <li><i class="fa-solid fa-check me-2"></i>Community</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Built-in Sales Funnel & Pages</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Groups & Recordings </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Website Editor & Hosting </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Subscriptions </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Live Event Hosting </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Payment Gateway Integration</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Attach Domain & Publish</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Affiliates Commission </li>
+                        <li><i class="fa-solid fa-check me-2"></i> Support Tickets Services</li>
+                        <li><i class="fa-solid fa-check me-2"></i> Portal Management </li>
                     </ul>
-                    <div className="now-order-btn">
-                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
+                    <div class="btn-position">
+                        <a href="#" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
                     </div>
+
                 </div>
             </div>
         </div>

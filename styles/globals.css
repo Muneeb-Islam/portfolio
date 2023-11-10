@@ -63,7 +63,7 @@ p {
 }
 
 .pt-90 {
-  padding-top: 100px!important;
+  padding-top: 100px !important;
 }
 
 .mt-90 {
@@ -85,7 +85,10 @@ p {
 .video-icon,
 .btn-vision,
 .slider_wrapper .slick-dots li.slick-active button,
-.tab-content h2::after, .hows-text h2::after {
+.tab-content h2::after,
+.hows-text h2::after,
+.pricing .nexora-price-card:hover,
+.pricing .box-div {
   background: rgb(0, 102, 204);
 }
 
@@ -103,7 +106,7 @@ span,
 .navbar_wrapper .navbar-nav .nav-item .nav-link.active,
 .navbar_wrapper i,
 .slider_wrapper .client-slider-card i,
-.slider_wrapper .done-heading h1 {
+.slider_wrapper .done-heading h1 , .pricing .fa-check  {
   color: rgb(0, 102, 204)
 }
 
@@ -114,9 +117,7 @@ span,
 .contact_form_wrapper .contact-card .send-message:hover,
 .banner_wrapper .get-started:hover,
 .choose-card:hover .elementor-icon,
-.top_services_wrapper .elementor-icon:hover,
-.redlight-pricing-card:hover .elementor-icon,
-.redlight-pricing-card:hover .now-order-btn a,
+.top_services_wrapper .elementor-icon:hover .elementor-icon .now-order-btn a,
 .chhose-btn:hover,
 .btn-vision:hover {
   background-color: rgb(25, 139, 168);
@@ -125,7 +126,6 @@ span,
 .features-wrapper .nav-pills .nav-link:hover,
 .features-wrapper .nav-pills .show>.nav-link:hover,
 .navbar_wrapper span:hover,
-.pricing .plan-per-text h2,
 .white-btn-with-arrow,
 .slider_wrapper .star-rating i {
   color: rgb(25, 139, 168);
@@ -162,7 +162,12 @@ a:hover,
 .footer_wrapper h3,
 .footer_wrapper .btn_subscribe,
 .contact_form_wrapper .contact-card .send-message,
-.services_wrapper .pos-content h3 {
+.services_wrapper .pos-content h3,
+.pricing .nexora-price-card:hover h2,
+.pricing .nexora-price-card:hover,
+.pricing .nexora-price-card:hover h3,
+.pricing .box-div,
+.pricing .nexora-price-card:hover span, .pricing .nexora-price-card:hover .fa-check {
   color: #fff;
 }
 
@@ -172,10 +177,10 @@ header,
 .choose-us .choose-card:hover,
 .navbar_wrapper input[type=search],
 .contact_form_wrapper .contact-card,
-.img-div:hover .overlay,
-.pricing .redlight-pricing-card {
+.img-div:hover .overlay {
   background: #fff;
 }
+
 
 /* ------------------------------------------
 end general css 
@@ -241,9 +246,11 @@ end general css
   margin: 0 1.5rem 0 0;
 
 }
-.navbar_wrapper .navbar-nav .nav-item:last-of-type .nav-link{
+
+.navbar_wrapper .navbar-nav .nav-item:last-of-type .nav-link {
   margin: 0;
 }
+
 .navbar_wrapper .navbar-toggler:focus {
   outline: none;
   border: none;
@@ -434,7 +441,7 @@ end general css
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
 
 }
@@ -512,12 +519,14 @@ features
   transform: scaleX(1);
 }
 
-.tab-content h2, .hows-text h2 {
+.tab-content h2,
+.hows-text h2 {
   position: relative;
   margin-bottom: 40px;
 }
 
-.tab-content h2::after, .hows-text h2::after {
+.tab-content h2::after,
+.hows-text h2::after {
   content: "";
   display: block;
   position: absolute;
@@ -528,12 +537,14 @@ features
   margin-top: 30px;
 }
 
-.features-wrapper h3 ,  .hows-text h3{
+.features-wrapper h3,
+.hows-text h3 {
   font-size: 0.975rem;
   padding: 1.8rem 0rem 1rem 0rem;
 }
 
-.features-wrapper ul li ,  .hows-text ul li{
+.features-wrapper ul li,
+.hows-text ul li {
   line-height: 2;
   font-weight: 400;
   font-size: .938rem;
@@ -566,38 +577,46 @@ features
     padding-right: 10px;
   }
 }
-   /* -----------------------------------------
+
+/* -----------------------------------------
   start hows work
 ---------------------------------------------------- */
-.position-img{
+.position-img {
   position: absolute;
   bottom: -126px;
   left: 50%;
   transform: translateX(-50%);
   z-index: -999;
 }
-.position-img-2{
- position: absolute;
- bottom: -126px;
- right: 50%;
- transform: translateX(50%);
- z-index: -999;
+
+.position-img-2 {
+  position: absolute;
+  bottom: -126px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: -999;
 }
-@media(max-width:991px){
-  .position-img,.position-img-2{
+
+@media(max-width:991px) {
+
+  .position-img,
+  .position-img-2 {
     display: none;
   }
-  .pt-90 {
-    padding-top: 48px!important;
-}
-}
-@media(max-width: 530px){
 
-  .hows-text ul li{
-    width: 100%;
-  
+  .pt-90 {
+    padding-top: 48px !important;
   }
 }
+
+@media(max-width: 530px) {
+
+  .hows-text ul li {
+    width: 100%;
+
+  }
+}
+
 /* -------------------------------------------------
 services
 ----------------------------------------------------------- */
@@ -893,9 +912,10 @@ faq
 } */
 
 
-.experience_wrapper{
+.experience_wrapper {
   padding-top: 4rem;
 }
+
 .experience_wrapper h2,
 .experience_wrapper p {
   margin-top: 1rem;
@@ -1046,11 +1066,14 @@ faq
 /* top_services_ends */
 
 .brand_logos_wrapper {
-  padding: 4rem 0 0;
+  padding: 5rem  0;
 }
 
 .brand_logos_wrapper .brand-logos img {
   opacity: 0.6;
+  width: 130px;
+  display: flex;
+  margin: auto;
 }
 
 /* Footer_starts */
@@ -1569,40 +1592,89 @@ start explore
 end explore
 --------------------------------------------------- */
 /* price section   */
-.pricing {
-  color: #000;
+.pricing p, .pricing .outer-card-div, .pricing h2{
+  text-align: center;
 }
 
-.pricing .redlight-pricing-card h3,
-.pricing .plan-per-text h2 {
+.pricing .main-price-heading h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.pricing .main-price-heading h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pricing .nexora-price-card h2 {
+  font-size: 3.125rem;
   font-weight: 700;
 }
 
-.pricing .pricing-main p {
-  margin-top: 1.5rem;
-}
 
-.pricing h3 {
-  margin-top: 1rem;
-}
-
-.pricing .plan-per-text h2,
-.pricing .plan-per-text h4,
-.pricing .plan-per-para p,
-.pricing .redlight-pricing-card h3,
-.pricing .pricing-main h1 {
-  margin-bottom: 0;
-}
-
-.pricing .redlight-pricing-card {
-  border-radius: 0.313rem;
-  padding: 3rem 2rem;
-  border-bottom: 0.188rem solid rgb(0, 102, 204);
+.pricing .nexora-price-card {
+  padding: 4.375rem 1.5rem 6.4375rem;
+  box-shadow: 0.0625rem 0 0.825rem rgba(0 0 0 /0.3);
+  transition: all .8s;
+  border-radius: 0.375rem;
   position: relative;
 }
 
-.pricing .redlight-pricing-card:hover {
-  border-bottom: 0.188rem solid rgb(25, 139, 168);
+
+
+
+.pricing .outer-card-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.pricing .box-div {
+  display: inline-block;
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  padding: 0.25rem 1.25rem;
+  font-weight: 700;
+}
+
+.pricing .top-border {
+  border-top: 0.033rem solid #efefef;
+}
+
+.pricing p {
+  margin-top: 0.4rem;
+}
+
+.pricing .card-list li {
+  padding: 0.25rem 0rem;
+  font-size: 0.9rem;
+}
+
+
+.pricing span {
+  color: #8b8888;
+}
+.pricing .fa-xmark{
+  color: red;
+}
+.pricing .nexora-price-card:hover .box-div,
+.pricing .nexora-price-card:hover .btn-vision {
+  background: #fff;
+  color: #0066cc !important;
+}
+
+.pricing .btn-position {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.pricing .nexora-plan-list {
+  margin-bottom: 6.5rem;
 }
 
 @media(max-width:600px) {

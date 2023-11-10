@@ -77,7 +77,7 @@ return (
           </div>
         </div>
         <div className="d-flex align-items-center info-position">
-          <img src="/assets/home-page/img-1.png" alt="" className="img-fluid" />
+          <img src="/assets/home-page/img-2.png" alt="" className="img-fluid" />
           <div className="clients-naame wp-pl-10">
             <h3> Sarah Mille</h3>
             <ul className="list-unstyled mb-0 star-rating d-flex justify-content-center justify-content-lg-start">
@@ -112,9 +112,9 @@ return (
           </div>
         </div>
         <div className="d-flex align-items-center info-position">
-          <img src="/assets/home-page/img-2.png" alt="" className="img-fluid" />
+          <img src="/assets/home-page/img-1.png" alt="" className="img-fluid" />
           <div className="clients-naame wp-pl-10">
-            <h3>John Davidson</h3>
+            <h3>John David</h3>
             <ul className="list-unstyled mb-0 star-rating d-flex justify-content-center justify-content-lg-start">
               <li>
                 <i className="fa-solid fa-star"></i>
@@ -184,9 +184,9 @@ return (
           </div>
         </div>
         <div className="d-flex align-items-center info-position">
-          <img src="/assets/home-page/img-1.png" alt="" className="img-fluid" />
+          <img src="/assets/home-page/img-4.png" alt="" className="img-fluid" />
           <div className="clients-naame wp-pl-10">
-            <h3>Mark Lewis</h3>
+            <h3>Maria Lewis</h3>
             <ul className="list-unstyled mb-0 star-rating d-flex justify-content-center justify-content-lg-start">
               <li>
                 <i className="fa-solid fa-star"></i>
