@@ -4,7 +4,7 @@ return (
 <section className="banner">
   <div className="container">
     <div className="row align-items-center">
-      <div className="col-lg-6 order-2 order-lg-1 mt-5 mt-lg-0 wow slideInLeft">
+      <div className="col-lg-6 order-2 order-lg-1 mt-5 mt-lg-0 wow slideInLeft text-center text-lg-start">
         <img src="/assets/home-page/banner-logo.png" alt="" className="img-fluid" />
         <h1>Our Solution, <br /> Your Success </h1>
         <p>At Vissioon, we are your all-in-one solution for membership management, business consulting, sales generation, and business growth. Our expertise aims to unlock your business's full potential. Stay informed through our Community  and manage it all with our CRM/CMS platform.</p>

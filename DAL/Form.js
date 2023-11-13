@@ -1,20 +1,11 @@
+import { api_key } from "@/config/config";
 import { invokeApi } from "../bl_libs/invokeApi";
 
-export const _sending_email = async (data) => {
+export const _send_contact_support_email = async (data) => {
   const requestObj = {
-    path: `/api/app_api/sending_email`,
+    path: `/app/send_contact_support_email`,
     method: "POST",
-    headers: {},
-    postData: data,
-  };
-  return invokeApi(requestObj);
-};
-
-export const _list_active_courses_for_user = async (data) => {
-  const requestObj = {
-    path: `/api/course/list_active_courses_for_user`,
-    method: "GET",
-    headers: {},
+    headers: { "x-auth-api-key": api_key },
     postData: data,
   };
   return invokeApi(requestObj);

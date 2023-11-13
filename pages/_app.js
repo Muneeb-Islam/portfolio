@@ -4,6 +4,7 @@ import Script from "next/script";
 // import "animate.css/animate.min.css";
 import { _get_website_page } from "../DAL/pages";
 import { useEffect } from "react";
+import { SnackbarProvider, useSnackbar } from "notistack";
 export default function App({ Component, pageProps }) {
   const sale_page = async () => {
     // call DAL function
@@ -17,7 +18,14 @@ export default function App({ Component, pageProps }) {
     sale_page();
   }, []);
   return (
-    <>
+    <SnackbarProvider
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "right",
+      }}
+      maxSnack={3}
+      autoHideDuration={3000}
+    >
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -48,6 +56,6 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></Script>
-    </>
+    </SnackbarProvider>
   );
 }
