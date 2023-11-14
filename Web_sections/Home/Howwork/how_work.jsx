@@ -17,8 +17,7 @@ return (
       </div>
       <div className="col-lg-6 hows-text  ps-lg-5 pt-80  wow slideInRight">
         <h2>Add Mastermind programme </h2>
-        <p>Discover the best in life with our tailored programme and mentorship on your path to self-designed success.
-          Effortlessly navigate success principles with our proven step-by-step systems.</p>
+        <p>Discover our personalized program and explore the best life has to offer. It's like having a personal guide to help you succeed, with simple steps to navigate the path to your goals easily. </p>
         <h3>Top Features</h3>
         <ul className="list-unstyled">
           <li>Programme & Lessons Drip</li>
@@ -31,8 +30,7 @@ return (
     <div className="row  align-items-center  position-relative">
       <div className="col-lg-6 hows-text pe-lg-5 pt-90 order-2 order-lg-1 wow slideInLeft">
         <h2>Select Website Editor</h2>
-        <p>Vissioon: Simple for every business. Choose professional themes and funnels. Mix and match content blocks,
-          and add your info, logo, and style. Access an image and graphics library with no computer skills needed.</p>
+        <p>Simplify your website with our easy Website Editor. Pick professional themes, customize with content blocks, and add your info and style without any computer skills required. Access a library of images and graphics easily. </p>
         <h3>Top Feature</h3>
         <ul className="list-unstyled">
           <li>Edit & Customize Everything </li>
@@ -53,8 +51,7 @@ return (
       </div>
       <div className="col-lg-6 hows-text ps-lg-5 pt-90 wow slideInRight">
         <h2>Make Payment Gateway Integration</h2>
-        <p>We set the programme's price using a payment plan, create a subscription for access control, and decide if it's
-          a one-time, recurring, or trial payment.</p>
+        <p>Set up your payment system with ease. We decide on the program's cost, create a subscription for access control, and choose whether it's a one-time, recurring, or trial payment. </p>
         <h3>Top Feature</h3>
         <ul className="list-unstyled">
           <li>Support Multiple Currencies</li>
@@ -67,8 +64,7 @@ return (
     <div className="row  align-items-center position-relative">
       <div className="col-lg-6 hows-text pe-lg-5 pt-90  order-2 order-lg-1 wow slideInLeft">
         <h2>Choose Domain & Publish</h2>
-        <p>Simplify domain management with Vissioon. Effortlessly connect domains for a smooth experience. Publish your
-          website anytime—your choice, hassle-free.</p>
+        <p>Simplify the process of managing domains using Vissioon. Easily connect domains for a smooth experience, allowing you to publish your website anytime, and hassle-free. </p>
         <h3>Top Features</h3>
         <ul className="list-unstyled">
           <li>Secure Hosting</li>
