@@ -85,7 +85,7 @@ const Header = ({ page_data }) => {
                     <>
                       <li className="nav-item">
                         <a
-                          className={`nav-link ${index === 0 ? "active" : ""}`}
+                          className={index === 0?"nav-link active":"nav-link"}
                           aria-current="page"
                           href={items.item_url}
                         >
