@@ -82,9 +82,10 @@ const Header = ({ page_data }) => {
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-lg-center">
                 {menu_items.map((items, index) => {
                   return (
-                    <>
-                      <li className="nav-item">
+                    
+                      <li className="nav-item" key={index}>
                         <a
+                        data-index={index}
                           className={index === 0?"nav-link active":"nav-link"}
                           aria-current="page"
                           href={items.item_url}
@@ -92,7 +93,7 @@ const Header = ({ page_data }) => {
                           {items.title}
                         </a>
                       </li>
-                    </>
+                  
                   );
                 })}
 
