@@ -428,9 +428,9 @@ end general css
   }
 } */
 .banner {
-  background: url(../public/assets/home-page/banner-back.jpg);
+  /* background: url(../public/assets/home-page/banner-back.jpg);
   background-position: top right;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   padding-top: 50px;
 }
 
