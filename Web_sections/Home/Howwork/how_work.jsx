@@ -12,11 +12,11 @@ return (
     </div>
     <div className="row  align-items-center position-relative">
       <div className="col-lg-6 pe-lg-5 pt-80">
-        <img src="/assets/home-page/Add-Mastermind-Programm.png" className="img-fluid" alt="" />
+        <img src="/assets/home-page/add-master-mind.png" className="img-fluid" alt="" />
         <img src="/assets/home-page/line-2.png" className="img-fluid position-img" alt="" />
       </div>
       <div className="col-lg-6 hows-text  ps-lg-5 pt-80  wow slideInRight">
-        <h2>Add Mastermind programme </h2>
+        <h2>Add Mastermind Programme </h2>
         <p>Discover our personalized program and explore the best life has to offer. It's like having a personal guide to help you succeed, with simple steps to navigate the path to your goals easily. </p>
         <h3>Top Features</h3>
         <ul className="list-unstyled">
@@ -30,7 +30,7 @@ return (
     <div className="row  align-items-center  position-relative">
       <div className="col-lg-6 hows-text pe-lg-5 pt-90 order-2 order-lg-1 wow slideInLeft">
         <h2>Select Website Editor</h2>
-        <p>Simplify your website with our easy Website Editor. Pick professional themes, customize with content blocks, and add your info and style without any computer skills required. Access a library of images and graphics easily. </p>
+        <p>Simplify your website with our easy Website Editor. Pick professional themes, customize with content blocks, add your info, and style without any computer skills required. Also, you can access a library of images and graphics easily.</p>
         <h3>Top Feature</h3>
         <ul className="list-unstyled">
           <li>Edit & Customize Everything </li>
@@ -40,7 +40,7 @@ return (
         </ul>
       </div>
       <div className="col-lg-6 ps-lg-5 ps-lg-5 pt-90  order-1 order-lg-2">
-        <img src="/assets/home-page/Select-Page-Builder.png" className="img-fluid" alt="" />
+        <img src="/assets/home-page/select-website.png" className="img-fluid" alt="" />
         <img src="/assets/home-page/line-1.png" className="img-fluid position-img-2" alt="" />
       </div>
     </div>
@@ -51,8 +51,7 @@ return (
       </div>
       <div className="col-lg-6 hows-text ps-lg-5 pt-90 wow slideInRight">
         <h2>Make Payment Gateway Integration</h2>
-        <p>Set up your payment system with ease. We decide on the program's cost, create a subscription for access control, and choose whether it's a one-time, recurring, or trial payment. </p>
-        <h3>Top Feature</h3>
+        <p>Set up your payment system with ease. We determine the program's cost, create a subscription for access control, and choose whether it's a one-time, recurring, or trial payment.</p>
         <ul className="list-unstyled">
           <li>Support Multiple Currencies</li>
           <li>Handled various subscriptions</li>
@@ -110,7 +109,7 @@ return (
         </ul>
       </div>
       <div className="col-lg-6  ps-lg-5 ps-lg-5 pt-90  order-1 order-lg-2">
-        <img src="/assets/home-page/More-Revenue-Success.png" className="img-fluid" alt="" />
+        <img src="/assets/home-page/more-revenew.png" className="img-fluid" alt="" />
       </div>
     </div>
   </div>

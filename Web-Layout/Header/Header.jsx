@@ -1,10 +1,14 @@
 import { s3baseUrl } from "@/config/config";
-import React from "react";
+import React, { useEffect } from "react";
 const Header = ({ page_data }) => {
     const salePage = page_data.sale_page_detail;
   const menu_items = page_data.header_menu.menu_items;
   const { brand_logo } = page_data;
 
+  useEffect(() => {
+    document.getElementsByClassName("nav-link")[0].classList.add("active");
+  }, [])
+  
   return (
     <header>
       {/* <div className="top_navbar d-none d-lg-flex">
@@ -86,7 +90,7 @@ const Header = ({ page_data }) => {
                       <li className="nav-item" key={index}>
                         <a
                         data-index={index}
-                          className={index === 0?"nav-link active":"nav-link"}
+                          className={"nav-link"}
                           aria-current="page"
                           href={items.item_url}
                         >
