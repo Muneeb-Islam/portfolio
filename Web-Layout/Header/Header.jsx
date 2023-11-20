@@ -6,6 +6,7 @@ const Header = ({ page_data }) => {
   const { brand_logo } = page_data;
 
   useEffect(() => {
+    console.log("script run for active first");
     document.getElementsByClassName("nav-link")[0].classList.add("active");
   }, [])
   
