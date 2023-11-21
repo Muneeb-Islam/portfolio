@@ -27,15 +27,19 @@ export default function HomePage({ page_data }) {
   const benefit = page_data.benefit;
   const testimonial = page_data.testimonial;
   const menu_items = page_data.menu_items;
+  const payment_plan = page_data.payment_plan;
   console.log(page_data, "--page_data ");
 
   return (
     <div>
       <Header page_data={sale_page} />
-      <BannerSection />
-      <HowSection />
+      {/* <BannerSection page_data={sale_page} silder={slider} /> */}
+      <HowSection
+        page_data={sale_page}
+        comprehensive_services={comprehensive_services}
+      />
       {/* <FeaturesSection /> */}
-      <Service />
+      <Service page_data={sale_page} website_program={website_program} />
       {/* <Brans_LogoSection /> */}
       {/* <ServiceSection
         page_data={sale_page}
@@ -49,13 +53,13 @@ export default function HomePage({ page_data }) {
         />
       )} */}
       {/* <AboutSection page_data={sale_page} /> */}
-      <PricingSection />
+      <PricingSection page_data={sale_page} payment_plan={payment_plan} />
 
       {/* <ExploreSection page_data={sale_page} benefit={benefit} /> */}
 
       {/* <ExperianceSection page_data={sale_page} /> */}
 
-      <TestimonialSection />
+      <TestimonialSection page_data={sale_page} testimonial={testimonial} />
       <FaqSection />
       {/* <Top_ServiceSection
         page_data={sale_page}
