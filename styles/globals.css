@@ -1611,9 +1611,6 @@ end explore
   position: relative;
 }
 
-
-
-
 .pricing .outer-card-div {
   position: absolute;
   top: 0;
@@ -1666,7 +1663,23 @@ end explore
 .pricing .nexora-plan-list {
   margin-bottom: 6.5rem;
 }
-
+.pricing .tick{
+  background: url(../public/assets/check.png) no-repeat left -2px;
+  background-size: 17px;
+  background-position: 0;
+  padding-left: 22px!important;
+  line-height: 2;
+}
+.pricing .cross{
+  background: url(../public/assets/close-icon.png) no-repeat left -2px;
+  background-size: 10px;
+  background-position: 0;
+  padding-left: 22px!important;
+  line-height: 2;
+}
+.pricing  li{
+  padding-left: 1rem;
+}
 @media(max-width:600px) {
   h1 {
     font-size: 2rem;

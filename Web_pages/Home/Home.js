@@ -33,7 +33,7 @@ export default function HomePage({ page_data }) {
   return (
     <div>
       <Header page_data={sale_page} />
-      {/* <BannerSection page_data={sale_page} silder={slider} /> */}
+      <BannerSection page_data={sale_page} slider={slider} />
       <HowSection
         page_data={sale_page}
         comprehensive_services={comprehensive_services}
@@ -60,7 +60,7 @@ export default function HomePage({ page_data }) {
       {/* <ExperianceSection page_data={sale_page} /> */}
 
       <TestimonialSection page_data={sale_page} testimonial={testimonial} />
-      <FaqSection />
+      <FaqSection page_data={sale_page} buisness_strategy={buisness_strategy} />
       {/* <Top_ServiceSection
         page_data={sale_page}
         testimonial={testimonial}
