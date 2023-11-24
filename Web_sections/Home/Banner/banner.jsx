@@ -18,7 +18,7 @@ return (
             __html:items.detail_description,
           }}></div>
 
-          <a href="#contact_form_wrapper" class="btn-vision">BOOK A CALL</a>
+          <a href={salePage.banner_button_link} class="btn-vision">{salePage.banner_button_text}</a>
         </div>
         );
       })}

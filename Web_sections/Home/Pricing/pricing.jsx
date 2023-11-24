@@ -7,7 +7,7 @@ return (
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7">
-                <h2>Flexible Pricing Plan</h2>
+                <h2>{salePage.plan_heading}</h2>
             </div>
         </div>
         <div class="row justify-content-center wb-payment-plans">
@@ -32,7 +32,7 @@ return (
                         __html:items.detailed_description,
                        }}></div>
                     <div class="btn-position">
-                        <a href="#contact_form_wrapper" class="btn-vision" name="wb-payment-plan-button">CHOOSE PLAN</a>
+                        <a href={items.plan_button_link} class="btn-vision" name="wb-payment-plan-button">{items.plan_button}</a>
                     </div>
 
                 </div>

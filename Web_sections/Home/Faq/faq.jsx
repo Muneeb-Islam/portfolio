@@ -46,10 +46,13 @@ return (
         </ul>
       </div>
       <div className="col-md-6 col-lg-5 wow slideInRight">
-        <h2>Frequently <br /> Asked Questions</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.!</p>
+        <div 
+        dangerouslySetInnerHTML={{
+          __html:salePage.faq_text,
+        }}
+        ></div>
         <div className="position-btn mt-4 mt-lg-0 text-center text-md-start">
-          <a href="#contact_form_wrapper" className="btn-vision">BOOK A CALL</a>
+          <a href={salePage.faq_button_link} className="btn-vision">{salePage.faq_button_text}</a>
           <img src={s3baseUrl+ salePage.faq_image} className="img-fluid mt-4 mt-md-0" alt="" />
         </div>
       </div>
