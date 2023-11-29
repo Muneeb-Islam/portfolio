@@ -11,7 +11,7 @@ return (
       {slider.map((items, index) =>{
         return(
           <div className="col-lg-6 order-2 order-lg-1 mt-5 mt-lg-0 wow slideInLeft text-center text-lg-start">
-          <img src={s3baseUrl+salePage.banner_title_image} alt="" className="img-fluid" />
+          {/* <img src={s3baseUrl+salePage.banner_title_image} alt="" className="img-fluid" /> */}
           <h1>{items.title}</h1>
           <div
           dangerouslySetInnerHTML={{

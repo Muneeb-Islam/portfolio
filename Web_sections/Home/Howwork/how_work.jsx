@@ -24,11 +24,11 @@ const HowSection = ({ page_data, comprehensive_services }) => {
                     className="img-fluid"
                     alt=""
                   />
-                  <img
+                  {/* <img
                     src={s3baseUrl + items.icon_images.thumbnail_1}
                     className="img-fluid position-img"
                     alt=""
-                  />
+                  /> */}
                 </div>
                 <div className="col-lg-6 hows-text  ps-lg-5 pt-80  wow slideInRight">
                   <h2>{items.title}</h2>
@@ -57,11 +57,11 @@ const HowSection = ({ page_data, comprehensive_services }) => {
                     className="img-fluid"
                     alt=""
                   />
-                  <img
+                  {/* <img
                     src="/assets/home-page/line-1.png"
                     className="img-fluid position-img-2"
                     alt=""
-                  />
+                  /> */}
                 </div>
               </div>
             );
