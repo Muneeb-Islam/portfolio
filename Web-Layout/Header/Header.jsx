@@ -2,8 +2,9 @@ import { s3baseUrl } from "@/config/config";
 import React, { useEffect } from "react";
 const Header = ({ page_data }) => {
     const salePage = page_data.sale_page_detail;
-  const menu_items = page_data.header_menu.menu_items;
+  const menu_items = page_data?.header_menu?.menu_items;
   const { brand_logo } = page_data;
+  // console.log(menu_items, "---menu_items")
 
   useEffect(() => {
     console.log("script run for active first");
@@ -85,7 +86,7 @@ const Header = ({ page_data }) => {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-lg-center">
-                {menu_items.map((items, index) => {
+                {menu_items?.map((items, index) => {
                   return (
                     
                       <li className="nav-item" key={index}>

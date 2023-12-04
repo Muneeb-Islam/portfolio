@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 
 const Footer = ({ page_data}) => {
   const salePage = page_data.sale_page_detail;
-  const footer_menu = page_data.footer_menu.menu_items;
+  const footer_menu = page_data?.footer_menu?.menu_items;
   const { footer_logo } = page_data;
- 
+ console.log(footer_menu, "---footer_menu")
   return (
     <section className="footer_wrapper" style={{
       background: `url(${
@@ -28,11 +28,11 @@ const Footer = ({ page_data}) => {
           </div>
           <div className="col-lg-6 pt-4 pt-lg-0 links-list text-center text-lg-start">
           <ul className="list-unstyled mb-0 footer-links ">
-                {footer_menu.map ((items, index) =>{
+                {footer_menu?.map ((items, index) =>{
                     return(
                         <>
                          <li>
-                  <a href={items.item_url_for}>{items.title}</a>
+                  <a href={items.item_url}>{items.title}</a>
                 </li>
                         </>
                     )
