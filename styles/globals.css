@@ -1188,17 +1188,18 @@ faq
   box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, .07);
 }
 
-.contact_form_wrapper .contact-card input,
-.contact_form_wrapper .contact-card textarea {
+ .contact-card input,
+.contact-card textarea {
   font-size: 0.875rem;
-  padding: 0.813rem 1.3rem;
   border-radius: 0.625rem;
   border: 0.063rem solid #e8ecef;
-  margin-top: 0.513rem;
 }
-
-.contact_form_wrapper .contact-card input:focus,
-.contact_form_wrapper .contact-card textarea:focus {
+.form-control{
+  padding: 1rem 1.3rem;
+  background-color: #f8f9fb;
+}
+ .contact-card input:focus,
+ .contact-card textarea:focus {
   box-shadow: none;
   outline: none;
   border-color: rgb(0, 102, 204);
@@ -1695,3 +1696,41 @@ end explore
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
       max-width: 1248px;
   }} */
+  /* -------------------------------------
+  Payment Banner
+  ----------------------------------------------- */
+  .payment-banner{
+    background: #ebf5f3;
+    padding: 80px 0px;
+  }
+  .payment-banner h1{
+    margin-bottom: 1rem;
+  }
+  .contact-card input, .contact-card textarea{
+    border: 0.163rem solid #e8ecef;
+  }
+  .contact-card ul{
+    margin-top: 1rem;
+  }
+  .contact-card li{
+    line-height: 2;
+    font-weight: 400;
+    font-size: .938rem;
+    background: url(../public/assets/icon-check.svg) no-repeat left -2px;
+    background-size: 22px;
+    background-position: 0;
+    padding-left: 30px;
+
+  }
+  .contact_form{
+    padding-bottom: 3rem;
+  }
+ .contact_form h3{
+  margin-top: 1rem;
+ }
+ .contact_form label{
+  margin-bottom: 0.6rem;
+ }
+ .contact_form .btn-vision{
+  font-size: 1.2rem;
+ }

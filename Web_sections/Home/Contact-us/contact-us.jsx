@@ -82,7 +82,7 @@ const ContactSection = ({ page_data }) => {
           <div className="col-lg-7 ps-lg-5">
             <form  onSubmit={handleSubmit}>
               <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 pt-2">
                   <input
                     type="text"
                     name="name"
@@ -94,7 +94,7 @@ const ContactSection = ({ page_data }) => {
                     onChange={handleInputChange}
                   />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 pt-2">
                   <input
                     type="phone"
                     className="form-control"
@@ -106,7 +106,7 @@ const ContactSection = ({ page_data }) => {
                     onChange={handleInputChange}
                   />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 pt-2">
                   <input
                     type="email"
                     className="form-control"
@@ -118,7 +118,7 @@ const ContactSection = ({ page_data }) => {
                     onChange={handleInputChange}
                   />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 pt-2">
                   <input
                     type="text"
                     className="form-control"
@@ -130,7 +130,7 @@ const ContactSection = ({ page_data }) => {
                   />
                 </div>
 
-                <div className="col-12">
+                <div className="col-12 pt-2">
                   <textarea
                     type="message"
                     className="form-control"

@@ -11,6 +11,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^2.2.0",
     "axios": "^1.6.0",
     "env-cmd": "^10.1.0",
     "next": "latest",
