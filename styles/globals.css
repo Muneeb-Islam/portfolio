@@ -1734,3 +1734,7 @@ end explore
  .contact_form .btn-vision{
   font-size: 1.2rem;
  }
+ .contact_form ul{
+  list-style: none;
+  padding: 0;
+ }

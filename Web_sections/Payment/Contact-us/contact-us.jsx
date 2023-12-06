@@ -8,9 +8,13 @@ import {
   CardExpiryElement,
   CardCvcElement,
 } from "@stripe/react-stripe-js";
-const ContactSection = ({ page_data }) => {
+const ContactSection = ({ page_data}) => {
+  const paymentPage = page_data.payment_page.sale_page_detail;
   const { enqueueSnackbar } = useSnackbar();
   const salePage = page_data.sale_page_detail;
+  const paymentPlan = page_data.payment_plan;
+  console.log(page_data, --page_data);
+ 
   const [inputs, setInputs] = useState({
     name: "",
     phone_number: "",
@@ -43,23 +47,20 @@ const ContactSection = ({ page_data }) => {
       enqueueSnackbar(resp.message, { variant: "error" });
     }
   };
+
+
   return (
     <section className="contact_form" id="contact_form_wrapper">
       <div className="container-fluid px-lg-5">
         <div className="row justify-content-center align-items-center mx-3 mt-5 contact-card">
           <div className="col-lg-6 ps-lg-0">
-            <h2>Ready to see Wrike for yourself?</h2>
-            <p>
-              We’d love to show you how Wrike can help your team do more of
-              their best work. Fill out the form and we’ll be in touch within 24
-              hours.
-            </p>
-            <ul className="list-unstyled">
-              <li>Discuss pricing options</li>
-              <li>Assess your team’s needs</li>
-              <li>Learn more about Wrike features</li>
-            </ul>
-            <img src="/assets/form-img.webp" alt="" className="img-fluid" />
+            <div 
+            dangerouslySetInnerHTML={{
+              __html:paymentPage.ready_to_see_text,
+            }}>
+
+            </div>
+            <img src={s3baseUrl+ paymentPage.payment_form_image} alt="" className="img-fluid" />
           </div>
 
           <div className="col-lg-6 ps-lg-5 mt-4 mt-md-0">
@@ -113,21 +114,22 @@ const ContactSection = ({ page_data }) => {
                     onChange={handleInputChange}
                   />
                 </div>
+   
                 <h3>Payment Detail:</h3>
               
-               <div className="col-12 mt-2">
-               <label>Card Number </label>
-                  <CardNumberElement   className="form-control"/>
+              <div className="col-12 mt-2">
+              <label>Card Number </label>
+                 <CardNumberElement   className="form-control"/>
+              </div>
+              
+               <div className="col-lg-6 mt-4">
+               <label>Expiration Date</label>
+                 <CardExpiryElement   className="form-control" />
                </div>
-               
                 <div className="col-lg-6 mt-4">
-                <label>Expiration Date</label>
-                  <CardExpiryElement   className="form-control" />
+                <label>CVC</label>
+                 <CardCvcElement   className="form-control"/>
                 </div>
-                 <div className="col-lg-6 mt-4">
-                 <label>CVC</label>
-                  <CardCvcElement   className="form-control"/>
-                 </div>
                   <div className="col-12 mt-4">
                   <button className="btn-vision w-100 mt-0">
                     {/* {salePage.contact_us_button_text}{" "} */}

@@ -28,7 +28,6 @@ export default function HomePage({ page_data }) {
   const testimonial = page_data.testimonial;
   const menu_items = page_data.menu_items;
   const payment_plan = page_data.payment_plan;
-  console.log(page_data, "--page_data ");
 
   return (
     <div>
