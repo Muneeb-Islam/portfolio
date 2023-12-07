@@ -5,7 +5,7 @@ export default function ThanksPage() {
   return (
     <div className="container pt-5">
       <div className="row text-center">
-        <h1>Thanks For Payment</h1>
+        <h1>Thanks For The Payment</h1>
       </div>
       {/* <Header page_data={sale_page} />
       <BannerSection page_data={sale_page} />
