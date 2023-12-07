@@ -20,6 +20,7 @@ import FaqSection from "@/Web_sections/Home/Faq/faq";
 import Brans_LogoSection from "@/Web_sections/Home/Brand-logo/brand-logo";
 export default function HomePage({ page_data }) {
   const sale_page = page_data.Sale_page;
+  console.log(page_data, "salepagesalepagesalepage");
   const slider = page_data.slider;
   const buisness_strategy = page_data.buisness_strategy;
   const website_program = page_data.website_program;

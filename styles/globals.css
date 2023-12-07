@@ -106,7 +106,9 @@ span,
 .navbar_wrapper .navbar-nav .nav-item .nav-link.active,
 .navbar_wrapper i,
 .slider_wrapper .client-slider-card i,
-.slider_wrapper .done-heading h1 , .pricing .fa-check ,.slider_wrapper .star-rating i  {
+.slider_wrapper .done-heading h1,
+.pricing .fa-check,
+.slider_wrapper .star-rating i {
   color: rgb(0, 102, 204)
 }
 
@@ -126,7 +128,7 @@ span,
 .features-wrapper .nav-pills .nav-link:hover,
 .features-wrapper .nav-pills .show>.nav-link:hover,
 .navbar_wrapper span:hover,
-.white-btn-with-arrow{
+.white-btn-with-arrow {
   color: rgb(25, 139, 168);
 }
 
@@ -166,7 +168,8 @@ a:hover,
 .pricing .nexora-price-card:hover,
 .pricing .nexora-price-card:hover h3,
 .pricing .box-div,
-.pricing .nexora-price-card:hover span, .pricing .nexora-price-card:hover .fa-check {
+.pricing .nexora-price-card:hover span,
+.pricing .nexora-price-card:hover .fa-check {
   color: #fff;
 }
 
@@ -595,9 +598,11 @@ features
   transform: translateX(50%);
   z-index: -999;
 }
-.last-child:last-child .position-img-2{
+
+.last-child:last-child .position-img-2 {
   display: none;
 }
+
 @media(max-width:991px) {
 
   .position-img,
@@ -1067,7 +1072,7 @@ faq
 /* top_services_ends */
 
 .brand_logos_wrapper {
-  padding: 5rem  0;
+  padding: 5rem 0;
 }
 
 .brand_logos_wrapper .brand-logos img {
@@ -1118,25 +1123,29 @@ faq
   float: left;
   width: 50%;
 } */
-.footer_wrapper .footer-links{
+.footer_wrapper .footer-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.footer_wrapper .footer-links li{
+
+.footer_wrapper .footer-links li {
   margin-left: 1rem;
   font-size: 15px;
- 
+
 }
-.footer_wrapper .footer-links li:first-of-type{
+
+.footer_wrapper .footer-links li:first-of-type {
   margin-left: 0;
 }
+
 .footer_wrapper a {
   color: #CBD0E3;
   font-weight: 400;
 
 }
-.footer_wrapper .social-list a{
+
+.footer_wrapper .social-list a {
   height: 30px;
   width: 30px;
   background: #0066cc;
@@ -1146,6 +1155,7 @@ faq
   align-items: center;
   justify-content: center;
 }
+
 .footer_wrapper .bottom-footer {
   border-top: 0.063rem solid #e5e5e5;
   margin-top: 3rem;
@@ -1156,7 +1166,7 @@ faq
 
 
 @media (max-width:62rem) {
- 
+
 
   .footer_wrapper .links-list {
     border-left: none;
@@ -1188,18 +1198,20 @@ faq
   box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, .07);
 }
 
- .contact-card input,
+.contact-card input,
 .contact-card textarea {
   font-size: 0.875rem;
   border-radius: 0.625rem;
   border: 0.063rem solid #e8ecef;
 }
-.form-control{
+
+.form-control {
   padding: 1rem 1.3rem;
   background-color: #f8f9fb;
 }
- .contact-card input:focus,
- .contact-card textarea:focus {
+
+.contact-card input:focus,
+.contact-card textarea:focus {
   box-shadow: none;
   outline: none;
   border-color: rgb(0, 102, 204);
@@ -1583,7 +1595,9 @@ start explore
 end explore
 --------------------------------------------------- */
 /* price section   */
-.pricing p, .pricing .outer-card-div, .pricing h2{
+.pricing p,
+.pricing .outer-card-div,
+.pricing h2 {
   text-align: center;
 }
 
@@ -1644,9 +1658,11 @@ end explore
 .pricing span {
   color: #8b8888;
 }
-.pricing .fa-xmark{
+
+.pricing .fa-xmark {
   color: red;
 }
+
 .pricing .nexora-price-card:hover .box-div,
 .pricing .nexora-price-card:hover .btn-vision {
   background: #fff;
@@ -1664,23 +1680,27 @@ end explore
 .pricing .nexora-plan-list {
   margin-bottom: 6.5rem;
 }
-.pricing .tick{
+
+.pricing .tick {
   background: url(../public/assets/check.png) no-repeat left -2px;
   background-size: 17px;
   background-position: 0;
-  padding-left: 22px!important;
+  padding-left: 22px !important;
   line-height: 2;
 }
-.pricing .cross{
+
+.pricing .cross {
   background: url(../public/assets/close-icon.png) no-repeat left -2px;
   background-size: 10px;
   background-position: 0;
-  padding-left: 22px!important;
+  padding-left: 22px !important;
   line-height: 2;
 }
-.pricing  li{
+
+.pricing li {
   padding-left: 1rem;
 }
+
 @media(max-width:600px) {
   h1 {
     font-size: 2rem;
@@ -1696,45 +1716,67 @@ end explore
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
       max-width: 1248px;
   }} */
-  /* -------------------------------------
+/* -------------------------------------
   Payment Banner
   ----------------------------------------------- */
-  .payment-banner{
-    background: #ebf5f3;
-    padding: 80px 0px;
-  }
-  .payment-banner h1{
-    margin-bottom: 1rem;
-  }
-  .contact-card input, .contact-card textarea{
-    border: 0.163rem solid #e8ecef;
-  }
-  .contact-card ul{
-    margin-top: 1rem;
-  }
-  .contact-card li{
-    line-height: 2;
-    font-weight: 400;
-    font-size: .938rem;
-    background: url(../public/assets/icon-check.svg) no-repeat left -2px;
-    background-size: 22px;
-    background-position: 0;
-    padding-left: 30px;
+.payment-banner {
+  background: #ebf5f3;
+  padding: 80px 0px;
+}
 
-  }
-  .contact_form{
-    padding-bottom: 3rem;
-  }
- .contact_form h3{
+.payment-banner h1 {
+  margin-bottom: 1rem;
+}
+
+.contact-card input,
+.contact-card textarea {
+  border: 0.163rem solid #e8ecef;
+}
+
+.contact-card ul {
   margin-top: 1rem;
- }
- .contact_form label{
+}
+
+.contact-card li {
+  line-height: 2;
+  font-weight: 400;
+  font-size: .938rem;
+  background: url(../public/assets/icon-check.svg) no-repeat left -2px;
+  background-size: 22px;
+  background-position: 0;
+  padding-left: 30px;
+
+}
+
+.contact_form {
+  padding-bottom: 3rem;
+}
+
+.contact_form h3 {
+  margin-top: 1rem;
+}
+
+.contact_form label {
   margin-bottom: 0.6rem;
- }
- .contact_form .btn-vision{
+}
+
+.contact_form .btn-vision {
   font-size: 1.2rem;
- }
- .contact_form ul{
+}
+
+.contact_form ul {
   list-style: none;
   padding: 0;
- }
+}
+
+
+.contact_form .payment-form-password {
+  position: relative;
+}
+
+.contact_form .payment-form-password-icon {
+  position: absolute;
+  top: 16px;
+  color: rgb(25, 139, 168);
+  right: 23px;
+}
