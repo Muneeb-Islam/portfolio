@@ -6,17 +6,6 @@ import { _get_website_page } from "../DAL/pages";
 import { useEffect } from "react";
 import { SnackbarProvider, useSnackbar } from "notistack";
 export default function App({ Component, pageProps }) {
-  const sale_page = async () => {
-    // call DAL function
-    const postData = {
-      page_slug: "home",
-    };
-    const result = await _get_website_page(postData);
-    console.log(result, "--result");
-  };
-  useEffect(() => {
-    sale_page();
-  }, []);
   return (
     <SnackbarProvider
       anchorOrigin={{

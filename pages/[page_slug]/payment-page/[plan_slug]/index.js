@@ -5,7 +5,7 @@ import PaymentPage from "@/Web_pages/Payment/Payment";
 export async function getServerSideProps(context) {
   const query = context.query;
   const postData = {
-    page_slug: "",
+    page_slug: query.page_slug,
   };
   const result = await _get_website_page(postData);
   // console.log(result, "--result--result");
