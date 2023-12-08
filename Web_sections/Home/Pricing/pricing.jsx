@@ -46,10 +46,13 @@ return (
                     <div dangerouslySetInnerHTML={{
                         __html:items.detailed_description,
                        }}></div>
-                    <div class="btn-position">
+                       {
+                        items.plan_button_text?  <div class="btn-position">
                         <button onClick = {() => handleclick(items.plan_slug)}  
                          class="btn-vision" name="wb-payment-plan-button">{items.plan_button_text}</button>
-                    </div>
+                    </div>: ""
+                       }
+                  
 
                 </div>
             </div>
