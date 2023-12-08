@@ -39,7 +39,7 @@ return (
                                         items.plan_currency
                                       ) + items.plan_price}
                         </h2>
-                        {items.plan_type && <span>/{items.plan_type}</span>}
+                        {/* {items.plan_type && <span>/{items.plan_type}</span>} */}
                     </div>
                     <p>{items.short_description}</p>
                     <div class="top-border mt-4"></div>

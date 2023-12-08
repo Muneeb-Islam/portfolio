@@ -12,9 +12,7 @@ return (
           <div className="card-inner">
             <h1>THANK YOU</h1>
             <h3>- For your Purchase -</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, venenatis dictum et nec. Fringilla
-              dictum tristique cras pellentesque morbi consequat, maecenas egestas a. Mi feugiat urna turpis placerat
-              faucibus bibendum hac vulputate. </p>
+            <p>Congratulations on choosing Vissioon to accelerate your business growth! We are thrilled to welcome you to our community of visionaries.</p>
             <div className="lawyer-home-btn">
               <a href="/">Go To Home</a>
             </div>

@@ -438,7 +438,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     </button>
                   ) : (
                     <button type="submit" className="btn-vision w-100 mt-0">
-                      Get in Touch
+                      {salePage.get_started_button}
                     </button>
                   )}
                 </div>
