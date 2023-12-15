@@ -1209,7 +1209,11 @@ faq
   padding: 1rem 1.3rem;
   background-color: #f8f9fb;
 }
-
+ input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 .contact-card input:focus,
 .contact-card textarea:focus {
   box-shadow: none;

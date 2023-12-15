@@ -362,7 +362,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                 </div>
                 <div className="col-lg-6 mt-4">
                   <input
-                    type="phone"
+                    type="number"
                     className="form-control"
                     placeholder="Phone Number *"
                     required
@@ -393,7 +393,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                       value={inputState.password}
                       required
                       onChange={handleChangeInputsState}
-                      placeholder="Password:*"
+                      placeholder="Password *"
                       autoComplete="new-password"
                     />
                     <span

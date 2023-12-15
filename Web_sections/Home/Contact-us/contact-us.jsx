@@ -96,7 +96,7 @@ const ContactSection = ({ page_data }) => {
                 </div>
                 <div className="col-lg-6 pt-2">
                   <input
-                    type="phone"
+                    type="number"
                     className="form-control"
                     placeholder="Phone Number *"
                     required
