@@ -3,11 +3,11 @@ import { _get_website_page } from "../../../../DAL/pages";
 import { s3baseUrl } from "@/config/config";
 import ThanksPage from "@/Web_pages/Thanks/thanks";
 export async function getServerSideProps(context) {
+  console.log(context.resolvedUrl, "resolved--");
   const query = context.query;
-  const postData = {
-    page_slug: "",
-  };
-  const result = await _get_website_page(postData);
+  const result = await _get_website_page(
+    JSON.stringify({ page_slug: query.page_slug })
+  );
 
   if (result.code === 200) {
     return {

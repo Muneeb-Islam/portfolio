@@ -18,17 +18,17 @@ import ServiceSection from "@/Web_sections/Home/Service/service";
 import Animated from "../../Components/AnimatedComponent";
 import FaqSection from "@/Web_sections/Home/Faq/faq";
 import Brans_LogoSection from "@/Web_sections/Home/Brand-logo/brand-logo";
-export default function HomePage({ page_data }) {
-  const sale_page = page_data.Sale_page;
-  console.log(page_data, "salepagesalepagesalepage");
-  const slider = page_data.slider;
-  const buisness_strategy = page_data.buisness_strategy;
-  const website_program = page_data.website_program;
-  const comprehensive_services = page_data.comprehensive_services;
-  const benefit = page_data.benefit;
-  const testimonial = page_data.testimonial;
-  const menu_items = page_data.menu_items;
-  const payment_plan = page_data.payment_plan;
+export default function HomePage({ result }) {
+  console.log(result, "salepagesalepagesalepage");
+  const sale_page = result.Sale_page;
+  const slider = result.slider;
+  const buisness_strategy = result.buisness_strategy;
+  const website_program = result.website_program;
+  const comprehensive_services = result.comprehensive_services;
+  const benefit = result.benefit;
+  const testimonial = result.testimonial;
+  const menu_items = result.menu_items;
+  const payment_plan = result.payment_plan;
 
   return (
     <div>

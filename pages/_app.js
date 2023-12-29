@@ -41,6 +41,7 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
         />
+
         {/* <link href="/assets/fav-icon.png" rel="icon" type="image/x-icon"></link> */}
       </Head>
       <Component {...pageProps} />
