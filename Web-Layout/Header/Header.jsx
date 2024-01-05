@@ -67,7 +67,7 @@ const Header = ({ page_data }) => {
       <div className="navbar_wrapper">
         <div className="container ">
           <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand" href="#home">
+            <a className="navbar-brand" href={salePage.brand_logo_link}>
               <img src={s3baseUrl + brand_logo} alt="" className="img-fluid" />
             </a>
             <button

@@ -17,7 +17,7 @@ const Footer = ({ page_data}) => {
       <div className="container">
         <div className="row justify-content-center align-items-center px-lg-4">
           <div className="col-lg-3  text-center text-lg-start">
-            <a href="#home">
+            <a href={salePage.brand_logo_link}>
               <img src={s3baseUrl+footer_logo} alt="" className="img-fluid" />
             </a>
             {/* <div
