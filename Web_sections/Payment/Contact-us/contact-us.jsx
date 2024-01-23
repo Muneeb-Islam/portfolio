@@ -240,27 +240,26 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   const handleSubmitFree = async (event) => {
     event.preventDefault();
 
-    const formData = new FormData();
+    // const formData = new FormData();
+    //   formData.append("first_name", inputState.firstName);
+    //   formData.append("last_name", inputState.lastName);
+    //   formData.append("email", inputState.email);
+    //   formData.append("password", inputState.password);
+    //   formData.append("contact_number", inputState.phone);
+    //   formData.append("page_slug", params.page_slug);
+    //   formData.append("plan_id", paymentPlan._id);
 
-    if (_get_token_from_localStorage()) {
-      formData.append("x_sh_auth", _get_token_from_localStorage());
-      formData.append("plan_id", paymentPlan._id);
-      formData.append("page_slug", params.page_slug);
-    } else {
-      formData.append("first_name", inputState.firstName);
-      formData.append("last_name", inputState.lastName);
-      formData.append("email", inputState.email);
-      formData.append("password", inputState.password);
-      formData.append("contact_number", inputState.phone);
-      formData.append("page_slug", params.page_slug);
-      formData.append("plan_id", paymentPlan._id);
+    const postData= {
+      first_name: inputState.firstName,
+      last_name: inputState.lastName,
+      email: inputState.email,
+      password: inputState.password,
+      contact_number: inputState.phone,
+      page_slug: params.page_slug,
+      plan_id: paymentPlan._id,
     }
-
-    for (var value of formData.values()) {
-    }
-
     setIsLoadingCard(true);
-    const result = await add_free_member_by_web(formData);
+    const result = await add_free_member_by_web(postData);
     if (result.code === 200) {
       setIsLoadingCard(false);
       enqueueSnackbar(result.message, {
