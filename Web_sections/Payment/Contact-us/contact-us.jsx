@@ -18,14 +18,11 @@ import { useEffect, useState } from "react";
 import { useSnackbar } from "notistack";
 import React from "react";
 import {
-  CardNumberElement,
-  CardExpiryElement,
-  CardCvcElement,
   useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
+import { CardElement } from "@stripe/react-stripe-js";
 
-// import { CardElement } from "@stripe/react-stripe-js";
 import { useRouter } from "next/router";
 import Loader from "@/Components/Loader/Loader";
 
@@ -53,6 +50,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     phone: "",
     password: "",
     passwordType: "password",
+    brand_name: "",
   });
 
   const handleChangeInputsState = (e) => {
@@ -63,27 +61,76 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     }));
   };
 
-  const payNowForSubscription = async (token, CardNumberElement) => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (elements == null) {
+      return;
+    }
+    setIsLoadingCard(true);
+    const cardElement = elements.getElement(CardElement);
+    stripe.createToken(cardElement).then(function (result) {
+      // Handle result.error or result.token
+      if (result.error) {
+        setIsLoadingCard(false);
+        enqueueSnackbar(result.error.message, { variant: "error" });
+        return;
+      }
+      handleCardAction(result.token.id, cardElement);
+    });
+  };
+  const handleSubmitFree = async (event) => {
+    event.preventDefault();
+
     const formData = new FormData();
-    // if (_get_token_from_localStorage()) {
-    //   formData.append("x_sh_auth", _get_token_from_localStorage());
-    //   formData.append("plan_id", paymentPlan._id);
-    //   formData.append("page_slug", params.page_slug);
-    //   formData.append("source_token", token);
-    // } else {
+      formData.append("first_name", inputState.firstName);
+      formData.append("last_name", inputState.lastName);
+      formData.append("email", inputState.email);
+      formData.append("password", inputState.password);
+      formData.append("contact_number", inputState.phone);
+      formData.append("page_slug", params.page_slug);
+      formData.append("plan_id", paymentPlan._id);
+
+      console.log(formData , "---freeplane")
+   
+    setIsLoadingCard(true);
+    const result = await add_free_member_by_web(formData);
+    if (result.code === 200) {
+      setIsLoadingCard(false);
+      enqueueSnackbar(result.message, {
+        variant: "success",
+      });
+      setIsLoading(true);
+      localStorage.setItem("token", result?.token);
+      _set_user_in_localStorage(result?.user_info);
+      handleNavigateToThankyou();
+    } else {
+      enqueueSnackbar(result.message, { variant: "error" });
+      setIsLoadingCard(false);
+    }
+  };
+  const payNowForSubscription = async (token, cardElement) => {
+    const formData = new FormData();
+    if (_get_token_from_localStorage()) {
+      formData.append("x_sh_auth", _get_token_from_localStorage());
+      formData.append("plan_id", paymentPlan._id);
+      formData.append("page_slug", params.page_slug);
+      formData.append("source_token", token);
+    } else {
     formData.append("first_name", inputState.firstName);
     formData.append("last_name", inputState.lastName);
     formData.append("email", inputState.email);
     formData.append("password", inputState.password);
     formData.append("contact_number", inputState.phone);
+    formData.append("brand_name" , inputState.brand_name)
     formData.append("source_token", token);
     formData.append("page_slug", params.page_slug);
     formData.append("plan_id", paymentPlan._id);
-    // }
+    }
+    console.log(formData , "---Recurring");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
-      handleSecureCard(clientSecret, CardNumberElement, resPostData);
+      handleSecureCard(clientSecret, cardElement, resPostData);
       return;
     }
     const result = await pay_now_for_subscription_web(formData);
@@ -110,26 +157,29 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       setClientSecret(result.client_secret);
       setResPostData(postData);
       // handle secure card action
-      handleSecureCard(result.client_secret, CardNumberElement, postData);
+      handleSecureCard(result.client_secret, cardElement, postData);
     } else {
       enqueueSnackbar(result.message, { variant: "error" });
       setIsLoadingCard(false);
     }
   };
 
-  const getIntentClientSecretForOneTime = async (token, CardNumberElement) => {
+  const getIntentClientSecretForOneTime = async (token, cardElement) => {
     const formData = new FormData();
     formData.append("first_name", inputState.firstName);
     formData.append("last_name", inputState.lastName);
     formData.append("email", inputState.email);
     formData.append("password", inputState.password);
     formData.append("contact_number", inputState.phone);
+    formData.append(" brand_name" , inputState.brand_name)
     formData.append("plan_id", paymentPlan._id);
     formData.append("page_slug", params.page_slug);
+   
+    console.log(formData , "---Recurring");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
-      handleSecureCard(clientSecret, CardNumberElement, resPostData);
+      handleSecureCard(clientSecret, cardElement, resPostData);
       return;
     }
     const result = await get_web_intent_client_secret_for_one_time(formData);
@@ -144,7 +194,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       setClientSecret(result.client_secret);
       setResPostData(postData);
       // handle secure card action
-      handleSecureCard(result.client_secret, CardNumberElement, postData);
+      handleSecureCard(result.client_secret, cardElement, postData);
     } else {
       enqueueSnackbar(result.message, { variant: "error" });
       setIsLoadingCard(false);
@@ -170,6 +220,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       }
     } else {
       const result = await confirm_one_time_payment_for_web(postData);
+     
       if (result.code === 200) {
         setIsLoadingCard(false);
         enqueueSnackbar("Payment succeeded successfully.", {
@@ -186,7 +237,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     }
   };
 
-  const handleSecureCard = (client_secret, CardNumberElement, postData) => {
+  const handleSecureCard = (client_secret, cardElement, postData) => {
     enqueueSnackbar("Processing card...", {
       variant: "info",
     });
@@ -194,7 +245,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     stripe
       .confirmCardPayment(client_secret, {
         payment_method: {
-          card: CardNumberElement,
+          card: cardElement,
         },
       })
       .then(function (result) {
@@ -212,68 +263,15 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       });
   };
 
-  const handleCardAction = (card_token, CardNumberElement) => {
+  const handleCardAction = (card_token, cardElement) => {
     if (paymentPlan.payment_access === "recursion") {
-      payNowForSubscription(card_token, CardNumberElement);
+      payNowForSubscription(card_token, cardElement);
     } else {
-      getIntentClientSecretForOneTime(card_token, CardNumberElement);
+      getIntentClientSecretForOneTime(card_token, cardElement);
     }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (elements == null) {
-      return;
-    }
-    setIsLoadingCard(true);
-    const cardElement = elements.getElement(CardNumberElement);
-    stripe.createToken(cardElement).then(function (result) {
-      // Handle result.error or result.token
-      if (result.error) {
-        setIsLoadingCard(false);
-        enqueueSnackbar(result.error.message, { variant: "error" });
-        return;
-      }
-      handleCardAction(result.token.id, cardElement);
-    });
-  };
-  const handleSubmitFree = async (event) => {
-    event.preventDefault();
 
-    // const formData = new FormData();
-    //   formData.append("first_name", inputState.firstName);
-    //   formData.append("last_name", inputState.lastName);
-    //   formData.append("email", inputState.email);
-    //   formData.append("password", inputState.password);
-    //   formData.append("contact_number", inputState.phone);
-    //   formData.append("page_slug", params.page_slug);
-    //   formData.append("plan_id", paymentPlan._id);
-
-    const postData= {
-      first_name: inputState.firstName,
-      last_name: inputState.lastName,
-      email: inputState.email,
-      password: inputState.password,
-      contact_number: inputState.phone,
-      page_slug: params.page_slug,
-      plan_id: paymentPlan._id,
-    }
-    setIsLoadingCard(true);
-    const result = await add_free_member_by_web(postData);
-    if (result.code === 200) {
-      setIsLoadingCard(false);
-      enqueueSnackbar(result.message, {
-        variant: "success",
-      });
-      setIsLoading(true);
-      localStorage.setItem("token", result?.token);
-      _set_user_in_localStorage(result?.user_info);
-      handleNavigateToThankyou();
-    } else {
-      enqueueSnackbar(result.message, { variant: "error" });
-      setIsLoadingCard(false);
-    }
-  };
 
   const changePasswordType = () => {
     if (inputState.passwordType === "password") {
@@ -370,6 +368,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     onChange={handleChangeInputsState}
                     readOnly={isStoredToken ? true : false}
                   />
+                  
                 </div>
                 <div className="col-lg-6 mt-4">
                   <input
@@ -384,7 +383,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                   />
                 </div>
                 {!isStoredToken && (
-                  <div className=" col-12 mt-3 payment-form-password">
+                  <div className=" col-lg-6 mt-4 payment-form-password">
                     <input
                       type={inputState.passwordType}
                       className="form-control"
@@ -405,23 +404,46 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     </span>
                   </div>
                 )}
-
+                <div className="col-lg-6 mt-4">
+                      <input
+                      type="text"
+                      className="form-control"
+                      name="brand_name"
+                      value={inputState.brand_name}
+                      required
+                      onChange={handleChangeInputsState}
+                      placeholder="Brand name *"
+                    />
+                    </div>
                 {paymentPlan.is_plan_free === false ? (
                   <>
                     <h3>Payment Detail:</h3>
-                    <div className="col-12 mt-2">
-                      <label>Card Number </label>
-                      <CardNumberElement className="form-control" />
+                  
+                    <div className="col-12 mt-4">
+                      {/* <label>Card Number </label> */}
+                      <CardElement
+                    options={{
+                      hidePostalCode: true,
+                      style: {
+                        base: {
+                          iconColor: "#000",
+                          padding: "10px",
+                          color: "#000",
+                          borderRadius: "12px",
+                          borderColor: "#000",
+                          "::placeholder": {
+                            color: "#7e8080",
+
+                            textTransform: "capitalize",
+                          },
+                        },
+                      },
+                    }}
+                    className="form-control"
+                  />
                     </div>
 
-                    <div className="col-lg-6 mt-4">
-                      <label>Expiration Date</label>
-                      <CardExpiryElement className="form-control" />
-                    </div>
-                    <div className="col-lg-6 mt-4">
-                      <label>CVC</label>
-                      <CardCvcElement className="form-control" />
-                    </div>
+                    
                   </>
                 ) : (
                   ""
