@@ -17,10 +17,7 @@ import {
 import { useEffect, useState } from "react";
 import { useSnackbar } from "notistack";
 import React from "react";
-import {
-  useElements,
-  useStripe,
-} from "@stripe/react-stripe-js";
+import { useElements, useStripe } from "@stripe/react-stripe-js";
 import { CardElement } from "@stripe/react-stripe-js";
 
 import { useRouter } from "next/router";
@@ -82,16 +79,14 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     event.preventDefault();
 
     const formData = new FormData();
-      formData.append("first_name", inputState.firstName);
-      formData.append("last_name", inputState.lastName);
-      formData.append("email", inputState.email);
-      formData.append("password", inputState.password);
-      formData.append("contact_number", inputState.phone);
-      formData.append("page_slug", params.page_slug);
-      formData.append("plan_id", paymentPlan._id);
+    formData.append("first_name", inputState.firstName);
+    formData.append("last_name", inputState.lastName);
+    formData.append("email", inputState.email);
+    formData.append("password", inputState.password);
+    formData.append("contact_number", inputState.phone);
+    formData.append("page_slug", params.page_slug);
+    formData.append("plan_id", paymentPlan._id);
 
-      console.log(formData , "---freeplane")
-   
     setIsLoadingCard(true);
     const result = await add_free_member_by_web(formData);
     if (result.code === 200) {
@@ -108,6 +103,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       setIsLoadingCard(false);
     }
   };
+
   const payNowForSubscription = async (token, cardElement) => {
     const formData = new FormData();
     if (_get_token_from_localStorage()) {
@@ -116,17 +112,16 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       formData.append("page_slug", params.page_slug);
       formData.append("source_token", token);
     } else {
-    formData.append("first_name", inputState.firstName);
-    formData.append("last_name", inputState.lastName);
-    formData.append("email", inputState.email);
-    formData.append("password", inputState.password);
-    formData.append("contact_number", inputState.phone);
-    formData.append("brand_name" , inputState.brand_name)
-    formData.append("source_token", token);
-    formData.append("page_slug", params.page_slug);
-    formData.append("plan_id", paymentPlan._id);
+      formData.append("first_name", inputState.firstName);
+      formData.append("last_name", inputState.lastName);
+      formData.append("email", inputState.email);
+      formData.append("password", inputState.password);
+      formData.append("contact_number", inputState.phone);
+      formData.append("brand_name", inputState.brand_name);
+      formData.append("source_token", token);
+      formData.append("page_slug", params.page_slug);
+      formData.append("plan_id", paymentPlan._id);
     }
-    console.log(formData , "---Recurring");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
@@ -134,7 +129,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       return;
     }
     const result = await pay_now_for_subscription_web(formData);
-
     if (result.code === 200) {
       setIsLoadingCard(false);
       enqueueSnackbar("Payment succeeded successfully.", {
@@ -171,11 +165,9 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("email", inputState.email);
     formData.append("password", inputState.password);
     formData.append("contact_number", inputState.phone);
-    formData.append(" brand_name" , inputState.brand_name)
+    formData.append("brand_name", inputState.brand_name);
     formData.append("plan_id", paymentPlan._id);
     formData.append("page_slug", params.page_slug);
-   
-    console.log(formData , "---Recurring");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
@@ -187,6 +179,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       const postData = {
         plan_id: paymentPlan._id,
         page_slug: params.page_slug,
+        shipping_object: result.shipping_object,
       };
       postData.email = inputState.email;
 
@@ -220,7 +213,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       }
     } else {
       const result = await confirm_one_time_payment_for_web(postData);
-     
+
       if (result.code === 200) {
         setIsLoadingCard(false);
         enqueueSnackbar("Payment succeeded successfully.", {
@@ -270,8 +263,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       getIntentClientSecretForOneTime(card_token, cardElement);
     }
   };
-
-
 
   const changePasswordType = () => {
     if (inputState.passwordType === "password") {
@@ -368,7 +359,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     onChange={handleChangeInputsState}
                     readOnly={isStoredToken ? true : false}
                   />
-                  
                 </div>
                 <div className="col-lg-6 mt-4">
                   <input
@@ -405,45 +395,45 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                   </div>
                 )}
                 <div className="col-lg-6 mt-4">
-                      <input
-                      type="text"
-                      className="form-control"
-                      name="brand_name"
-                      value={inputState.brand_name}
-                      required
-                      onChange={handleChangeInputsState}
-                      placeholder="Brand name *"
-                    />
-                    </div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="brand_name"
+                    value={inputState.brand_name}
+                    required
+                    onChange={handleChangeInputsState}
+                    placeholder="Brand name *"
+                  />
+                </div>
                 {paymentPlan.is_plan_free === false ? (
                   <>
-                    <h3>Payment Detail:</h3>
-                  
-                    <div className="col-12 mt-4">
-                      {/* <label>Card Number </label> */}
-                      <CardElement
-                    options={{
-                      hidePostalCode: true,
-                      style: {
-                        base: {
-                          iconColor: "#000",
-                          padding: "10px",
-                          color: "#000",
-                          borderRadius: "12px",
-                          borderColor: "#000",
-                          "::placeholder": {
-                            color: "#7e8080",
-
-                            textTransform: "capitalize",
-                          },
-                        },
-                      },
-                    }}
-                    className="form-control"
-                  />
+                    <div className="pt-3">
+                      <h3>Payment Detail:</h3>
                     </div>
 
-                    
+                    <div className="col-12 mt-2">
+                      {/* <label>Card Number </label> */}
+                      <CardElement
+                        options={{
+                          hidePostalCode: true,
+                          style: {
+                            base: {
+                              iconColor: "#000",
+                              padding: "10px",
+                              color: "#000",
+                              borderRadius: "12px",
+                              borderColor: "#000",
+                              "::placeholder": {
+                                color: "#7e8080",
+
+                                textTransform: "capitalize",
+                              },
+                            },
+                          },
+                        }}
+                        className="form-control"
+                      />
+                    </div>
                   </>
                 ) : (
                   ""
