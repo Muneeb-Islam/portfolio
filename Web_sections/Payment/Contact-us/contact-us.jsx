@@ -168,6 +168,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("brand_name", inputState.brand_name);
     formData.append("plan_id", paymentPlan._id);
     formData.append("page_slug", params.page_slug);
+    formData.append("source_token", token);
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
