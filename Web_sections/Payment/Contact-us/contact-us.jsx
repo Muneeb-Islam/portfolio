@@ -12,7 +12,7 @@ import {
   _get_token_from_localStorage,
   _get_user_from_localStorage,
   _set_user_in_localStorage,
-} from "../../../DAL/loacalStorage";
+} from "@/DAL/loacalStorage";
 
 import { useEffect, useState } from "react";
 import { useSnackbar } from "notistack";
@@ -106,22 +106,16 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
 
   const payNowForSubscription = async (token, cardElement) => {
     const formData = new FormData();
-    if (_get_token_from_localStorage()) {
-      formData.append("x_sh_auth", _get_token_from_localStorage());
-      formData.append("plan_id", paymentPlan._id);
-      formData.append("page_slug", params.page_slug);
-      formData.append("source_token", token);
-    } else {
-      formData.append("first_name", inputState.firstName);
-      formData.append("last_name", inputState.lastName);
-      formData.append("email", inputState.email);
-      formData.append("password", inputState.password);
-      formData.append("contact_number", inputState.phone);
-      formData.append("brand_name", inputState.brand_name);
-      formData.append("source_token", token);
-      formData.append("page_slug", params.page_slug);
-      formData.append("plan_id", paymentPlan._id);
-    }
+
+    formData.append("first_name", inputState.firstName);
+    formData.append("last_name", inputState.lastName);
+    formData.append("email", inputState.email);
+    formData.append("password", inputState.password);
+    formData.append("contact_number", inputState.phone);
+    formData.append("brand_name", inputState.brand_name);
+    formData.append("source_token", token);
+    formData.append("page_slug", params.page_slug);
+    formData.append("plan_id", paymentPlan._id);
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
@@ -333,7 +327,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     autoComplete="off"
                     value={inputState.firstName}
                     onChange={handleChangeInputsState}
-                    readOnly={isStoredToken ? true : false}
                   />
                 </div>
                 <div className="col-lg-6 mt-4 mt-md-0">
@@ -346,7 +339,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     autoComplete="off"
                     value={inputState.lastName}
                     onChange={handleChangeInputsState}
-                    readOnly={isStoredToken ? true : false}
                   />
                 </div>
                 <div className="col-lg-6 mt-4">
@@ -358,43 +350,39 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     name="phone"
                     value={inputState.phone}
                     onChange={handleChangeInputsState}
-                    readOnly={isStoredToken ? true : false}
                   />
                 </div>
                 <div className="col-lg-6 mt-4">
                   <input
                     type="email"
                     className="form-control"
-                    placeholder="Email Address *"
+                    placeholder="Email *"
                     required
                     name="email"
                     value={inputState.email}
                     onChange={handleChangeInputsState}
-                    readOnly={isStoredToken ? true : false}
                   />
                 </div>
-                {!isStoredToken && (
-                  <div className=" col-lg-6 mt-4 payment-form-password">
-                    <input
-                      type={inputState.passwordType}
-                      className="form-control"
-                      name="password"
-                      value={inputState.password}
-                      required
-                      onChange={handleChangeInputsState}
-                      placeholder="Password *"
-                      autoComplete="new-password"
-                    />
-                    <span
-                      className="payment-form-password-icon"
-                      onClick={() => {
-                        changePasswordType();
-                      }}
-                    >
-                      <i className="fa-solid fa-eye"></i>
-                    </span>
-                  </div>
-                )}
+                <div className=" col-lg-6 mt-4 payment-form-password">
+                  <input
+                    type={inputState.passwordType}
+                    className="form-control"
+                    name="password"
+                    value={inputState.password}
+                    required
+                    onChange={handleChangeInputsState}
+                    placeholder="Password *"
+                    autoComplete="new-password"
+                  />
+                  <span
+                    className="payment-form-password-icon"
+                    onClick={() => {
+                      changePasswordType();
+                    }}
+                  >
+                    <i className="fa-solid fa-eye"></i>
+                  </span>
+                </div>
                 <div className="col-lg-6 mt-4">
                   <input
                     type="text"
@@ -411,9 +399,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     <div className="pt-3">
                       <h3>Payment Detail:</h3>
                     </div>
-
                     <div className="col-12 mt-2">
-                      {/* <label>Card Number </label> */}
                       <CardElement
                         options={{
                           hidePostalCode: true,
