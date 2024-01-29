@@ -181,12 +181,12 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
         shipping_object: result.shipping_object,
       };
       postData.email = inputState.email;
-
-      // save data for failure use
-      setClientSecret(result.client_secret);
-      setResPostData(postData);
-      // handle secure card action
+      setIsLoading(true);
+      handleNavigateToThankyou();
+    } else if (result.code === 201) {
       handleSecureCard(result.client_secret, cardElement, postData);
+      setResPostData(postData);
+      setClientSecret(result.client_secret);
     } else {
       enqueueSnackbar(result.message, { variant: "error" });
       setIsLoadingCard(false);
