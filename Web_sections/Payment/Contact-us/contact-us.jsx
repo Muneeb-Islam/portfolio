@@ -48,6 +48,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     password: "",
     passwordType: "password",
     brand_name: "",
+    payment_type: "",
   });
 
   const handleChangeInputsState = (e) => {
@@ -86,6 +87,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("contact_number", inputState.phone);
     formData.append("page_slug", params.page_slug);
     formData.append("plan_id", paymentPlan._id);
+    formData.append("payment_type", "free");
 
     setIsLoadingCard(true);
     const result = await add_free_member_by_web(formData);
@@ -163,6 +165,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("plan_id", paymentPlan._id);
     formData.append("page_slug", params.page_slug);
     formData.append("source_token", token);
+    formData.append("payment_type", "onetime");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
@@ -170,6 +173,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       return;
     }
     const result = await get_web_intent_client_secret_for_one_time(formData);
+
     if (result.code === 200) {
       const postData = {
         plan_id: paymentPlan._id,
@@ -226,6 +230,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const handleSecureCard = (client_secret, cardElement, postData) => {
+    console.log(client_secret, "client_secretclient_secret");
     enqueueSnackbar("Processing card...", {
       variant: "info",
     });

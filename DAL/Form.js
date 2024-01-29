@@ -13,7 +13,7 @@ export const _send_contact_support_email = async (data) => {
 
 export const add_free_member_by_web = async (data) => {
   const requestObj = {
-    path: `/app/add_free_member_by_web`,
+    path: `/app/payment`,
     method: "POST",
     headers: {
       "x-auth-api-key": api_key,
@@ -49,7 +49,7 @@ export const confirm_subscription_incomplete_for_web = async (data) => {
 
 export const get_web_intent_client_secret_for_one_time = async (plan_id) => {
   const requestObj = {
-    path: `/app/pay_one_time_by_web`,
+    path: `/app/payment`,
     method: "POST",
     headers: {
       "x-auth-api-key": api_key,
