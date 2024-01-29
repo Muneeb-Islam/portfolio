@@ -172,8 +172,8 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       handleSecureCard(clientSecret, cardElement, resPostData);
       return;
     }
-    const result = await get_web_intent_client_secret_for_one_time(formData);
 
+    const result = await get_web_intent_client_secret_for_one_time(formData);
     if (result.code === 200) {
       const postData = {
         plan_id: paymentPlan._id,
@@ -182,6 +182,9 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       };
       postData.email = inputState.email;
       setIsLoading(true);
+      enqueueSnackbar("Payment succeeded successfully.", {
+        variant: "success",
+      });
       handleNavigateToThankyou();
     } else if (result.code === 201) {
       handleSecureCard(result.client_secret, cardElement, postData);
