@@ -1,7 +1,7 @@
 import { s3baseUrl } from "@/config/config";
 
 const BannerSection = ({ page_data }) => {
-  const paymentPage = page_data.payment_page.sale_page_detail;
+  const paymentPage = page_data?.payment_page?.sale_page_detail;
   console.log(paymentPage, "--paymentPage");
 
   return (
@@ -9,7 +9,7 @@ const BannerSection = ({ page_data }) => {
       <div
         className="container"
         dangerouslySetInnerHTML={{
-          __html: paymentPage.get_in_touch_text,
+          __html: paymentPage?.get_in_touch_text,
         }}
       ></div>
     </section>

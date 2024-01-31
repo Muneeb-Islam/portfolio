@@ -25,7 +25,7 @@ import { useRouter } from "next/router";
 import Loader from "@/Components/Loader/Loader";
 
 const ContactSection = ({ page_data, PaymentPlan }) => {
-  const paymentPage = page_data.payment_page.sale_page_detail;
+  const paymentPage = page_data?.payment_page?.sale_page_detail;
   const salePage = page_data.sale_page_detail;
   const router = useRouter();
   const [isLoadingCard, setIsLoadingCard] = useState(false);
