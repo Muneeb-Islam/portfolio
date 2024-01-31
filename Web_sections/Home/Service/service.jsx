@@ -80,11 +80,11 @@ const ServiceSection = ({ page_data, comprehensive_services }) => {
           ></div>
         </div>
 
-        <div id="service-slider" className=" pt-5">
+        <div id="service-slider" className=" pt-5 overflow-hidden">
           <Slider {...settings}>
             {comprehensive_services.map((items, index) => {
               return (
-                <>
+              
                   <div className=" px-2 position-relative img-div">
                     <img
                       src={s3baseUrl + items.program_images.thumbnail_1}
@@ -114,7 +114,7 @@ const ServiceSection = ({ page_data, comprehensive_services }) => {
                       ></div>
                     </div>
                   </div>
-                </>
+               
               );
             })}
           </Slider>

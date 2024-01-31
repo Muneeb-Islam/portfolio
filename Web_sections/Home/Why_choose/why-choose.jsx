@@ -6,7 +6,7 @@ const Why_chooseSection = ({ page_data, website_program }) => {
 
   return (
     <section
-      className="choose-us "
+      className="choose-us mt-90 "
       style={{
         background: `url(${
           s3baseUrl + salePage.choose_us_background_image
@@ -17,7 +17,7 @@ const Why_chooseSection = ({ page_data, website_program }) => {
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-7 wow fadeInDown">
-            <span> {salePage.choose_us_heading} </span>
+            {/* <span> {salePage.choose_us_heading} </span> */}
             <div
               dangerouslySetInnerHTML={{
                 __html: salePage.why_choose_us_text,
@@ -59,7 +59,7 @@ const Why_chooseSection = ({ page_data, website_program }) => {
           className="row align-items-center justify-content-center back-img"
          
         >
-          <div className="col-11 col-lg-11 image-border"  style={{
+          {/* <div className="col-11 col-lg-11 image-border"  style={{
             background: `url(${
               s3baseUrl + salePage.agency_background_image
             }) no-repeat center`,
@@ -91,10 +91,10 @@ const Why_chooseSection = ({ page_data, website_program }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div
+      {/* <div
         className="modal fade mt-5 pt-5"
         id="myModal"
         data-bs-backdrop="static"
@@ -124,7 +124,7 @@ const Why_chooseSection = ({ page_data, website_program }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

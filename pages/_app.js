@@ -4,20 +4,17 @@ import Script from "next/script";
 // import "animate.css/animate.min.css";
 import { _get_website_page } from "../DAL/pages";
 import { useEffect } from "react";
+import { SnackbarProvider, useSnackbar } from "notistack";
 export default function App({ Component, pageProps }) {
-  const sale_page = async () => {
-    // call DAL function
-    const postData = {
-      page_slug: "home",
-    };
-    const result = await _get_website_page(postData);
-    console.log(result, "--result");
-  };
-  useEffect(() => {
-    sale_page();
-  }, []);
   return (
-    <>
+    <SnackbarProvider
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "right",
+      }}
+      maxSnack={3}
+      autoHideDuration={3000}
+    >
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,7 +23,7 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet"
         />
 
@@ -39,14 +36,16 @@ export default function App({ Component, pageProps }) {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
+
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
         />
+
         {/* <link href="/assets/fav-icon.png" rel="icon" type="image/x-icon"></link> */}
       </Head>
       <Component {...pageProps} />
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></Script>
-    </>
+    </SnackbarProvider>
   );
 }

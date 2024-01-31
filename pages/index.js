@@ -1,15 +1,15 @@
 import styles from "@/styles/Home.module.css";
 import HeaderController from "@/Components/Header-Controller/HeaderController";
-import HomePage from "@/Web_pages/Home/Home";
 import { _get_website_page } from "../DAL/pages";
 import { s3baseUrl } from "@/config/config";
+import { PageController } from "@/Web_pages";
 export async function getServerSideProps(context) {
+  console.log(context.resolvedUrl, "resolved--");
   const query = context.query;
-  const postData = {
-    page_slug: "",
-  };
-  const result = await _get_website_page(postData);
-  // console.log(result, "--result--result");
+  const result = await _get_website_page(
+    JSON.stringify({ page_slug: query.page_slug })
+  );
+
   if (result.code === 200) {
     return {
       props: {
@@ -28,8 +28,8 @@ export async function getServerSideProps(context) {
 export default function Home({ page_data }) {
   const { brand_favicon, meta_keywords, meta_title, meta_description } =
     page_data.Sale_page;
-
-  // console.log(page_data, "--page_data");
+  const page_name = page_data?.Sale_page.page_component_name;
+  console.log(page_name, "-- page_name");
   return (
     <>
       <HeaderController
@@ -39,7 +39,7 @@ export default function Home({ page_data }) {
         description={meta_description}
         keywords={meta_keywords}
       />
-      <HomePage page_data={page_data} />
+      <PageController page_data={{ page_data, page_name }} />
     </>
   );
 }

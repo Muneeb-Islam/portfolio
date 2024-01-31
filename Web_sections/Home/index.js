@@ -1,9 +1,13 @@
 export { default as BannerSection } from "./Banner/banner";
+export { default as FeaturesSection } from "./Features/features";
+export { default as HowSection } from "./Howwork/how_work";
+export { default as Service } from "./Service2/service-2";
 export { default as AboutSection } from "./About/about";
 export { default as ServiceSection } from "./Service/service";
 export { default as Why_chooseSection } from "./Why_choose/why-choose";
+export { default as TestimonialSection } from "./Testimonial/testimonial";
+export { default as faqSection } from "./Faq/faq";
 export { default as ExploreSection } from "./Explore/explore";
-export { default as Brans_LogoSection } from "./Brand-logo/brand-logo";
 export { default as ExperianceSection } from "./Experiance/experiance";
 export { default as Top_ServiceSection } from "./Top-Service/top-service";
 export { default as ContactSection } from "./Contact-us/contact-us";

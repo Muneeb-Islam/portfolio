@@ -1,97 +1,64 @@
-const PricingSection = () => {
+import convertCurrencyToSign from "../../../utils/constants"
+import { useRouter } from 'next/router';
+const PricingSection = ({page_data, payment_plan}) => {
+const salePage = page_data.sale_page_detail;
+const page_slug = page_data.sale_page_title_slug;
+console.log(page_slug, "------page_slugpage_slug ");
+const router = useRouter();
+const handleclick =(plan_slug)=>{  
+    router.push(`/${page_slug}/payment-page/${plan_slug}`)
+    
+    
+}
 
 return (
-<section className="pricing main_section" id="price">
-    <div className="container">
-        <div className="row justify-content-center">
-            <div className="col-lg-5 text-center">
-                <h2>Your Pricing Plan</h2>
-                <p>We give you three pricing plans so you do not have to pay for something you do not want.
-                </p>
+<section className="pricing pt-90" id="price">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <h2>{salePage.plan_heading}</h2>
             </div>
         </div>
-        <div className="row justify-content-center pt-4">
-            <div className="col-md-6 col-lg-4 pt-4">
-                <div className=" redlight-pricing-card h-100">
-                    <span className="elementor-icon"> <img src="/assets/pricing-plan-icon1.png" alt=""
-                            className="img-fluid" /></span>
-
-                    <h3>Beginner</h3>
-                    <div
-                        className="d-flex align-items-baseline plan-per-text mt-3">
-                        <h2>$5000</h2>
-                        {/* <h4>/Month</h4> */}
+        <div class="row justify-content-center wb-payment-plans">
+            {payment_plan.map((items, index) => {
+            return(
+            <div class="col-md-6 col-lg-4 pt-5 wow slideInLeft">
+                <div class=" nexora-price-card wb-plan-card h-100">
+                    <div class="outer-card-div">
+                        <div class="box-div">{items.plan_title}</div>
                     </div>
-                    <ul className="p-0 mt-3 mb-5">
-                        <li>Built-in Web Pages </li>
-                        <li> Community Building</li>
-                        <li>Content Management System (CMS)</li>
-                        <li> Program Drip system</li>
-                        <li><del>Business Growth</del></li>
-                        <li><del>Business Consulting</del></li>
-                        <li><del>Email Campaigns</del></li>
-                        <li><del>Built-in Web Pages</del></li>
-                    </ul>
-
-                    <div className="now-order-btn">
-                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
+                    <div class="d-flex justify-content-center align-items-baseline">
+                        <h2 class="ms-3">
+                        {items.is_plan_free
+                                    ? "Free"
+                                    : items?.is_dont_show_full_amount == true
+                                    ? convertCurrencyToSign(
+                                        items.plan_currency
+                                      ) + items.initial_amount
+                                    : convertCurrencyToSign(
+                                        items.plan_currency
+                                      ) + items.plan_price}
+                        </h2>
+                        {/* {items.plan_type && <span>/{items.plan_type}</span>} */}
                     </div>
+                    <p>{items.short_description}</p>
+                    <div class="top-border mt-4"></div>
+                    <div dangerouslySetInnerHTML={{
+                        __html:items.detailed_description,
+                       }}></div>
+                       {
+                        items.plan_button_text?  <div class="btn-position">
+                        <button onClick = {() => handleclick(items.plan_slug)}  
+                         class="btn-vision" name="wb-payment-plan-button">{items.plan_button_text}</button>
+                    </div>: ""
+                       }
+                  
+
                 </div>
             </div>
+            )
+            })}
 
-            <div className="col-md-6 col-lg-4 pt-4">
-                <div className=" redlight-pricing-card h-100">
-                    <span className="elementor-icon"> <img src="/assets/price-2.png" alt=""
-                            className="img-fluid" /></span>
-
-                    <h3>Business</h3>
-                    <div
-                        className="d-flex align-items-baseline plan-per-text mt-3">
-                        <h2>$7000</h2>
-                        {/* <h4>/Month</h4> */}
-                    </div>
-                    <ul className="p-0 mt-3 mb-5">
-                        <li>Built-in Web Pages </li>
-                        <li> Community Building</li>
-                        <li>Content Management System (CMS)</li>
-                        <li> Program Drip system</li>
-                        <li>Business Growth</li>
-                        <li>Business Consulting</li>
-                        <li><del>Email Campaigns</del></li>
-                        <li><del>Built-in Web Pages</del></li>
-                    </ul>
-                    <div className="now-order-btn">
-                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md-6 col-lg-4 pt-4">
-                <div className=" redlight-pricing-card h-100">
-                    <span className="elementor-icon"> <img src="/assets/price-3.png" alt=""
-                            className="img-fluid" /></span>
-
-                    <h3>Exclusive</h3>
-                    <div
-                        className="d-flex  align-items-baseline plan-per-text mt-3">
-                        <h2>$10000</h2>
-                        {/* <h4>/Month</h4> */}
-                    </div>
-                    <ul className="p-0 mt-3 mb-5">
-                        <li>Built-in Web Pages </li>
-                        <li> Community Building</li>
-                        <li>Content Management System (CMS)</li>
-                        <li> Program Drip system</li>
-                        <li>Business Growth</li>
-                        <li>Business Consulting</li>
-                        <li>Email Campaigns</li>
-                        <li>Built-in Web Pages</li>
-                    </ul>
-                    <div className="now-order-btn">
-                        <a href="#">REGISTER NOW <i className="fa-solid fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

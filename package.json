@@ -5,15 +5,21 @@
   "scripts": {
     "dev": "env-cmd -f .env.dev next dev",
     "prod": "env-cmd -f .env.prod next dev",
-    "start": "next start -p 4009 ",
+    "start": "next start -p 4010 ",
     "build:dev": "env-cmd -f .env.dev next build",
     "build:prod": "env-cmd -f .env.prod next build",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.20",
+    "@stripe/react-stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^2.2.0",
     "axios": "^1.6.0",
     "env-cmd": "^10.1.0",
     "next": "latest",
+    "notistack": "^3.0.1",
     "react": "latest",
     "react-dom": "latest",
     "react-slick": "^0.29.0",

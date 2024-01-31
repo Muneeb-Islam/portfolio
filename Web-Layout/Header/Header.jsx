@@ -1,13 +1,19 @@
 import { s3baseUrl } from "@/config/config";
-import React from "react";
+import React, { useEffect } from "react";
 const Header = ({ page_data }) => {
     const salePage = page_data.sale_page_detail;
-  const menu_items = page_data.header_menu.menu_items;
+  const menu_items = page_data?.header_menu?.menu_items;
   const { brand_logo } = page_data;
+  // console.log(menu_items, "---menu_items")
 
+  useEffect(() => {
+    console.log("script run for active first");
+    document.getElementsByClassName("nav-link")[0].classList.add("active");
+  }, [])
+  
   return (
     <header>
-      <div className="top_navbar d-none d-lg-flex">
+      {/* <div className="top_navbar d-none d-lg-flex">
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-lg-5">
@@ -29,12 +35,6 @@ const Header = ({ page_data }) => {
             </div>
 
             <div className="col-lg-5 pt-2 pt-lg-0 d-lg-flex justify-content-center justify-content-lg-end align-items-center">
-              {/* <ul className="mb-0 list-unstyled">
-                        <li className="border-line me-4"><a
-                                className="me-lg-4 d-flex justify-content-center align-items-baseline"><i
-                                    className="fa-regular fa-clock me-2"></i> Office Hour : 09:00am - 6:00pm</a></li>
-
-                    </ul> */}
               <ul className="mb-0 list-unstyled d-flex justify-content-center justify-content-lg-end align-items-center">
                 <li>
                   <a href={salePage.facebook_link} className="me-4">
@@ -63,11 +63,11 @@ const Header = ({ page_data }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="navbar_wrapper">
         <div className="container ">
           <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand" href="#home">
+            <a className="navbar-brand" href={salePage.brand_logo_link}>
               <img src={s3baseUrl + brand_logo} alt="" className="img-fluid" />
             </a>
             <button
@@ -86,26 +86,27 @@ const Header = ({ page_data }) => {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-lg-center">
-                {menu_items.map((items, index) => {
+                {menu_items?.map((items, index) => {
                   return (
-                    <>
-                      <li className="nav-item">
+                    
+                      <li className="nav-item" key={index}>
                         <a
-                          className={`nav-link ${index === 0 ? "active" : ""}`}
+                        data-index={index}
+                          className={"nav-link"}
                           aria-current="page"
                           href={items.item_url}
                         >
                           {items.title}
                         </a>
                       </li>
-                    </>
+                  
                   );
                 })}
 
                 {/* <div className="now-order-btn mt-2 mt-lg-0"><a href="#">GET A QUOTE <i
                                     className="fa-solid fa-arrow-right ms-2"></i></a></div> */}
               </ul>
-              <div className="contact d-xl-flex d-none align-items-center me-5">
+              {/* <div className="contact d-xl-flex d-none align-items-center me-5">
                 <i className="fa-solid fa-headset"></i>
                 <div className="contact-info">
                   <span>{salePage.have_any_question_text}</span>
@@ -114,7 +115,7 @@ const Header = ({ page_data }) => {
                 }}></div>
                  
                 </div>
-              </div>
+              </div> */}
               {/* <div className="border-line"></div>
 
                     <a><i className="fa-solid fa-magnifying-glass mx-5 d-none d-lg-flex"></i></a> */}
@@ -135,8 +136,9 @@ const Header = ({ page_data }) => {
                         </div>
                     </div> */}
 
-              <a href="#" className="get-quote-btn mt-3 mt-lg-0">
-                {salePage.get_a_quote_text} <i className="fa-solid fa-arrow-right ms-2"></i>
+              <a href={salePage.get_a_quote_link} className="btn-vision mt-3 mt-lg-0">
+                {salePage.get_a_quote_text} 
+                {/* <i className="fa-solid fa-arrow-right ms-2"></i> */}
               </a>
             </div>
           </nav>
