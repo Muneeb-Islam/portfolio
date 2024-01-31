@@ -175,7 +175,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     }
 
     const result = await _payment_for_one_time(formData);
-    console.log(...formData, "---formData");
 
     if (result.code === 200) {
       const postData = {
@@ -252,7 +251,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const handleSecureCard = (client_secret, cardElement, postData) => {
-    console.log(client_secret, "client_secretclient_secret");
     enqueueSnackbar("Processing card...", {
       variant: "info",
     });
