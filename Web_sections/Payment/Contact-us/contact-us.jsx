@@ -214,40 +214,40 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const confirmCardPayment = async (postData) => {
-    if (paymentPlan.payment_access === "recursion") {
-      const result = await confirm_subscription_incomplete_for_web(postData);
+    // if (paymentPlan.payment_access === "recursion") {
+    //   const result = await confirm_subscription_incomplete_for_web(postData);
 
-      if (result.code === 200) {
-        setIsLoadingCard(false);
-        enqueueSnackbar("Payment succeeded successfully.", {
-          variant: "success",
-        });
-        setIsLoading(true);
-        localStorage.setItem("token", result?.token);
-        _set_user_in_localStorage(result?.user_info);
-        handleNavigateToThankyou();
-      } else {
-        enqueueSnackbar(result.message, { variant: "error" });
-        setIsLoadingCard(false);
-      }
+    //   if (result.code === 200) {
+    //     setIsLoadingCard(false);
+    //     enqueueSnackbar("Payment succeeded successfully.", {
+    //       variant: "success",
+    //     });
+    //     setIsLoading(true);
+    //     localStorage.setItem("token", result?.token);
+    //     _set_user_in_localStorage(result?.user_info);
+    //     handleNavigateToThankyou();
+    //   } else {
+    //     enqueueSnackbar(result.message, { variant: "error" });
+    //     setIsLoadingCard(false);
+    //   }
+    // } else {
+    const result = await confirm_one_time_payment_for_web(postData);
+
+    if (result.code === 200) {
+      setIsLoadingCard(false);
+      enqueueSnackbar("Payment succeeded successfully.", {
+        variant: "success",
+      });
+
+      setIsLoading(true);
+      localStorage.setItem("token", result?.token);
+      _set_user_in_localStorage(result?.user_info);
+      handleNavigateToThankyou();
     } else {
-      const result = await confirm_one_time_payment_for_web(postData);
-
-      if (result.code === 200) {
-        setIsLoadingCard(false);
-        enqueueSnackbar("Payment succeeded successfully.", {
-          variant: "success",
-        });
-
-        setIsLoading(true);
-        localStorage.setItem("token", result?.token);
-        _set_user_in_localStorage(result?.user_info);
-        handleNavigateToThankyou();
-      } else {
-        enqueueSnackbar(result.message, { variant: "error" });
-        setIsLoadingCard(false);
-      }
+      enqueueSnackbar(result.message, { variant: "error" });
+      setIsLoadingCard(false);
     }
+    // }
   };
 
   const handleSecureCard = (client_secret, cardElement, postData) => {

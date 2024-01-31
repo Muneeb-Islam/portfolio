@@ -61,7 +61,7 @@ export const confirm_subscription_incomplete_for_web = async (data) => {
 
 export const pay_now_for_subscription_web = async (data) => {
   const requestObj = {
-    path: `/app/pay_now_by_web`,
+    path: `/app/payment`,
     method: "POST",
     headers: {
       "x-auth-api-key": api_key,
