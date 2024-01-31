@@ -11,7 +11,7 @@ export const _send_contact_support_email = async (data) => {
   return invokeApi(requestObj);
 };
 
-export const add_free_member_by_web = async (data) => {
+export const _payment_free = async (data) => {
   const requestObj = {
     path: `/app/payment`,
     method: "POST",
@@ -19,6 +19,18 @@ export const add_free_member_by_web = async (data) => {
       "x-auth-api-key": api_key,
     },
     postData: data,
+  };
+  return invokeApi(requestObj);
+};
+
+export const _payment_for_one_time = async (plan_id) => {
+  const requestObj = {
+    path: `/app/payment`,
+    method: "POST",
+    headers: {
+      "x-auth-api-key": api_key,
+    },
+    postData: plan_id,
   };
   return invokeApi(requestObj);
 };
@@ -43,18 +55,6 @@ export const confirm_subscription_incomplete_for_web = async (data) => {
       "x-auth-api-key": api_key,
     },
     postData: data,
-  };
-  return invokeApi(requestObj);
-};
-
-export const get_web_intent_client_secret_for_one_time = async (plan_id) => {
-  const requestObj = {
-    path: `/app/payment`,
-    method: "POST",
-    headers: {
-      "x-auth-api-key": api_key,
-    },
-    postData: plan_id,
   };
   return invokeApi(requestObj);
 };

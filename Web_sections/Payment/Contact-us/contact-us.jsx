@@ -1,7 +1,8 @@
 import { s3baseUrl } from "@/config/config";
 import {
+  _payment_for_one_time,
+  _payment_free,
   _send_contact_support_email,
-  add_free_member_by_web,
   confirm_one_time_payment_for_web,
   confirm_subscription_incomplete_for_web,
   get_web_intent_client_secret_for_one_time,
@@ -48,7 +49,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     password: "",
     passwordType: "password",
     brand_name: "",
-    payment_type: "",
   });
 
   const handleChangeInputsState = (e) => {
@@ -76,6 +76,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       handleCardAction(result.token.id, cardElement);
     });
   };
+
   const handleSubmitFree = async (event) => {
     event.preventDefault();
 
@@ -87,10 +88,10 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("contact_number", inputState.phone);
     formData.append("page_slug", params.page_slug);
     formData.append("plan_id", paymentPlan._id);
-    formData.append("payment_type", "free");
+    // formData.append("payment_type", "free");
 
     setIsLoadingCard(true);
-    const result = await add_free_member_by_web(formData);
+    const result = await _payment_free(formData);
     if (result.code === 200) {
       setIsLoadingCard(false);
       enqueueSnackbar(result.message, {
@@ -165,7 +166,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("plan_id", paymentPlan._id);
     formData.append("page_slug", params.page_slug);
     formData.append("source_token", token);
-    formData.append("payment_type", "onetime");
+    // formData.append("payment_type", "onetime");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
@@ -173,20 +174,37 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       return;
     }
 
-    const result = await get_web_intent_client_secret_for_one_time(formData);
+    const result = await _payment_for_one_time(formData);
+    console.log(...formData, "---formData");
+
     if (result.code === 200) {
       const postData = {
         plan_id: paymentPlan._id,
         page_slug: params.page_slug,
         shipping_object: result.shipping_object,
       };
-      postData.email = inputState.email;
+
+      if (_get_token_from_localStorage()) {
+        postData.x_sh_auth = _get_token_from_localStorage();
+      } else {
+        postData.email = inputState.email;
+      }
+      // postData.email = inputState.email;
       setIsLoading(true);
       enqueueSnackbar("Payment succeeded successfully.", {
         variant: "success",
       });
       handleNavigateToThankyou();
     } else if (result.code === 201) {
+      const postData = {
+        email: inputState.email
+          ? inputState.email
+          : _get_user_from_localStorage()?.email,
+        plan_id: paymentPlan._id,
+        page_slug: params.page_slug,
+        shipping_object: result.shipping_object,
+      };
+
       handleSecureCard(result.client_secret, cardElement, postData);
       setResPostData(postData);
       setClientSecret(result.client_secret);
@@ -221,6 +239,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
         enqueueSnackbar("Payment succeeded successfully.", {
           variant: "success",
         });
+
         setIsLoading(true);
         localStorage.setItem("token", result?.token);
         _set_user_in_localStorage(result?.user_info);
@@ -252,6 +271,14 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
           return;
         }
 
+        if (
+          result.payment_intent &&
+          result.payment_intent.status === "succeeded"
+        ) {
+          handleCardAction();
+          return;
+        }
+
         confirmCardPayment(postData);
       })
       .catch((err) => {
@@ -280,6 +307,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       }));
     }
   };
+
   const handleNavigateToThankyou = () => {
     navigate({
       pathname: `/${params.page_slug}/thank-you/${params.plan_slug}`,
