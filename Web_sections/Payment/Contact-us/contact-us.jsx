@@ -450,6 +450,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                       <h5>{paymentPlan?.plan_title}</h5>
                     </div>
                     <div>
+                      
                       <h5>
                         {paymentPlan.is_plan_free
                           ? "Free"
