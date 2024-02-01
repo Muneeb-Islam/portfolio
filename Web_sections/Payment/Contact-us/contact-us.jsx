@@ -88,7 +88,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("contact_number", inputState.phone);
     formData.append("page_slug", params.page_slug);
     formData.append("plan_id", paymentPlan._id);
-    // formData.append("payment_type", "free");
 
     setIsLoadingCard(true);
     const result = await _payment_free(formData);
@@ -344,11 +343,11 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
 
           <div className="col-lg-6 ps-lg-5 mt-4 mt-md-0">
             <form
-              // onSubmit={
-              //   paymentPlan.is_plan_free === false
-              //     ? handleSubmit
-              //     : handleSubmitFree
-              // }
+              onSubmit={
+                paymentPlan.is_plan_free === false
+                  ? handleSubmit
+                  : handleSubmitFree
+              }
             >
               <div className="row">
                 <div className="col-lg-6">
@@ -368,7 +367,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     type="text"
                     name="lastName"
                     className="form-control"
-                    placeholder="Last Name "
+                    placeholder="Last Name *"
                     // required
                     autoComplete="off"
                     value={inputState.lastName}
@@ -469,12 +468,9 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                       {"Processing..."}
                     </button>
                   ) : (
-                    // <button type="submit" className="btn-vision w-100 mt-0">
-                    //   {paymentPage.get_started_button}
-                    // </button>
-                     <button type="button" className="btn-vision w-100 mt-0" onClick={()=>  handleNavigateToThankyou()}>
-                     {paymentPage.get_started_button}
-                   </button>
+                    <button type="submit" className="btn-vision w-100 mt-0">
+                      {paymentPage.get_started_button}
+                    </button>
                   )}
                 </div>
               </div>
