@@ -4,8 +4,6 @@ import {
   _payment_free,
   _send_contact_support_email,
   confirm_one_time_payment_for_web,
-  confirm_subscription_incomplete_for_web,
-  get_web_intent_client_secret_for_one_time,
   pay_now_for_subscription_web,
 } from "../../../DAL/Form";
 
@@ -176,21 +174,15 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
 
     if (result.code === 200) {
       const postData = {
+        email: inputState.email
+          ? inputState.email
+          : _get_user_from_localStorage()?.email,
         plan_id: paymentPlan._id,
         page_slug: params.page_slug,
         shipping_object: result.shipping_object,
       };
 
-      if (_get_token_from_localStorage()) {
-        postData.x_sh_auth = _get_token_from_localStorage();
-      } else {
-        postData.email = inputState.email;
-      }
-      setIsLoading(true);
-      enqueueSnackbar("Payment succeeded successfully.", {
-        variant: "success",
-      });
-      handleNavigateToThankyou();
+      confirmCardPayment(postData);
     } else if (result.code === 201) {
       const postData = {
         email: inputState.email
@@ -227,7 +219,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       enqueueSnackbar(result.message, { variant: "error" });
       setIsLoadingCard(false);
     }
-    // }
   };
 
   const handleSecureCard = (client_secret, cardElement, postData) => {
