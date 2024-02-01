@@ -349,7 +349,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     name="lastName"
                     className="form-control"
                     placeholder="Last Name *"
-                    // required
+                    required
                     autoComplete="off"
                     value={inputState.lastName}
                     onChange={handleChangeInputsState}
