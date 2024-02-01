@@ -8,7 +8,6 @@ export async function getServerSideProps(context) {
     page_slug: query.page_slug,
   };
   const result = await _get_website_page(postData);
-  // console.log(result, "--result--result");
 
   if (result.code === 200) {
     return {

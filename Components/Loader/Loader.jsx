@@ -1,16 +1,39 @@
-import { CircularProgress } from "@mui/material";
-import React from "react";
+import { Box, LinearProgress } from "@mui/material";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-function Loader() {
+const PageTransitionBar = () => {
+  const [showLoader, setShowLoader] = useState(false);
+  const router = useRouter();
+  /* <<--------------------------------------------------------->> */
+  const routeChangeStart = () => {
+    setShowLoader(true);
+  };
+  const routeChangeComplete = () => {
+    setShowLoader(false);
+  };
+  /* <<--------------------------------------------------------->> */
+  useEffect(() => {
+    router.events.on("routeChangeStart", routeChangeStart);
+    router.events.on("routeChangeComplete", routeChangeComplete);
+    return () => {
+      router.events.off("routeChangeStart", routeChangeStart);
+      router.events.off("routeChangeComplete", routeChangeComplete);
+    };
+  }, []);
+  /* <<--------------------------------------------------------->> */
+  if (!showLoader) {
+    return <></>;
+  }
   return (
-    <div className="container">
-      <div className="row text-center">
-        <div className="centered">
-          <CircularProgress />
-        </div>
-      </div>
-    </div>
+    <Box className="page-loading-bar">
+      <LinearProgress
+        color="primary"
+        sx={{
+          height: "0.12rem",
+        }}
+      />
+    </Box>
   );
-}
-
-export default Loader;
+};
+export default PageTransitionBar;
