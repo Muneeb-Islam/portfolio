@@ -4,8 +4,6 @@ import {
   _payment_free,
   _send_contact_support_email,
   confirm_one_time_payment_for_web,
-  confirm_subscription_incomplete_for_web,
-  get_web_intent_client_secret_for_one_time,
   pay_now_for_subscription_web,
 } from "../../../DAL/Form";
 
@@ -20,24 +18,28 @@ import { useSnackbar } from "notistack";
 import React from "react";
 import { useElements, useStripe } from "@stripe/react-stripe-js";
 import { CardElement } from "@stripe/react-stripe-js";
-
 import { useRouter } from "next/router";
-import Loader from "@/Components/Loader/Loader";
+import { LinearProgress } from "@mui/material";
+import convertCurrencyToSign from "@/utils/constants";
 
 const ContactSection = ({ page_data, PaymentPlan }) => {
+<<<<<<< HEAD
   const paymentPage = page_data?.payment_page?.sale_page_detail;
   const salePage = page_data.sale_page_detail;
+=======
+  const paymentPage = page_data.payment_page.sale_page_detail;
+>>>>>>> dev
   const router = useRouter();
   const [isLoadingCard, setIsLoadingCard] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
   const [paymentPlan, setPaymentPlan] = useState([]);
+  console.log(paymentPlan, "---paymentPlan");
   const [pageData, setPageData] = useState({});
   const { enqueueSnackbar } = useSnackbar();
   const [clientSecret, setClientSecret] = useState("");
   const [resPostData, setResPostData] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isStoredToken, setIsStoredToken] = useState(false);
   const params = router.query ? router.query : page_data.query;
   const navigate = router.push;
 
@@ -133,20 +135,13 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       localStorage.setItem("token", result?.token);
       _set_user_in_localStorage(result?.user_info);
       handleNavigateToThankyou();
-    } else if (result.code === 210) {
+    } else if (result.code === 201) {
       const postData = {
-        email: inputState.email
-          ? inputState.email
-          : _get_user_from_localStorage()?.email,
-        plan_id: paymentPlan._id,
-        page_slug: params.page_slug,
-        subscription_id: page_data?.strip_subscription_id,
+        susbcription_object: result.susbcription_object,
       };
 
-      // save data for failure use
       setClientSecret(result.client_secret);
       setResPostData(postData);
-      // handle secure card action
       handleSecureCard(result.client_secret, cardElement, postData);
     } else {
       enqueueSnackbar(result.message, { variant: "error" });
@@ -165,7 +160,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("plan_id", paymentPlan._id);
     formData.append("page_slug", params.page_slug);
     formData.append("source_token", token);
-    // formData.append("payment_type", "onetime");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
@@ -177,22 +171,15 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
 
     if (result.code === 200) {
       const postData = {
+        email: inputState.email
+          ? inputState.email
+          : _get_user_from_localStorage()?.email,
         plan_id: paymentPlan._id,
         page_slug: params.page_slug,
         shipping_object: result.shipping_object,
       };
 
-      if (_get_token_from_localStorage()) {
-        postData.x_sh_auth = _get_token_from_localStorage();
-      } else {
-        postData.email = inputState.email;
-      }
-      // postData.email = inputState.email;
-      setIsLoading(true);
-      enqueueSnackbar("Payment succeeded successfully.", {
-        variant: "success",
-      });
-      handleNavigateToThankyou();
+      confirmCardPayment(postData);
     } else if (result.code === 201) {
       const postData = {
         email: inputState.email
@@ -213,40 +200,30 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const confirmCardPayment = async (postData) => {
-    // if (paymentPlan.payment_access === "recursion") {
-    //   const result = await confirm_subscription_incomplete_for_web(postData);
+    if (paymentPlan.payment_access === "one_time") {
+      const result = await confirm_one_time_payment_for_web(postData);
 
-    //   if (result.code === 200) {
-    //     setIsLoadingCard(false);
-    //     enqueueSnackbar("Payment succeeded successfully.", {
-    //       variant: "success",
-    //     });
-    //     setIsLoading(true);
-    //     localStorage.setItem("token", result?.token);
-    //     _set_user_in_localStorage(result?.user_info);
-    //     handleNavigateToThankyou();
-    //   } else {
-    //     enqueueSnackbar(result.message, { variant: "error" });
-    //     setIsLoadingCard(false);
-    //   }
-    // } else {
-    const result = await confirm_one_time_payment_for_web(postData);
+      if (result.code === 200) {
+        setIsLoadingCard(false);
+        enqueueSnackbar("Payment succeeded successfully.", {
+          variant: "success",
+        });
 
-    if (result.code === 200) {
-      setIsLoadingCard(false);
+        setIsLoading(true);
+        localStorage.setItem("token", result?.token);
+        _set_user_in_localStorage(result?.user_info);
+        handleNavigateToThankyou();
+      } else {
+        enqueueSnackbar(result.message, { variant: "error" });
+        setIsLoadingCard(false);
+      }
+    } else {
       enqueueSnackbar("Payment succeeded successfully.", {
         variant: "success",
       });
 
-      setIsLoading(true);
-      localStorage.setItem("token", result?.token);
-      _set_user_in_localStorage(result?.user_info);
       handleNavigateToThankyou();
-    } else {
-      enqueueSnackbar(result.message, { variant: "error" });
-      setIsLoadingCard(false);
     }
-    // }
   };
 
   const handleSecureCard = (client_secret, cardElement, postData) => {
@@ -284,7 +261,11 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const handleCardAction = (card_token, cardElement) => {
-    if (paymentPlan.payment_access === "recursion") {
+    if (
+      paymentPlan.payment_access === "recurring_basic" ||
+      paymentPlan.payment_access === "recurring_fixed" ||
+      paymentPlan.payment_access === "installment"
+    ) {
       payNowForSubscription(card_token, cardElement);
     } else {
       getIntentClientSecretForOneTime(card_token, cardElement);
@@ -321,7 +302,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   }, []);
 
   if (isLoading) {
-    return <Loader />;
+    return <LinearProgress />;
   }
 
   return (
@@ -368,7 +349,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     name="lastName"
                     className="form-control"
                     placeholder="Last Name *"
-                    // required
+                    required
                     autoComplete="off"
                     value={inputState.lastName}
                     onChange={handleChangeInputsState}
@@ -458,6 +439,38 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                 ) : (
                   ""
                 )}
+
+                <div className="col-12 mt-4">
+                  <div className="d-flex justify-content-between select-plan-price">
+                    <div>
+                      <h4>Your Plan</h4>
+                    </div>
+                    <div>
+                      <h4>Price</h4>
+                    </div>
+                  </div>
+                  <div className="border-line-div"></div>
+                  <div className="d-flex justify-content-between select-plan-price">
+                    <div>
+                      <h5>{paymentPlan?.plan_title}</h5>
+                    </div>
+                    <div>
+                      <h5>
+                        {paymentPlan.is_plan_free
+                          ? "Free"
+                          : paymentPlan.payment_access === "installment"
+                          ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                            paymentPlan.initial_amount
+                          : paymentPlan.payment_access === "one_time" ||
+                            paymentPlan.payment_access === "recurring_fixed" ||
+                            paymentPlan.payment_access === "recurring_basic"
+                          ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                            paymentPlan.plan_price
+                          : ""}
+                      </h5>
+                    </div>
+                  </div>
+                </div>
                 <div className="col-12 mt-4">
                   {isLoadingCard ? (
                     <button

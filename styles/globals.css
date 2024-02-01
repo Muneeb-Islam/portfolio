@@ -88,7 +88,9 @@ p {
 .tab-content h2::after,
 .hows-text h2::after,
 .pricing .nexora-price-card:hover,
-.pricing .box-div, .thanks_wrapper .lawyer-home-btn a, .thanks_wrapper .card-outer-area   {
+.pricing .box-div,
+.thanks_wrapper .lawyer-home-btn a,
+.thanks_wrapper .card-outer-area {
   background: rgb(0, 102, 204);
 }
 
@@ -108,7 +110,8 @@ span,
 .slider_wrapper .client-slider-card i,
 .slider_wrapper .done-heading h1,
 .pricing .fa-check,
-.slider_wrapper .star-rating i, .thanks_wrapper .lawyer-socials a:hover {
+.slider_wrapper .star-rating i,
+.thanks_wrapper .lawyer-socials a:hover {
   color: rgb(0, 102, 204)
 }
 
@@ -121,7 +124,8 @@ span,
 .choose-card:hover .elementor-icon,
 .top_services_wrapper .elementor-icon:hover .elementor-icon .now-order-btn a,
 .chhose-btn:hover,
-.btn-vision:hover ,.thanks_wrapper .lawyer-home-btn a:hover{
+.btn-vision:hover,
+.thanks_wrapper .lawyer-home-btn a:hover {
   background-color: rgb(25, 139, 168);
 }
 
@@ -132,7 +136,8 @@ span,
   color: rgb(25, 139, 168);
 }
 
-.navbar_wrapper span,.thanks_wrapper .lawyer-socials a {
+.navbar_wrapper span,
+.thanks_wrapper .lawyer-socials a {
   color: #677289;
 }
 
@@ -169,7 +174,9 @@ a:hover,
 .pricing .nexora-price-card:hover h3,
 .pricing .box-div,
 .pricing .nexora-price-card:hover span,
-.pricing .nexora-price-card:hover .fa-check ,.thanks_wrapper .lawyer-home-btn a, .thanks_wrapper .lawyer-home-btn a:hover {
+.pricing .nexora-price-card:hover .fa-check,
+.thanks_wrapper .lawyer-home-btn a,
+.thanks_wrapper .lawyer-home-btn a:hover {
   color: #fff;
 }
 
@@ -1209,11 +1216,13 @@ faq
   padding: 1rem 1.3rem;
   background-color: #f8f9fb;
 }
- input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 .contact-card input:focus,
 .contact-card textarea:focus {
   box-shadow: none;
@@ -1784,31 +1793,38 @@ end explore
   color: rgb(25, 139, 168);
   right: 1.4375rem;
 }
+
 /*======================== 
 lawyer-theme1-thankyou-start 
 ==========================*/
 .thanks_wrapper .card-outer-area {
   padding: 4.5rem 5rem;
 }
-.thanks_wrapper .card-inner{
+
+.thanks_wrapper .card-inner {
   padding: 6rem 7rem 8rem;
 }
+
 .thanks_wrapper .lawyer-thankyou {
   background-color: #fff;
 
 }
-.thanks_wrapper  h1,
+
+.thanks_wrapper h1,
 .thanks_wrapper h3 {
   margin-bottom: 1.3rem;
 }
-.thanks_wrapper  h1 {
+
+.thanks_wrapper h1 {
   font-size: 3.25rem;
   font-weight: 700;
 }
-.thanks_wrapper  h3 {
+
+.thanks_wrapper h3 {
   font-size: 1.5rem;
   font-weight: 400;
 }
+
 .thanks_wrapper .lawyer-thankyou-heading p {
   line-height: 1.8;
 }
@@ -1816,17 +1832,21 @@ lawyer-theme1-thankyou-start
 .thanks_wrapper .lawyer-socials a {
   font-size: 1.2rem;
 }
+
 .thanks_wrapper .lawyer-socials li:not(:last-of-type) {
   margin-right: 1rem;
 }
+
 .thanks_wrapper .lawyer-socials {
   bottom: 13.5rem;
-  position: static!important;
+  position: static !important;
 }
+
 .thanks_wrapper .copyright-icon {
   bottom: 11rem;
 }
-.position-div{
+
+.position-div {
   position: absolute;
   bottom: 6rem;
   text-align: center;
@@ -1840,27 +1860,52 @@ lawyer-theme1-thankyou-start
   margin: 3rem 0rem 5rem;
   border-radius: 0.3125rem;
 }
+
 .thanks_wrapper .lawyer-thankyou-copyright p,
 .thanks_wrapper .copyright-icon i {
   font-size: 0.875rem;
   margin-bottom: 0;
 }
+
 /*======================== 
 lawyer-theme1-thankyou-end 
 ==========================*/
 
 /* Media Queries */
-@media(max-width:64rem){
-  .thanks_wrapper .lawyer-thankyou{
+@media(max-width:64rem) {
+  .thanks_wrapper .lawyer-thankyou {
     min-height: 100vh;
   }
 }
+
 @media (max-width: 33.75rem) {
   .thanks_wrapper .card-inner {
     padding: 15rem 1rem;
   }
-.thanks_wrapper .card-outer-area {
+
+  .thanks_wrapper .card-outer-area {
     padding: 1rem;
   }
 }
 
+
+.border-line-div {
+  background: #0066cc;
+  height: 2px !important;
+  margin: 10px 0;
+}
+
+.select-plan-price h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: #292929;
+}
+
+.select-plan-price h5 {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #292929;
+
+}
