@@ -450,17 +450,19 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                       <h5>{paymentPlan?.plan_title}</h5>
                     </div>
                     <div>
-                      {paymentPlan.is_plan_free
-                        ? "Free"
-                        : paymentPlan.payment_access === "installment"
-                        ? convertCurrencyToSign(paymentPlan.plan_currency) +
-                          paymentPlan.initial_amount
-                        : paymentPlan.payment_access === "one_time" ||
-                          paymentPlan.payment_access === "recurring_fixed" ||
-                          paymentPlan.payment_access === "recurring_basic"
-                        ? convertCurrencyToSign(paymentPlan.plan_currency) +
-                          paymentPlan.plan_price
-                        : ""}
+                      <h5>
+                        {paymentPlan.is_plan_free
+                          ? "Free"
+                          : paymentPlan.payment_access === "installment"
+                          ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                            paymentPlan.initial_amount
+                          : paymentPlan.payment_access === "one_time" ||
+                            paymentPlan.payment_access === "recurring_fixed" ||
+                            paymentPlan.payment_access === "recurring_basic"
+                          ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                            paymentPlan.plan_price
+                          : ""}
+                      </h5>
                     </div>
                   </div>
                 </div>
