@@ -18,13 +18,11 @@ import { useSnackbar } from "notistack";
 import React from "react";
 import { useElements, useStripe } from "@stripe/react-stripe-js";
 import { CardElement } from "@stripe/react-stripe-js";
-
 import { useRouter } from "next/router";
-import Loader from "@/Components/Loader/Loader";
+import { LinearProgress } from "@mui/material";
 
 const ContactSection = ({ page_data, PaymentPlan }) => {
   const paymentPage = page_data.payment_page.sale_page_detail;
-  const salePage = page_data.sale_page_detail;
   const router = useRouter();
   const [isLoadingCard, setIsLoadingCard] = useState(false);
   const stripe = useStripe();
@@ -35,7 +33,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   const [clientSecret, setClientSecret] = useState("");
   const [resPostData, setResPostData] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isStoredToken, setIsStoredToken] = useState(false);
   const params = router.query ? router.query : page_data.query;
   const navigate = router.push;
 
@@ -131,20 +128,13 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       localStorage.setItem("token", result?.token);
       _set_user_in_localStorage(result?.user_info);
       handleNavigateToThankyou();
-    } else if (result.code === 210) {
+    } else if (result.code === 201) {
       const postData = {
-        email: inputState.email
-          ? inputState.email
-          : _get_user_from_localStorage()?.email,
-        plan_id: paymentPlan._id,
-        page_slug: params.page_slug,
-        subscription_id: page_data?.strip_subscription_id,
+        susbcription_object: result.susbcription_object,
       };
 
-      // save data for failure use
       setClientSecret(result.client_secret);
       setResPostData(postData);
-      // handle secure card action
       handleSecureCard(result.client_secret, cardElement, postData);
     } else {
       enqueueSnackbar(result.message, { variant: "error" });
@@ -203,21 +193,29 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const confirmCardPayment = async (postData) => {
-    const result = await confirm_one_time_payment_for_web(postData);
+    if (paymentPlan.payment_access === "one_time") {
+      const result = await confirm_one_time_payment_for_web(postData);
 
-    if (result.code === 200) {
-      setIsLoadingCard(false);
+      if (result.code === 200) {
+        setIsLoadingCard(false);
+        enqueueSnackbar("Payment succeeded successfully.", {
+          variant: "success",
+        });
+
+        setIsLoading(true);
+        localStorage.setItem("token", result?.token);
+        _set_user_in_localStorage(result?.user_info);
+        handleNavigateToThankyou();
+      } else {
+        enqueueSnackbar(result.message, { variant: "error" });
+        setIsLoadingCard(false);
+      }
+    } else {
       enqueueSnackbar("Payment succeeded successfully.", {
         variant: "success",
       });
 
-      setIsLoading(true);
-      localStorage.setItem("token", result?.token);
-      _set_user_in_localStorage(result?.user_info);
       handleNavigateToThankyou();
-    } else {
-      enqueueSnackbar(result.message, { variant: "error" });
-      setIsLoadingCard(false);
     }
   };
 
@@ -256,7 +254,11 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const handleCardAction = (card_token, cardElement) => {
-    if (paymentPlan.payment_access === "recursion") {
+    if (
+      paymentPlan.payment_access === "recurring_basic" ||
+      paymentPlan.payment_access === "recurring_fixed" ||
+      paymentPlan.payment_access === "installment"
+    ) {
       payNowForSubscription(card_token, cardElement);
     } else {
       getIntentClientSecretForOneTime(card_token, cardElement);
@@ -293,7 +295,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   }, []);
 
   if (isLoading) {
-    return <Loader />;
+    return <LinearProgress />;
   }
 
   return (

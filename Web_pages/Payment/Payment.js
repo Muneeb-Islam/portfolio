@@ -14,7 +14,6 @@ export default function PaymentPage({ page_data }) {
   const menu_items = page_data.menu_items;
   const stripKey = page_data.stripe_publish_key;
 
-  console.log(page_data, --page_data);
   return (
     <div>
       <Header page_data={sale_page} />
