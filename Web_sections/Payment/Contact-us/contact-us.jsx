@@ -165,7 +165,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("plan_id", paymentPlan._id);
     formData.append("page_slug", params.page_slug);
     formData.append("source_token", token);
-    // formData.append("payment_type", "onetime");
 
     // if client secret is already generated
     if (clientSecret && resPostData) {
@@ -187,7 +186,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
       } else {
         postData.email = inputState.email;
       }
-      // postData.email = inputState.email;
       setIsLoading(true);
       enqueueSnackbar("Payment succeeded successfully.", {
         variant: "success",
@@ -213,23 +211,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const confirmCardPayment = async (postData) => {
-    // if (paymentPlan.payment_access === "recursion") {
-    //   const result = await confirm_subscription_incomplete_for_web(postData);
-
-    //   if (result.code === 200) {
-    //     setIsLoadingCard(false);
-    //     enqueueSnackbar("Payment succeeded successfully.", {
-    //       variant: "success",
-    //     });
-    //     setIsLoading(true);
-    //     localStorage.setItem("token", result?.token);
-    //     _set_user_in_localStorage(result?.user_info);
-    //     handleNavigateToThankyou();
-    //   } else {
-    //     enqueueSnackbar(result.message, { variant: "error" });
-    //     setIsLoadingCard(false);
-    //   }
-    // } else {
     const result = await confirm_one_time_payment_for_web(postData);
 
     if (result.code === 200) {
