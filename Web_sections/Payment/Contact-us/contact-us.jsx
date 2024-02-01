@@ -20,6 +20,7 @@ import { useElements, useStripe } from "@stripe/react-stripe-js";
 import { CardElement } from "@stripe/react-stripe-js";
 import { useRouter } from "next/router";
 import { LinearProgress } from "@mui/material";
+import convertCurrencyToSign from "@/utils/constants";
 
 const ContactSection = ({ page_data, PaymentPlan }) => {
   const paymentPage = page_data.payment_page.sale_page_detail;
@@ -28,6 +29,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [paymentPlan, setPaymentPlan] = useState([]);
+  console.log(paymentPlan, "---paymentPlan");
   const [pageData, setPageData] = useState({});
   const { enqueueSnackbar } = useSnackbar();
   const [clientSecret, setClientSecret] = useState("");
@@ -432,6 +434,36 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                 ) : (
                   ""
                 )}
+
+                <div className="col-12 mt-4">
+                  <div className="d-flex justify-content-between select-plan-price">
+                    <div>
+                      <h4>Your Plan</h4>
+                    </div>
+                    <div>
+                      <h4>Price</h4>
+                    </div>
+                  </div>
+                  <div className="border-line-div"></div>
+                  <div className="d-flex justify-content-between select-plan-price">
+                    <div>
+                      <h5>{paymentPlan?.plan_title}</h5>
+                    </div>
+                    <div>
+                      {paymentPlan.is_plan_free
+                        ? "Free"
+                        : paymentPlan.payment_access === "installment"
+                        ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                          paymentPlan.initial_amount
+                        : paymentPlan.payment_access === "one_time" ||
+                          paymentPlan.payment_access === "recurring_fixed" ||
+                          paymentPlan.payment_access === "recurring_basic"
+                        ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                          paymentPlan.plan_price
+                        : ""}
+                    </div>
+                  </div>
+                </div>
                 <div className="col-12 mt-4">
                   {isLoadingCard ? (
                     <button
