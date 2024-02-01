@@ -88,7 +88,6 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     formData.append("contact_number", inputState.phone);
     formData.append("page_slug", params.page_slug);
     formData.append("plan_id", paymentPlan._id);
-    // formData.append("payment_type", "free");
 
     setIsLoadingCard(true);
     const result = await _payment_free(formData);
