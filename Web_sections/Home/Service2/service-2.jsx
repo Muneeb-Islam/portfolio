@@ -4,7 +4,7 @@ const Services = ({page_data, website_program}) => {
   const salePage = page_data.sale_page_detail;
 return (
 
-<section className="services pt-90 text-center" id="why_us">
+<section className="services pt-90 text-center" id="features">
   <div className="container">
     <div className="row justify-content-center">
       <div className="col-lg-9 wow slideInUp"
