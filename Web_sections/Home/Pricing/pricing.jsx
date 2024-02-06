@@ -10,7 +10,7 @@ const PricingSection = ({ page_data, payment_plan }) => {
   };
 
   return (
-    <section className="pricing pt-90" id="price">
+    <section className="pricing pt-90" id="pricing">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-7">
