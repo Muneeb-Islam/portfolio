@@ -4,7 +4,7 @@ const HowSection = ({ page_data, comprehensive_services }) => {
   const salePage = page_data.sale_page_detail;
 
   return (
-    <section className="how-work pt-90" id="features">
+    <section className="how-work pt-90" id="about-us">
       <div className="container">
         <div className="row justify-content-center">
           <div
