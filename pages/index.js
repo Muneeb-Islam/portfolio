@@ -29,7 +29,6 @@ export default function Home({ page_data }) {
   const { brand_favicon, meta_keywords, meta_title, meta_description } =
     page_data.Sale_page;
   const page_name = page_data?.Sale_page.page_component_name;
-  console.log(page_name, "-- page_name");
   return (
     <>
       <HeaderController

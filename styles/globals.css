@@ -1909,3 +1909,439 @@ lawyer-theme1-thankyou-end
   color: #292929;
 
 }
+
+
+
+/* ====================== plan-page ==============================
+ =============================================================== */
+
+
+.plan-page h1,
+.plan-page h2,
+.plan-page h3,
+.plan-page h4,
+.plan-page h5,
+.plan-page h6,
+.plan-page p,
+.plan-page ul>li {
+  color: #282828;
+}
+
+.plan-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.plan-page h2 {
+  font-size: 1.95rem;
+  font-weight: 700;
+}
+.plan-page h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.plan-page .plan-pricing {
+  padding: 64px 0 100px;
+}
+
+
+
+.plan-page .payment-plan-card.active-card {
+  border-top: 16px solid #319b77 !important;
+  border: 1px solid #319b77;
+}
+
+
+.plan-page .payment-plan-card {
+  background: #fff;
+  padding: 58px 30px 40px;
+  border: 1px solid #d5d6dc;
+  border-radius: 6px;
+  position: relative;
+  border-top: 16px solid #d5d6dc;
+
+}
+
+.plan-page .payment-plan-card h6 {
+  font-size: 16px;
+  margin-bottom: 32px;
+  white-space: nowrap;
+  padding-top: 5px;
+}
+
+.plan-page .payment-plan-card h2 {
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+
+}
+
+.plan-page .payment-plan-card ul {
+  padding-top: 15px;
+  display: inline-block;
+  padding-left: 0;
+}
+
+.plan-page .payment-plan-card ul>li {
+  display: flex !important;
+  justify-content: start;
+  font-size: 16px;
+  background: url(/assets/check-2.png) no-repeat left 7px;
+  background-size: 20px;
+  padding: 3px 35px 7px;
+  float: left;
+}
+
+.plan-page .plan-page-price h2 {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+.plan-page .plan-page-price h2>span {
+  color: #282828;
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 4px;
+  bottom: 20px;
+  text-transform: uppercase;
+}
+
+.plan-page .plan-page-price h5 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.plan-page .plan-btn-div.plan-btn-div-2 {
+  margin: auto 20px !important;
+
+}
+
+.plan-page .plan-btn-div {
+  margin: auto 0;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.plan-page .plan-btn-btn {
+  width: 80%;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.025rem;
+  padding: 12px 30px 15px;
+  color: #319b77;
+  font-weight: 600;
+  border: 2px solid #319b77;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.plan-btn-btn i {
+  font-size: 15px !important;
+  padding-top: 4px;
+}
+
+.plan-page .plan-btn-btn.plan-btn-fill:hover {
+  color: #319b77;
+  border: 2px solid #319b77;
+  background: #fff;
+}
+
+.plan-page .plan-btn-btn.plan-btn-fill {
+  background: #319b77;
+  color: #fff;
+}
+
+.plan-page .plan-btn-btn:hover i{
+  color: #fff;
+}
+.plan-page .plan-btn-btn:hover {
+  background: #319b77;
+  color: #fff;
+
+}
+
+.plan-page .toggle-btn h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529 !important;
+
+}
+
+.plan-page .plan-bottom-text h6 {
+  font-size: 26px;
+  color: #282828;
+}
+
+.plan-page .switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+
+.plan-page .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.plan-page .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 2px solid #319b77;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.plan-page .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 1.5px;
+  background-color: #319b77;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.plan-page input:checked+.slider {
+  background-color: #fff;
+}
+
+.plan-page input:focus+.slider {
+  box-shadow: 0 0 1px #319b77;
+}
+
+.plan-page input:checked+.slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.plan-page .slider.round {
+  border-radius: 34px;
+}
+
+.plan-page .slider.round:before {
+  border-radius: 50%;
+}
+
+.plan-page .bg-plan-color {
+  background: #edfbf6;
+  padding: 128px 0;
+}
+
+.plan-page .plan-compare {
+  padding: 128px 0 100px;
+}
+
+.plan-page .plan-compare h2 {
+  line-height: 1.5;
+}
+.plan-page .plan-compare .fa-minus{
+  color: #5d5e6f !important;
+}
+.plan-page .plan-compare .fa-solid{
+  color: #319b77;
+  font-size: 22px;
+}
+
+.plan-page .plan-compare-card {
+  border-left: 1px solid #edfbf6;
+  padding: 0px 20px 16px;
+  box-shadow: inset 0 0 0 #d5d6dc, inset 1px 0 0 #d5d6dc;
+  position: relative;
+}
+
+.plan-page .plan-compare-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.plan-page .plan-compare-card p,
+.plan-page .plan-compare-card h6 {
+  font-size: 14px;
+}
+
+.plan-page .plan-compare-card h6 {
+  font-weight: 600;
+  color: #282828;
+  margin-bottom: 13px;
+}
+
+.plan-page .plan-compare-card .compare-btn-btn {
+  width: 100%;
+  display: inline-block;
+  padding: 8px 15px 10px;
+  font-size: 16px;
+}
+.plan-page .plan-compare .table:first-child{
+  font-size: 18px;
+}
+
+
+.table-bordered>:not(caption)>*>* {
+  border-left: 0;
+}
+
+.table td > span{
+  font-size: 10px;
+  color: #282828;
+  display: block;
+  letter-spacing: 0;
+
+}
+.table .border-right-0{
+  border-right: 0;
+}
+.table>:not(caption)>*>* {
+  color: #5d5e6f;
+  padding: 1.5rem ;  
+  width: 15%;
+}
+
+.table > td , .table > th{
+  width: 20%;
+}
+
+
+.plan-page .bg-plan-color h2 {
+  line-height: 2.125rem !important;
+  margin-bottom: 20px;
+}
+
+
+.plan-page .btn-color-link:hover {
+  border-color: #319b77;
+}
+
+.plan-page .btn-color-link i {
+  font-size: 18px;
+}
+
+.plan-page .btn-color-link {
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s linear 0s;
+  color: #319b77;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+
+.plan-page .plan-page-faq,
+.plan-page .bg-plan-slider {
+  padding: 50px 0 150px;
+}
+
+.plan-page .bg-plan-slider h3 {
+  color: #5d5e6f;
+}
+
+
+.plan-page .plan-page-faq .faq-list {
+  border-radius: 0rem;
+  margin-bottom: -0.125rem;
+}
+
+.plan-page .plan-page-faq .faq-list h6 {
+  font-size: 1.2rem;
+}
+
+
+.plan-page .plan-page-faq .faq-list {
+  padding-left: 0;
+}
+
+.plan-page .plan-page-faq .faq-list li {
+  padding: 0.75rem 0.938rem 1rem 0rem;
+  border-bottom: 1px solid #d5d6dc;
+}
+
+.plan-page .plan-page-faq .faq-list a {
+  display: block;
+  position: relative;
+  padding: 0.925rem 0rem 0.425rem !important;
+  cursor: pointer;
+}
+
+.plan-page .plan-page-faq .faq-list i {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  color: #319b77;
+  position: absolute;
+  right: 0rem;
+  top: 1.125rem;
+}
+
+
+.plan-page .plan-page-faq .faq-list p {
+  padding: 1rem 0rem;
+}
+
+.plan-page .plan-page-faq span {
+  color: #319b77;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.plan-page .plan-page-faq .collap {
+  position: relative;
+}
+
+.plan-page .plan-page-faq .faq-list .icon-show {
+  display: none;
+}
+
+.plan-page .plan-page-faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+  position: absolute;
+  top: 1.313rem;
+}
+
+.plan-page .plan-page-faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media(max-width:33.75rem) {
+  .plan-page .plan-page-faq .faq-list a.collapsed .icon-show {
+    top: 1.063rem;
+  }
+}
+
+@media (max-width : 26.563rem) {
+  .plan-page .plan-page-faq .faq-list .fas {
+    position: absolute;
+    top: 1.313rem;
+  }
+}
+
+@media (max-width: 1400px) {}
+
+@media only screen and (max-width: 1200px) and (min-width: 991px) {
+  .plan-page .plan-compare-card .compare-btn-btn{
+    padding: 8px 5px ;
+    font-size: 14px;
+  }
+ 
+}
+
+@media(max-width:992px) {}
+
+@media only screen and (max-width:991px) and (min-width:768px) {}
+
+@media(max-width:768px) {}
