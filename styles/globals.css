@@ -2359,3 +2359,56 @@ lawyer-theme1-thankyou-end
   font-size: 25px;
   text-transform: capitalize;
 }
+
+
+@media (max-width: 1024px) {
+  .popup {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    width: 45%;
+  }
+}
+
+@media (max-width: 525px) {
+  .popup {
+    width: 80%;
+  }
+}
+
+
+.popup {
+  width: 25%;
+  /* height: 70vh; */
+  border-radius: 4px;
+  opacity: 1;
+  background-color: black;
+  border: 1px solid #319b77;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  box-shadow: rgb(181, 157, 78) 0px 1px 2px 0px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.crossPoPUp {
+  background-color: #319b77;
+  display: inline;
+  width: 23px;
+  position: absolute;
+  text-align: center;
+  height: 23px;
+  border-radius: 50px;
+  font-weight: 400;
+  right: 8px;
+  top: 5px;
+  z-index: 9999999999999;
+  cursor: pointer;
+}

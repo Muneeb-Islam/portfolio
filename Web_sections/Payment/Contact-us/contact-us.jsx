@@ -359,7 +359,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
           <div className="container">
             <div className="row mt-5 margin-bottom-form">
               <div style={{ textAlign: "center" }}>
-                <span className="log-heading">The Skin Sister login</span>
+                <span className="log-heading">Vision login</span>
               </div>
               <form
                 style={{ colorScheme: "dark" }}
