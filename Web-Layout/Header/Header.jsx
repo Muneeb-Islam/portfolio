@@ -1,7 +1,7 @@
 import { s3baseUrl } from "@/config/config";
 import React, { useEffect } from "react";
 const Header = ({ page_data }) => {
-    const salePage = page_data.sale_page_detail;
+  const salePage = page_data.page_detail;
   const menu_items = page_data?.header_menu?.menu_items;
   const { brand_logo } = page_data;
   // console.log(menu_items, "---menu_items")
@@ -9,8 +9,8 @@ const Header = ({ page_data }) => {
   useEffect(() => {
     console.log("script run for active first");
     document.getElementsByClassName("nav-link")[0].classList.add("active");
-  }, [])
-  
+  }, []);
+
   return (
     <header>
       {/* <div className="top_navbar d-none d-lg-flex">
@@ -88,18 +88,16 @@ const Header = ({ page_data }) => {
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-lg-center">
                 {menu_items?.map((items, index) => {
                   return (
-                    
-                      <li className="nav-item" key={index}>
-                        <a
+                    <li className="nav-item" key={index}>
+                      <a
                         data-index={index}
-                          className={"nav-link"}
-                          aria-current="page"
-                          href={items.item_url}
-                        >
-                          {items.title}
-                        </a>
-                      </li>
-                  
+                        className={"nav-link"}
+                        aria-current="page"
+                        href={items.item_url}
+                      >
+                        {items.title}
+                      </a>
+                    </li>
                   );
                 })}
 
@@ -136,10 +134,15 @@ const Header = ({ page_data }) => {
                         </div>
                     </div> */}
 
-              <a href={salePage.get_a_quote_link} className="btn-vision mt-3 mt-lg-0">
-                {salePage.get_a_quote_text} 
-                {/* <i className="fa-solid fa-arrow-right ms-2"></i> */}
-              </a>
+              {salePage.get_a_quote_text && (
+                <a
+                  href={salePage.get_a_quote_link}
+                  className="btn-vision mt-3 mt-lg-0"
+                >
+                  {salePage.get_a_quote_text}
+                  {/* <i className="fa-solid fa-arrow-right ms-2"></i> */}
+                </a>
+              )}
             </div>
           </nav>
         </div>

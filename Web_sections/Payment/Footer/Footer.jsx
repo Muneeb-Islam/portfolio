@@ -2,7 +2,7 @@ import { s3baseUrl } from "@/config/config";
 import { useEffect, useState } from "react";
 
 const Footer = ({ page_data }) => {
-  const salePage = page_data.sale_page_detail;
+  const salePage = page_data.page_detail;
   const footer_menu = page_data?.footer_menu?.menu_items;
   const { footer_logo } = page_data;
   return (

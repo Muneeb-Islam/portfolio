@@ -23,8 +23,9 @@ import { LinearProgress } from "@mui/material";
 import convertCurrencyToSign from "@/utils/constants";
 
 const ContactSection = ({ page_data, PaymentPlan }) => {
-  const paymentPage = page_data.payment_page.sale_page_detail;
+  const paymentPage = page_data.payment_page.page_detail;
   const router = useRouter();
+  const [pop, setpop] = useState(false);
   const [isLoadingCard, setIsLoadingCard] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
@@ -46,6 +47,11 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     password: "",
     passwordType: "password",
     brand_name: "",
+  });
+
+  const [inputPopState, setInputsPopState] = useState({
+    email: "",
+    password: "",
   });
 
   const handleChangeInputsState = (e) => {
@@ -267,6 +273,38 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     }
   };
 
+  const showPopUp = () => {
+    setpop(true);
+  };
+  const closePopUp = () => {
+    setpop(false);
+  };
+
+  // pop up login
+  const handleSubmitPoPup = async (e) => {
+    e.preventDefault();
+    setIsLoadingCard(true);
+    const postData = {
+      email: inputPopState.email,
+      password: inputPopState.password,
+    };
+    setIsLoadingCard(true);
+    const result = await login_member_by_payment_popup(postData);
+    if (result.code === 200) {
+      setIsLoadingCard(false);
+      localStorage.setItem("token", result?.token);
+      _set_user_in_localStorage(result?.user_info);
+      set_user_info(result?.user_info);
+      enqueueSnackbar(result.message, {
+        variant: "success",
+      });
+      setpop(false);
+    } else {
+      enqueueSnackbar(result.message, { variant: "error" });
+      setIsLoadingCard(false);
+    }
+  };
+
   const changePasswordType = () => {
     if (inputState.passwordType === "password") {
       setInputsState((prevState) => ({
@@ -287,6 +325,17 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
     });
   };
 
+  const handleClickPlan = (plan) => {
+    if (params.affiliate_name) {
+      router.replace(
+        `/${params.page_slug}/payment-page/${plan.plan_slug}/${params.affiliate_name}`
+      );
+    } else {
+      router.replace(`/${params.page_slug}/payment-page/${plan.plan_slug}`);
+    }
+    setPaymentPlan(plan);
+  };
+
   useEffect(() => {
     setPageData(page_data);
     let find_plan = PaymentPlan.find(
@@ -301,90 +350,47 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   }
 
   return (
-    <section className="contact_form" id="contact_form_wrapper">
-      <div className="container-fluid px-lg-5">
-        <div className="row justify-content-center align-items-center mx-3 mt-5 contact-card">
-          <div className="col-lg-6 ps-lg-0">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: paymentPage.ready_to_see_text,
-              }}
-            ></div>
-            <img
-              src={s3baseUrl + paymentPage.payment_form_image}
-              alt=""
-              className="img-fluid"
-            />
+    <>
+      {pop && (
+        <div className="popup">
+          <div className="crossPoPUp" onClick={closePopUp}>
+            x
           </div>
-
-          <div className="col-lg-6 ps-lg-5 mt-4 mt-md-0">
-            <form
-              onSubmit={
-                paymentPlan.is_plan_free === false
-                  ? handleSubmit
-                  : handleSubmitFree
-              }
-            >
-              <div className="row">
-                <div className="col-lg-6">
-                  <input
-                    type="text"
-                    name="firstName"
-                    className="form-control"
-                    placeholder="First Name *"
-                    required
-                    autoComplete="off"
-                    value={inputState.firstName}
-                    onChange={handleChangeInputsState}
-                  />
-                </div>
-                <div className="col-lg-6 mt-4 mt-md-0">
-                  <input
-                    type="text"
-                    name="lastName"
-                    className="form-control"
-                    placeholder="Last Name *"
-                    required
-                    autoComplete="off"
-                    value={inputState.lastName}
-                    onChange={handleChangeInputsState}
-                  />
-                </div>
-                <div className="col-lg-6 mt-4">
-                  <input
-                    type="number"
-                    className="form-control"
-                    placeholder="Phone Number *"
-                    required
-                    name="phone"
-                    value={inputState.phone}
-                    onChange={handleChangeInputsState}
-                  />
-                </div>
-                <div className="col-lg-6 mt-4">
+          <div className="container">
+            <div className="row mt-5 margin-bottom-form">
+              <div style={{ textAlign: "center" }}>
+                <span className="log-heading">The Skin Sister login</span>
+              </div>
+              <form
+                style={{ colorScheme: "dark" }}
+                onSubmit={handleSubmitPoPup}
+                autoComplete="off"
+              >
+                <div className="col-md-12 form-group mt-4">
                   <input
                     type="email"
-                    className="form-control"
-                    placeholder="Email *"
-                    required
+                    className="form-control field-color"
                     name="email"
-                    value={inputState.email}
-                    onChange={handleChangeInputsState}
+                    required
+                    autoComplete="new-password"
+                    value={inputPopState.email}
+                    onChange={handleChangeInputsPopState}
+                    placeholder="Email:*"
                   />
                 </div>
-                <div className=" col-lg-6 mt-4 payment-form-password">
+                <div className="col-md-12 form-group mt-3 payment-form-password">
                   <input
                     type={inputState.passwordType}
-                    className="form-control"
+                    className="form-control field-color"
                     name="password"
-                    value={inputState.password}
                     required
-                    onChange={handleChangeInputsState}
-                    placeholder="Password *"
-                    autoComplete="new-password"
+                    onChange={handleChangeInputsPopState}
+                    value={inputPopState.password}
+                    placeholder="Password:*"
+                    autoComplete="off"
                   />
                   <span
-                    className="payment-form-password-icon"
+                    className="payment-form-password-icon-2"
                     onClick={() => {
                       changePasswordType();
                     }}
@@ -392,62 +398,47 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     <i className="fa-solid fa-eye"></i>
                   </span>
                 </div>
-                <div className="col-lg-6 mt-4">
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="brand_name"
-                    value={inputState.brand_name}
-                    required
-                    onChange={handleChangeInputsState}
-                    placeholder="Brand name *"
-                  />
+                <div className="text-center mt-3">
+                  <button type="submit" className="btn-vision">
+                    Log In
+                  </button>
                 </div>
-                {paymentPlan.is_plan_free === false ? (
-                  <>
-                    <div className="pt-3">
-                      <h3>Payment Detail:</h3>
-                    </div>
-                    <div className="col-12 mt-2">
-                      <CardElement
-                        options={{
-                          hidePostalCode: true,
-                          style: {
-                            base: {
-                              iconColor: "#000",
-                              padding: "10px",
-                              color: "#000",
-                              borderRadius: "12px",
-                              borderColor: "#000",
-                              "::placeholder": {
-                                color: "#7e8080",
-
-                                textTransform: "capitalize",
-                              },
-                            },
-                          },
-                        }}
-                        className="form-control"
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
+      <section className="contact_form" id="contact_form_wrapper">
+        <div className="container-fluid px-lg-5">
+          <div className="row justify-content-center">
+            <div className="col-lg-9 pt-4">
+              {payment_plan.map((plan) => (
+                <div className="mb-1">
+                  <div
+                    onClick={() => handleClickPlan(plan)}
+                    className={
+                      plan.plan_slug === paymentPlan.plan_slug
+                        ? "art-banner-form d-flex justify-content-between"
+                        : "art-banner-form d-flex justify-content-between"
+                    }
+                  >
+                    <div className="d-flex align-items-center">
+                      <input
+                        type="radio"
+                        id="path-label"
+                        name="fav_language"
+                        value="HTML"
+                        defaultChecked={
+                          plan.plan_slug === paymentPlan.plan_slug
+                        }
+                        className="path-label"
                       />
-                    </div>
-                  </>
-                ) : (
-                  ""
-                )}
-
-                <div className="col-12 mt-4">
-                  <div className="d-flex justify-content-between select-plan-price">
-                    <div>
-                      <h4>Your Plan</h4>
-                    </div>
-                    <div>
-                      <h4>Price</h4>
-                    </div>
-                  </div>
-                  <div className="border-line-div"></div>
-                  <div className="d-flex justify-content-between select-plan-price">
-                    <div>
-                      <h5>{paymentPlan?.plan_title}</h5>
+                      <label
+                        for="path-label"
+                        className="path-page-new-label ps-2"
+                      >
+                        {plan.plan_title}
+                      </label>
                     </div>
                     <div>
                       <h5>
@@ -466,27 +457,195 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     </div>
                   </div>
                 </div>
-                <div className="col-12 mt-4">
-                  {isLoadingCard ? (
-                    <button
-                      type="button"
-                      disabled={true}
-                      className="btn-vision w-100 mt-0"
+              ))}
+            </div>
+          </div>
+          <div className="row justify-content-center align-items-center mx-3 mt-5 contact-card">
+            {/* <div className="col-lg-6 ps-lg-0">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: paymentPage.ready_to_see_text,
+                }}
+              ></div>
+              <img
+                src={s3baseUrl + paymentPage.payment_form_image}
+                alt=""
+                className="img-fluid"
+              />
+            </div> */}
+
+            <div className="col-lg-10 mt-4 mt-md-0">
+              <form
+                onSubmit={
+                  paymentPlan.is_plan_free === false
+                    ? handleSubmit
+                    : handleSubmitFree
+                }
+              >
+                <div className="row">
+                  <div className="col-lg-6">
+                    <input
+                      type="text"
+                      name="firstName"
+                      className="form-control"
+                      placeholder="First Name *"
+                      required
+                      autoComplete="off"
+                      value={inputState.firstName}
+                      onChange={handleChangeInputsState}
+                    />
+                  </div>
+                  <div className="col-lg-6 mt-4 mt-md-0">
+                    <input
+                      type="text"
+                      name="lastName"
+                      className="form-control"
+                      placeholder="Last Name *"
+                      required
+                      autoComplete="off"
+                      value={inputState.lastName}
+                      onChange={handleChangeInputsState}
+                    />
+                  </div>
+                  <div className="col-lg-6 mt-4">
+                    <input
+                      type="number"
+                      className="form-control"
+                      placeholder="Phone Number *"
+                      required
+                      name="phone"
+                      value={inputState.phone}
+                      onChange={handleChangeInputsState}
+                    />
+                  </div>
+                  <div className="col-lg-6 mt-4">
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Email *"
+                      required
+                      name="email"
+                      value={inputState.email}
+                      onChange={handleChangeInputsState}
+                    />
+                  </div>
+                  <div className=" col-lg-6 mt-4 payment-form-password">
+                    <input
+                      type={inputState.passwordType}
+                      className="form-control"
+                      name="password"
+                      value={inputState.password}
+                      required
+                      onChange={handleChangeInputsState}
+                      placeholder="Password *"
+                      autoComplete="new-password"
+                    />
+                    <span
+                      className="payment-form-password-icon"
+                      onClick={() => {
+                        changePasswordType();
+                      }}
                     >
-                      {"Processing..."}
-                    </button>
+                      <i className="fa-solid fa-eye"></i>
+                    </span>
+                  </div>
+                  <div className="col-lg-6 mt-4">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="brand_name"
+                      value={inputState.brand_name}
+                      required
+                      onChange={handleChangeInputsState}
+                      placeholder="Brand name *"
+                    />
+                  </div>
+                  {paymentPlan.is_plan_free === false ? (
+                    <>
+                      <div className="pt-3">
+                        <h3>Payment Detail:</h3>
+                      </div>
+                      <div className="col-12 mt-2">
+                        <CardElement
+                          options={{
+                            hidePostalCode: true,
+                            style: {
+                              base: {
+                                iconColor: "#000",
+                                padding: "10px",
+                                color: "#000",
+                                borderRadius: "12px",
+                                borderColor: "#000",
+                                "::placeholder": {
+                                  color: "#7e8080",
+
+                                  textTransform: "capitalize",
+                                },
+                              },
+                            },
+                          }}
+                          className="form-control"
+                        />
+                      </div>
+                    </>
                   ) : (
-                    <button type="submit" className="btn-vision w-100 mt-0">
-                      {paymentPage.get_started_button}
-                    </button>
+                    ""
                   )}
+
+                  <div className="col-12 mt-4">
+                    <div className="d-flex justify-content-between select-plan-price">
+                      <div>
+                        <h4>Your Plan</h4>
+                      </div>
+                      <div>
+                        <h4>Price</h4>
+                      </div>
+                    </div>
+                    <div className="border-line-div"></div>
+                    <div className="d-flex justify-content-between select-plan-price">
+                      <div>
+                        <h5>{paymentPlan?.plan_title}</h5>
+                      </div>
+                      <div>
+                        <h5>
+                          {paymentPlan.is_plan_free
+                            ? "Free"
+                            : paymentPlan.payment_access === "installment"
+                            ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                              paymentPlan.initial_amount
+                            : paymentPlan.payment_access === "one_time" ||
+                              paymentPlan.payment_access ===
+                                "recurring_fixed" ||
+                              paymentPlan.payment_access === "recurring_basic"
+                            ? convertCurrencyToSign(paymentPlan.plan_currency) +
+                              paymentPlan.plan_price
+                            : ""}
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-12 mt-4">
+                    {isLoadingCard ? (
+                      <button
+                        type="button"
+                        disabled={true}
+                        className="btn-vision w-100 mt-0"
+                      >
+                        {"Processing..."}
+                      </button>
+                    ) : (
+                      <button type="submit" className="btn-vision w-100 mt-0">
+                        {paymentPage.get_started_button}
+                      </button>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

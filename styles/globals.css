@@ -1936,6 +1936,7 @@ lawyer-theme1-thankyou-end
   font-size: 1.95rem;
   font-weight: 700;
 }
+
 .plan-page h3 {
   font-size: 24px;
   font-weight: 700;
@@ -1963,7 +1964,7 @@ lawyer-theme1-thankyou-end
 
 }
 
-.plan-page .payment-plan-card h6 {
+.plan-page .payment-plan-card p:last-of-type {
   font-size: 16px;
   margin-bottom: 32px;
   white-space: nowrap;
@@ -2058,9 +2059,10 @@ lawyer-theme1-thankyou-end
   color: #fff;
 }
 
-.plan-page .plan-btn-btn:hover i{
+.plan-page .plan-btn-btn:hover i {
   color: #fff;
 }
+
 .plan-page .plan-btn-btn:hover {
   background: #319b77;
   color: #fff;
@@ -2152,10 +2154,12 @@ lawyer-theme1-thankyou-end
 .plan-page .plan-compare h2 {
   line-height: 1.5;
 }
-.plan-page .plan-compare .fa-minus{
+
+.plan-page .plan-compare .fa-minus {
   color: #5d5e6f !important;
 }
-.plan-page .plan-compare .fa-solid{
+
+.plan-page .plan-compare .fa-solid {
   color: #319b77;
   font-size: 22px;
 }
@@ -2172,16 +2176,12 @@ lawyer-theme1-thankyou-end
   margin-bottom: 10px;
 }
 
-.plan-page .plan-compare-card p,
-.plan-page .plan-compare-card h6 {
-  font-size: 14px;
+.plan-page .plan-compare-card p {
+  color: #282828;
+  font-size: 15px;
+  margin-bottom: 18px;
 }
 
-.plan-page .plan-compare-card h6 {
-  font-weight: 600;
-  color: #282828;
-  margin-bottom: 13px;
-}
 
 .plan-page .plan-compare-card .compare-btn-btn {
   width: 100%;
@@ -2189,32 +2189,36 @@ lawyer-theme1-thankyou-end
   padding: 8px 15px 10px;
   font-size: 16px;
 }
-.plan-page .plan-compare .table:first-child{
+
+.plan-page .plan-compare .table:first-child {
   font-size: 18px;
 }
 
 
-.table-bordered>:not(caption)>*>* {
+/* .table-bordered>:not(caption)>*>* {
   border-left: 0;
-}
+} */
 
-.table td > span{
+.table td>span {
   font-size: 10px;
   color: #282828;
   display: block;
   letter-spacing: 0;
 
 }
-.table .border-right-0{
+
+.table .border-right-0 {
   border-right: 0;
 }
+
 .table>:not(caption)>*>* {
   color: #5d5e6f;
-  padding: 1.5rem ;  
+  padding: 1.5rem;
   width: 15%;
 }
 
-.table > td , .table > th{
+.table>td,
+.table>th {
   width: 20%;
 }
 
@@ -2333,11 +2337,11 @@ lawyer-theme1-thankyou-end
 @media (max-width: 1400px) {}
 
 @media only screen and (max-width: 1200px) and (min-width: 991px) {
-  .plan-page .plan-compare-card .compare-btn-btn{
-    padding: 8px 5px ;
+  .plan-page .plan-compare-card .compare-btn-btn {
+    padding: 8px 5px;
     font-size: 14px;
   }
- 
+
 }
 
 @media(max-width:992px) {}
@@ -2345,3 +2349,13 @@ lawyer-theme1-thankyou-end
 @media only screen and (max-width:991px) and (min-width:768px) {}
 
 @media(max-width:768px) {}
+
+
+/* ================= Payment Page ================
+=============================================== */
+.log-heading {
+  color: #0066cc;
+  text-align: center;
+  font-size: 25px;
+  text-transform: capitalize;
+}

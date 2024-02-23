@@ -9,7 +9,7 @@ import {
 } from "@/Web_sections/Payment";
 
 export default function PaymentPage({ page_data }) {
-  const sale_page = page_data.Sale_page;
+  const sale_page = page_data.web_page;
   const paymentPlan = page_data.payment_plan;
   const menu_items = page_data.menu_items;
   const stripKey = page_data.stripe_publish_key;
