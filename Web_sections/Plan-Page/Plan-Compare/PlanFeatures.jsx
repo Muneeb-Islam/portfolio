@@ -20,13 +20,19 @@ export default function PlanFeatures(props) {
                 {items.plan_features.map((item) => {
                   return (
                     <>
-                      {item.text ? (
-                        <td className="text-center">{item.text}</td>
-                      ) : (
-                        <td scope="col" className="text-center">
-                          <img src={s3baseUrl + item.icon} alt="" />
-                        </td>
-                      )}
+                      {item.features.map((item, index) => {
+                        return (
+                          <>
+                            {item.text ? (
+                              <td className="text-center">{item.text}</td>
+                            ) : (
+                              <td scope="col" className="text-center">
+                                <img src={s3baseUrl + item.icon} alt="" />
+                              </td>
+                            )}
+                          </>
+                        );
+                      })}
                     </>
                   );
                 })}
