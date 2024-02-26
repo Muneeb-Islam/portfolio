@@ -24,6 +24,7 @@ export async function getServerSideProps(context) {
     };
   }
 }
+
 export default function Payment({ web_page }) {
   const { brand_favicon, meta_keywords, meta_title, meta_description } =
     web_page;

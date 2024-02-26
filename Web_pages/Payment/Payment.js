@@ -9,7 +9,6 @@ import {
 } from "@/Web_sections/Payment";
 
 export default function PaymentPage({ page_data }) {
-  console.log(page_data, "-----page_data");
   const sale_page = page_data.web_page;
   const paymentPlan = page_data.payment_plan;
   const menu_items = page_data.menu_items;
