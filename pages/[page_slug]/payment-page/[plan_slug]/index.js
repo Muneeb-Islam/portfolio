@@ -25,19 +25,18 @@ export async function getServerSideProps(context) {
   }
 }
 export default function Payment({ web_page }) {
-  console.log(web_page, "---web_page");
-  // const { brand_favicon, meta_keywords, meta_title, meta_description } =
-  //   web_page.Sale_page;
+  const { brand_favicon, meta_keywords, meta_title, meta_description } =
+    web_page;
 
   return (
     <>
-      {/* <HeaderController
+      <HeaderController
         fav_icon={s3baseUrl + brand_favicon}
         image={s3baseUrl + brand_favicon}
         title={meta_title}
         description={meta_description}
         keywords={meta_keywords}
-      /> */}
+      />
       <PaymentPage page_data={web_page} />
     </>
   );

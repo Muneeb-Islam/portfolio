@@ -464,6 +464,7 @@ end general css
   margin-top: 3.125rem;
   font-weight: 500;
   font-size: 0.9375rem;
+  cursor: pointer;
 
 }
 
@@ -1735,6 +1736,7 @@ end explore
 .payment-banner {
   background: #ebf5f3;
   padding: 5rem 0rem;
+  position: relative;
 }
 
 .payment-banner h1 {
@@ -2354,15 +2356,90 @@ lawyer-theme1-thankyou-end
 /* ================= Payment Page ================
 =============================================== */
 .log-heading {
-  color: #0066cc;
+  color: #fff;
   text-align: center;
   font-size: 25px;
   text-transform: capitalize;
 }
 
 
+.popup {
+  width: 25%;
+  /* height: 70vh; */
+  border-radius: 4px;
+  opacity: 1;
+  background-color: rgb(94, 92, 92);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  /* border: 1px solid #0066cc; */
+  /* box-shadow: rgb(48, 43, 27) 0px 1px 2px 0px; */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding-bottom: 20px;
+}
+
+
+.crossPoPUp {
+  background-color: #fff;
+  display: inline;
+  width: 24px;
+  position: absolute;
+  text-align: center;
+  height: 26px;
+  border-radius: 50px;
+  right: 8px;
+  top: 5px;
+  z-index: 9999999999999;
+  cursor: pointer;
+}
+
+
+.payment-form-password {
+  position: relative;
+}
+
+
+ .art-banner-form .path-label {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #0066cc !important;
+  border: 1px solid #d9d9d9;
+  color: #1f1f1f;
+}
+
+.margin-bottom-form .form-control:focus{
+  box-shadow: none;
+
+}
+
+ .art-banner-form input[type="radio"]#path-label {
+  background: #d9d9d9;
+  accent-color:  #0066cc;
+}
+
+
+.art-banner-form .path-page-new-label{
+  padding-top: 7px;
+  font-size: 18px;
+}
+
+
+ .payment-form-password-icon-2 {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+}
+
+
 @media (max-width: 1024px) {
   .popup {
+  top: 50%;
+
     width: 60%;
   }
 }
@@ -2377,38 +2454,4 @@ lawyer-theme1-thankyou-end
   .popup {
     width: 80%;
   }
-}
-
-
-.popup {
-  width: 25%;
-  /* height: 70vh; */
-  border-radius: 4px;
-  opacity: 1;
-  background-color: black;
-  border: 1px solid #319b77;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  animation-name: example;
-  animation-duration: 1s;
-  animation-delay: 0s;
-  box-shadow: rgb(181, 157, 78) 0px 1px 2px 0px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.crossPoPUp {
-  background-color: #319b77;
-  display: inline;
-  width: 23px;
-  position: absolute;
-  text-align: center;
-  height: 23px;
-  border-radius: 50px;
-  font-weight: 400;
-  right: 8px;
-  top: 5px;
-  z-index: 9999999999999;
-  cursor: pointer;
 }

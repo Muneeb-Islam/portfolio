@@ -6,12 +6,15 @@ const BannerSection = ({ page_data }) => {
 
   return (
     <section className="payment-banner text-center">
-      <div
+      <div className="container">
+        <h2>{paymentPage.all_plan_text}</h2>
+      </div>
+      {/* <div
         className="container"
         dangerouslySetInnerHTML={{
-          __html: paymentPage.get_in_touch_text,
+          __html: paymentPage.all_plan_text,
         }}
-      ></div>
+      ></div> */}
     </section>
   );
 };

@@ -22,7 +22,7 @@ import { useRouter } from "next/router";
 import { LinearProgress } from "@mui/material";
 import convertCurrencyToSign from "@/utils/constants";
 
-const ContactSection = ({ page_data, PaymentPlan }) => {
+const ContactSection = ({ page_data, PaymentPlans }) => {
   const paymentPage = page_data.payment_page.page_detail;
   const router = useRouter();
   const [pop, setpop] = useState(false);
@@ -30,13 +30,13 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [paymentPlan, setPaymentPlan] = useState([]);
-  console.log(paymentPlan, "---paymentPlan");
   const [pageData, setPageData] = useState({});
   const { enqueueSnackbar } = useSnackbar();
   const [clientSecret, setClientSecret] = useState("");
   const [resPostData, setResPostData] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const params = router.query ? router.query : page_data.query;
+  console.log(params, "---params");
   const navigate = router.push;
 
   const [inputState, setInputsState] = useState({
@@ -326,20 +326,22 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
   };
 
   const handleClickPlan = (plan) => {
-    if (params.affiliate_name) {
-      router.replace(
-        `/${params.page_slug}/payment-page/${plan.plan_slug}/${params.affiliate_name}`
-      );
-    } else {
-      router.replace(`/${params.page_slug}/payment-page/${plan.plan_slug}`);
-    }
+    router.replace(`/${params.page_slug}/payment-page/${plan.plan_slug}`);
     setPaymentPlan(plan);
+  };
+
+  const handleChangeInputsPopState = (e) => {
+    const { name, value } = e.target;
+    setInputsPopState((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   useEffect(() => {
     setPageData(page_data);
-    let find_plan = PaymentPlan.find(
-      (country) => country.plan_slug == params.plan_slug
+    let find_plan = PaymentPlans.find(
+      (plan) => plan.plan_slug == params.plan_slug
     );
     setPaymentPlan(find_plan);
     setIsLoading(false);
@@ -351,7 +353,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
 
   return (
     <>
-      {pop && (
+      {/* {pop && (
         <div className="popup">
           <div className="crossPoPUp" onClick={closePopUp}>
             x
@@ -381,7 +383,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                 <div className="col-md-12 form-group mt-3 payment-form-password">
                   <input
                     type={inputState.passwordType}
-                    className="form-control field-color"
+                    className="form-control"
                     name="password"
                     required
                     onChange={handleChangeInputsPopState}
@@ -407,12 +409,12 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
       <section className="contact_form" id="contact_form_wrapper">
-        <div className="container-fluid px-lg-5">
+        <div className="container-fluid px-lg-5 pt-4">
           <div className="row justify-content-center">
-            <div className="col-lg-9 pt-4">
-              {payment_plan.map((plan) => (
+            <div className="col-lg-9 pt-5 col-11">
+              {PaymentPlans.map((plan) => (
                 <div className="mb-1">
                   <div
                     onClick={() => handleClickPlan(plan)}
@@ -425,16 +427,15 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     <div className="d-flex align-items-center">
                       <input
                         type="radio"
-                        id="path-label"
+                        // id="path-label"
+                        id={`path-label-${plan.plan_slug}`}
                         name="fav_language"
                         value="HTML"
-                        defaultChecked={
-                          plan.plan_slug === paymentPlan.plan_slug
-                        }
+                        checked={plan.plan_slug === paymentPlan.plan_slug}
                         className="path-label"
                       />
                       <label
-                        for="path-label"
+                        htmlFor={`path-label-${plan.plan_slug}`}
                         className="path-page-new-label ps-2"
                       >
                         {plan.plan_title}
@@ -442,17 +443,17 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     </div>
                     <div>
                       <h5>
-                        {paymentPlan.is_plan_free
+                        {plan.is_plan_free
                           ? "Free"
-                          : paymentPlan.payment_access === "installment"
-                          ? convertCurrencyToSign(paymentPlan.plan_currency) +
-                            paymentPlan.initial_amount
-                          : paymentPlan.payment_access === "one_time" ||
-                            paymentPlan.payment_access === "recurring_fixed" ||
-                            paymentPlan.payment_access === "recurring_basic"
-                          ? convertCurrencyToSign(paymentPlan.plan_currency) +
-                            paymentPlan.plan_price
-                          : ""}
+                          : plan.payment_access === "recursion"
+                          ? convertCurrencyToSign(plan.plan_currency) +
+                            plan.initial_amount
+                          : plan.payment_access === "onetime" &&
+                            plan.is_dont_show_full_amount == true
+                          ? convertCurrencyToSign(plan.plan_currency) +
+                            plan.initial_amount
+                          : convertCurrencyToSign(plan.plan_currency) +
+                            plan.plan_price}
                       </h5>
                     </div>
                   </div>
@@ -460,20 +461,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
               ))}
             </div>
           </div>
-          <div className="row justify-content-center align-items-center mx-3 mt-5 contact-card">
-            {/* <div className="col-lg-6 ps-lg-0">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: paymentPage.ready_to_see_text,
-                }}
-              ></div>
-              <img
-                src={s3baseUrl + paymentPage.payment_form_image}
-                alt=""
-                className="img-fluid"
-              />
-            </div> */}
-
+          <div className="row justify-content-center align-items-center mx-3 mt-4 contact-card">
             <div className="col-lg-10 mt-4 mt-md-0">
               <form
                 onSubmit={
@@ -482,7 +470,27 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                     : handleSubmitFree
                 }
               >
-                <div className="row">
+                <div className="row align-items-center">
+                  <div className="col-md-6">
+                    <h3>{paymentPage?.your_details_text}</h3>
+                  </div>
+                  {/* <div className="col-md-6 ps-lg-4">
+                    <div className="d-flex align-items-center justify-content-between">
+                      <p className=" ">
+                        {paymentPage.have_already_account_text}
+                      </p>
+                      {paymentPage.login_button_text && (
+                        <span
+                          className="btn-vision ms-2 mt-0"
+                          onClick={showPopUp}
+                        >
+                          {paymentPage.login_button_text}
+                        </span>
+                      )}
+                    </div>
+                  </div> */}
+                </div>
+                <div className="row pt-3">
                   <div className="col-lg-6">
                     <input
                       type="text"
@@ -507,17 +515,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                       onChange={handleChangeInputsState}
                     />
                   </div>
-                  <div className="col-lg-6 mt-4">
-                    <input
-                      type="number"
-                      className="form-control"
-                      placeholder="Phone Number *"
-                      required
-                      name="phone"
-                      value={inputState.phone}
-                      onChange={handleChangeInputsState}
-                    />
-                  </div>
+
                   <div className="col-lg-6 mt-4">
                     <input
                       type="email"
@@ -526,6 +524,17 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                       required
                       name="email"
                       value={inputState.email}
+                      onChange={handleChangeInputsState}
+                    />
+                  </div>
+                  <div className="col-lg-6 mt-4">
+                    <input
+                      type="number"
+                      className="form-control"
+                      placeholder="Phone Number"
+                      // required
+                      name="phone"
+                      value={inputState.phone}
                       onChange={handleChangeInputsState}
                     />
                   </div>
@@ -563,7 +572,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                   {paymentPlan.is_plan_free === false ? (
                     <>
                       <div className="pt-3">
-                        <h3>Payment Detail:</h3>
+                        <h3>{paymentPage.payment_details_text}</h3>
                       </div>
                       <div className="col-12 mt-2">
                         <CardElement
@@ -635,7 +644,7 @@ const ContactSection = ({ page_data, PaymentPlan }) => {
                       </button>
                     ) : (
                       <button type="submit" className="btn-vision w-100 mt-0">
-                        {paymentPage.get_started_button}
+                        {paymentPage.your_purchases_text}
                       </button>
                     )}
                   </div>

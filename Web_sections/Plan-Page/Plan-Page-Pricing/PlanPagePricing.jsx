@@ -2,6 +2,7 @@ import { s3baseUrl } from "@/config/config";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import convertCurrencyToSign from "../../../utils/constants";
+import PaymentLoader from "@/Components/Loader/PaymentLoader";
 
 const PlanPagePricing = ({ page_data, payment_plan }) => {
   console.log(payment_plan, "----payment_plan");
@@ -18,10 +19,17 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
 
   const page_slug = page_data.page_title_slug;
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleclick = (plan_slug) => {
+    setIsLoading(true);
     router.push(`/${page_slug}/payment-page/${plan_slug}`);
   };
+
+  if (isLoading) {
+    return <PaymentLoader />;
+  }
+
   return (
     <>
       {payment_plan && payment_plan.length > 0 && (
