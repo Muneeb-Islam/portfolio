@@ -49,10 +49,10 @@ const PlanCompare = ({ page_data, payment_plan, plan_feature }) => {
               <div className="row mt-5">
                 <PlanFeatures
                   plan_feature={plan_feature}
-                  title="Project Management"
+                  // title="Project Management"
                 />
               </div>
-              <div className="row mt-5">
+              {/* <div className="row mt-5">
                 <PlanFeatures
                   plan_feature={plan_feature}
                   title="Issue Management"
@@ -78,7 +78,7 @@ const PlanCompare = ({ page_data, payment_plan, plan_feature }) => {
               </div>
               <div className="row mt-5">
                 <PlanFeatures plan_feature={plan_feature} title="Mobile" />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

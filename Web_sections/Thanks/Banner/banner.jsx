@@ -1,7 +1,7 @@
 import { s3baseUrl } from "@/config/config";
 
 const BannerSection = ({ page_data }) => {
-  const sale_page_detail = page_data.page_detail;
+  const sale_page_detail = page_data;
 
   return (
     <section className="thanks_wrapper main_section">
@@ -10,11 +10,12 @@ const BannerSection = ({ page_data }) => {
           <div className="col-lg-11 card-outer-area">
             <div className="lawyer-thankyou position-relative">
               <div className="card-inner">
-                <div
+                <h2>{sale_page_detail.thankyou_page_contact_us_content}</h2>
+                {/* <div
                   dangerouslySetInnerHTML={{
                     __html: page_data.thankyou_page_bottom_content,
                   }}
-                ></div>
+                ></div> */}
                 <div className="lawyer-home-btn">
                   <a href={page_data.thankyou_page_button_link}>
                     {page_data.thankyou_page_button_text}
@@ -46,12 +47,9 @@ const BannerSection = ({ page_data }) => {
                 </ul>
                 <div className="d-flex justify-content-center align-items-baseline copyright-icon">
                   <i className="fa-regular fa-copyright"></i>
-                  <div
-                    className="lawyer-thankyou-copyright"
-                    dangerouslySetInnerHTML={{
-                      __html: sale_page_detail.copyright_text,
-                    }}
-                  ></div>
+                  <p className="lawyer-thankyou-copyright ps-1">
+                    {sale_page_detail.thankyou_page_bottom_content}
+                  </p>
                 </div>
               </div>
             </div>
