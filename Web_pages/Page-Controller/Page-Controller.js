@@ -5,8 +5,6 @@ export default function PageController({ page_data }) {
   const page_name_component = page_data.page_name;
   const pageData = page_data.web_page;
 
-  console.log(pageData, "----------pageDatattat");
-
   return (
     <>
       {page_name_component === "home" ? (
