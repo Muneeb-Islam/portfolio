@@ -411,7 +411,7 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
         </div>
       )} */}
       <section className="contact_form" id="contact_form_wrapper">
-        <div className="container-fluid px-lg-5 pt-4">
+        <div className="container px-lg-5">
           <div className="row justify-content-center">
             <div className="col-lg-9 pt-5 col-11">
               {PaymentPlans.map((plan) => (
@@ -427,7 +427,6 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
                     <div className="d-flex align-items-center">
                       <input
                         type="radio"
-                        // id="path-label"
                         id={`path-label-${plan.plan_slug}`}
                         name="fav_language"
                         value="HTML"
@@ -461,7 +460,7 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
               ))}
             </div>
           </div>
-          <div className="row justify-content-center align-items-center mx-3 mt-4 contact-card">
+          <div className="row justify-content-center align-items-center mx-3 mt-4 contact-card-2">
             <div className="col-lg-10 mt-4 mt-md-0">
               <form
                 onSubmit={
@@ -572,7 +571,7 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
                   {paymentPlan.is_plan_free === false ? (
                     <>
                       <div className="pt-3">
-                        <h3>{paymentPage.payment_details_text}</h3>
+                        <h3>{paymentPage.complete_and_register_text}</h3>
                       </div>
                       <div className="col-12 mt-2">
                         <CardElement
@@ -581,19 +580,16 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
                             style: {
                               base: {
                                 iconColor: "#000",
-                                padding: "10px",
                                 color: "#000",
-                                borderRadius: "12px",
                                 borderColor: "#000",
                                 "::placeholder": {
                                   color: "#7e8080",
-
                                   textTransform: "capitalize",
                                 },
                               },
                             },
                           }}
-                          className="form-control"
+                          className="form-control form-data"
                         />
                       </div>
                     </>
@@ -633,17 +629,20 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-12 mt-4">
+                  <div className=" mt-4 text-center">
                     {isLoadingCard ? (
                       <button
                         type="button"
                         disabled={true}
-                        className="btn-vision w-100 mt-0"
+                        className="btn-vision mt-0 border-0"
                       >
                         {"Processing..."}
                       </button>
                     ) : (
-                      <button type="submit" className="btn-vision w-100 mt-0">
+                      <button
+                        type="submit"
+                        className="btn-vision mt-0 border-0"
+                      >
                         {paymentPage.your_purchases_text}
                       </button>
                     )}

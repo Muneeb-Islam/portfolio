@@ -8,8 +8,8 @@ const Header = ({ page_data }) => {
   return (
     <>
       <PageTransitionBar />
-      <header>
-        <div className="container py-3">
+      <header className="payment-header-bttom">
+        <div className="container py-3 text-center">
           <a className="navbar-brand" href={salePage?.brand_logo_link}>
             <img src={s3baseUrl + brand_logo} alt="" className="img-fluid" />
           </a>

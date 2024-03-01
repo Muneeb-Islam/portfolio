@@ -110,7 +110,9 @@ span,
 .slider_wrapper .done-heading h1,
 .pricing .fa-check,
 .slider_wrapper .star-rating i,
-.thanks_wrapper .lawyer-socials a:hover, .pricing-btn, .pricing-btn:hover {
+.thanks_wrapper .lawyer-socials a:hover,
+.pricing-btn,
+.pricing-btn:hover {
   color: rgb(0, 102, 204)
 }
 
@@ -170,7 +172,8 @@ a:hover,
 .services_wrapper .pos-content h3,
 
 .thanks_wrapper .lawyer-home-btn a,
-.thanks_wrapper .lawyer-home-btn a:hover, .pricing .box-div  {
+.thanks_wrapper .lawyer-home-btn a:hover,
+.pricing .box-div {
   color: #fff;
 }
 
@@ -203,10 +206,13 @@ end general css
   text-decoration: none;
 
 }
-.pricing-btn, .top_navbar a,
-.top_navbar{
+
+.pricing-btn,
+.top_navbar a,
+.top_navbar {
   font-weight: 400;
 }
+
 .top_navbar .border-line {
   border-right: 0.063rem solid #575B6E;
 }
@@ -1611,9 +1617,11 @@ end explore
 .pricing h2 {
   text-align: center;
 }
-.pricing-btn{
+
+.pricing-btn {
   text-decoration: underline;
 }
+
 .pricing .main-price-heading h1 {
   font-size: 4rem;
   line-height: 1.2;
@@ -1728,13 +1736,24 @@ end explore
 /* -------------------------------------
   Payment Banner
   ----------------------------------------------- */
+.payment-header-bttom {
+  border-bottom: 1px solid #282828;
+}
+
 .payment-banner {
-  background: #ebf5f3;
-  padding: 5rem 0rem;
+  /* background: #ebf5f3; */
+  padding: 3rem 0rem 0;
   position: relative;
 }
 
-.payment-banner h1 {
+.payment-banner .border-bg-bottom {
+  border-bottom: 4px solid #0066cc;
+
+}
+
+.payment-banner h2 {
+  font-size: 37px;
+  font-weight: 800;
   margin-bottom: 1rem;
 }
 
@@ -2399,34 +2418,67 @@ lawyer-theme1-thankyou-end
   position: relative;
 }
 
+.art-banner-form h5 {
+  color: #282828;
+}
 
- .art-banner-form .path-label {
-  height: 20px;
-  width: 20px;
+.contact-card-2 .payment-form-password-icon {
+  top: 0.7rem !important;
+}
+
+.contact-card-2 .form-control.form-data{
+  padding: 16px 12px 16px;
+  color: #000;
+}
+.contact-card-2 .form-control {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 10px 12px 12px;
+  font-size: 1rem;
+  color: #282828 !important;
+
+}
+
+.contact-card-2 .form-control::placeholder {
+  font-size: 15px;
+  color: #3f3f3f;
+}
+
+.art-banner-form {
+  cursor: pointer;
+}
+
+.art-banner-form .path-label {
+  height: 28px;
+  width: 28px;
   border-radius: 50%;
   background: #0066cc !important;
   border: 1px solid #d9d9d9;
   color: #1f1f1f;
 }
 
-.margin-bottom-form .form-control:focus{
+.margin-bottom-form .form-control:focus {
   box-shadow: none;
 
 }
 
- .art-banner-form input[type="radio"]#path-label {
+.art-banner-form input[type="radio"]#path-label {
   background: #d9d9d9;
-  accent-color:  #0066cc;
+  accent-color: #0066cc;
 }
 
 
-.art-banner-form .path-page-new-label{
-  padding-top: 7px;
+.art-banner-form .path-page-new-label {
   font-size: 18px;
+  color: #282828;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 
- .payment-form-password-icon-2 {
+.payment-form-password-icon-2 {
   position: absolute;
   top: 15px;
   right: 18px;
@@ -2435,7 +2487,7 @@ lawyer-theme1-thankyou-end
 
 @media (max-width: 1024px) {
   .popup {
-  top: 50%;
+    top: 50%;
 
     width: 60%;
   }
