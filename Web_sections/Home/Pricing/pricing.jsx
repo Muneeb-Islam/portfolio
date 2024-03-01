@@ -22,11 +22,12 @@ const PricingSection = ({ page_data, payment_plan }) => {
             <div className="row justify-content-center">
               <div className="col-lg-7">
                 <h2>{salePage.plan_heading}</h2>
-              </div>
-            <div className="justify-content-center d-flex align-items-center toggle-btn">
-              <Link>Monthly</Link>
-              <Link>Annual</Link>
+                <div className=" toggle-btn">
+              <button href="" className="annual">Monthly</button>
+              <button href="" className="monthly">Annual</button>
             </div> 
+              </div>
+           
             </div>
             <div className="row justify-content-center wb-payment-plans">
               {payment_plan?.map((items, index) => {
