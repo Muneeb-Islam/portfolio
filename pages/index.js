@@ -26,7 +26,6 @@ export async function getServerSideProps(context) {
   }
 }
 export default function Home({ web_page }) {
-  console.log(web_page, "----webpagee");
   const { brand_favicon, meta_keywords, meta_title, meta_description } =
     web_page;
   const page_name = web_page.web_page.page_component_name;
