@@ -62,40 +62,79 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
             </div> */}
               {payment_plan?.map((items, index) => {
                 return (
-                  <div className="col-xl-3 col-lg-4 col-md-6 mt-5">
-                    <div className="payment-plan-card h-100 text-start">
-                      <h2>{items.plan_title}</h2>
-                      <p>{items.short_description}</p>
-                      <div className="pt-3 text-center mb-5 plan-page-price">
-                        <h2>
-                          {items.is_plan_free
-                            ? "Free"
-                            : items?.is_dont_show_full_amount == true
-                            ? convertCurrencyToSign(items.plan_currency) +
-                              items.initial_amount
-                            : convertCurrencyToSign(items.plan_currency) +
-                              items.plan_price}
-                          <span> / {items.plan_type}</span>
-                        </h2>
-                        <hr />
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: items.detailed_description,
-                          }}
-                        ></div>
-                      </div>
-                      {items.plan_button_text && (
-                        <div className="plan-btn-div ">
-                          <button
-                            className="plan-btn-btn"
-                            onClick={() => handleclick(items.plan_slug)}
-                          >
-                            {items.plan_button_text}
-                          </button>
+                  <>
+                    {payment_plan.length > 3 ? (
+                      <div className="col-xl-3 col-lg-5 col-md-6 mt-5">
+                        <div className="payment-plan-card h-100 text-start">
+                          <h2>{items.plan_title}</h2>
+                          <p>{items.short_description}</p>
+                          <div className="pt-3 text-center mb-5 plan-page-price">
+                            <h2>
+                              {items.is_plan_free
+                                ? "Free"
+                                : items?.is_dont_show_full_amount == true
+                                ? convertCurrencyToSign(items.plan_currency) +
+                                  items.initial_amount
+                                : convertCurrencyToSign(items.plan_currency) +
+                                  items.plan_price}
+                              <span> / {items.plan_type}</span>
+                            </h2>
+                            <hr />
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: items.detailed_description,
+                              }}
+                            ></div>
+                          </div>
+                          {items.plan_button_text && (
+                            <div className="plan-btn-div ">
+                              <button
+                                className="plan-btn-btn"
+                                onClick={() => handleclick(items.plan_slug)}
+                              >
+                                {items.plan_button_text}
+                              </button>
+                            </div>
+                          )}
                         </div>
-                      )}
-                    </div>
-                  </div>
+                      </div>
+                    ) : (
+                      <div className="col-xl-4 col-lg-4 col-md-6 mt-5">
+                        <div className="payment-plan-card h-100 text-start">
+                          <h2>{items.plan_title}</h2>
+                          <p>{items.short_description}</p>
+                          <div className="pt-3 text-center mb-5 plan-page-price">
+                            <h2>
+                              {items.is_plan_free
+                                ? "Free"
+                                : items?.is_dont_show_full_amount == true
+                                ? convertCurrencyToSign(items.plan_currency) +
+                                  items.initial_amount
+                                : convertCurrencyToSign(items.plan_currency) +
+                                  items.plan_price}
+                              <span> / {items.plan_type}</span>
+                            </h2>
+                            <hr />
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: items.detailed_description,
+                              }}
+                            ></div>
+                          </div>
+                          {items.plan_button_text && (
+                            <div className="plan-btn-div ">
+                              <button
+                                className="plan-btn-btn"
+                                onClick={() => handleclick(items.plan_slug)}
+                              >
+                                {items.plan_button_text}
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </>
                 );
               })}
               {/* <div className="col-xl-3 col-lg-4 col-md-6 mt-5">

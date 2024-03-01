@@ -22,25 +22,49 @@ const PlanCompare = ({ page_data, payment_plan, plan_feature }) => {
               </div>
               {payment_plan?.map((items, index) => {
                 return (
-                  <div className="col-xl-2 col-lg-3 col-md-4 mt-4">
-                    <div className="plan-compare-card h-100 text-start">
-                      <div className="pb-5">
-                        <h2>{items.plan_title}</h2>
-                        <p>{items.short_description}</p>
-                      </div>
+                  <>
+                    {payment_plan.length > 3 ? (
+                      <div className="col-xl-2 col-lg-3 col-md-4 mt-4">
+                        <div className="plan-compare-card h-100 text-start">
+                          <div className="pb-5">
+                            <h2>{items.plan_title}</h2>
+                            <p>{items.short_description}</p>
+                          </div>
 
-                      {items.plan_button_text && (
-                        <div className="plan-btn-div plan-btn-div-2 ">
-                          <button
-                            className="plan-btn-btn compare-btn-btn"
-                            onClick={() => handleclick(items.plan_slug)}
-                          >
-                            {items.plan_button_text}
-                          </button>
+                          {items.plan_button_text && (
+                            <div className="plan-btn-div plan-btn-div-2 ">
+                              <button
+                                className="plan-btn-btn compare-btn-btn"
+                                onClick={() => handleclick(items.plan_slug)}
+                              >
+                                {items.plan_button_text}
+                              </button>
+                            </div>
+                          )}
                         </div>
-                      )}
-                    </div>
-                  </div>
+                      </div>
+                    ) : (
+                      <div className="col-xl-3 col-lg-3 col-md-4 mt-4">
+                        <div className="plan-compare-card h-100 text-start">
+                          <div className="pb-5">
+                            <h2>{items.plan_title}</h2>
+                            <p>{items.short_description}</p>
+                          </div>
+
+                          {items.plan_button_text && (
+                            <div className="plan-btn-div plan-btn-div-2 ">
+                              <button
+                                className="plan-btn-btn compare-btn-btn"
+                                onClick={() => handleclick(items.plan_slug)}
+                              >
+                                {items.plan_button_text}
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </>
                 );
               })}
             </div>
