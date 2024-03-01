@@ -13,7 +13,7 @@ export async function getServerSideProps(context) {
   if (result.code === 200) {
     return {
       props: {
-        page_data: result,
+        web_page: result,
       },
     };
   } else {
@@ -25,10 +25,11 @@ export async function getServerSideProps(context) {
     };
   }
 }
-export default function Home({ page_data }) {
+export default function Home({ web_page }) {
+  console.log(web_page, "----webpagee");
   const { brand_favicon, meta_keywords, meta_title, meta_description } =
-    page_data.Sale_page;
-  const page_name = page_data?.Sale_page.page_component_name;
+    web_page;
+  const page_name = web_page.web_page.page_component_name;
   return (
     <>
       <HeaderController
@@ -38,7 +39,7 @@ export default function Home({ page_data }) {
         description={meta_description}
         keywords={meta_keywords}
       />
-      <PageController page_data={{ page_data, page_name }} />
+      <PageController page_data={{ web_page, page_name }} />
     </>
   );
 }

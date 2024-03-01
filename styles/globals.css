@@ -87,7 +87,6 @@ p {
 .slider_wrapper .slick-dots li.slick-active button,
 .tab-content h2::after,
 .hows-text h2::after,
-.pricing .nexora-price-card:hover,
 .pricing .box-div,
 .thanks_wrapper .lawyer-home-btn a,
 .thanks_wrapper .card-outer-area {
@@ -111,7 +110,7 @@ span,
 .slider_wrapper .done-heading h1,
 .pricing .fa-check,
 .slider_wrapper .star-rating i,
-.thanks_wrapper .lawyer-socials a:hover {
+.thanks_wrapper .lawyer-socials a:hover, .pricing-btn, .pricing-btn:hover {
   color: rgb(0, 102, 204)
 }
 
@@ -169,14 +168,9 @@ a:hover,
 .footer_wrapper .btn_subscribe,
 .contact_form_wrapper .contact-card .send-message,
 .services_wrapper .pos-content h3,
-.pricing .nexora-price-card:hover h2,
-.pricing .nexora-price-card:hover,
-.pricing .nexora-price-card:hover h3,
-.pricing .box-div,
-.pricing .nexora-price-card:hover span,
-.pricing .nexora-price-card:hover .fa-check,
+
 .thanks_wrapper .lawyer-home-btn a,
-.thanks_wrapper .lawyer-home-btn a:hover {
+.thanks_wrapper .lawyer-home-btn a:hover, .pricing .box-div  {
   color: #fff;
 }
 
@@ -207,9 +201,12 @@ end general css
   color: #CBD0E3;
   font-size: 0.8rem;
   text-decoration: none;
+
+}
+.pricing-btn, .top_navbar a,
+.top_navbar{
   font-weight: 400;
 }
-
 .top_navbar .border-line {
   border-right: 0.063rem solid #575B6E;
 }
@@ -1614,7 +1611,9 @@ end explore
 .pricing h2 {
   text-align: center;
 }
-
+.pricing-btn{
+  text-decoration: underline;
+}
 .pricing .main-price-heading h1 {
   font-size: 4rem;
   line-height: 1.2;
@@ -1677,11 +1676,7 @@ end explore
   color: red;
 }
 
-.pricing .nexora-price-card:hover .box-div,
-.pricing .nexora-price-card:hover .btn-vision {
-  background: #fff;
-  color: #0066cc !important;
-}
+
 
 .pricing .btn-position {
   position: absolute;
