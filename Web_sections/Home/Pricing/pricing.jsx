@@ -1,11 +1,14 @@
 import Link from "next/link";
 import convertCurrencyToSign from "../../../utils/constants";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 const PricingSection = ({ page_data, payment_plan }) => {
   const salePage = page_data.page_detail;
   const page_slug = page_data.page_title_slug;
   const router = useRouter();
+
+
 
   const handleclick = (plan_slug) => {
     router.push(`/${page_slug}/payment-page/${plan_slug}`);
@@ -19,11 +22,12 @@ const PricingSection = ({ page_data, payment_plan }) => {
             <div className="row justify-content-center">
               <div className="col-lg-7">
                 <h2>{salePage.plan_heading}</h2>
+                <div className=" toggle-btn">
+              <button href="" className="annual">Monthly</button>
+              <button href="" className="monthly">Annual</button>
+            </div> 
               </div>
-              <label class="switch">
-  <input type="checkbox" />
-  <span class="slider"></span>
-</label>
+           
             </div>
             <div className="row justify-content-center wb-payment-plans">
               {payment_plan?.map((items, index) => {
