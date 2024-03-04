@@ -71,38 +71,8 @@ const PlanCompare = ({ page_data, payment_plan, plan_feature }) => {
 
             <div className="d-none d-lg-block" id="features">
               <div className="row mt-5">
-                <PlanFeatures
-                  plan_feature={plan_feature}
-                  // title="Project Management"
-                />
+                <PlanFeatures plan_feature={plan_feature} />
               </div>
-              {/* <div className="row mt-5">
-                <PlanFeatures
-                  plan_feature={plan_feature}
-                  title="Issue Management"
-                />
-              </div>
-              <div className="row mt-5">
-                <PlanFeatures
-                  plan_feature={plan_feature}
-                  title="Code Review & Collaboration"
-                />
-              </div>
-              <div className="row mt-5">
-                <PlanFeatures plan_feature={plan_feature} title="Security" />
-              </div>
-              <div className="row mt-5">
-                <PlanFeatures plan_feature={plan_feature} title="Support" />
-              </div>
-              <div className="row mt-5">
-                <PlanFeatures
-                  plan_feature={plan_feature}
-                  title="Storage & Attachments"
-                />
-              </div>
-              <div className="row mt-5">
-                <PlanFeatures plan_feature={plan_feature} title="Mobile" />
-              </div> */}
             </div>
           </div>
         </section>

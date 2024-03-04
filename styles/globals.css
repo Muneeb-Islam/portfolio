@@ -1965,8 +1965,8 @@ lawyer-theme1-thankyou-end
 
 
 .plan-page .payment-plan-card.active-card {
-  border-top: 16px solid #319b77 !important;
-  border: 1px solid #319b77;
+  border-top: 16px solid #0066cc !important;
+  border: 1px solid #0066cc;
 }
 
 
@@ -2049,9 +2049,9 @@ lawyer-theme1-thankyou-end
   display: inline-block;
   font-size: 1.025rem;
   padding: 12px 30px 15px;
-  color: #319b77;
+  color: #0066cc;
   font-weight: 600;
-  border: 2px solid #319b77;
+  border: 2px solid #0066cc;
   background: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -2064,13 +2064,13 @@ lawyer-theme1-thankyou-end
 }
 
 .plan-page .plan-btn-btn.plan-btn-fill:hover {
-  color: #319b77;
-  border: 2px solid #319b77;
+  color: #0066cc;
+  border: 2px solid #0066cc;
   background: #fff;
 }
 
 .plan-page .plan-btn-btn.plan-btn-fill {
-  background: #319b77;
+  background: #0066cc;
   color: #fff;
 }
 
@@ -2079,7 +2079,7 @@ lawyer-theme1-thankyou-end
 }
 
 .plan-page .plan-btn-btn:hover {
-  background: #319b77;
+  background: #0066cc;
   color: #fff;
 
 }
@@ -2117,7 +2117,7 @@ lawyer-theme1-thankyou-end
   right: 0;
   bottom: 0;
   background-color: #fff;
-  border: 2px solid #319b77;
+  border: 2px solid #0066cc;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -2129,7 +2129,7 @@ lawyer-theme1-thankyou-end
   width: 18px;
   left: 2px;
   bottom: 1.5px;
-  background-color: #319b77;
+  background-color: #0066cc;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -2140,7 +2140,7 @@ lawyer-theme1-thankyou-end
 }
 
 .plan-page input:focus+.slider {
-  box-shadow: 0 0 1px #319b77;
+  box-shadow: 0 0 1px #0066cc;
 }
 
 .plan-page input:checked+.slider:before {
@@ -2157,8 +2157,33 @@ lawyer-theme1-thankyou-end
   border-radius: 50%;
 }
 
+.image-loader {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.image-loader img {
+  height: 70px;
+}
+
+.plan-page .bg-plan-color h1,
+.plan-page .bg-plan-color h2,
+.plan-page .bg-plan-color h3,
+.plan-page .bg-plan-color h4,
+.plan-page .bg-plan-color h5,
+.plan-page .bg-plan-color h6,
+.plan-page .bg-plan-color p{
+  color: #fff;
+}
 .plan-page .bg-plan-color {
-  background: #edfbf6;
+  background: #0066cc;
+  /* background: #edfbf6; */
   padding: 128px 0;
 }
 
@@ -2175,7 +2200,7 @@ lawyer-theme1-thankyou-end
 }
 
 .plan-page .plan-compare .fa-solid {
-  color: #319b77;
+  color: #0066cc;
   font-size: 22px;
 }
 
@@ -2247,7 +2272,7 @@ lawyer-theme1-thankyou-end
 
 
 .plan-page .btn-color-link:hover {
-  border-color: #319b77;
+  border-color: #0066cc;
 }
 
 .plan-page .btn-color-link i {
@@ -2257,7 +2282,7 @@ lawyer-theme1-thankyou-end
 .plan-page .btn-color-link {
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s linear 0s;
-  color: #319b77;
+  color: #0066cc;
   font-weight: 600;
   font-size: 22px;
 }
@@ -2303,7 +2328,7 @@ lawyer-theme1-thankyou-end
   display: inline-flex;
   justify-content: center;
   text-align: center;
-  color: #319b77;
+  color: #0066cc;
   position: absolute;
   right: 0rem;
   top: 1.125rem;
@@ -2315,7 +2340,7 @@ lawyer-theme1-thankyou-end
 }
 
 .plan-page .plan-page-faq span {
-  color: #319b77;
+  color: #0066cc;
   font-weight: 600;
   font-size: 1.3rem;
 }
