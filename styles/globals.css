@@ -1880,10 +1880,11 @@ lawyer-theme1-thankyou-start
 ==========================*/
 .thanks_wrapper .card-outer-area {
   padding: 4.5rem 5rem;
+  position: relative;
 }
 
 .thanks_wrapper .card-inner {
-  padding: 6rem 7rem 8rem;
+  padding: 6rem 7rem 0rem;
 }
 
 .thanks_wrapper .lawyer-thankyou {
@@ -1927,9 +1928,12 @@ lawyer-theme1-thankyou-start
   bottom: 11rem;
 }
 
+.position-div ul{
+  display: inline-block;
+}
 .position-div {
-  position: absolute;
-  bottom: 6rem;
+  /* position: absolute; */
+  /* bottom: 4rem; */
   text-align: center;
   width: 100%;
 }
@@ -1938,7 +1942,7 @@ lawyer-theme1-thankyou-start
   display: inline-block;
   padding: 0.875rem 1.75rem;
   font-weight: 600;
-  margin: 3rem 0rem 5rem;
+  /* margin: 3rem 0rem 5rem; */
   border-radius: 0.3125rem;
 }
 
@@ -1961,7 +1965,7 @@ lawyer-theme1-thankyou-end
 
 @media (max-width: 33.75rem) {
   .thanks_wrapper .card-inner {
-    padding: 15rem 1rem;
+    padding: 15rem 1rem 0;
   }
 
   .thanks_wrapper .card-outer-area {
@@ -2529,6 +2533,9 @@ lawyer-theme1-thankyou-end
   padding: 16px 12px 16px;
   color: #000;
 }
+.contact-card-2 .form-control:focus{
+  box-shadow: none;
+}
 .contact-card-2 .form-control {
   background: #fff;
   border: 1px solid #000;
@@ -2549,8 +2556,8 @@ lawyer-theme1-thankyou-end
 }
 
 .art-banner-form .path-label {
-  height: 28px;
-  width: 28px;
+  height: 26px;
+  width: 26px;
   border-radius: 50%;
   background: #0066cc !important;
   border: 1px solid #d9d9d9;

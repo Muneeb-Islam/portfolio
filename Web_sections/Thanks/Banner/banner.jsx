@@ -11,13 +11,13 @@ const BannerSection = ({ page_data }) => {
             <div className="lawyer-thankyou position-relative">
               <div className="card-inner">
                 <h2>{sale_page_detail.thankyou_page_contact_us_content}</h2>
-                <div className="lawyer-home-btn">
+                <div className="lawyer-home-btn mt-4">
                   <a href={page_data.thankyou_page_button_link}>
                     {page_data.thankyou_page_button_text}
                   </a>
                 </div>
               </div>
-              <div className="position-div">
+              <div className="position-div mt-5">
                 <ul className="d-flex justify-content-center list-unstyled lawyer-socials">
                   <li>
                     <a href={sale_page_detail.twitter_link}>
@@ -40,11 +40,14 @@ const BannerSection = ({ page_data }) => {
                     </a>
                   </li>
                 </ul>
-                <div className="d-flex justify-content-center align-items-baseline copyright-icon">
-                  <i className="fa-regular fa-copyright"></i>
-                  <p className="lawyer-thankyou-copyright ps-1">
-                    {sale_page_detail.thankyou_page_bottom_content}
-                  </p>
+              </div>
+              <div className="d-flex justify-content-center align-items-baseline copyright-icon mt-5 pb-5 mb-5">
+                <div className="lawyer-thankyou-copyright ps-1">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: sale_page_detail.thankyou_page_bottom_content,
+                    }}
+                  ></div>
                 </div>
               </div>
             </div>

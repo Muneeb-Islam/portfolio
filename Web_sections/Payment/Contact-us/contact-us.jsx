@@ -412,7 +412,7 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
       <section className="contact_form" id="contact_form_wrapper">
         <div className="container px-lg-5">
           <div className="row justify-content-center">
-            <div className="col-lg-9 pt-5 col-11">
+            <div className="col-lg-10 pt-5 col-11 px-lg-5">
               {PaymentPlans.map((plan) => (
                 <div className="mb-1">
                   <div
