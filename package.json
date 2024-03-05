@@ -8,7 +8,9 @@
     "start": "next start -p 4010 ",
     "build:dev": "env-cmd -f .env.dev next build",
     "build:prod": "env-cmd -f .env.prod next build",
-    "lint": "next lint"
+    "lint": "next lint",
+    "stage": "env-cmd -f .env.stage next dev",
+    "build:stage": "env-cmd -f .env.stage next build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

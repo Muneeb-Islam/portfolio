@@ -1,7 +1,6 @@
 import { s3baseUrl } from "../../../config/config";
 const AboutSection = ({ page_data }) => {
   const salePage = page_data.sale_page_detail;
-  console.log(salePage, "--salePage");
   return (
     <section className="about_wrapper" id="about_wrapper">
       <div className="container">

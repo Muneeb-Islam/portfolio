@@ -19,26 +19,22 @@ import Animated from "../../Components/AnimatedComponent";
 import FaqSection from "@/Web_sections/Home/Faq/faq";
 import Brans_LogoSection from "@/Web_sections/Home/Brand-logo/brand-logo";
 export default function HomePage({ result }) {
-  const sale_page = result.Sale_page;
-  const slider = result.slider;
-  const buisness_strategy = result.buisness_strategy;
-  const website_program = result.website_program;
-  const comprehensive_services = result.comprehensive_services;
-  const benefit = result.benefit;
-  const testimonial = result.testimonial;
-  const menu_items = result.menu_items;
-  const payment_plan = result.payment_plan;
+  const sale_page = result.web_page;
+  const faq = result?.faq;
+  const feature = result?.feature;
+  const website_workflow = result?.website_workflow;
+  const benefit = result?.benefit;
+  const testimonial = result?.testimonial;
+  const menu_items = result?.menu_items;
+  const payment_plan = result?.payment_plan;
 
   return (
     <div>
       <Header page_data={sale_page} />
-      <BannerSection page_data={sale_page} slider={slider} />
-      <HowSection
-        page_data={sale_page}
-        comprehensive_services={comprehensive_services}
-      />
+      <BannerSection page_data={sale_page} />
+      <HowSection page_data={sale_page} website_workflow={website_workflow} />
       {/* <FeaturesSection /> */}
-      <Service page_data={sale_page} website_program={website_program} />
+      <Service page_data={sale_page} feature={feature} />
       {/* <Brans_LogoSection /> */}
       {/* <ServiceSection
         page_data={sale_page}
@@ -59,7 +55,7 @@ export default function HomePage({ result }) {
       {/* <ExperianceSection page_data={sale_page} /> */}
 
       <TestimonialSection page_data={sale_page} testimonial={testimonial} />
-      <FaqSection page_data={sale_page} buisness_strategy={buisness_strategy} />
+      <FaqSection page_data={sale_page} faq={faq} />
       {/* <Top_ServiceSection
         page_data={sale_page}
         testimonial={testimonial}

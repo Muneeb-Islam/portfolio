@@ -12,7 +12,7 @@ export async function getServerSideProps(context) {
   if (result.code === 200) {
     return {
       props: {
-        page_data: result,
+        web_page: result,
       },
     };
   } else {
@@ -24,9 +24,9 @@ export async function getServerSideProps(context) {
     };
   }
 }
-export default function Thanks({ page_data }) {
+export default function Thanks({ web_page }) {
   const { brand_favicon, meta_keywords, meta_title, meta_description } =
-    page_data.Sale_page;
+    web_page.web_page.thanks_page;
 
   return (
     <>
@@ -37,7 +37,7 @@ export default function Thanks({ page_data }) {
         description={meta_description}
         keywords={meta_keywords}
       />
-      <ThanksPage page_data={page_data} />
+      <ThanksPage page_data={web_page} />
     </>
   );
 }

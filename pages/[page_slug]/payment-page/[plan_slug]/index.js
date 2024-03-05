@@ -12,7 +12,7 @@ export async function getServerSideProps(context) {
   if (result.code === 200) {
     return {
       props: {
-        page_data: result,
+        web_page: result,
       },
     };
   } else {
@@ -24,12 +24,11 @@ export async function getServerSideProps(context) {
     };
   }
 }
-export default function Home({ page_data }) {
-  const { brand_favicon, meta_keywords, meta_title, meta_description } =
-    page_data.Sale_page;
 
-  // const page_component_name = page_data.Sale_page.page_component_name;
-  // console.log(page_component_name, "--page_component_name");
+export default function Payment({ web_page }) {
+  const { brand_favicon, meta_keywords, meta_title, meta_description } =
+    web_page.web_page.payment_page;
+
   return (
     <>
       <HeaderController
@@ -39,7 +38,7 @@ export default function Home({ page_data }) {
         description={meta_description}
         keywords={meta_keywords}
       />
-      <PaymentPage page_data={page_data} />
+      <PaymentPage page_data={web_page} />
     </>
   );
 }

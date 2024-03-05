@@ -87,10 +87,9 @@ p {
 .slider_wrapper .slick-dots li.slick-active button,
 .tab-content h2::after,
 .hows-text h2::after,
-.pricing .nexora-price-card:hover,
 .pricing .box-div,
 .thanks_wrapper .lawyer-home-btn a,
-.thanks_wrapper .card-outer-area {
+.thanks_wrapper .card-outer-area , .toggle-btn .annual{
   background: rgb(0, 102, 204);
 }
 
@@ -111,7 +110,9 @@ span,
 .slider_wrapper .done-heading h1,
 .pricing .fa-check,
 .slider_wrapper .star-rating i,
-.thanks_wrapper .lawyer-socials a:hover {
+.thanks_wrapper .lawyer-socials a:hover,
+.pricing-btn,
+.pricing-btn:hover {
   color: rgb(0, 102, 204)
 }
 
@@ -169,14 +170,11 @@ a:hover,
 .footer_wrapper .btn_subscribe,
 .contact_form_wrapper .contact-card .send-message,
 .services_wrapper .pos-content h3,
-.pricing .nexora-price-card:hover h2,
-.pricing .nexora-price-card:hover,
-.pricing .nexora-price-card:hover h3,
-.pricing .box-div,
-.pricing .nexora-price-card:hover span,
-.pricing .nexora-price-card:hover .fa-check,
+
 .thanks_wrapper .lawyer-home-btn a,
-.thanks_wrapper .lawyer-home-btn a:hover {
+.thanks_wrapper .lawyer-home-btn a:hover, .pricing .box-div, .toggle-btn .annual
+.thanks_wrapper .lawyer-home-btn a:hover,
+.pricing .box-div {
   color: #fff;
 }
 
@@ -207,6 +205,12 @@ end general css
   color: #CBD0E3;
   font-size: 0.8rem;
   text-decoration: none;
+
+}
+
+.pricing-btn,
+.top_navbar a,
+.top_navbar {
   font-weight: 400;
 }
 
@@ -464,6 +468,7 @@ end general css
   margin-top: 3.125rem;
   font-weight: 500;
   font-size: 0.9375rem;
+  cursor: pointer;
 
 }
 
@@ -1614,6 +1619,10 @@ end explore
   text-align: center;
 }
 
+.pricing-btn {
+  text-decoration: underline;
+}
+
 .pricing .main-price-heading h1 {
   font-size: 4rem;
   line-height: 1.2;
@@ -1632,13 +1641,15 @@ end explore
 
 
 .pricing .nexora-price-card {
-  padding: 4.375rem 1.5rem 6.4375rem;
+  padding: 4.375rem 1rem 6.4375rem;
   box-shadow: 0.0625rem 0 0.825rem rgba(0 0 0 /0.3);
   transition: all .8s;
   border-radius: 0.375rem;
   position: relative;
 }
-
+.pricing .nexora-price-card:hover{
+  box-shadow: 0.0625rem 0 0.725rem rgba(0 0 0 /0.7);
+}
 .pricing .outer-card-div {
   position: absolute;
   top: 0;
@@ -1654,7 +1665,7 @@ end explore
   font-weight: 700;
 }
 
-.pricing .top-border {
+ .pricing .card-list li {
   border-top: 0.033rem solid #efefef;
 }
 
@@ -1663,8 +1674,9 @@ end explore
 }
 
 .pricing .card-list li {
-  padding: 0.25rem 0rem;
+  padding: 0.55rem 0rem;
   font-size: 0.9rem;
+
 }
 
 
@@ -1676,11 +1688,7 @@ end explore
   color: red;
 }
 
-.pricing .nexora-price-card:hover .box-div,
-.pricing .nexora-price-card:hover .btn-vision {
-  background: #fff;
-  color: #0066cc !important;
-}
+
 
 .pricing .btn-position {
   position: absolute;
@@ -1724,7 +1732,68 @@ end explore
     font-size: 1.375rem;
   }
 }
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 /* @media (min-width: 75rem){
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
       max-width: 78rem;
@@ -1732,12 +1801,24 @@ end explore
 /* -------------------------------------
   Payment Banner
   ----------------------------------------------- */
-.payment-banner {
-  background: #ebf5f3;
-  padding: 5rem 0rem;
+.payment-header-bttom {
+  border-bottom: 1px solid #282828;
 }
 
-.payment-banner h1 {
+.payment-banner {
+  /* background: #ebf5f3; */
+  padding: 3rem 0rem 0;
+  position: relative;
+}
+
+.payment-banner .border-bg-bottom {
+  border-bottom: 4px solid #0066cc;
+
+}
+
+.payment-banner h2 {
+  font-size: 37px;
+  font-weight: 800;
   margin-bottom: 1rem;
 }
 
@@ -1799,10 +1880,11 @@ lawyer-theme1-thankyou-start
 ==========================*/
 .thanks_wrapper .card-outer-area {
   padding: 4.5rem 5rem;
+  position: relative;
 }
 
 .thanks_wrapper .card-inner {
-  padding: 6rem 7rem 8rem;
+  padding: 6rem 7rem 0rem;
 }
 
 .thanks_wrapper .lawyer-thankyou {
@@ -1846,9 +1928,12 @@ lawyer-theme1-thankyou-start
   bottom: 11rem;
 }
 
+.position-div ul{
+  display: inline-block;
+}
 .position-div {
-  position: absolute;
-  bottom: 6rem;
+  /* position: absolute; */
+  /* bottom: 4rem; */
   text-align: center;
   width: 100%;
 }
@@ -1857,7 +1942,7 @@ lawyer-theme1-thankyou-start
   display: inline-block;
   padding: 0.875rem 1.75rem;
   font-weight: 600;
-  margin: 3rem 0rem 5rem;
+  /* margin: 3rem 0rem 5rem; */
   border-radius: 0.3125rem;
 }
 
@@ -1880,7 +1965,7 @@ lawyer-theme1-thankyou-end
 
 @media (max-width: 33.75rem) {
   .thanks_wrapper .card-inner {
-    padding: 15rem 1rem;
+    padding: 15rem 1rem 0;
   }
 
   .thanks_wrapper .card-outer-area {
@@ -1908,4 +1993,620 @@ lawyer-theme1-thankyou-end
   margin-bottom: 0;
   color: #292929;
 
+}
+
+
+
+/* ====================== plan-page ==============================
+ =============================================================== */
+
+
+.plan-page h1,
+.plan-page h2,
+.plan-page h3,
+.plan-page h4,
+.plan-page h5,
+.plan-page h6,
+.plan-page p,
+.plan-page ul>li {
+  color: #282828;
+}
+
+.plan-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.plan-page h2 {
+  font-size: 1.95rem;
+  font-weight: 700;
+}
+
+.plan-page h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.plan-page .plan-pricing {
+  padding: 64px 0 100px;
+}
+
+
+
+.plan-page .payment-plan-card.active-card {
+  border-top: 16px solid #0066cc !important;
+  border: 1px solid #0066cc;
+}
+
+
+.plan-page .payment-plan-card {
+  background: #fff;
+  padding: 58px 30px 40px;
+  border: 1px solid #d5d6dc;
+  border-radius: 6px;
+  position: relative;
+  border-top: 16px solid #d5d6dc;
+
+}
+
+.plan-page .payment-plan-card p:last-of-type {
+  font-size: 16px;
+  margin-bottom: 32px;
+  padding-top: 5px;
+}
+
+.plan-page .payment-plan-card h2 {
+  font-size: 2.25rem;
+  line-height: 2.875rem;
+
+}
+
+.plan-page .payment-plan-card ul {
+  padding-top: 15px;
+  display: inline-block;
+  padding-left: 0;
+}
+
+.plan-page .payment-plan-card ul>li {
+  display: flex !important;
+  justify-content: start;
+  font-size: 16px;
+  background: url(/assets/check-2.png) no-repeat left 7px;
+  background-size: 20px;
+  padding: 3px 35px 7px;
+  float: left;
+}
+
+.plan-page .plan-page-price h2 {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+.plan-page .plan-page-price h2>span {
+  color: #282828;
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-left: 4px;
+  bottom: 20px;
+  text-transform: uppercase;
+}
+
+.plan-page .plan-page-price h5 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.plan-page .plan-btn-div.plan-btn-div-2 {
+  margin: auto 20px !important;
+
+}
+
+.plan-page .plan-btn-div {
+  margin: auto 0;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.plan-page .plan-btn-btn {
+  width: 80%;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.025rem;
+  padding: 12px 30px 15px;
+  color: #0066cc;
+  font-weight: 600;
+  border: 2px solid #0066cc;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+.toggle-btn {
+
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: center;
+
+}
+.toggle-btn button{
+  padding: 0.5em 1rem;
+  border: none;
+}
+.plan-btn-btn i {
+  font-size: 15px !important;
+  padding-top: 4px;
+}
+
+.plan-page .plan-btn-btn.plan-btn-fill:hover {
+  color: #0066cc;
+  border: 2px solid #0066cc;
+  background: #fff;
+}
+
+.plan-page .plan-btn-btn.plan-btn-fill {
+  background: #0066cc;
+  color: #fff;
+}
+
+.plan-page .plan-btn-btn:hover i {
+  color: #fff;
+}
+
+.plan-page .plan-btn-btn:hover {
+  background: #0066cc;
+  color: #fff;
+
+}
+
+.plan-page .toggle-btn h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529 !important;
+
+}
+
+.plan-page .plan-bottom-text h6 {
+  font-size: 26px;
+  color: #282828;
+}
+
+.plan-page .switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 24px;
+}
+
+.plan-page .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.plan-page .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 2px solid #0066cc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.plan-page .slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 1.5px;
+  background-color: #0066cc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+.plan-page input:checked+.slider {
+  background-color: #fff;
+}
+
+.plan-page input:focus+.slider {
+  box-shadow: 0 0 1px #0066cc;
+}
+
+.plan-page input:checked+.slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+.plan-page .slider.round {
+  border-radius: 34px;
+}
+
+.plan-page .slider.round:before {
+  border-radius: 50%;
+}
+
+.image-loader {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.image-loader img {
+  height: 70px;
+}
+
+.plan-page .bg-plan-color h1,
+.plan-page .bg-plan-color h2,
+.plan-page .bg-plan-color h3,
+.plan-page .bg-plan-color h4,
+.plan-page .bg-plan-color h5,
+.plan-page .bg-plan-color h6,
+.plan-page .bg-plan-color p{
+  color: #fff;
+}
+.plan-page .bg-plan-color {
+  background: #0066cc;
+  /* background: #edfbf6; */
+  padding: 128px 0;
+}
+
+.plan-page .plan-compare {
+  padding: 128px 0 100px;
+}
+
+.plan-page .plan-compare h2 {
+  line-height: 1.5;
+}
+
+.plan-page .plan-compare .fa-minus {
+  color: #5d5e6f !important;
+}
+
+.plan-page .plan-compare .fa-solid {
+  color: #0066cc;
+  font-size: 22px;
+}
+
+.plan-page .plan-compare-card {
+  border-left: 1px solid #edfbf6;
+  padding: 0px 20px 16px;
+  box-shadow: inset 0 0 0 #d5d6dc, inset 1px 0 0 #d5d6dc;
+  position: relative;
+}
+
+.plan-page .plan-compare-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.plan-page .plan-compare-card p {
+  color: #282828;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+
+.plan-page .plan-compare-card .compare-btn-btn {
+  width: 100%;
+  display: inline-block;
+  padding: 8px 15px 10px;
+  font-size: 16px;
+}
+
+.plan-page .plan-compare .table:first-child {
+  font-size: 18px;
+}
+
+
+/* .table-bordered>:not(caption)>*>* {
+  border-left: 0;
+} */
+
+
+
+.table td>span {
+  font-size: 10px;
+  color: #282828;
+  display: block;
+  letter-spacing: 0;
+
+}
+
+.table .border-right-0 {
+  border-right: 0;
+}
+
+.table>:not(caption)>*>* {
+  color: #5d5e6f;
+  padding: 1.5rem;
+  width: 15%;
+}
+
+.table>td,
+.table>th {
+  width: 20%;
+}
+
+
+.plan-page .bg-plan-color h2 {
+  line-height: 2.125rem !important;
+  margin-bottom: 20px;
+}
+
+
+.plan-page .btn-color-link:hover {
+  border-color: #0066cc;
+}
+
+.plan-page .btn-color-link i {
+  font-size: 18px;
+}
+
+.plan-page .btn-color-link {
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s linear 0s;
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+
+.plan-page .plan-page-faq,
+.plan-page .bg-plan-slider {
+  padding: 50px 0 150px;
+}
+
+.plan-page .bg-plan-slider h3 {
+  color: #5d5e6f;
+}
+
+
+.plan-page .plan-page-faq .faq-list {
+  border-radius: 0rem;
+  margin-bottom: -0.125rem;
+}
+
+.plan-page .plan-page-faq .faq-list h6 {
+  font-size: 1.2rem;
+}
+
+
+.plan-page .plan-page-faq .faq-list {
+  padding-left: 0;
+}
+
+.plan-page .plan-page-faq .faq-list li {
+  padding: 0.75rem 0.938rem 1rem 0rem;
+  border-bottom: 1px solid #d5d6dc;
+}
+
+.plan-page .plan-page-faq .faq-list a {
+  display: block;
+  position: relative;
+  padding: 0.925rem 0rem 0.425rem !important;
+  cursor: pointer;
+}
+
+.plan-page .plan-page-faq .faq-list i {
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  color: #0066cc;
+  position: absolute;
+  right: 0rem;
+  top: 1.125rem;
+}
+
+
+.plan-page .plan-page-faq .faq-list p {
+  padding: 1rem 0rem;
+}
+
+.plan-page .plan-page-faq span {
+  color: #0066cc;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.plan-page .plan-page-faq .collap {
+  position: relative;
+}
+
+.plan-page .plan-page-faq .faq-list .icon-show {
+  display: none;
+}
+
+.plan-page .plan-page-faq .faq-list a.collapsed .icon-show {
+  display: inline-block;
+  position: absolute;
+  top: 1.313rem;
+}
+
+.plan-page .plan-page-faq .faq-list a.collapsed .icon-close {
+  display: none;
+}
+
+@media(max-width:33.75rem) {
+  .plan-page .plan-page-faq .faq-list a.collapsed .icon-show {
+    top: 1.063rem;
+  }
+}
+
+@media (max-width : 26.563rem) {
+  .plan-page .plan-page-faq .faq-list .fas {
+    position: absolute;
+    top: 1.313rem;
+  }
+}
+
+@media (max-width: 1400px) {}
+
+@media only screen and (max-width: 1200px) and (min-width: 991px) {
+  .plan-page .plan-compare-card .compare-btn-btn {
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+
+}
+
+@media(max-width:992px) {}
+
+@media only screen and (max-width:991px) and (min-width:768px) {}
+
+@media(max-width:768px) {}
+
+
+/* ================= Payment Page ================
+=============================================== */
+.log-heading {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+
+.popup {
+  width: 25%;
+  /* height: 70vh; */
+  border-radius: 4px;
+  opacity: 1;
+  background-color: rgb(94, 92, 92);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  /* border: 1px solid #0066cc; */
+  /* box-shadow: rgb(48, 43, 27) 0px 1px 2px 0px; */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  padding-bottom: 20px;
+}
+
+
+.crossPoPUp {
+  background-color: #fff;
+  display: inline;
+  width: 24px;
+  position: absolute;
+  text-align: center;
+  height: 26px;
+  border-radius: 50px;
+  right: 8px;
+  top: 5px;
+  z-index: 9999999999999;
+  cursor: pointer;
+}
+
+
+.payment-form-password {
+  position: relative;
+}
+
+.art-banner-form h5 {
+  color: #282828;
+}
+
+.contact-card-2 .payment-form-password-icon {
+  top: 0.7rem !important;
+}
+
+.contact-card-2 .form-control.form-data{
+  padding: 16px 12px 16px;
+  color: #000;
+}
+.contact-card-2 .form-control:focus{
+  box-shadow: none;
+}
+.contact-card-2 .form-control {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 10px 12px 12px;
+  font-size: 1rem;
+  color: #282828 !important;
+
+}
+
+.contact-card-2 .form-control::placeholder {
+  font-size: 15px;
+  color: #3f3f3f;
+}
+
+.art-banner-form {
+  cursor: pointer;
+}
+
+.art-banner-form .path-label {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background: #0066cc !important;
+  border: 1px solid #d9d9d9;
+  color: #1f1f1f;
+}
+
+.margin-bottom-form .form-control:focus {
+  box-shadow: none;
+
+}
+
+.art-banner-form input[type="radio"]#path-label {
+  background: #d9d9d9;
+  accent-color: #0066cc;
+}
+
+
+.art-banner-form .path-page-new-label {
+  font-size: 18px;
+  color: #282828;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+
+.payment-form-password-icon-2 {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+}
+
+
+@media (max-width: 1024px) {
+  .popup {
+    top: 50%;
+
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    width: 45%;
+  }
+}
+
+@media (max-width: 525px) {
+  .popup {
+    width: 80%;
+  }
 }

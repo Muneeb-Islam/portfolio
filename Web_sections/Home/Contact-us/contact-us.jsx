@@ -1,16 +1,17 @@
 import { s3baseUrl } from "@/config/config";
-import {_send_contact_support_email} from "../../../DAL/Form";
+import { _send_contact_support_email } from "../../../DAL/Form";
 import { useState } from "react";
 import { useSnackbar } from "notistack";
 const ContactSection = ({ page_data }) => {
   const { enqueueSnackbar } = useSnackbar();
-  const salePage = page_data.sale_page_detail;
+  const salePage = page_data.page_detail;
+
   const [inputs, setInputs] = useState({
     name: "",
     phone_number: "",
     email: "",
     subject: "",
-    message:"",
+    message: "",
   });
   const handleInputChange = (e) => {
     const { target } = e;
@@ -27,15 +28,12 @@ const ContactSection = ({ page_data }) => {
     // call DAL function
     const resp = await _send_contact_support_email(postData);
 
-    // handle response
-    console.log(resp, "--resp");
     if (resp.code === 200) {
-      enqueueSnackbar(resp.message,{variant:"success"})
-        setInputs("")
+      enqueueSnackbar(resp.message, { variant: "success" });
+      setInputs("");
     } else {
       // alert("something wrong");
-      enqueueSnackbar(resp.message,{variant:"error"})
-
+      enqueueSnackbar(resp.message, { variant: "error" });
     }
   };
   return (
@@ -68,7 +66,6 @@ const ContactSection = ({ page_data }) => {
               s3baseUrl + salePage.contact_us_background_image
             }) no-repeat`,
             backgroundSize: "100% 100%",
-          
           }}
         >
           <div className="col-lg-5 ps-lg-0">
@@ -80,7 +77,7 @@ const ContactSection = ({ page_data }) => {
           </div>
 
           <div className="col-lg-7 ps-lg-5">
-            <form  onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-lg-6 pt-2">
                   <input
@@ -122,8 +119,9 @@ const ContactSection = ({ page_data }) => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Subject"
-                     name="subject"
+                    placeholder="Subject *"
+                    required
+                    name="subject"
                     id="subject"
                     value={inputs.subject}
                     onChange={handleInputChange}

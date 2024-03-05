@@ -1,7 +1,7 @@
 import { s3baseUrl } from "@/config/config";
 
 const BannerSection = ({ page_data }) => {
-  const salePage = page_data.sale_page_detail;
+  const salePage = page_data.page_detail;
 
   return (
     <section className="banner">
