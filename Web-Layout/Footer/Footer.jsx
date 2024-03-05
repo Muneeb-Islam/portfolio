@@ -66,14 +66,14 @@ const Footer = ({ page_data }) => {
           </div>
         </div>
 
-        <div className="row justify-content-between align-items-center bottom-footer px-lg-4">
+        <div className="row justify-content-center align-items-center bottom-footer px-lg-4">
           <div
-            className="col-lg-5 text-center text-lg-start"
+            className="col-12 text-center"
             dangerouslySetInnerHTML={{
               __html: salePage.copyright_text,
             }}
           ></div>
-          <div className="col-lg-4 pt-4 pt-lg-0">
+          {/* <div className="col-lg-4 pt-4 pt-lg-0">
             <ul className="list-unstyled d-flex justify-content-center justify-content-lg-end">
               <li>
                 <a href={salePage.about_us_link}>{salePage.about_us_heading}</a>
@@ -84,7 +84,7 @@ const Footer = ({ page_data }) => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
