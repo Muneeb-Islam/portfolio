@@ -145,7 +145,6 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10 text-center">
-              <h1>Hello</h1>
               <div
                 dangerouslySetInnerHTML={{
                   __html: salePage.private_server_host_backlog,
