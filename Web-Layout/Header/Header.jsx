@@ -7,7 +7,10 @@ const Header = ({ page_data }) => {
 
   useEffect(() => {
     console.log("script run for active first");
-    document.getElementsByClassName("nav-link")[0].classList.add("active");
+    const navLinks = document.getElementsByClassName("nav-link");
+    if (navLinks.length > 0) {
+      navLinks[0].classList.add("active");
+    }
   }, []);
 
   return (
