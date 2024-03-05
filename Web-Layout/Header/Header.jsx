@@ -4,7 +4,6 @@ const Header = ({ page_data }) => {
   const salePage = page_data.page_detail;
   const menu_items = page_data?.header_menu?.menu_items;
   const { brand_logo } = page_data;
-  // console.log(menu_items, "---menu_items")
 
   useEffect(() => {
     console.log("script run for active first");

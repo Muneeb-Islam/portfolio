@@ -19,7 +19,6 @@ import Animated from "../../Components/AnimatedComponent";
 import FaqSection from "@/Web_sections/Home/Faq/faq";
 import Brans_LogoSection from "@/Web_sections/Home/Brand-logo/brand-logo";
 export default function HomePage({ result }) {
-  console.log(result, "-----result");
   const sale_page = result.web_page;
   const faq = result?.faq;
   const feature = result?.feature;

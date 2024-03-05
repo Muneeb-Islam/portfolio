@@ -28,8 +28,6 @@ const ContactSection = ({ page_data }) => {
     // call DAL function
     const resp = await _send_contact_support_email(postData);
 
-    // handle response
-    console.log(resp, "--resp");
     if (resp.code === 200) {
       enqueueSnackbar(resp.message, { variant: "success" });
       setInputs("");
@@ -121,7 +119,8 @@ const ContactSection = ({ page_data }) => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Subject"
+                    placeholder="Subject *"
+                    required
                     name="subject"
                     id="subject"
                     value={inputs.subject}

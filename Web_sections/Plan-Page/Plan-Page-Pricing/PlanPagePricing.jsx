@@ -6,7 +6,6 @@ import PaymentLoader from "@/Components/Loader/PaymentLoader";
 import ImageLoader from "@/Components/ImageLoader";
 
 const PlanPagePricing = ({ page_data, payment_plan }) => {
-  console.log(payment_plan, "----payment_plan");
   const [isLoadingPlan, setIsLoadingPlan] = useState(false);
 
   const salePage = page_data.page_detail;

@@ -36,7 +36,6 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
   const [resPostData, setResPostData] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const params = router.query ? router.query : page_data.query;
-  console.log(params, "---params");
   const navigate = router.push;
 
   const [inputState, setInputsState] = useState({
