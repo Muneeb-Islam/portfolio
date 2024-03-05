@@ -8,8 +8,6 @@ const PricingSection = ({ page_data, payment_plan }) => {
   const page_slug = page_data.page_title_slug;
   const router = useRouter();
 
-
-
   const handleclick = (plan_slug) => {
     router.push(`/${page_slug}/payment-page/${plan_slug}`);
   };
@@ -22,20 +20,23 @@ const PricingSection = ({ page_data, payment_plan }) => {
             <div className="row justify-content-center">
               <div className="col-lg-7">
                 <h2>{salePage.plan_heading}</h2>
-                <div className=" toggle-btn">
-              <button href="" className="annual">Monthly</button>
-              <button href="" className="monthly">Annual</button>
-            </div> 
+                {/* <div className=" toggle-btn">
+                  <button href="" className="annual">
+                    Monthly
+                  </button>
+                  <button href="" className="monthly">
+                    Annual
+                  </button>
+                </div> */}
               </div>
-           
             </div>
             <div className="row justify-content-center wb-payment-plans">
               {payment_plan?.map((items, index) => {
                 return (
                   <div
-                  key={index}
-                  className= "col-12 col-md-4 pt-5 wow slideInLeft"
-                >
+                    key={index}
+                    className="col-12 col-md-4 pt-5 wow slideInLeft"
+                  >
                     <div className="nexora-price-card wb-plan-card h-100">
                       <div className="outer-card-div">
                         <div className="box-div">{items.plan_title}</div>
@@ -76,10 +77,12 @@ const PricingSection = ({ page_data, payment_plan }) => {
                 );
               })}
 
-              <div className="mt-4 text-center">
+              {/* <div className="mt-4 text-center">
                 <p>More details and all features</p>
-                <Link href="#" className="pricing-btn">View Pricing Page</Link>
-              </div>
+                <Link href="#" className="pricing-btn">
+                  View Pricing Page
+                </Link>
+              </div> */}
             </div>
           </div>
         </section>
