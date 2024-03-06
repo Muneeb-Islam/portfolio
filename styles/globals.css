@@ -89,7 +89,8 @@ p {
 .hows-text h2::after,
 .pricing .box-div,
 .thanks_wrapper .lawyer-home-btn a,
-.thanks_wrapper .card-outer-area , .toggle-btn .annual{
+.thanks_wrapper .card-outer-area,
+.toggle-btn .annual {
   background: rgb(0, 102, 204);
 }
 
@@ -128,6 +129,10 @@ span,
 .btn-vision:hover,
 .thanks_wrapper .lawyer-home-btn a:hover {
   background-color: rgb(25, 139, 168);
+}
+
+.btn-vision:hover {
+  border-color: rgb(25, 139, 168);
 }
 
 .features-wrapper .nav-pills .nav-link:hover,
@@ -172,8 +177,9 @@ a:hover,
 .services_wrapper .pos-content h3,
 
 .thanks_wrapper .lawyer-home-btn a,
-.thanks_wrapper .lawyer-home-btn a:hover, .pricing .box-div, .toggle-btn .annual
 .thanks_wrapper .lawyer-home-btn a:hover,
+.pricing .box-div,
+.toggle-btn .annual .thanks_wrapper .lawyer-home-btn a:hover,
 .pricing .box-div {
   color: #fff;
 }
@@ -1647,9 +1653,11 @@ end explore
   border-radius: 0.375rem;
   position: relative;
 }
-.pricing .nexora-price-card:hover{
+
+.pricing .nexora-price-card:hover {
   box-shadow: 0.0625rem 0 0.725rem rgba(0 0 0 /0.7);
 }
+
 .pricing .outer-card-div {
   position: absolute;
   top: 0;
@@ -1665,7 +1673,7 @@ end explore
   font-weight: 700;
 }
 
- .pricing .card-list li {
+.pricing .card-list li {
   border-top: 0.033rem solid #efefef;
 }
 
@@ -1732,6 +1740,7 @@ end explore
     font-size: 1.375rem;
   }
 }
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -1772,15 +1781,15 @@ end explore
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -1794,6 +1803,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 /* @media (min-width: 75rem){
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
       max-width: 78rem;
@@ -1928,9 +1938,10 @@ lawyer-theme1-thankyou-start
   bottom: 11rem;
 }
 
-.position-div ul{
+.position-div ul {
   display: inline-block;
 }
+
 .position-div {
   /* position: absolute; */
   /* bottom: 4rem; */
@@ -2126,6 +2137,7 @@ lawyer-theme1-thankyou-end
   cursor: pointer;
 
 }
+
 .toggle-btn {
 
   margin-top: 0.4rem;
@@ -2133,10 +2145,12 @@ lawyer-theme1-thankyou-end
   justify-content: center;
 
 }
-.toggle-btn button{
+
+.toggle-btn button {
   padding: 0.5em 1rem;
   border: none;
 }
+
 .plan-btn-btn i {
   font-size: 15px !important;
   padding-top: 4px;
@@ -2257,9 +2271,10 @@ lawyer-theme1-thankyou-end
 .plan-page .bg-plan-color h4,
 .plan-page .bg-plan-color h5,
 .plan-page .bg-plan-color h6,
-.plan-page .bg-plan-color p{
+.plan-page .bg-plan-color p {
   color: #fff;
 }
+
 .plan-page .bg-plan-color {
   background: #0066cc;
   /* background: #edfbf6; */
@@ -2361,7 +2376,7 @@ lawyer-theme1-thankyou-end
 .plan-page .btn-color-link {
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s linear 0s;
-  color: #0066cc;
+  color: #fff;
   font-weight: 600;
   font-size: 22px;
 }
@@ -2529,13 +2544,15 @@ lawyer-theme1-thankyou-end
   top: 0.7rem !important;
 }
 
-.contact-card-2 .form-control.form-data{
+.contact-card-2 .form-control.form-data {
   padding: 16px 12px 16px;
   color: #000;
 }
-.contact-card-2 .form-control:focus{
+
+.contact-card-2 .form-control:focus {
   box-shadow: none;
 }
+
 .contact-card-2 .form-control {
   background: #fff;
   border: 1px solid #000;
