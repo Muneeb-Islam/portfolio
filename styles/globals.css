@@ -2271,10 +2271,24 @@ lawyer-theme1-thankyou-end
 .plan-page .bg-plan-color h4,
 .plan-page .bg-plan-color h5,
 .plan-page .bg-plan-color h6,
-.plan-page .bg-plan-color p {
+.plan-page .bg-plan-color p , 
+.plan-page .pricing-page-banner h1,
+.plan-page .pricing-page-banner h2,
+.plan-page .pricing-page-banner h3,
+.plan-page .pricing-page-banner h4,
+.plan-page .pricing-page-banner h5,
+.plan-page .pricing-page-banner h6,
+.plan-page .pricing-page-banner p,
+.plan-page .pricing-page-banner a
+{
   color: #fff;
 }
 
+.plan-page .pricing-page-banner {
+  background: #0066cc;
+  padding: 80px 0;
+margin: 20px 0;
+}
 .plan-page .bg-plan-color {
   background: #0066cc;
   /* background: #edfbf6; */

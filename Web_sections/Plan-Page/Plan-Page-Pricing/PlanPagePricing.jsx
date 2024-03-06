@@ -32,6 +32,19 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
   return (
     <>
       {isLoadingPlan && <ImageLoader />}
+      <section className="pricing-page-banner">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10 text-center">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: salePage.banner_text,
+                }}
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
       {payment_plan && payment_plan.length > 0 && (
         <section className="plan-pricing" id="subscribe">
           <div className="container pt-5">
