@@ -31,7 +31,12 @@ const PlanPageFaq = ({ faq, page_data }) => {
                             className="collapse"
                             data-bs-parent=".faq-list"
                           >
-                            <p>{items.answer_statment}</p>
+                            {/* <p>{items.answer_statment}</p> */}
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: items.answer_statment,
+                              }}
+                            ></div>
                           </div>
                         </li>
                       </div>

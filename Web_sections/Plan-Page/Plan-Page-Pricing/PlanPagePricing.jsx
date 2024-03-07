@@ -32,6 +32,19 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
   return (
     <>
       {isLoadingPlan && <ImageLoader />}
+      <section className="pricing-page-banner mt-1">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6 text-center">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: salePage.banner_text,
+                }}
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
       {payment_plan && payment_plan.length > 0 && (
         <section className="plan-pricing" id="subscribe">
           <div className="container pt-5">
@@ -141,11 +154,11 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
           </div>
         </section>
       )}
+
       <section className="bg-plan-color">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10 text-center">
-              <h1>Hello</h1>
               <div
                 dangerouslySetInnerHTML={{
                   __html: salePage.private_server_host_backlog,
