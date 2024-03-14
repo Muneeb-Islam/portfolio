@@ -32,10 +32,10 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
   return (
     <>
       {isLoadingPlan && <ImageLoader />}
-      <section className="pricing-page-banner">
+      <section className="pricing-page-banner mt-1">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-10 text-center">
+            <div className="col-lg-6 text-center">
               <div
                 dangerouslySetInnerHTML={{
                   __html: salePage.banner_text,
@@ -154,34 +154,32 @@ const PlanPagePricing = ({ page_data, payment_plan }) => {
           </div>
         </section>
       )}
-      {salePage.private_server_host_backlog ||
-        (salePage.learn_about_plan_button_text && (
-          <section className="bg-plan-color">
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-lg-10 text-center">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: salePage.private_server_host_backlog,
-                    }}
-                  ></div>
 
-                  {salePage.learn_about_plan_button_text && (
-                    <div className="mt-5">
-                      <a
-                        href={salePage.learn_about_plan_button_link}
-                        className="btn-color-link"
-                      >
-                        {salePage.learn_about_plan_button_text}
-                        <i className="fa-solid fa-angle-right ps-2"></i>
-                      </a>
-                    </div>
-                  )}
+      <section className="bg-plan-color">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10 text-center">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: salePage.private_server_host_backlog,
+                }}
+              ></div>
+
+              {salePage.learn_about_plan_button_text && (
+                <div className="mt-5">
+                  <a
+                    href={salePage.learn_about_plan_button_link}
+                    className="btn-color-link"
+                  >
+                    {salePage.learn_about_plan_button_text}
+                    <i className="fa-solid fa-angle-right ps-2"></i>
+                  </a>
                 </div>
-              </div>
+              )}
             </div>
-          </section>
-        ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };

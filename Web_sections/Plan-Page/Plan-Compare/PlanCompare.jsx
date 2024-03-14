@@ -16,7 +16,7 @@ const PlanCompare = ({ page_data, payment_plan, plan_feature }) => {
       {payment_plan && payment_plan.length > 0 && (
         <section className="plan-compare">
           <div className="container">
-            <div className="row  justify-content-center">
+            <div className="row justify-content-center align-items-center">
               <div className="col-lg-3 col-xl-2">
                 <h2>{salePage.compare_pricing_plans_text}</h2>
               </div>

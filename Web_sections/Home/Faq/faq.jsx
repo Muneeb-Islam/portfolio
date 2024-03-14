@@ -2,7 +2,6 @@ import { s3baseUrl } from "@/config/config";
 
 const FaqSection = ({ page_data, faq }) => {
   const salePage = page_data.page_detail;
-
   const faqLength = faq?.length;
 
   return (
@@ -74,7 +73,11 @@ const FaqSection = ({ page_data, faq }) => {
               }}
             ></div>
             <div className="position-btn mt-4 mt-lg-0 text-center text-md-start">
-              <a href={salePage.faq_button_link} className="btn-vision">
+              <a
+                href={salePage.faq_button_link}
+                className="btn-vision"
+                target="_blank"
+              >
                 {salePage.faq_button_text}
               </a>
               <img
