@@ -705,8 +705,13 @@ testimonial
   bottom: -2.5rem;
 }
 
-.slider_wrapper .info-position {
+.slider_wrapper .info-position img{
+  height: 5rem;
+  width: 5rem;
+  object-fit: cover;
+}
 
+.slider_wrapper .info-position {
   bottom: 1rem;
 }
 
