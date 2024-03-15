@@ -2,18 +2,24 @@ import Link from "next/link";
 import convertCurrencyToSign from "../../../utils/constants";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import ImageLoader from "@/Components/ImageLoader";
 
 const PricingSection = ({ page_data, payment_plan }) => {
+  const [isLoadingPlan, setIsLoadingPlan] = useState(false);
+  console.log(isLoadingPlan, "=====isLoadingPlan");
+
   const salePage = page_data.page_detail;
   const page_slug = page_data.page_title_slug;
   const router = useRouter();
 
   const handleclick = (plan_slug) => {
+    setIsLoadingPlan(true);
     router.push(`/${page_slug}/payment-page/${plan_slug}`);
   };
 
   return (
     <>
+      {isLoadingPlan && <ImageLoader />}
       {payment_plan && payment_plan.length > 0 && (
         <section className="pricing pt-90" id="pricing-plan">
           <div className="container">
