@@ -682,12 +682,14 @@ testimonial
   font-weight: 600;
 }
 
+
 .slider_wrapper .client-slider-card {
   background: #f3f3f3;
   border-radius: 1.5rem;
   padding: 2rem;
   position: relative;
   height: 100%;
+ 
   clip-path: polygon(93.784% 1.793%, 8.113% 1.793%, 8.113% 1.793%, 7.104% 1.905%, 6.147% 2.229%, 5.255% 2.747%, 4.441% 3.443%, 3.716% 4.298%, 3.095% 5.294%, 2.59% 6.415%, 2.213% 7.642%, 1.978% 8.959%, 1.896% 10.347%, 1.896% 91.447%, 1.896% 91.447%, 1.978% 92.835%, 2.213% 94.151%, 2.59% 95.378%, 3.095% 96.499%, 3.716% 97.496%, 4.441% 98.35%, 5.255% 99.046%, 6.147% 99.564%, 7.104% 99.888%, 8.113% 100%, 49.555% 100%, 49.555% 100%, 50.564% 99.888%, 51.521% 99.564%, 52.413% 99.046%, 53.227% 98.35%, 53.952% 97.496%, 54.573% 96.499%, 55.078% 95.378%, 55.455% 94.151%, 55.69% 92.835%, 55.772% 91.447%, 55.772% 91.447%, 55.853% 90.058%, 56.088% 88.742%, 56.465% 87.514%, 56.97% 86.394%, 57.592% 85.397%, 58.316% 84.543%, 59.13% 83.847%, 60.022% 83.329%, 60.979% 83.005%, 61.988% 82.893%, 93.784% 82.893%, 93.784% 82.893%, 94.793% 82.781%, 95.749% 82.457%, 96.641% 81.939%, 97.456% 81.243%, 98.18% 80.389%, 98.801% 79.392%, 99.307% 78.271%, 99.683% 77.044%, 99.919% 75.728%, 100% 74.34%, 100% 10.347%, 100% 10.347%, 99.919% 8.959%, 99.683% 7.642%, 99.307% 6.415%, 98.801% 5.294%, 98.18% 4.298%, 97.456% 3.443%, 96.641% 2.747%, 95.749% 2.229%, 94.793% 1.905%, 93.784% 1.793%);
 }
 
@@ -705,7 +707,7 @@ testimonial
   bottom: -2.5rem;
 }
 
-.slider_wrapper .info-position img{
+.slider_wrapper .info-position img {
   height: 5rem;
   width: 5rem;
   object-fit: cover;
@@ -788,6 +790,14 @@ testimonial
   bottom: -5rem;
 }
 
+
+@media (max-width: 1200px) {
+  .slider_wrapper .client-slider-card {
+    padding: 2rem 1.2rem;
+
+  }
+  
+}
 /* -----------------------------------
 End testimonial
 ---------------------------------------------------------- */
@@ -2015,7 +2025,7 @@ lawyer-theme1-thankyou-end
 
 /* ====================== plan-page ==============================
  =============================================================== */
-.plan-page{
+.plan-page {
   background: #fbfbfb;
 }
 
@@ -2292,15 +2302,16 @@ lawyer-theme1-thankyou-end
   color: #fff;
 }
 
-.plan-page .pricing-page-banner h1{
+.plan-page .pricing-page-banner h1 {
   font-size: 3.4rem;
   font-weight: 500 !important;
   line-height: 1.2;
 }
+
 .plan-page .pricing-page-banner {
   background: #0066cc;
   padding: 80px 0;
- 
+
 }
 
 .plan-page .bg-plan-color {
@@ -2410,10 +2421,11 @@ lawyer-theme1-thankyou-end
 }
 
 
-.plan-page .plan-page-faq{
+.plan-page .plan-page-faq {
   padding: 50px 0 100px;
 
 }
+
 .plan-page .bg-plan-slider {
   padding: 50px 0 150px;
 
@@ -2461,14 +2473,13 @@ lawyer-theme1-thankyou-end
 }
 
 
-.plan-page .plan-page-faq .faq-list h1 , 
-.plan-page .plan-page-faq .faq-list h2 , 
-.plan-page .plan-page-faq .faq-list h3 , 
-.plan-page .plan-page-faq .faq-list h4 , 
-.plan-page .plan-page-faq .faq-list h5 , 
-.plan-page .plan-page-faq .faq-list h6, 
-.plan-page .plan-page-faq .faq-list p 
- {
+.plan-page .plan-page-faq .faq-list h1,
+.plan-page .plan-page-faq .faq-list h2,
+.plan-page .plan-page-faq .faq-list h3,
+.plan-page .plan-page-faq .faq-list h4,
+.plan-page .plan-page-faq .faq-list h5,
+.plan-page .plan-page-faq .faq-list h6,
+.plan-page .plan-page-faq .faq-list p {
   font-size: 1rem;
   padding: 1rem 0rem;
 }
