@@ -1,8 +1,7 @@
-import Link from "next/link";
-import convertCurrencyToSign from "../../../utils/constants";
+import ImageLoader from "@/Components/ImageLoader";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import ImageLoader from "@/Components/ImageLoader";
+import convertCurrencyToSign from "../../../utils/constants";
 
 const PricingSection = ({ page_data, payment_plan }) => {
   const [isLoadingPlan, setIsLoadingPlan] = useState(false);
