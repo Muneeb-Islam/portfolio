@@ -72,7 +72,7 @@ const TestimonialSection = ({ page_data, testimonial }) => {
                 return (
                   <div className="client-slider-card wow slideInLeft">
                     <i className="fa-solid fa-quote-left"></i>
-                    <div className="para-content position-relative">
+                    <div className="para-content position-relative pb-4">
                       <p>{items.description}</p>
                       <div className="icon-pos">
                         <i className="fa-solid fa-quote-right"></i>

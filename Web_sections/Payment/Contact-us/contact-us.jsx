@@ -440,6 +440,7 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
                       </label>
                     </div>
                     <div>
+                      
                       <h5>
                         {plan.is_plan_free
                           ? "Free"

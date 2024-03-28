@@ -51,7 +51,7 @@ const ContactSection = ({ page_data }) => {
   return (
     <section
       className="contact_form_wrapper"
-      id="contact_form_wrapper"
+      id="contact"
       style={{
         background: `url(${
           s3baseUrl + salePage.contact_us_outer_background_image

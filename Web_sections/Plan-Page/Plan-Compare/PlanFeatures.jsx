@@ -42,41 +42,6 @@ export default function PlanFeatures(props) {
           </>
         );
       })}
-      {/* <table className="table table-bordered ms-2 mt-3">
-        <thead>
-          {plan_feature.map((items, index) => {
-            return (
-              <>
-                <h3>{items.plan_feature_title}</h3>
-                {items.plan_features.map((item) => {
-                  return (
-                    <>
-                      <tr>
-                        <th scope="col" className="">
-                          {item.title}
-                        </th>
-                        {item.features.map((item, index) => {
-                          return (
-                            <>
-                              {item.text ? (
-                                <td className="text-center">{item.text}</td>
-                              ) : (
-                                <td scope="col" className="text-center">
-                                  <img src={s3baseUrl + item.icon} alt="" />
-                                </td>
-                              )}
-                            </>
-                          );
-                        })}
-                      </tr>
-                    </>
-                  );
-                })}
-              </>
-            );
-          })}
-        </thead>
-      </table> */}
     </>
   );
 }
