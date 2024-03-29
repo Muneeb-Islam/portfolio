@@ -710,12 +710,15 @@ testimonial
   bottom: -2.5rem;
 }
 
-.slider_wrapper .info-position img {
-  height: 5rem;
-  width: 5rem;
+.slider_wrapper .info-position {
+  border-radius: 50%;
   object-fit: cover;
 }
-
+.slider_wrapper .info-position img{
+    border-radius: 50%;
+    height: 58px;
+    width: 58px;
+}
 .slider_wrapper .info-position {
   bottom: 1rem;
 }

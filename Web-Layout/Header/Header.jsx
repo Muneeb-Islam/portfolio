@@ -1,5 +1,5 @@
 import { s3baseUrl } from "@/config/config";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 const Header = ({ page_data }) => {
   const salePage = page_data.page_detail;
   const menu_items = page_data?.header_menu?.menu_items;
