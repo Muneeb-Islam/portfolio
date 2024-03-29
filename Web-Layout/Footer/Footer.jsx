@@ -1,5 +1,4 @@
 import { s3baseUrl } from "@/config/config";
-import { useEffect, useState } from "react";
 
 const Footer = ({ page_data }) => {
   const salePage = page_data.page_detail;
@@ -43,24 +42,28 @@ const Footer = ({ page_data }) => {
           <div className="col-10 col-lg-3 pt-4 pt-lg-0 news-letter text-center text-lg-start">
             <ul className="mb-0 list-unstyled d-flex justify-content-center justify-content-lg-end social-list">
               <li>
+              {salePage.facebook_link ? 
                 <a href={salePage.facebook_link} className="me-4">
                   <i className="fa-brands fa-facebook-f"></i>
-                </a>
+                </a>: ""}            
               </li>
               <li>
-                <a href={salePage.twitter_link} className="me-4">
+              {salePage.twitter_link ? <a href={salePage.twitter_link} className="me-4">
                   <i className="fa-brands fa-twitter"></i>
-                </a>
+                </a>: ""}
+                
               </li>
               <li>
-                <a href={salePage.mail_link} className="me-4">
+              {salePage.gmail_link ?  <a href={salePage.gmail_link} className="me-4">
                   <i className="fa-brands fa-google-plus-g"></i>
-                </a>
+                </a>: ""}
+               
               </li>
               <li>
-                <a href={salePage.instagram_link}>
+              {salePage.instagram_link ?  <a href={salePage.instagram_link}>
                   <i className="fa-brands fa-instagram"></i>
-                </a>
+                </a>: ""}
+               
               </li>
             </ul>
           </div>

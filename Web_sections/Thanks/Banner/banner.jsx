@@ -4,7 +4,7 @@ const BannerSection = ({ page_data }) => {
   const sale_page_detail = page_data;
 
   return (
-    <section className="thanks_wrapper main_section">
+    <section className="thanks_wrapper main_section mt-5">
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-11 card-outer-area">

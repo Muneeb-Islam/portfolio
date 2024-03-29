@@ -3,6 +3,7 @@ import { _send_contact_support_email } from "../../../DAL/Form";
 import { useState } from "react";
 import { useSnackbar } from "notistack";
 const ContactSection = ({ page_data }) => {
+  console.log(page_data._id, "======page_data");
   const { enqueueSnackbar } = useSnackbar();
   const salePage = page_data.page_detail;
 
@@ -24,9 +25,20 @@ const ContactSection = ({ page_data }) => {
     e.target.reset();
 
     // make postData body
-    const postData = inputs;
+    // const postData = inputs;
+
+    const postData = {
+      name: inputs.name,
+      phone_number: inputs.phone_number,
+      email: inputs.email,
+      subject: inputs.subject,
+      message: inputs.message,
+      web_page_id: page_data._id,
+    };
+
     // call DAL function
     const resp = await _send_contact_support_email(postData);
+    console.log(resp, "----zahidaaaa");
 
     if (resp.code === 200) {
       enqueueSnackbar(resp.message, { variant: "success" });
