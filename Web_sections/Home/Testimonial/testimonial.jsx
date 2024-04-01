@@ -1,7 +1,7 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import { s3baseUrl } from "@/config/config";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const TestimonialSection = ({ page_data, testimonial }) => {
   const salePage = page_data.page_detail;
@@ -85,8 +85,10 @@ const TestimonialSection = ({ page_data, testimonial }) => {
                         className="img-fluid"
                       />
                       <div className="clients-naame wp-pl-10">
-                        <h3>{items.title}</h3>
-                        <ul className="list-unstyled mb-0 star-rating d-flex justify-content-center justify-content-lg-start">
+                        <h3>{items.title.length > 8 ? items.title.substring(0, 8)+ "...": items.title}</h3>
+                        {/* <h3>{items.title.length > 14 ? items.title.substring(0, 14) + "..." : items.title}</h3> */}
+
+                            <ul className="list-unstyled mb-0 star-rating d-flex justify-content-center justify-content-lg-start">
                           <li>
                             <i className="fa-solid fa-star"></i>
                           </li>
