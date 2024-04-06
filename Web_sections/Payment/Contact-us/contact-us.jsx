@@ -1,26 +1,21 @@
-import { s3baseUrl } from "@/config/config";
 import {
   _payment_for_one_time,
   _payment_free,
-  _send_contact_support_email,
   confirm_one_time_payment_for_web,
   pay_now_for_subscription_web,
 } from "../../../DAL/Form";
 
 import {
-  _get_token_from_localStorage,
   _get_user_from_localStorage,
   _set_user_in_localStorage,
 } from "@/DAL/loacalStorage";
 
-import { useEffect, useState } from "react";
-import { useSnackbar } from "notistack";
-import React from "react";
-import { useElements, useStripe } from "@stripe/react-stripe-js";
-import { CardElement } from "@stripe/react-stripe-js";
-import { useRouter } from "next/router";
-import { LinearProgress } from "@mui/material";
 import convertCurrencyToSign from "@/utils/constants";
+import { LinearProgress } from "@mui/material";
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { useRouter } from "next/router";
+import { useSnackbar } from "notistack";
+import { useEffect, useState } from "react";
 
 const ContactSection = ({ page_data, PaymentPlans }) => {
   const paymentPage = page_data.payment_page.page_detail;
@@ -437,10 +432,13 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
                         className="path-page-new-label ps-2"
                       >
                         {plan.plan_title}
+                        <span style={{ fontSize: "9px" }}>
+                          {" "}
+                          ({plan.plan_type})
+                        </span>
                       </label>
                     </div>
                     <div>
-                      
                       <h5>
                         {plan.is_plan_free
                           ? "Free"

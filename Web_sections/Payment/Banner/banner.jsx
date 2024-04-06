@@ -1,5 +1,3 @@
-import { s3baseUrl } from "@/config/config";
-
 const BannerSection = ({ page_data }) => {
   const paymentPage = page_data.payment_page.page_detail;
 
