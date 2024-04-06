@@ -50,9 +50,13 @@ const FaqSection = ({ page_data, faq }) => {
                         className="accordion-collapse collapse"
                         data-bs-parent="#it-accordion_G_U_ID"
                       >
-                        <p className="accordion-body">
-                          {items.answer_statment}
-                        </p>
+                        <div className="accordion-body">
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: items.answer_statment,
+                            }}
+                          ></div>
+                        </div>
                         {/* <div
                           className="accordion-body"
                           dangerouslySetInnerHTML={{

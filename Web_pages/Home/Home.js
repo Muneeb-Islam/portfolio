@@ -1,23 +1,15 @@
 import Footer from "@/Web-Layout/Footer/Footer";
 import Header from "@/Web-Layout/Header/Header";
 import {
-  AboutSection,
   BannerSection,
   ContactSection,
-  ExperianceSection,
-  ExploreSection,
-  FeaturesSection,
   HowSection,
   PricingSection,
   Service,
   TestimonialSection,
-  Top_ServiceSection,
-  Why_chooseSection,
 } from "@/Web_sections/Home";
-import ServiceSection from "@/Web_sections/Home/Service/service";
-import Animated from "../../Components/AnimatedComponent";
 import FaqSection from "@/Web_sections/Home/Faq/faq";
-import Brans_LogoSection from "@/Web_sections/Home/Brand-logo/brand-logo";
+import Animated from "../../Components/AnimatedComponent";
 export default function HomePage({ result }) {
   const sale_page = result.web_page;
   const faq = result?.faq;

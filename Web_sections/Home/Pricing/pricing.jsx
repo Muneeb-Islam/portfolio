@@ -36,20 +36,26 @@ const PricingSection = ({ page_data, payment_plan }) => {
                     />
                     <span className="slider round"></span>
                   </label>
-                  <h6 className="ps-md-4 ps-3">Annually</h6>
+                  <h6 className="ps-md-4 ps-3">Yearly</h6>
                 </div>
               </div>
             </div>
             <div className="row justify-content-center wb-payment-plans">
               {payment_plan.map((items, index) => {
                 // Determine whether to show monthly or yearly plan based on plan_type
-                const isMonthlyPlan = items.plan_type === 'month';
-                const isYearlyPlan = items.plan_type === 'year';
+                const isMonthlyPlan = items.plan_type === "month";
+                const isYearlyPlan = items.plan_type === "year";
 
                 // Render plan only if it matches the selected mode
-                if ((isMonthlyPlan && !isDarkMode) || (isYearlyPlan && isDarkMode)) {
+                if (
+                  (isMonthlyPlan && !isDarkMode) ||
+                  (isYearlyPlan && isDarkMode)
+                ) {
                   return (
-                    <div key={index} className="col-12 col-md-4 pt-5 wow slideInLeft">
+                    <div
+                      key={index}
+                      className="col-12 col-md-4 pt-5 wow slideInLeft"
+                    >
                       <div className="nexora-price-card wb-plan-card h-100">
                         <div className="outer-card-div">
                           <div className="box-div">{items.plan_title}</div>
@@ -59,13 +65,19 @@ const PricingSection = ({ page_data, payment_plan }) => {
                             {items.is_plan_free
                               ? "Free"
                               : items.is_dont_show_full_amount
-                              ? convertCurrencyToSign(items.plan_currency) + items.initial_amount
-                              : convertCurrencyToSign(items.plan_currency) + items.plan_price}
+                              ? convertCurrencyToSign(items.plan_currency) +
+                                items.initial_amount
+                              : convertCurrencyToSign(items.plan_currency) +
+                                items.plan_price}
                           </h2>
                         </div>
                         <p>{items.short_description}</p>
                         <div className="top-border mt-4"></div>
-                        <div dangerouslySetInnerHTML={{ __html: items.detailed_description }}></div>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: items.detailed_description,
+                          }}
+                        ></div>
                         {items.plan_button_text && (
                           <div className="btn-position">
                             <button
