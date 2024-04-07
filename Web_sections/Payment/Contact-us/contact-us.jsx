@@ -432,7 +432,7 @@ const ContactSection = ({ page_data, PaymentPlans }) => {
                         className="path-page-new-label ps-2"
                       >
                         {plan.plan_title}
-                        <span style={{ fontSize: "9px" }} className="ms-2">
+                        <span className="ms-2">
                           {plan.plan_type === "month"
                             ? "(Monthly)"
                             : plan.plan_type === "year"
