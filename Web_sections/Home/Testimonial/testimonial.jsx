@@ -1,120 +1,154 @@
-import { s3baseUrl } from "@/config/config";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-
-const TestimonialSection = ({ page_data, testimonial }) => {
-  const salePage = page_data.page_detail;
-
-  var settings = {
-    dots: true,
-    // infinite: true,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-
-    responsive: [
-      {
-        breakpoint: 1023,
-        settings: {
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: false,
-        },
-      },
-      {
-        breakpoint: 799,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          centerMode: false,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          arrows: false,
-        },
-      },
-    ],
-  };
-
+const TestimonialSection = () => {
   return (
-    <>
-      {testimonial && testimonial.length > 0 && (
-        <section className="slider_wrapper overflow-hidden pt-90" id="services">
-          <div className="container">
-            <div className="text-center wow slideInUp">
-              <h2>{salePage.testimonial_heading}</h2>
+    <section
+      className="slider_163 main_section wp-pt-80"
+      data-_id="67ab16a9b9616f8ef8b9e4ef"
+      data-section_id="xlymldmuep"
+      data-section_title="Testimonial with top content and review cards with center image"
+      data-section_name="67ab16a9b9616f8ef8b9e4ef"
+      id="xlymldmuep"
+      imgheight="803"
+      imgwidth="1828"
+      style={{ paddingTop: "0rem" }}
+    >
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-8 text-center">
+            <div className="wb-editor-block saasify-testimonial-main">
+              <h1>
+                <span style={{ fontSize: "4.5rem" }}>
+                  Client Testimonials &amp; Endorsements
+                </span>
+              </h1>
+              <p>
+                We are committed to delivering outstanding service and value. Our clients'
+                feedback reflects the trust, quality, and excellence we strive for in every project.
+              </p>
             </div>
-            <Slider {...settings}>
-              {testimonial?.map((items, index) => {
-                return (
-                  <div className="client-slider-card wow slideInLeft">
-                    <i className="fa-solid fa-quote-left"></i>
-                    <div className="para-content position-relative pb-4">
-                      <p>{items.description}</p>
-                      <div className="icon-pos">
-                        <i className="fa-solid fa-quote-right"></i>
-                      </div>
-                    </div>
-                    <div className="d-flex align-items-center info-position">
-                      <img
-                        src={s3baseUrl + items.images.thumbnail_1}
-                        alt=""
-                        className="img-fluid"
-                      />
-                      <div className="clients-naame wp-pl-10">
-                        <h3>{items.title.length > 8 ? items.title.substring(0, 8)+ "...": items.title}</h3>
-                        {/* <h3>{items.title.length > 14 ? items.title.substring(0, 14) + "..." : items.title}</h3> */}
+          </div>
+        </div>
 
-                            <ul className="list-unstyled mb-0 star-rating d-flex justify-content-center justify-content-lg-start">
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                        </ul>
-                      </div>
+        <div className="row justify-content-center align-items-center">
+          {/* Left Reviews */}
+          <div className="col-lg-4 wp-pt-40">
+            <ul className="list-unstyled mb-0 saasify-reviews-list">
+              <li>
+                <div
+                  className="wb-box saasify-testimonial-card h-100 wp-pl-0 wp-pr-0 wp-border-0"
+                  imgheight="141"
+                  imgwidth="416"
+                  style={{
+                    paddingRight: "0rem",
+                    paddingLeft: "0rem",
+                    backgroundColor: "rgba(0, 0, 0, 0)",
+                  }}
+                >
+                  <div className="saasify-testimonial-flex-div">
+                    <img
+                      src="https://builder-templates-bucket.s3.amazonaws.com/67ab16a9b9616f8ef8b9e4ef/assets/saasify-avatar-01.svg"
+                      alt=""
+                      className="img-fluid"
+                      data-width="20"
+                      data-height="40"
+                    />
+                    <div className="wb-editor-block saasify-testimonial-text wp-pl-16">
+                      <h3>Sophia Lancaster</h3>
+                      <p>Saasify streamlined our workflow effortlessly. A game-changer!</p>
                     </div>
                   </div>
-                );
-              })}
-            </Slider>
+                </div>
+              </li>
+
+              <li>
+                <div
+                  className="wb-box saasify-testimonial-card h-100 wp-border-0"
+                  imgheight="141"
+                  imgwidth="416"
+                  style={{ backgroundColor: "rgb(248, 229, 89)" }}
+                >
+                  <div className="saasify-testimonial-flex-div">
+                    <div className="wb-editor-block saasify-testimonial-text">
+                      <h3>Ethan Caldwell</h3>
+                      <p style={{ color: "rgb(20, 30, 39)" }}>
+                        Seamless setup and excellent support—Saasify delivers!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
-        </section>
-      )}
-    </>
+
+          {/* Center Image */}
+          <div className="col-lg-4 text-center wp-pt-40 px-lg-4">
+            <img
+              src="https://builder-templates-bucket.s3.amazonaws.com/67ab16a9b9616f8ef8b9e4ef/assets/saasify-testimonial-img.png"
+              alt=""
+              className="img-fluid"
+              data-width="20"
+              data-height="40"
+            />
+          </div>
+
+          {/* Right Reviews */}
+          <div className="col-lg-4 wp-pt-40">
+            <ul className="list-unstyled mb-0 saasify-reviews-list">
+              <li>
+                <div
+                  className="wb-box saasify-testimonial-card h-100 wp-border-0"
+                  imgheight="141"
+                  imgwidth="416"
+                  style={{ backgroundColor: "rgb(224, 221, 170)" }}
+                >
+                  <div className="saasify-testimonial-flex-div">
+                    <img
+                      src="https://builder-templates-bucket.s3.amazonaws.com/67ab16a9b9616f8ef8b9e4ef/assets/saasify-avatar-02.svg"
+                      alt=""
+                      className="img-fluid"
+                      data-width="20"
+                      data-height="40"
+                    />
+                    <div className="wb-editor-block saasify-testimonial-text wp-pl-16">
+                      <h3>Jonathan Meyers</h3>
+                      <p style={{ color: "rgb(20, 30, 39)" }}>
+                        Powerful, intuitive, and efficient. Highly recommend Saasify!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div
+                  className="wb-box saasify-testimonial-card h-100 wp-pl-0 wp-pr-0 wp-border-0"
+                  imgheight="166"
+                  imgwidth="416"
+                  style={{
+                    paddingLeft: "0rem",
+                    paddingRight: "0rem",
+                    backgroundColor: "rgba(0, 0, 0, 0)",
+                  }}
+                >
+                  <div className="saasify-testimonial-flex-div">
+                    <img
+                      src="https://builder-templates-bucket.s3.amazonaws.com/67ab16a9b9616f8ef8b9e4ef/assets/saasify-avatar-04.svg"
+                      alt=""
+                      className="img-fluid"
+                      data-width="20"
+                      data-height="40"
+                    />
+                    <div className="wb-editor-block saasify-testimonial-text wp-pl-16">
+                      <h3>Rachel Whitmore</h3>
+                      <p>Smooth transition and top-notch performance. Saasify exceeded expectations!</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

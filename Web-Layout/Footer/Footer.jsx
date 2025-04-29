@@ -1,93 +1,119 @@
-import { s3baseUrl } from "@/config/config";
-
-const Footer = ({ page_data }) => {
-  const salePage = page_data.page_detail;
-  const footer_menu = page_data?.footer_menu?.menu_items;
-  const { footer_logo } = page_data;
+const Footer = () => {
   return (
     <section
-      className="footer_wrapper"
-      style={{
-        background: `url(${
-          s3baseUrl + salePage.footer_background_image
-        }) no-repeat center`,
-        backgroundSize: "cover",
-      }}
+      className="footer_147 main_section wp-pt-40"
+      data-_id="67879e70b9616f8ef8b7e504"
+      data-section_id="wfuwaaovth"
+      data-section_title="Footer with newsletter, navigation, socials move up on hover"
+      data-section_name="67879e70b9616f8ef8b7e504"
+      id="wfuwaaovth"
+      style={{ paddingTop: "0rem" }}
     >
       <div className="container">
-        <div className="row justify-content-center align-items-center px-lg-4">
-          <div className="col-lg-3  text-center text-lg-start">
-            <a href={salePage.brand_logo_link}>
-              <img src={s3baseUrl + footer_logo} alt="" className="img-fluid" />
+        <div className="row justify-content-center justify-content-lg-between align-items-baseline">
+          <div className="col-md-10 col-lg-5 pe-lg-5 text-center text-lg-start wp-pt-32">
+            <a href="https://accelerator-builder-bucket.s3.amazonaws.com/67ab16fccf78a37220cfa878/index.html">
+              <img
+                src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Saasify-footer-logo.svg"
+                alt="Saasify Footer Logo"
+                className="img-fluid brand-logo"
+              />
             </a>
-            {/* <div
-              dangerouslySetInnerHTML={{
-                __html: salePage.footer_text,
-              }}
-            ></div> */}
+            <div className="wb-editor-block profitpod-subscribe-heading wp-pt-24">
+              <h2 style={{ fontSize: "1.375rem", fontWeight: 600 }}>
+                Subscribe to our newsletter and get news
+              </h2>
+            </div>
+
+            <form style={{ position: "relative" }}>
+              <div className="row">
+                <div className="col-12 wp-mt-20">
+                  <input
+                    type="email"
+                    className="form-control wp-pb-18 wp-pt-18"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    style={{ borderColor: "rgb(238, 237, 223)" }}
+                  />
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-12 wp-mt-20">
+                  <button
+                    type="submit"
+                    className="submit-butn w-100 font-size-lg wb-fw-500 wp-pt-20 wp-pb-20 lh-1"
+                    style={{
+                      paddingLeft: "1.875rem",
+                      paddingRight: "1.875rem",
+                      color: "rgb(20, 30, 39)",
+                      backgroundColor: "rgb(248, 229, 89)"
+                    }}
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
-          <div className="col-lg-6 pt-4 pt-lg-0 links-list text-center text-lg-start">
-            <ul className="list-unstyled mb-0 footer-links ">
-              {footer_menu?.map((items, index) => {
-                return (
-                  <>
-                    <li>
-                      <a href={items.item_url}>{items.title}</a>
-                    </li>
-                  </>
-                );
-              })}
+
+          {/* Quick Links */}
+          <div className="col-4 col-md-3 col-lg-2 wp-pt-32">
+            <h3 className="profitpod-links-heading font-size-xlg wb-fw-600">Quick Links</h3>
+            <ul className="mb-0 list-unstyled wp-mt-20 profitpod-footer-links">
+              <li className="wp-mb-14"><a href="#qbjenxbtom" className="font-size-md wb-fw-400">Home</a></li>
+              <li className="wp-mb-14"><a href="#xnvvxpvlbu" className="font-size-md wb-fw-400">Why Us</a></li>
+              <li className="wp-mb-14"><a href="#iqqtzvazmn" className="font-size-md wb-fw-400">Workflow</a></li>
+              <li className="wp-mb-14"><a href="#fnnqpkglvc" className="font-size-md wb-fw-400">Pricing</a></li>
             </ul>
           </div>
-          <div className="col-10 col-lg-3 pt-4 pt-lg-0 news-letter text-center text-lg-start">
-            <ul className="mb-0 list-unstyled d-flex justify-content-center justify-content-lg-end social-list">
-              <li>
-              {salePage.facebook_link ? 
-                <a href={salePage.facebook_link} className="me-4">
-                  <i className="fa-brands fa-facebook-f"></i>
-                </a>: ""}            
-              </li>
-              <li>
-              {salePage.twitter_link ? <a href={salePage.twitter_link} className="me-4">
-                  <i className="fa-brands fa-twitter"></i>
-                </a>: ""}
-                
-              </li>
-              <li>
-              {salePage.gmail_link ?  <a href={salePage.gmail_link} className="me-4">
-                  <i className="fa-brands fa-google-plus-g"></i>
-                </a>: ""}
-               
-              </li>
-              <li>
-              {salePage.instagram_link ?  <a href={salePage.instagram_link}>
-                  <i className="fa-brands fa-instagram"></i>
-                </a>: ""}
-               
-              </li>
+
+          {/* Utilities */}
+          <div className="col-4 col-md-3 col-lg-2 wp-pt-32">
+            <h3 className="profitpod-links-heading font-size-xlg wb-fw-600">Utilities</h3>
+            <ul className="mb-0 list-unstyled wp-mt-20 profitpod-footer-links">
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Style Guide</a></li>
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Licenses</a></li>
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Changelog</a></li>
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Instructions</a></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div className="col-4 col-md-3 col-lg-2 wp-pt-32">
+            <h3 className="profitpod-links-heading font-size-xlg wb-fw-600">Legal</h3>
+            <ul className="mb-0 list-unstyled wp-mt-20 profitpod-footer-links">
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Privacy</a></li>
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Terms</a></li>
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Help</a></li>
+              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Community</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="row justify-content-center align-items-center bottom-footer px-lg-4">
-          <div
-            className="col-12 text-center"
-            dangerouslySetInnerHTML={{
-              __html: salePage.copyright_text,
-            }}
-          ></div>
-          {/* <div className="col-lg-4 pt-4 pt-lg-0">
-            <ul className="list-unstyled d-flex justify-content-center justify-content-lg-end">
-              <li>
-                <a href={salePage.about_us_link}>{salePage.about_us_heading}</a>
-              </li>
-              <li className="ms-4">
-                <a href={salePage.contact_us_link}>
-                  {salePage.contact_us_nav_heading}
-                </a>
-              </li>
+        <div className="row wp-pt-60">
+          <div className="col-12">
+            <div className="border-line"></div>
+          </div>
+        </div>
+
+        {/* Socials and Copyright */}
+        <div className="row justify-content-center align-items-center wp-pt-14">
+          <div className="col-lg-4 wp-pt-16">
+            <ul className="mb-0 list-unstyled profitpod-footer-socials">
+              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
+              <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-x-twitter font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
+              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
             </ul>
-          </div> */}
+          </div>
+
+          <div className="col-lg-8 text-center text-lg-end wp-pt-16">
+            <p style={{ fontSize: "1.125rem", fontWeight: 400 }}>
+              Copyright © <span className="wb-copyright-year">2024</span> <span style={{ color: "rgb(27, 142, 61)" }}>Saasify</span> - All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </section>
