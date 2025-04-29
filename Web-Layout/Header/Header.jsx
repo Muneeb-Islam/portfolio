@@ -1,154 +1,108 @@
-import { s3baseUrl } from "@/config/config";
-import { useEffect } from "react";
-const Header = ({ page_data }) => {
-  const salePage = page_data.page_detail;
-  const menu_items = page_data?.header_menu?.menu_items;
-  const { brand_logo } = page_data;
-
-  useEffect(() => {
-    console.log("script run for active first");
-    const navLinks = document.getElementsByClassName("nav-link");
-    if (navLinks.length > 0) {
-      navLinks[0].classList.add("active");
-    }
-  }, []);
-
+const Header = () => {
   return (
     <header>
-      {/* <div className="top_navbar d-none d-lg-flex">
+      <section
+        className="banner_154 main_section"
+        data-_id="67ab1283b9616f8ef8b9e29a"
+        data-section_id="qbjenxbtom"
+        data-section_title="Banner with menu box, content box with video modal and image"
+        data-section_name="67ab1283b9616f8ef8b9e29a"
+        id="qbjenxbtom"
+        imgheight="1323"
+        imgwidth="1828"
+        style={{ color: "rgb(20, 30, 39)" }}
+      >
         <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-lg-5">
-              <ul className="mb-0 list-unstyled d-lg-flex justify-content-center justify-content-lg-start align-items-center">
-                <li className="border-line me-4">
-                  <a className="me-lg-4 d-flex justify-content-center  align-items-baseline">
-                    <i className="fa-solid fa-location-dot me-2"></i>{salePage.brand_address}
+          <div className="row">
+            <div className="col-12">
+              <div
+                className="wb-box banner-menu-box"
+                imgheight="109"
+                imgwidth="1296"
+                style={{ boxShadow: "0px 0px 0px 0px", backgroundColor: "rgb(238, 237, 222)" }}
+              >
+                <nav className="navbar navbar-expand-lg">
+                  <a className="navbar-brand" href="https://accelerator-builder-bucket.s3.amazonaws.com/67ab16fccf78a37220cfa878/index.html">
+                    <img
+                      src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Saasify-logo.svg"
+                      className="img-fluid brand-logo"
+                      alt=""
+                      data-width="20"
+                      data-height="40"
+                      imgheight="63"
+                      imgwidth="108"
+                      data-image_name="Saasify-logo.svg"
+                    />
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="mailto: salepage.vissioon@support.com"
-                    className="d-flex justify-content-center align-items-baseline">
-                    <i className="fa-regular fa-envelope me-2"></i>
-                   {salePage.brand_support}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-lg-5 pt-2 pt-lg-0 d-lg-flex justify-content-center justify-content-lg-end align-items-center">
-              <ul className="mb-0 list-unstyled d-flex justify-content-center justify-content-lg-end align-items-center">
-                <li>
-                  <a href={salePage.facebook_link} className="me-4">
-                    <i className="fa-brands fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href={salePage.twitter_link} className="me-4">
-                    <i className="fa-brands fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href={salePage.mail_link}
-                    className="me-4"
+                  <button
+                    className="navbar-toggler"
+                    type="submit"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent_id_qbjenxbtom"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
                   >
-                    <i className="fa-brands fa-google-plus-g"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href={salePage.instagram_link}>
-                    <i className="fa-brands fa-instagram"></i>
-                  </a>
-                </li>
-              </ul>
+                    <span className="navbar-toggler-icon">
+                      <i className="fas fa-bars"></i>
+                    </span>
+                  </button>
+                  <div className="collapse navbar-collapse" id="navbarSupportedContent_id_qbjenxbtom">
+                    <ul className="navbar-nav mx-auto">
+                      <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="index.html">
+                          Home
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#xnvvxpvlbu">
+                          Why Us
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#iqqtzvazmn">
+                          Workflow
+                        </a>
+                      </li>
+                      {/* <li className="nav-item">
+                        <a className="nav-link" href="#services">
+                          Services
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#portfolio">
+                          Portfolio
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#services">
+                          Careers
+                        </a>
+                      </li> */}
+                      <li className="nav-item">
+                        <a className="nav-link" href="#xlymldmuep">
+                          Testimonial
+                        </a>
+                      </li>
+                    </ul>
+                    <div className="saasnode-banner-btns">
+                      <a href="#" className="mt-3 mt-lg-0 banner-login-btn wp-pb-14 wp-pt-14">
+                        <span>Login</span>
+                      </a>
+                      {/* <a href="#" className="mt-3 mt-lg-0 wp-ml-16 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18">
+                        <span>Request A Quote</span>
+                      </a> */}
+                      <a href="#" className="mt-3 mt-lg-0 wp-ml-16 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18">
+                        <span>Sign Up</span>
+                      </a>
+                    </div>
+                  </div>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
-      </div> */}
-      <div className="navbar_wrapper">
-        <div className="container ">
-          <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand" href={salePage.brand_logo_link}>
-              <img src={s3baseUrl + brand_logo} alt="" className="img-fluid" />
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav mx-auto mb-2 mb-lg-0 d-flex align-items-lg-center">
-                {menu_items?.map((items, index) => {
-                  return (
-                    <li className="nav-item" key={index}>
-                      <a
-                        data-index={index}
-                        className={"nav-link"}
-                        aria-current="page"
-                        href={items.item_url}
-                      >
-                        {items.title}
-                      </a>
-                    </li>
-                  );
-                })}
-
-                {/* <div className="now-order-btn mt-2 mt-lg-0"><a href="#">GET A QUOTE <i
-                                    className="fa-solid fa-arrow-right ms-2"></i></a></div> */}
-              </ul>
-              {/* <div className="contact d-xl-flex d-none align-items-center me-5">
-                <i className="fa-solid fa-headset"></i>
-                <div className="contact-info">
-                  <span>{salePage.have_any_question_text}</span>
-                  <div   dangerouslySetInnerHTML={{
-                    __html:salePage.contact_info,
-                }}></div>
-                 
-                </div>
-              </div> */}
-              {/* <div className="border-line"></div>
-
-                    <a><i className="fa-solid fa-magnifying-glass mx-5 d-none d-lg-flex"></i></a> */}
-
-              {/* <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div className="modal-dialog">
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <button type="button" className="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div className="modal-body">
-                                    <form> <input className="form-control me-2" type="search" placeholder="Search..."
-                                            aria-label="Search" /></form>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-
-              {salePage.get_a_quote_text && (
-                <a
-                  href={salePage.get_a_quote_link}
-                  className="btn-vision mt-3 mt-lg-0"
-                >
-                  {salePage.get_a_quote_text}
-                  {/* <i className="fa-solid fa-arrow-right ms-2"></i> */}
-                </a>
-              )}
-            </div>
-          </nav>
-        </div>
-      </div>
+      </section>
     </header>
   );
 };
