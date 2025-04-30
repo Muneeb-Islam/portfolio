@@ -1446,9 +1446,7 @@ color: var(--wb-website-theme-secondary-color);
 }
 .portfolio_wrapper .item-image img{
   border-radius: 8px;
-  width: 100%;
-  height: 219px;
-  object-fit:cover;
+
 }
 
 .item-image img {
