@@ -286,7 +286,7 @@ const PortfolioSection = () => {
                                     <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
                                         <div className='item-image'>
                                             <a href="#">
-                                                <img src="/assets/app-img1.jpg" alt="" className='img-fluid' />
+                                                <img src="/assets/app-img1.png" alt="" className='img-fluid' />
                                             </a>
                                         </div>
                                         <div className="item-info">
@@ -297,7 +297,7 @@ const PortfolioSection = () => {
                                     <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
                                         <div className='item-image'>
                                             <a href="#">
-                                                <img src="/assets/app-img2.jpg" alt="" className='img-fluid' />
+                                                <img src="/assets/app-img2.png" alt="" className='img-fluid' />
                                             </a>
                                         </div>
                                         <div className="item-info">
@@ -310,7 +310,7 @@ const PortfolioSection = () => {
                                     <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
                                         <div className='item-image'>
                                             <a href="#">
-                                                <img src="/assets/app-img3.jpg" alt="" className='img-fluid' />
+                                                <img src="/assets/app-img3.png" alt="" className='img-fluid' />
                                             </a>
                                         </div>
                                         <div className="item-info">
@@ -323,7 +323,7 @@ const PortfolioSection = () => {
                                     <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
                                         <div className='item-image'>
                                             <a href="#">
-                                                <img src="/assets/app-img4.jpg" alt="" className='img-fluid' />
+                                                <img src="/assets/app-img4.png" alt="" className='img-fluid' />
                                             </a>
                                         </div>
                                         <div className="item-info">
@@ -336,7 +336,7 @@ const PortfolioSection = () => {
                                     <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
                                         <div className='item-image'>
                                             <a href="#">
-                                                <img src="/assets/app-img5.jpg" alt="" className='img-fluid' />
+                                                <img src="/assets/app-img5.png" alt="" className='img-fluid' />
                                             </a>
                                         </div>
                                         <div className="item-info">
@@ -349,7 +349,7 @@ const PortfolioSection = () => {
                                     <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
                                         <div className='item-image'>
                                             <a href="#">
-                                                <img src="/assets/app-img6.jpg" alt="" className='img-fluid' />
+                                                <img src="/assets/app-img6.png" alt="" className='img-fluid' />
                                             </a>
                                         </div>
                                         <div className="item-info">
@@ -360,8 +360,154 @@ const PortfolioSection = () => {
                                         </div>
                                     </div></div>
                             </TabPanel>
-                            <TabPanel value="4"></TabPanel>
-                            <TabPanel value="5"></TabPanel>
+                            <TabPanel value="4">
+                                <div className='row'>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img7.jpg" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://dynamitedigital.info" target="_blank">Design That Delivers</a>
+                                            </h4>
+                                            <p>Php Responsive Template</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img8.jpg" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://5678elite.training/" target="_blank">Built for Impact</a>
+                                            </h4>
+                                            <p>Responsive Website</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img9.jpg" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://sarahcon.com/" target="_blank">Web Power, Unleashed</a>
+                                            </h4>
+                                            <p>Responsive Website</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img10.jpg" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="http://irishlanguagelearning.com/" target="_blank">Crafted for Growth</a>
+                                            </h4>
+                                            <p>Responsive Website</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img11.jpg" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://techfios.com/" target="_blank">Where Ideas Go Live</a>
+                                            </h4>
+                                            <p>Responsive Website</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TabPanel>
+                            <TabPanel value="5">
+                                <div className='row'>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img1.png" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4><a href="https://play.google.com/store/apps/details?id=com.revolve" target="_blank">Seamless Connectivity</a></h4>
+                                            <p>ios, design</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img2.png" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://play.google.com/store/apps/details?id=shy7lo.com.shy7lo" target="_blank">Smart Living, Simplified</a>
+                                            </h4>
+                                            <p>ios, design</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img3.png" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="#">Power in Your Pocket</a>
+                                            </h4>
+                                            <p>ios, design</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img4.png" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://play.google.com/store/apps/details?id=app.mangle.com" target="_blank">Tap. Explore. Enjoy.</a>
+                                            </h4>
+                                            <p>ios, design</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img5.png" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://play.google.com/store/apps/details?id=com.kindminds" target="_blank">Experience Innovation</a>
+                                            </h4>
+                                            <p>ios, design</p>
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6 col-lg-4 pt-3 pt-lg-5'>
+                                        <div className='item-image'>
+                                            <a href="#">
+                                                <img src="/assets/app-img6.png" alt="" className='img-fluid' />
+                                            </a>
+                                        </div>
+                                        <div className="item-info">
+                                            <h4>
+                                                <a href="https://play.google.com/store/apps/details?id=com.idillionaire.app" target="_blank">Next-Gen Convenience</a>
+                                            </h4>
+                                            <p>ios, design</p>
+                                        </div>
+                                    </div></div>
+                            </TabPanel>
                         </TabContext>
                     </Box>
 
