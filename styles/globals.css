@@ -1446,6 +1446,9 @@ color: var(--wb-website-theme-secondary-color);
 }
 .portfolio_wrapper .item-image img{
   border-radius: 8px;
+  width: 100%;
+  height: 219px;
+  object-fit:cover;
 }
 
 .item-image img {
@@ -1581,7 +1584,7 @@ color: var(--wb-website-theme-secondary-color);
   border: 1px solid rgba(0, 0, 0, 0.23);
 }
 .upload-files{
-  outline: 2px dashed #efefef;
+  outline: 2px dashed  rgba(0, 0, 0, 0.42);
   padding: 60px;
   display: flex;
   align-items: center;

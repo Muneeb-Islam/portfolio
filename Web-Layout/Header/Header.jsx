@@ -1,4 +1,16 @@
+import { useRouter } from "next/router";
+
 const Header = () => {
+  const router = useRouter();
+
+  const handleNavClick = (hash) => {
+    if (router.pathname === "/") {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/#${hash}`);
+    }
+  };
   return (
     <header>
       <section
@@ -22,7 +34,7 @@ const Header = () => {
                 style={{ boxShadow: "0px 0px 0px 0px", backgroundColor: "rgb(238, 237, 222)" }}
               >
                 <nav className="navbar navbar-expand-lg">
-                  <a className="navbar-brand" href="https://accelerator-builder-bucket.s3.amazonaws.com/67ab16fccf78a37220cfa878/index.html">
+                  <a className="navbar-brand" href="/">
                     <img
                       src="/assets/logoo.png"
                       className="img-fluid brand-logo"
@@ -50,7 +62,7 @@ const Header = () => {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#xnvvxpvlbu">
+                        <a className="nav-link" onClick={() => handleNavClick("xnvvxpvlbu")} style={{ cursor: "pointer" }}>
                           Why Us
                         </a>
                       </li>
@@ -60,7 +72,7 @@ const Header = () => {
                         </a>
                       </li> */}
                       <li className="nav-item">
-                        <a className="nav-link" href="#services">
+                        <a className="nav-link" onClick={() => handleNavClick("services")} style={{ cursor: "pointer" }}>
                           Services
                         </a>
                       </li>
@@ -75,7 +87,7 @@ const Header = () => {
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#xlymldmuep">
+                        <a className="nav-link" onClick={() => handleNavClick("xlymldmuep")} style={{ cursor: "pointer" }}>
                           Testimonial
                         </a>
                       </li>

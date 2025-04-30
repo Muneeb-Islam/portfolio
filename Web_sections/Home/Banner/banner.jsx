@@ -38,7 +38,7 @@ const BannerSection = () => {
                     </p>
                   </div>
                   <div className="saasnode-banner-btns">
-                    <a href="#fnnqpkglvc" className="wp-mt-16 banner-solid-btn">
+                    <a href="#contact" className="wp-mt-16 banner-solid-btn">
                       <span>Get Started</span>
                     </a>
                     <a

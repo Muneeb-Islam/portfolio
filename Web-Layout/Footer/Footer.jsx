@@ -1,4 +1,16 @@
+import { useRouter } from "next/router";
+
 const Footer = () => {
+  const router = useRouter();
+
+  const handleNavClick = (hash) => {
+    if (router.pathname === "/") {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/#${hash}`);
+    }
+  };
   return (
     <section
       className="footer_147 main_section wp-pt-40 m-40"
@@ -34,12 +46,14 @@ const Footer = () => {
           <div className="col-6 col-md-3 col-lg-3 pt-3">
             <h3 className="profitpod-links-heading font-size-xlg mb-4">Company</h3>
             <ul>
-              <li><a href="#qbjenxbtom" >Home</a></li>
-              <li><a href="#xnvvxpvlbu" >Why Us</a></li>
-              <li><a href="#iqqtzvazmn" >Workflow</a></li>
-              <li><a href="#services" >Services</a></li>
+              <li><a href="/" >Home</a></li>
+              <li><a onClick={() => handleNavClick("xnvvxpvlbu")} style={{ cursor: "pointer" }} >Why Us</a></li>
+              <li><a onClick={() => handleNavClick("services")} style={{ cursor: "pointer" }} >Services</a></li>
               <li><a href="/portfolio" >Portfolio</a></li>
               <li><a href="/career" >Career</a></li>
+              <li><a onClick={() => handleNavClick("xlymldmuep")} style={{ cursor: "pointer" }}>
+                Testimonial
+              </a> </li>
             </ul>
           </div>
 
@@ -48,15 +62,16 @@ const Footer = () => {
             <ul>
               <li>
                 <span><i className="fas fa-envelope pe-2"></i></span>
-                <div><p>Email</p><a href="mailto:hr@bytepulse.com">hr@bytepulse.com</a></div>
+                <div><p>Email</p><a href="mailto:bytepulse@gmail.com">bytepulse@gmail.com</a></div>
               </li>
               <li>
                 <span><i className="fas fa-phone-alt pe-2"></i></span>
-                <div><p>Phone </p><a href="tel:+923000800613">(+92)300 0800 613</a></div>
+                <div><p>Phone </p><a href="tel:+923000800613">(+92)000 0000 000</a></div>
               </li>
               <li>
                 <span><i className="fas fa-map-marker-alt pe-2"></i></span>
-                <div><p>Address </p>Office #1, ground floor, saeed center, farid town road sahiwal</div>
+                <div><p>Address </p>Office #12, 2nd Floor, Lorem Plaza, Ipsum Street, Dolor City
+                </div>
               </li>
             </ul>
           </div>

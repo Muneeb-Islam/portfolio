@@ -15,7 +15,7 @@ const ContactSection = () => {
 
 
     return (
-        <section className="contact_1 main_section m-40">
+        <section className="contact_1 main_section m-40" id="contact">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-6">
@@ -136,7 +136,7 @@ const ContactSection = () => {
                             </div>
                             <div className="info-body wb-editor-block">
                                 <p>Assistance hours: Monday – Friday, 9 am to 6 pm</p>
-                                <a href="tel:03044278167">(+92)304 4278 167</a>
+                                <a href="tel:03044278167">(+92)000 0000 000</a>
                             </div>
                         </div>
                         <div className="info-card mt-4">
@@ -146,7 +146,7 @@ const ContactSection = () => {
                             </div>
                             <div className="info-body wb-editor-block">
                                 <p>Our support team will get back to you in 24-h during standard business hours.</p>
-                                <a href="mailto:info@mail.com">support@gmail.com</a>
+                                <a href="mailto:bytepulse@gmail.com">bytepulse@gmail.com</a>
                             </div>
                         </div>
                         <div className="info-card mt-4">
@@ -155,7 +155,7 @@ const ContactSection = () => {
                                 <span className="mx-2">Address:</span>
                             </div>
                             <div className="info-body wb-editor-block">
-                                <p>Office #2, first floor, saeed center, farid town road sahiwal</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, vitae?</p>
                             </div>
                         </div>
                     </div>

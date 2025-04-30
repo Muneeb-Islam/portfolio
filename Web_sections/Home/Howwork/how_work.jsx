@@ -123,7 +123,7 @@ const HowSection = () => {
             </h2>
             <p>We follow a structured approach to ensure seamless implementation, smooth configuration, and optimal performance—helping you get the most out of our platform.</p>
             <div className="saasify-started-btn">
-              <a href="#fnnqpkglvc" className="wp-mt-20">
+              <a href="#contact" className="wp-mt-20">
                 <span>Get Started</span>
               </a>
             </div>

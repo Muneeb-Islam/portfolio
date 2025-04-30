@@ -328,7 +328,7 @@ const PricingSection = () => {
                 <span style={{ fontWeight: 500 }}>
                   <a
                     className="wb-btn-text text-decoration-underline wb-transition-linear-03"
-                    href="#"
+                    href="#contact"
                   >
                     Contact Sales
                   </a>
