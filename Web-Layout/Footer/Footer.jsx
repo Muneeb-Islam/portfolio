@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <section
-      className="footer_147 main_section wp-pt-40"
+      className="footer_147 main_section wp-pt-40 m-40"
       data-_id="67879e70b9616f8ef8b7e504"
       data-section_id="wfuwaaovth"
       data-section_title="Footer with newsletter, navigation, socials move up on hover"
@@ -10,108 +10,65 @@ const Footer = () => {
       style={{ paddingTop: "0rem" }}
     >
       <div className="container">
-        <div className="row justify-content-center justify-content-lg-between align-items-baseline">
-          <div className="col-md-10 col-lg-5 pe-lg-5 text-center text-lg-start wp-pt-32">
-            <a href="https://accelerator-builder-bucket.s3.amazonaws.com/67ab16fccf78a37220cfa878/index.html">
+        <div className="row justify-content-center justify-content-lg-between">
+          <div className="col-md-5 col-lg-4 pe-lg-5 text-center text-lg-start pt-3">
+            <a href="/">
               <img
-                src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Saasify-footer-logo.svg"
+                src="/assets/logoo.png"
                 alt="Saasify Footer Logo"
-                className="img-fluid brand-logo"
+                className="img-fluid brand-logo mb-3"
               />
             </a>
-            <div className="wb-editor-block profitpod-subscribe-heading wp-pt-24">
-              <h2 style={{ fontSize: "1.375rem", fontWeight: 600 }}>
-                Subscribe to our newsletter and get news
-              </h2>
-            </div>
 
-            <form style={{ position: "relative" }}>
-              <div className="row">
-                <div className="col-12 wp-mt-20">
-                  <input
-                    type="email"
-                    className="form-control wp-pb-18 wp-pt-18"
-                    name="email"
-                    placeholder="Email Address"
-                    required
-                    style={{ borderColor: "rgb(238, 237, 223)" }}
-                  />
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-12 wp-mt-20">
-                  <button
-                    type="submit"
-                    className="submit-butn w-100 font-size-lg wb-fw-500 wp-pt-20 wp-pb-20 lh-1"
-                    style={{
-                      paddingLeft: "1.875rem",
-                      paddingRight: "1.875rem",
-                      color: "rgb(20, 30, 39)",
-                      backgroundColor: "rgb(248, 229, 89)"
-                    }}
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          {/* Quick Links */}
-          <div className="col-4 col-md-3 col-lg-2 wp-pt-32">
-            <h3 className="profitpod-links-heading font-size-xlg wb-fw-600">Quick Links</h3>
-            <ul className="mb-0 list-unstyled wp-mt-20 profitpod-footer-links">
-              <li className="wp-mb-14"><a href="#qbjenxbtom" className="font-size-md wb-fw-400">Home</a></li>
-              <li className="wp-mb-14"><a href="#xnvvxpvlbu" className="font-size-md wb-fw-400">Why Us</a></li>
-              <li className="wp-mb-14"><a href="#iqqtzvazmn" className="font-size-md wb-fw-400">Workflow</a></li>
-              <li className="wp-mb-14"><a href="#fnnqpkglvc" className="font-size-md wb-fw-400">Pricing</a></li>
+            <ul>
+              <li>- UI/UX Design</li>
+              <li>- Website Development</li>
+              <li>- Mobile Apps Development</li>
+              <li>- Custom CMS & CRM</li>
+              <li>- Ecommerce Solutions</li>
+              <li>- Digital Marketing</li>
+              <li>- Technical Consultancy</li>
             </ul>
           </div>
 
-          {/* Utilities */}
-          <div className="col-4 col-md-3 col-lg-2 wp-pt-32">
-            <h3 className="profitpod-links-heading font-size-xlg wb-fw-600">Utilities</h3>
-            <ul className="mb-0 list-unstyled wp-mt-20 profitpod-footer-links">
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Style Guide</a></li>
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Licenses</a></li>
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Changelog</a></li>
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Instructions</a></li>
+          <div className="col-6 col-md-3 col-lg-3 pt-3">
+            <h3 className="profitpod-links-heading font-size-xlg mb-4">Company</h3>
+            <ul>
+              <li><a href="#qbjenxbtom" >Home</a></li>
+              <li><a href="#xnvvxpvlbu" >Why Us</a></li>
+              <li><a href="#iqqtzvazmn" >Workflow</a></li>
+              <li><a href="#services" >Services</a></li>
+              <li><a href="/portfolio" >Portfolio</a></li>
+              <li><a href="/career" >Career</a></li>
             </ul>
           </div>
 
-          {/* Legal */}
-          <div className="col-4 col-md-3 col-lg-2 wp-pt-32">
-            <h3 className="profitpod-links-heading font-size-xlg wb-fw-600">Legal</h3>
-            <ul className="mb-0 list-unstyled wp-mt-20 profitpod-footer-links">
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Privacy</a></li>
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Terms</a></li>
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Help</a></li>
-              <li className="wp-mb-14"><a href="#" className="font-size-md wb-fw-400">Community</a></li>
+          <div className="col-6  col-md-4 col-lg-5 pt-3 footer-contact-list">
+            <h3 className="profitpod-links-heading font-size-xlg mb-4">Contact Us</h3>
+            <ul>
+              <li>
+                <span><i className="fas fa-envelope pe-2"></i></span>
+                <div><p>Email</p><a href="mailto:hr@bytepulse.com">hr@bytepulse.com</a></div>
+              </li>
+              <li>
+                <span><i className="fas fa-phone-alt pe-2"></i></span>
+                <div><p>Phone </p><a href="tel:+923000800613">(+92)300 0800 613</a></div>
+              </li>
+              <li>
+                <span><i className="fas fa-map-marker-alt pe-2"></i></span>
+                <div><p>Address </p>Office #1, ground floor, saeed center, farid town road sahiwal</div>
+              </li>
             </ul>
           </div>
-        </div>
 
-        <div className="row wp-pt-60">
-          <div className="col-12">
-            <div className="border-line"></div>
-          </div>
         </div>
 
         {/* Socials and Copyright */}
         <div className="row justify-content-center align-items-center wp-pt-14">
-          <div className="col-lg-4 wp-pt-16">
-            <ul className="mb-0 list-unstyled profitpod-footer-socials">
-              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
-              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
-              <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-x-twitter font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
-              <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in font-size-lg" style={{ color: "var(--wb-website-theme-secondary-color)" }}></i></a></li>
-            </ul>
-          </div>
 
-          <div className="col-lg-8 text-center text-lg-end wp-pt-16">
+          <div className="col-lg-6 text-center text-lg-end wp-pt-16">
             <p style={{ fontSize: "1.125rem", fontWeight: 400 }}>
-              Copyright © <span className="wb-copyright-year">2024</span> <span style={{ color: "rgb(27, 142, 61)" }}>Saasify</span> - All Rights Reserved.
+              Copyright © <span className="wb-copyright-year">2024</span> <span style={{ color: "rgb(27, 142, 61)" }}>Byte Pulse</span> - All Rights Reserved.
             </p>
           </div>
         </div>

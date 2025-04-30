@@ -1,7 +1,7 @@
 const AboutSection5 = () => {
   return (
     <section
-      className="about_225 main_section wp-pt-40"
+      className="about_225 main_section m-40"
       data-_id="67470b51f05e5f7adbddaaad"
       data-section_id="zvukgpyvoe"
       data-section_title="About us with icon list & total client shadow card with image"
@@ -13,20 +13,13 @@ const AboutSection5 = () => {
     >
       <div className="container">
         <div className="row justify-content-center align-items-center">
-          <div className="wp-pt-40 text-center text-lg-start col-12 col-lg-5" block-name="Block-1">
-            <div className="wb-editor-block mentor-flow-about-main">
-              <h2 style={{ lineHeight: "1.2" }}>
-                <span style={{ fontSize: "3.5rem", fontWeight: 600 }}>
-                  Seamlessly Integrate Your Favorite Tools
-                </span>
-              </h2>
-              <p>
-                <span style={{ fontWeight: 400, fontSize: "1.125rem" }}>
-                  Effortlessly connect with the apps you love to streamline workflows, enhance productivity, and maximize efficiency across your ecosystem.
-                </span>
-              </p>
-            </div>
-
+          <div className="text-center text-lg-start col-12 col-lg-5" block-name="Block-1">
+            <h2>
+              Seamlessly Integrate Your Favorite Tools
+            </h2>
+            <p>
+              Effortlessly connect with the apps you love to streamline workflows, enhance productivity, and maximize efficiency across your ecosystem.
+            </p>
             <div className="more-about-us-btn">
               <a
                 href="#"
@@ -38,7 +31,7 @@ const AboutSection5 = () => {
             </div>
           </div>
 
-          <div className="text-center wp-pt-40 ps-lg-5 col-12 col-lg-7" block-name="Block-2">
+          <div className="text-center pt-3 pt-lg-0 ps-lg-5 col-12 col-lg-7" block-name="Block-2">
             <img
               src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Saasify-connect-image.svg"
               alt=""

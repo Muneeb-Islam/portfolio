@@ -1,7 +1,7 @@
 const AboutSection3 = () => {
   return (
     <section
-      className="about_225 main_section wp-pt-40"
+      className="about_225 main_section m-40"
       data-_id="67470b51f05e5f7adbddaaad"
       data-section_id="jovgaoruja"
       data-section_title="About us with icon list & total client shadow card with image"
@@ -13,19 +13,15 @@ const AboutSection3 = () => {
     >
       <div className="container">
         <div className="row justify-content-center align-items-center">
-          <div className="col-lg-6 wp-pt-40 text-center text-lg-start col-12" block-name="Block-1">
-            <div className="wb-editor-block mentor-flow-about-main">
-              <h2 style={{ lineHeight: "1.2" }}>
-                <span style={{ fontSize: "3.5rem", fontWeight: 600 }}>
-                  Smart & Intuitive Dashboard
-                </span>
-              </h2>
-              <p>
-                <span style={{ fontWeight: 400, fontSize: "1.125rem" }}>
-                  Effortlessly manage your business and make informed decisions with ease.
-                </span>
-              </p>
-            </div>
+          <div className="col-lg-6  text-center text-lg-start col-12" block-name="Block-1">
+
+            <h2 >
+              Smart & Intuitive Dashboard
+            </h2>
+            <p>
+              Effortlessly manage your business and make informed decisions with ease.
+            </p>
+
 
             <ul className="list-unstyled text-start mb-0 mentor-flow-about-list wp-mt-32">
               {[
@@ -67,7 +63,7 @@ const AboutSection3 = () => {
             </div>
           </div>
 
-          <div className="col-lg-6 text-center wp-pt-40 ps-lg-5 col-12" block-name="Block-2">
+          <div className="col-lg-6 text-center pt-3 pt-lg-0 ps-lg-5 col-12" block-name="Block-2">
             <img
               src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/saasify-dashboard-image.svg"
               alt=""

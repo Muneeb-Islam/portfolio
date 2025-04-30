@@ -1,7 +1,7 @@
 const TestimonialSection = () => {
   return (
     <section
-      className="slider_163 main_section wp-pt-80"
+      className="slider_163 main_section m-40"
       data-_id="67ab16a9b9616f8ef8b9e4ef"
       data-section_id="xlymldmuep"
       data-section_title="Testimonial with top content and review cards with center image"
@@ -15,11 +15,9 @@ const TestimonialSection = () => {
         <div className="row justify-content-center">
           <div className="col-lg-8 text-center">
             <div className="wb-editor-block saasify-testimonial-main">
-              <h1>
-                <span style={{ fontSize: "4.5rem" }}>
-                  Client Testimonials &amp; Endorsements
-                </span>
-              </h1>
+              <h2>
+                Client Testimonials &amp; Endorsements
+              </h2>
               <p>
                 We are committed to delivering outstanding service and value. Our clients'
                 feedback reflects the trust, quality, and excellence we strive for in every project.

@@ -24,14 +24,9 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg">
                   <a className="navbar-brand" href="https://accelerator-builder-bucket.s3.amazonaws.com/67ab16fccf78a37220cfa878/index.html">
                     <img
-                      src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Saasify-logo.svg"
+                      src="/assets/logoo.png"
                       className="img-fluid brand-logo"
                       alt=""
-                      data-width="20"
-                      data-height="40"
-                      imgheight="63"
-                      imgwidth="108"
-                      data-image_name="Saasify-logo.svg"
                     />
                   </a>
                   <button
@@ -50,7 +45,7 @@ const Header = () => {
                   <div className="collapse navbar-collapse" id="navbarSupportedContent_id_qbjenxbtom">
                     <ul className="navbar-nav mx-auto">
                       <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="index.html">
+                        <a className="nav-link active" aria-current="page" href="/">
                           Home
                         </a>
                       </li>
@@ -59,26 +54,26 @@ const Header = () => {
                           Why Us
                         </a>
                       </li>
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <a className="nav-link" href="#iqqtzvazmn">
                           Workflow
                         </a>
-                      </li>
-                      {/* <li className="nav-item">
+                      </li> */}
+                      <li className="nav-item">
                         <a className="nav-link" href="#services">
                           Services
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#portfolio">
+                        <a className="nav-link" href="/portfolio">
                           Portfolio
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#services">
+                        <a className="nav-link" href="/career">
                           Careers
                         </a>
-                      </li> */}
+                      </li>
                       <li className="nav-item">
                         <a className="nav-link" href="#xlymldmuep">
                           Testimonial
@@ -86,14 +81,11 @@ const Header = () => {
                       </li>
                     </ul>
                     <div className="saasnode-banner-btns">
-                      <a href="#" className="mt-3 mt-lg-0 banner-login-btn wp-pb-14 wp-pt-14">
+                      {/* <a href="#" className="mt-3 mt-lg-0 banner-login-btn wp-pb-14 wp-pt-14">
                         <span>Login</span>
-                      </a>
-                      {/* <a href="#" className="mt-3 mt-lg-0 wp-ml-16 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18">
-                        <span>Request A Quote</span>
                       </a> */}
-                      <a href="#" className="mt-3 mt-lg-0 wp-ml-16 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18">
-                        <span>Sign Up</span>
+                      <a href="/contact" className="mt-3 mt-lg-0 ms-0 ms-lg-2 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18">
+                        <span>Request A Quote</span>
                       </a>
                     </div>
                   </div>

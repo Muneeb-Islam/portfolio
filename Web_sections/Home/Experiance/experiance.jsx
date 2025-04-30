@@ -2,7 +2,7 @@
 const ExperianceSection = () => {
   return (
     <section
-      className="about_277 main_section wp-pt-40 wp-pb-80 wp-mt-80"
+      className="about_277 main_section wp-pt-40 wp-pb-80 m-40"
       data-_id="67a99b2fb9616f8ef8b9d360"
       data-section_id="mibchlsony"
       data-section_title="About info with multiple images, solid and border button with icon list"
@@ -23,17 +23,15 @@ const ExperianceSection = () => {
           </div>
 
           <div className="col-lg-6 text-center text-lg-start wp-pt-32">
-            <div className="wb-editor-block glorious-about-main wp-pb-10">
-              <h2 style={{ lineHeight: 1.2 }}>
-                <span style={{ fontSize: "3.5rem", fontWeight: 600 }}>
-                  Join the journey of innovation and excellence.
-                </span>
+            <div className="wb-editor-block wp-pb-10">
+              <h2>
+                Join the journey of innovation and excellence.
               </h2>
             </div>
 
             <div className="glorious-about-btns">
               <a
-                href="#"
+                href="/contact"
                 className="wp-mt-16 solid-butn font-size-md img-custom-round-size wb-fw-500 wp-pt-20 wp-pb-20 lh-base wp-border-0 wp-mr-24"
                 style={{
                   borderRadius: "50px",
@@ -41,15 +39,15 @@ const ExperianceSection = () => {
                   paddingRight: "1.875rem",
                 }}
               >
-                <span>Sign Up</span>
-                {/* <span>Get A Quote</span> */}
+                {/* <span>Sign Up</span> */}
+                <span>Request A Quote</span>
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="wp-mt-16 border-butn font-size-md lh-base wb-fw-500 wb-btn-text wp-border-0 text-decoration-underline wp-pt-20 wp-pb-20 wp-pr-0 wp-pl-0"
               >
                 <span>Learn More</span>
-              </a>
+              </a> */}
             </div>
 
             <ul className="list-unstyled wp-mt-24 text-start glorious-about-list wp-mb-0">

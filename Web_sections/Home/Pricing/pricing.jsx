@@ -232,7 +232,7 @@ const PricingSection = () => {
   };
   return (
     <section
-      className="pricing_50 main_section wp-pt-80 color_text_FFFFFF"
+      className="pricing_50 main_section m-40 color_text_FFFFFF"
       id="fnnqpkglvc"
       style={{ paddingTop: "0rem" }}
     >
@@ -246,11 +246,11 @@ const PricingSection = () => {
               <div className="row justify-content-center">
                 <div className="col-lg-8 text-center">
                   <div className="wb-editor-block saasify-pricing-main">
-                    <h1>
-                      <span style={{ color: "rgb(248, 229, 89)", fontSize: "4.5rem" }}>
+                    <h2>
+                      <span style={{ color: "rgb(248, 229, 89)" }}>
                         Pricing models
                       </span>
-                    </h1>
+                    </h2>
                   </div>
                 </div>
               </div>
@@ -271,13 +271,13 @@ const PricingSection = () => {
                         </div>
                       )}
                       <div className="saasify-plan-name-text">
-                        <h2 style={{ color: "white" }}>{plan.name}</h2>
+                        <h3 style={{ color: "white" }}>{plan.name}</h3>
                       </div>
                       <div className="saasify-pricing-text">
-                        <h2 style={{ color: "white" }}>
+                        <h4 style={{ color: "white" }}>
                           {plan.currency}
                           {plan.price.toFixed(2)}
-                        </h2>
+                        </h4>
                         <h3 style={{ color: "white" }}>{plan.billingCycle}</h3>
                       </div>
 
@@ -317,6 +317,23 @@ const PricingSection = () => {
                 ))}
               </div>
 
+            </div>
+          </div>
+        </div>
+        <div className="row justify-content-center wp-pt-32">
+          <div className="col-lg-6 text-center text-lg-start col-12 wp-pt-0" block-name="Block-2">
+            <div className="wb-editor-block cuisina-whyus-main text-center">
+              <p >
+                Looking for more? We provide custom pricing plans tailored to your unique needs.&nbsp;
+                <span style={{ fontWeight: 500 }}>
+                  <a
+                    className="wb-btn-text text-decoration-underline wb-transition-linear-03"
+                    href="#"
+                  >
+                    Contact Sales
+                  </a>
+                </span>
+              </p>
             </div>
           </div>
         </div>

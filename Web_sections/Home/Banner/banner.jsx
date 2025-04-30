@@ -28,9 +28,7 @@ const BannerSection = () => {
                 <div className="col-lg-10 text-center">
                   <div className="wb-editor-block saasnode-banner-main wp-pb-20">
                     <h1>
-                      <span style={{ color: "rgb(248, 229, 89)", fontSize: "4.5rem" }}>
-                        Elevate your business with advanced solutions
-                      </span>
+                      Elevate your business with advanced solutions
                     </h1>
                     <p>
                       <span style={{ color: "rgb(238, 237, 222)" }}>

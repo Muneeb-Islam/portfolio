@@ -2,7 +2,7 @@
 const HowSection = () => {
   return (
     <section
-      className="about_278 main_section wp-pb-80 wp-mt-80 wp-pt-60"
+      className="about_278 main_section wp-pb-80 m-40 wp-pt-60"
       data-_id="67ab162db9616f8ef8b9e4e2"
       data-section_id="iqqtzvazmn"
       data-section_title="Workflow info steps tabs with shadow card, image and list text"
@@ -49,7 +49,7 @@ const HowSection = () => {
                     </div>
                     <div className="col-md-7 wp-pt-32 ps-md-5">
                       <div className="wb-editor-block saasify-tab-text">
-                        <h2>Integration</h2>
+                        <h3>Integration</h3>
                         <p>We begin with a structured implementation process, laying the foundation for seamless integration and long-term success.</p>
                       </div>
                       <ul className="list-unstyled mb-0 wp-mt-16 saasify-tab-list">
@@ -75,7 +75,7 @@ const HowSection = () => {
                     </div>
                     <div className="col-md-7 wp-pt-32 ps-md-5">
                       <div className="wb-editor-block saasify-tab-text">
-                        <h2>Configuration</h2>
+                        <h3>Configuration</h3>
                         <p>If you're migrating from another system, we guide you through a hassle-free data transfer to ensure continuity and accuracy.</p>
                       </div>
                       <ul className="list-unstyled mb-0 wp-mt-16 saasify-tab-list">
@@ -101,7 +101,7 @@ const HowSection = () => {
                     </div>
                     <div className="col-md-7 wp-pt-32 ps-md-5">
                       <div className="wb-editor-block saasify-tab-text">
-                        <h2>Optimization</h2>
+                        <h3>Optimization</h3>
                         <p>We provide expert insights, best practices, and performance enhancements to maximize efficiency and drive better results.</p>
                       </div>
                       <ul className="list-unstyled mb-0 wp-mt-16 saasify-tab-list">
@@ -118,14 +118,10 @@ const HowSection = () => {
           </div>
 
           <div className="col-lg-5 text-center text-lg-start wp-pt-40 col-12" block-name="Block-2" imgheight="400" imgwidth="550">
-            <div className="wb-editor-block saasify-tab-main">
-              <h1>
-                <span style={{ fontSize: "3.5rem" }}>
-                  Our Proven Workflow for Success
-                </span>
-              </h1>
-              <p>We follow a structured approach to ensure seamless implementation, smooth configuration, and optimal performance—helping you get the most out of our platform.</p>
-            </div>
+            <h2>
+              Our Proven Workflow for Success
+            </h2>
+            <p>We follow a structured approach to ensure seamless implementation, smooth configuration, and optimal performance—helping you get the most out of our platform.</p>
             <div className="saasify-started-btn">
               <a href="#fnnqpkglvc" className="wp-mt-20">
                 <span>Get Started</span>

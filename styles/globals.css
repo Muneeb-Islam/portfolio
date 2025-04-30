@@ -28,12 +28,11 @@
       --wb-theme-h2-font-weight:500!important;
       --wb-theme-h3-font-weight:500!important;
       --wb-theme-h4-font-weight:500!important;
-      --wb-theme-p-font-weight:500!important;
+      --wb-theme-p-font-weight:400!important;
       --wb-theme-h1-font-family:'Sanchez',serif!important;
       --wb-theme-h2-font-family:'Sanchez',serif;
       --wb-theme-h3-font-family:'Sanchez',serif;
       --wb-theme-h4-font-family:'Sanchez',serif;
-      --wb-theme-p-font-weight:500!important;
       --wb-theme-line-height:1.5!important;
       --wb-theme-root-html-font-mobile:10px
 
@@ -45,11 +44,17 @@
 /*----[[67ab1283b9616f8ef8b9e29a]]---*/
 h1, h2,h3,h4{
   font-family: var(--wb-theme-h1-font-family)!important;
+  font-weight: 600!important;
+}
+p{
+  font-size: 1.125rem!important;
 }
 .banner_154 {
   background: var(--wb-website-theme-primary-color);
 }
-
+.brand-logo{
+  height: 62px!important;
+}
 .banner_154 .banner-menu-box {
   background: var(--wb-website-theme-primary-color);
   box-shadow: 0 0.25rem 0.5rem var(--wb-theme-box-shadow);
@@ -108,10 +113,11 @@ h1, h2,h3,h4{
 }
 
 .banner_154 .saasnode-banner-main h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   line-height: 1.2;
+   color: rgb(248, 229, 89)
 }
 
 .banner_154 .saasnode-banner-main p {
@@ -122,7 +128,7 @@ h1, h2,h3,h4{
 }
 
 .banner_154 .saasnode-banner-btns .banner-login-btn,
-.banner_154 .saasnode-banner-btns .banner-solid-btn,
+ .banner-solid-btn,
 .banner_154 .saasnode-banner-btns .banner-video-btn {
   display: inline-block;
   font-size: 1.125rem;
@@ -131,7 +137,7 @@ h1, h2,h3,h4{
   line-height: normal;
 }
 
-.banner_154 .saasnode-banner-btns .banner-solid-btn,
+ .banner-solid-btn,
 .banner_154 .saasnode-banner-btns .banner-video-btn {
   padding: 1.25rem 1.875rem;
   border-radius: 3.125rem;
@@ -139,7 +145,7 @@ h1, h2,h3,h4{
   color: var(--wb-website-text-secondary-color);
 }
 
-.banner_154 .saasnode-banner-btns .banner-solid-btn:hover,
+ .banner-solid-btn:hover,
 .banner_154 .saasnode-banner-btns .banner-video-btn:hover {
   background: var(--wb-website-hover-background-color);
   color: var(--wb-website-hover-text-color);
@@ -216,8 +222,36 @@ h1, h2,h3,h4{
   }
 }
         /*----67ab1283b9616f8ef8b9e29a----*/
-        
+       .service-card  li {
+        display: inline-flex;
+        border-radius: 100%;
+        background: #f5f7ff;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        margin: 0 10px 0 0;
+       } 
+       .service-card li>img {
+        width: 30px;
+        margin: 0 auto;
+    }
+    .service-list{
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
 
+    .service-list li{
+      padding: 0 10px 0 0;
+      border-left: 1px solid #d4d4d4;
+    }
+    .service-list a{
+      padding-left: 10px;
+    }
+    .service-list li:first-child {
+      padding-left: 0px;
+      border: none;
+  }
 /*----[[677e03dfb9616f8ef8b6ff93]]---*/
         .hero_125 {
   background: var(--wb-website-theme-primary-color);
@@ -340,6 +374,9 @@ h1, h2,h3,h4{
 .about_276 .saasify-stat-text h2 {
   font-size: 3.25rem;
 }
+.about_276 h1{
+  font-size:3.5rem
+}
 
 .about_276 .saasify-about-main h1,
 .about_276 .why-saasify-text h3 {
@@ -355,7 +392,7 @@ h1, h2,h3,h4{
 }
 
 .about_276 .saasify-about-main h2 {
-  font-size: 2.5rem;
+  font-size: 2.5rem!important;
 }
 
 .about_276 .saasify-about-main p,
@@ -440,6 +477,24 @@ h1, h2,h3,h4{
 .about_274 .cuisina-whyus-text h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+.about_274 h1{
+  font-size: 4.5rem;
+  line-height: 1.2;
+}
+ h2{
+  font-size: 3.5rem!important;
+  line-height: 1.2!important;
+}
+ h3{
+  font-size: 1.375rem!important;
+}
+.saasify-pricing-text h4{
+  font-size: 2.5rem!important;
+}
+.pricing_50 h3{
+  font-weight: 500!important;
+  margin-bottom: 1rem!important;
 }
 
  .cuisina-whyus-main p,
@@ -1241,10 +1296,41 @@ h1, h2,h3,h4{
         
 
 /*----[[67879e70b9616f8ef8b7e504]]---*/
-        .footer_147 {
-  background: var(--wb-website-theme-primary-color);
+.m-40{
+  margin-top: 4rem!important;
 }
+        .footer_147 {
+          background-color: rgb(238, 237, 222);
+  font-size: 1.1rem ;
+  font-weight: 400;
+}
+.footer_147 ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.footer_147 ul li{
+  margin-top: 10px;
+  font-size: 1.1rem ;
+  font-weight: 400;
+}
+.footer-contact-list li{
+display: flex;
+}
+.footer-contact-list a:hover{
+  color: var(--wb-website-hover-background-color);
+}
+.footer-contact-list a{
+  display: block;
+}
+.footer-contact-list p{
+  margin-bottom: 0px;
+ font-weight: 600;
 
+}
+.footer-contact-list i, .footer-contact-list p{
+  color: #000;
+}
 .footer_147 .profitpod-subscribe-heading h2,
 .footer_147 .profitpod-links-heading,
 .footer_147 .copyright-text p {
@@ -1349,3 +1435,173 @@ h1, h2,h3,h4{
         /*----67879e70b9616f8ef8b7e504----*/
         
 
+/* ------------------portfolio page -------------------------- */
+.tab-heading p{
+margin-bottom: 10px;
+color: var(--wb-website-theme-secondary-color);
+}
+.portfolio_wrapper .item-image{
+  position: relative;
+  display: block;
+}
+.portfolio_wrapper .item-image img{
+  border-radius: 8px;
+}
+
+.item-image img {
+  transition: transform 0.5s ease;
+}
+
+.item-image:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio_wrapper .item-info{
+  padding-top: 20px;
+}
+.portfolio_wrapper .item-info p{
+  margin-bottom: 0px;
+}
+.portfolio_wrapper .item-info  h4{
+  margin-bottom: 0.4rem;
+}
+
+/* --------------------career page ----------------------------- */
+/*--------------------------------------------------------------
+# Contact_1
+--------------------------------------------------------------*/
+
+.contact_1 {
+  background: var(--wb-website-theme-primary-color);
+  position: relative;
+}
+
+.contact_1 .form-main-wrapper h2 {
+  font-size: 2.625rem!important;
+  font-weight: bold;
+}
+.form-main-wrapper p{
+  margin-top: 15px;
+}
+.contact_1 .info-card {
+  background: var(--wb-website-theme-primary-color);
+  /* background-color: rgb(238, 237, 222, 0.2); */
+  background-color: rgb(224, 221, 170);
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.6);
+  padding: 1.875rem;
+  align-self: center;
+  align-items: center;
+  
+}
+
+.contact_1 .info-card i {
+  color: var(--wb-website-theme-secondary-color);
+
+}
+
+.contact_1 .info-card a {
+  color: var(--wb-website-text-primary-color);
+  font-weight: 500;
+  font-size: 20px;
+}
+.contact_1 h6{
+  color: var(--wb-website-theme-secondary-color);
+}
+.contact_1 .info-card span {
+  font-size: 20px;
+  font-size: bold;
+}
+
+.contact_1 .info-card p {
+  margin: 1.25rem 0 0.625rem 0;
+}
+
+.contact_1 .form-group {
+  padding-bottom: 0.5rem;
+}
+
+.contact_1 .form-control {
+  height: 3.125rem;
+  padding: 0.638rem 0.938rem;
+  outline: none;
+  /* background: var(--wb-input-background-color); */
+  border: 0;
+  color: var(--wb-input-text-color);
+  border-bottom: 0.125rem solid var(--wb-input-border-color);
+  border-radius: 0.25rem;
+}
+
+.contact_1 ::placeholder {
+  font-size: 0.875rem;
+  color: var(--wb-input-placeholder-color);
+}
+
+.contact_1 .form-control:focus {
+  box-shadow: none;
+  border: 0 !important;
+  border-bottom: 0.125rem solid var(--wb-website-theme-secondary-color) !important;
+}
+
+.contact_1 .btn-header-button {
+  background: var(--wb-website-theme-secondary-color);
+  color: var(--wb-website-text-secondary-color);
+  border-radius: 6.25rem;
+  padding: 0.938rem 2rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact_1 .btn-header-button:hover {
+  background: var(--wb-website-hover-background-color);
+  color: var(--wb-website-hover-text-color);
+}
+
+
+.contact_1 span.circle {
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+  position: absolute;
+  top: -10%;
+  right: -8.125rem;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+}
+
+.contact_1 span.circle:hover {
+  transition: 1.2s cubic-bezier(.17, .85, .438, .99);
+}
+
+.contact_1 .btn-header-button:hover span.circle {
+  top: -10%;
+  right: -5rem;
+  transition: 1.2s cubic-bezier(.17, .85, .438, .99);
+}
+.form-btn{
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+.upload-files{
+  outline: 2px dashed #efefef;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+@media(max-width:768px){
+  .banner_154 .saasnode-banner-main h1 , .about_276 h1, .about_274 h1{
+    font-size: 2rem!important;}
+    h2{
+      font-size: 1.9rem!important;
+    }
+    h3{
+      font-size: 1.375rem!important;
+    }
+    .m-40{
+      margin-top: 2rem!important;
+    }
+}
+/*--------------------------------------------------------------
+# End Contact_1
+--------------------------------------------------------------*/

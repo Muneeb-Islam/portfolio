@@ -57,7 +57,7 @@ const Brans_LogoSection = () => {
   };
   return (
 
-    <section className="hero_95 main_section wp-pt-50" data-_id="66bf8b86b711672becdea6a2" data-section_id="rgukwtzywr" data-section_title="Partners logo owl carousel with top and bottom border" data-section_name="66bf8b86b711672becdea6a2" id="rgukwtzywr" imgheight="104" imgwidth="1828" style={{ backgroundImage: "none" }}>
+    <section className="hero_95 main_section wp-pt-65" data-_id="66bf8b86b711672becdea6a2" data-section_id="rgukwtzywr" data-section_title="Partners logo owl carousel with top and bottom border" data-section_name="66bf8b86b711672becdea6a2" id="rgukwtzywr" imgheight="104" imgwidth="1828" style={{ backgroundImage: "none" }}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="text-center col-12 col-lg-12" data-block-name="Block-1">

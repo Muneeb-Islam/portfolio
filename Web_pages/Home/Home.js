@@ -1,16 +1,17 @@
 import Footer from "@/Web-Layout/Footer/Footer";
 import Header from "@/Web-Layout/Header/Header";
+import { ContactSection } from "@/Web_sections/Contact";
 import {
   AboutSection,
   AboutSection2,
   AboutSection3,
-  AboutSection4,
   AboutSection5,
   BannerSection,
   Brans_LogoSection,
   ExperianceSection,
   HowSection,
   PricingSection,
+  ServicesSection,
   TestimonialSection,
 } from "@/Web_sections/Home";
 export default function HomePage() {
@@ -22,13 +23,14 @@ export default function HomePage() {
       <AboutSection />
       <AboutSection2 />
       <AboutSection3 />
-      <AboutSection4 />
+      <ServicesSection />
+      {/* <AboutSection4 /> */}
       <AboutSection5 />
-      {/* <ServicesSection /> */}
       <HowSection />
       <TestimonialSection />
       <PricingSection />
       <ExperianceSection />
+      <ContactSection />
       <Footer />
     </div>
   );

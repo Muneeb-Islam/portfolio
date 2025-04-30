@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
     <section
-      className="about_276 main_section wp-pt-40 wp-pb-80 wp-mt-80"
+      className="about_276 wp-pt-40 wp-pb-80 m-40"
       data-_id="67a99aeeb9616f8ef8b9d353"
       data-section_id="xnvvxpvlbu"
       data-section_title="About info with stats, center image and benefits list"
@@ -20,17 +20,13 @@ const AboutSection = () => {
         <div className="row justify-content-center align-items-center">
           {/* Left Column */}
           <div className="col-lg-4 text-center text-lg-start wp-pt-32">
-            <div className="wb-editor-block saasify-about-main">
-              <h1>
-                <span style={{ fontSize: "3.5rem" }}>
-                  Empowering Ventures to Succeed
-                </span>
-              </h1>
-              <p>
-                We recognize the vital role of adaptability and flexibility in
-                driving growth and success.
-              </p>
-            </div>
+            <h1>
+              Empowering Ventures to Succeed
+            </h1>
+            <p>
+              We recognize the vital role of adaptability and flexibility in
+              driving growth and success.
+            </p>
             <div className="saasify-learn-btn">
               <a href="#" className="wp-mt-32">
                 <span>Learn More</span>
