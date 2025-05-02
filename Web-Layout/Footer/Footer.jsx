@@ -13,7 +13,7 @@ const Footer = () => {
   };
   return (
     <section
-      className="footer_147 main_section wp-pt-40 m-40"
+      className="footer_147 main_section py-3 py-md-5 m-40"
       data-_id="67879e70b9616f8ef8b7e504"
       data-section_id="wfuwaaovth"
       data-section_title="Footer with newsletter, navigation, socials move up on hover"
@@ -23,12 +23,12 @@ const Footer = () => {
     >
       <div className="container">
         <div className="row justify-content-center justify-content-lg-between">
-          <div className="col-md-5 col-lg-4 pe-lg-5 text-center text-lg-start pt-3">
+          <div className="col-md-5 col-lg-4 pe-lg-5 text-center text-lg-start">
             <a href="/">
               <img
                 src="/assets/logoo.png"
                 alt="Saasify Footer Logo"
-                className="img-fluid brand-logo mb-3"
+                className="img-fluid brand-logo mb-2"
               />
             </a>
 
@@ -43,8 +43,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-6 col-md-3 col-lg-3 pt-3">
-            <h3 className="profitpod-links-heading font-size-xlg mb-4">Company</h3>
+          <div className="col-6 col-md-3 col-lg-3 pt-3 pt-md-0">
+            <h3 className="profitpod-links-heading font-size-xlg mb-3">Company</h3>
             <ul>
               <li><a href="/" >Home</a></li>
               <li><a onClick={() => handleNavClick("xnvvxpvlbu")} style={{ cursor: "pointer" }} >Why Us</a></li>
@@ -57,8 +57,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="col-6  col-md-4 col-lg-5 pt-3 footer-contact-list">
-            <h3 className="profitpod-links-heading font-size-xlg mb-4">Contact Us</h3>
+          <div className="col-6  col-md-4 col-lg-5 footer-contact-list pt-3 pt-md-0">
+            <h3 className="profitpod-links-heading font-size-xlg mb-3">Contact Us</h3>
             <ul>
               <li>
                 <span><i className="fas fa-envelope pe-2"></i></span>
@@ -79,11 +79,11 @@ const Footer = () => {
         </div>
 
         {/* Socials and Copyright */}
-        <div className="row justify-content-center align-items-center wp-pt-14">
+        <div className="row justify-content-center align-items-center pt-3 pt-lg-5">
 
-          <div className="col-lg-6 text-center text-lg-end wp-pt-16">
-            <p style={{ fontSize: "1.125rem", fontWeight: 400 }}>
-              Copyright © <span className="wb-copyright-year">2024</span> <span style={{ color: "rgb(27, 142, 61)" }}>Byte Pulse</span> - All Rights Reserved.
+          <div className="col-lg-6 text-center text-lg-end">
+            <p style={{ fontSize: "1.125rem", fontWeight: 400 }} className="mb-0">
+              Copyright © <span className="wb-copyright-year">2025</span> <span style={{ color: "rgb(27, 142, 61)" }}>Byte Pulse</span> - All Rights Reserved.
             </p>
           </div>
         </div>

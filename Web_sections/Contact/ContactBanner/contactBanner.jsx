@@ -122,8 +122,10 @@ const ContactSection = () => {
 
                                 </div>
                             </div>
-                            <div className="row  wp-mt-20 text-center">
-                                <a href="#" class="mt-3 mt-lg-0 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18"><span>Submit</span></a>
+                            <div className="row justify-content-center wp-mt-20 text-center">
+                                <div className='col-6 col-md-12'>
+                                    <a href="#" class="w-100 banner-solid-btn wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18"><span>Submit</span></a>
+                                </div>
                             </div>
 
                         </form>

@@ -28,12 +28,12 @@ const ServicesSection = () => {
                     App Development
                   </h3>
                 </div>
-                <ul className="service-list">
+                <ul className="service-list d-flex justify-content-center justify-content-md-start">
                   <li> <a href="#">React Native</a> </li>
                   <li> <a href="#">Swift</a> </li>
                   <li> <a href="#">Java/Kotlin</a> </li>
                 </ul>
-                <ul className=" service-card py-2">
+                <ul className=" service-card py-3">
                   <li>  <img
                     src="/assets/android.png"
                     alt=""
@@ -69,13 +69,13 @@ const ServicesSection = () => {
                 <h3>
                   Web Development
                 </h3>
-                <ul className="service-list">
+                <ul className="service-list d-flex justify-content-center justify-content-md-start">
                   <li> <a href="#">UI/UX</a> </li>
                   <li> <a href="#">PHP</a> </li>
                   <li> <a href="#">MysQL</a></li>
                   <li> <a href="#">Bootstrap</a> </li>
                 </ul>
-                <ul className=" service-card py-2">
+                <ul className=" service-card py-3">
                   <li>  <img
                     src="/assets/ux.png"
                     alt=""
@@ -118,12 +118,12 @@ const ServicesSection = () => {
                 <h3>
                   Custom CMS & CRM
                 </h3>
-                <ul className="service-list">
+                <ul className="service-list d-flex justify-content-center justify-content-md-start">
                   <li> <a href="#">ReactJs</a> </li>
                   <li> <a href="#">NodeJs</a> </li>
                   <li> <a href="#">MongoDB</a></li>
                 </ul>
-                <ul className="service-card py-2">
+                <ul className="service-card py-3">
                   <li>  <img
                     src="/assets/magento.png"
                     alt=""

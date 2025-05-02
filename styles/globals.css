@@ -221,7 +221,22 @@ p{
     height: 100%;
   }
 }
+
+@media(max-width:425px){
+  .MuiPaper-root{
+    left: 0!important;
+    right: 0!important;
+    margin: auto!important;
+  }
+  .css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+    max-width: calc(100% - 0px)!important;
+  }
+}
+
         /*----67ab1283b9616f8ef8b9e29a----*/
+        .service-card {
+          margin: 0px;
+        }
        .service-card  li {
         display: inline-flex;
         border-radius: 100%;
@@ -239,6 +254,7 @@ p{
       list-style: none;
       display: flex;
       flex-wrap: wrap;
+      margin: 0px;
     }
 
     .service-list li{
@@ -249,8 +265,10 @@ p{
       padding-left: 10px;
     }
     .service-list li:first-child {
-      padding-left: 0px;
       border: none;
+  }
+  .service-list li:first-child a{
+    padding-left: 0px;
   }
 /*----[[677e03dfb9616f8ef8b6ff93]]---*/
         .hero_125 {
@@ -1603,6 +1621,145 @@ color: var(--wb-website-theme-secondary-color);
       margin-top: 2rem!important;
     }
 }
+
 /*--------------------------------------------------------------
 # End Contact_1
 --------------------------------------------------------------*/
+/* ---------------- portfolio detail page------------------------ */
+.breadcrumbs{
+  background-color: rgb(238, 237, 222);
+  padding: 20px 0;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  font-weight: 600;
+  padding: 0px;
+}
+.breadcrumbs ol li, .breadcrumbs ol a:hover{
+  color: var(--wb-menu-hover-color);
+}
+.breadcrumbs ol li+li{
+  padding-left: 10px;
+  color: var(--wb-menu-color);
+}
+.breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: var(--wb-menu-hover-color);
+}
+.portfolio_slider .carousel-inner img{
+width: 100%;
+/* height: 500px;
+object-fit: cover; */
+}
+.carousel-indicators [data-bs-target]{
+  background-color: var(--wb-website-theme-secondary-color)!important;
+  width: 9px!important;
+  height: 9px!important;
+  border-radius: 50%!important;
+}
+.carousel-indicators {
+  bottom: -49px!important;}
+  .carousel-control-next-icon, .carousel-control-prev-icon {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.15);
+    font-size: 24px;
+    border-radius: 50%;
+    width: 48px!important;
+    height: 48px!important;
+  }
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-size: 30px!important;
+}
+ .testimonial-item {
+  padding: 30px 30px 0 30px;
+  position: relative;
+  background-color: rgb(238, 237, 222);
+  margin-bottom: 50px;
+}
+.testimonial-item .testimonial-img {
+  width: 90px;
+  border-radius: 50px;
+  border: 6px solid var(--background-color);
+  float: left;
+  margin: 0 10px 0 0;
+}
+.testimonial-item h4{
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+.testimonial-item i{
+  font-size: 26px;
+  color: var(--wb-website-theme-secondary-color);
+}
+.portfolio-info h3 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.portfolio-info h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--wb-menu-hover-color);
+  left: 0;
+  bottom: 0;
+}
+.portfolio-info ul {
+  list-style: none;
+  padding: 0;
+}
+.portfolio-info ul li {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+.portfolio-info span{
+  font-weight: 500;
+}
+.portfolio_slider .slick-slide img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.slick-dots li.slick-active button:before{
+  color: var(--wb-menu-hover-color)!important;
+}
+
+/* Change dot color */
+.slick-dots li button:before {
+  color: #000; /* black */
+  font-size: 12px;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff5722; /* active dot color */
+}
+
+/* Custom arrow styles */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 6px 12px;
+  border-radius: 50%;
+}
+
+.custom-arrow.prev {
+  left: -30px;
+}
+
+.custom-arrow.next {
+  right: -30px;
+}
