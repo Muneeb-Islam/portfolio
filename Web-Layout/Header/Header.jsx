@@ -1,7 +1,34 @@
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+const sectionIds = ["xnvvxpvlbu", "services", "xlymldmuep"]; // IDs of sections like Why Us, Services, Testimonial
 
 const Header = () => {
   const router = useRouter();
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let found = "";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            found = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(found);
+    };
+
+    if (router.pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+      handleScroll(); // initial check
+    }
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [router.pathname]);
 
   const handleNavClick = (hash) => {
     if (router.pathname === "/") {
@@ -11,6 +38,7 @@ const Header = () => {
       router.push(`/#${hash}`);
     }
   };
+
   return (
     <header>
       <section
@@ -57,37 +85,49 @@ const Header = () => {
                   <div className="collapse navbar-collapse" id="navbarSupportedContent_id_qbjenxbtom">
                     <ul className="navbar-nav mx-auto">
                       <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/">
+                        <a
+                          className={`nav-link ${router.pathname === "/" && !activeSection ? "active" : ""
+                            }`}
+                          aria-current="page"
+                          href="/"
+                        >
                           Home
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" onClick={() => handleNavClick("xnvvxpvlbu")} style={{ cursor: "pointer" }}>
+                        <a
+                          className={`nav-link ${activeSection === "xnvvxpvlbu" ? "active" : ""}`}
+                          onClick={() => handleNavClick("xnvvxpvlbu")}
+                          style={{ cursor: "pointer" }}
+                        >
                           Why Us
                         </a>
                       </li>
-                      {/* <li className="nav-item">
-                        <a className="nav-link" href="#iqqtzvazmn">
-                          Workflow
-                        </a>
-                      </li> */}
                       <li className="nav-item">
-                        <a className="nav-link" onClick={() => handleNavClick("services")} style={{ cursor: "pointer" }}>
+                        <a
+                          className={`nav-link ${activeSection === "services" ? "active" : ""}`}
+                          onClick={() => handleNavClick("services")}
+                          style={{ cursor: "pointer" }}
+                        >
                           Services
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/portfolio">
+                        <a className={`nav-link ${router.pathname === "/portfolio" ? "active" : ""}`} href="/portfolio">
                           Portfolio
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/career">
+                        <a className={`nav-link ${router.pathname === "/career" ? "active" : ""}`} href="/career">
                           Careers
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" onClick={() => handleNavClick("xlymldmuep")} style={{ cursor: "pointer" }}>
+                        <a
+                          className={`nav-link ${activeSection === "xlymldmuep" ? "active" : ""}`}
+                          onClick={() => handleNavClick("xlymldmuep")}
+                          style={{ cursor: "pointer" }}
+                        >
                           Testimonial
                         </a>
                       </li>

@@ -1627,8 +1627,15 @@ color: var(--wb-website-theme-secondary-color);
 --------------------------------------------------------------*/
 /* ---------------- portfolio detail page------------------------ */
 .breadcrumbs{
-  background-color: rgb(238, 237, 222);
-  padding: 20px 0;
+  background-color: rgb(32, 50, 57);
+  color: #fff;
+  padding: 50px 0;
+}
+.breadcrumbs p{
+  margin-bottom: 0px;
+}
+.breadcrumbs h2{
+  color: rgb(248, 229, 89);
 }
 .breadcrumbs ol {
   display: flex;
@@ -1637,13 +1644,18 @@ color: var(--wb-website-theme-secondary-color);
   margin: 0;
   font-weight: 600;
   padding: 0px;
+  font-size: 1.125rem 
 }
-.breadcrumbs ol li, .breadcrumbs ol a:hover{
+.breadcrumbs ol li{
+  color: #fff;
+}
+ .breadcrumbs ol a:hover{
   color: var(--wb-menu-hover-color);
 }
 .breadcrumbs ol li+li{
   padding-left: 10px;
-  color: var(--wb-menu-color);
+  color: var(--wb-menu-hover-color);
+
 }
 .breadcrumbs ol li+li::before {
   content: "/";

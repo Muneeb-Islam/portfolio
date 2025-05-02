@@ -2,7 +2,6 @@ import Footer from "@/Web-Layout/Footer/Footer";
 import Header from "@/Web-Layout/Header/Header";
 import {
   BannerSection,
-  BreadCrumbsSection,
   DetailSection,
   SliderSection,
 } from "@/Web_sections/PortfolioDetail";
@@ -12,7 +11,7 @@ export default function PortfolioDetailPage() {
     <div>
       <Header />
       <BannerSection />
-      <BreadCrumbsSection />
+      {/* <BreadCrumbsSection /> */}
       <SliderSection />
       <DetailSection />
       <Footer />
