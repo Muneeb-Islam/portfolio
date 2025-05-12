@@ -6,14 +6,15 @@ import {
   SliderSection,
 } from "@/Web_sections/PortfolioDetail";
 
-export default function PortfolioDetailPage() {
+export default function PortfolioDetailPage({ detail }) {
+  const images = detail?.images;
   return (
     <div>
       <Header />
-      <BannerSection />
+      <BannerSection detail={detail} />
       {/* <BreadCrumbsSection /> */}
-      <SliderSection />
-      <DetailSection />
+      <SliderSection images={images} />
+      <DetailSection detail={detail} />
       <Footer />
     </div>
   );

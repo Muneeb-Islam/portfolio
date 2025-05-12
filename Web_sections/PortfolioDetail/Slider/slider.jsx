@@ -21,7 +21,7 @@ const images = [
 //     </div>
 // );
 
-const SliderSection = () => {
+const SliderSection = ({ images }) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -84,10 +84,7 @@ const SliderSection = () => {
                     <div className="col-12">
                         <Slider {...settings}>
                             {images.map((img, index) => (
-                                <div
-                                    key={index}
-                                    className="px-lg-5 d-flex align-items-center justify-content-center"
-                                >
+                                <div key={index} className="px-lg-5 d-flex align-items-center justify-content-center">
                                     <img src={img.src} alt={img.alt} className="img-fluid" />
                                 </div>
                             ))}
@@ -96,6 +93,7 @@ const SliderSection = () => {
                 </div>
             </div>
         </section>
+
     );
 };
 

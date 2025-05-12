@@ -1775,3 +1775,10 @@ object-fit: cover; */
 .custom-arrow.next {
   right: -30px;
 }
+.portfolio_detail ul{
+ list-style: disc;
+ padding-left: 13px;
+}
+.portfolio_detail li{
+  margin-top: 10px;
+}

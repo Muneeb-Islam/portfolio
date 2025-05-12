@@ -1,4 +1,4 @@
-const BannerSection = () => {
+const BannerSection = ({ detail }) => {
 
 
     return (
@@ -10,8 +10,8 @@ const BannerSection = () => {
                             <li><a href="/">Home</a></li>
                             <li>Portfolio Detail</li>
                         </ol>
-                        <h2>Portfolio Details</h2>
-                        <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+                        <h2>{detail.title}</h2>
+                        <p>{detail.description}</p>
                     </div>
                 </div>
 
