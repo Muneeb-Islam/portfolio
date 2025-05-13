@@ -151,8 +151,8 @@ export const portfolioItems = [
     },
     images: [
       { src: "/assets/done.png", alt: "Website" },
-      { src: "/assets/done.png", alt: "Website" },
-      { src: "/assets/done.png", alt: "Website" },
+      { src: "/assets/done-1.png", alt: "Website" },
+      { src: "/assets/done-2.png", alt: "Website" },
     ],
   },
   {
@@ -269,6 +269,161 @@ export const portfolioItems = [
       image: "/assets/testimonial-6.jpg",
       name: "wahab K,",
       role: "Project Manager",
+    },
+    images: [
+      { src: "/assets/vissioon.png", alt: "Mobile App 1" },
+      { src: "/assets/vissioon-1.png", alt: "Mobile App 2" },
+      { src: "/assets/vissioon-2.png", alt: "Mobile App 3" },
+    ],
+  },
+  {
+    id: "7",
+    slug: "tikk",
+    title: "Tikk",
+    image: "/assets/1.png",
+    shortDecription: "reminder & daily planner",
+    client: "XYZ Company",
+    category: "Mobile App",
+    projectDate: "01 March, 2020",
+    url: "https://play.google.com/store/apps/details?id=com.devflips.tikk",
+    description:
+      "Tikk is a smart daily planner and family organizer that helps you manage tasks, events, bills, and reminders—all in one place for seamless group coordination and productivity.",
+    featureHeading: "Key Features",
+    featureList: `
+   <ul>
+  <li>Family & group task organization</li>
+  <li>Task assignment & deadlines</li>
+  <li>Daily & weekly calendar planner</li>
+  <li>Bill & expense tracking</li>
+  <li>Custom reminders & notifications</li>
+  <li>Task management & tracking</li>
+  <li>User-friendly interface</li>
+  <li>All-in-one organizer</li>
+</ul>
+`,
+    additionalText:
+      "Tikk is an all-in-one family organizer app that blends shared task management, calendar planning, bill tracking, and reminders to effortlessly simplify everyday scheduling and coordination among family and friends.",
+    testimonial: {
+      text: "Tikk has completely transformed how I organize my day! It’s easy to use and keeps my family on track with tasks, bills, and reminders. Highly recommend for managing busy lives!",
+      image: "/assets/testimonials-2.jpg",
+      name: "Sarah T,",
+      role: "Team Organizer",
+    },
+    images: [
+      { src: "/assets/vissioon.png", alt: "Mobile App 1" },
+      { src: "/assets/vissioon-1.png", alt: "Mobile App 2" },
+      { src: "/assets/vissioon-2.png", alt: "Mobile App 3" },
+    ],
+  },
+  {
+    id: "8",
+    slug: "positive-vibes",
+    title: "PositiveVibes",
+    image: "/assets/1.png",
+    shortDecription: "Life Coach",
+    client: "XYZ Company",
+    category: "Mobile App",
+    projectDate: "01 March, 2020",
+    url: "https://play.google.com/store/apps/details?id=com.positivevibes.app",
+    description:
+      "Positive Vibes offers daily motivational content – uplifting quotes, affirmations, prayers and guided meditations – to boost positivity, support mood and encourage personal growth and self-esteem.",
+    featureHeading: "Key Features",
+    featureList: `<ul>
+  <li>Daily inspirational, love & life quotes</li>
+  <li>Positive daily affirmations</li>
+  <li>Guided meditation & calming music</li>
+  <li>Prayers & spiritual support</li>
+  <li>Morning routine builder</li>
+  <li>Self-improvement tips</li>
+  <li>Mindfulness & stress relief</li>
+  <li>Time-management motivation</li>
+  <li>Custom quotes & affirmation creator</li>
+</ul>`,
+    additionalText:
+      "Positive Vibes: Life Coach is a holistic self-improvement app offering daily motivational quotes, affirmations, guided meditations, prayers, and personalized routines to foster positivity, mindfulness, and personal growth.",
+    testimonial: {
+      text: "I start every day with Positive Vibes. The morning routine feature, combining affirmations and meditation, sets a positive tone. The variety of content keeps me motivated and centered.",
+      image: "/assets/testimonial-1.jpg",
+      name: "Emily R,",
+      role: "Social Media Manager",
+    },
+    images: [
+      { src: "/assets/vissioon.png", alt: "Mobile App 1" },
+      { src: "/assets/vissioon-1.png", alt: "Mobile App 2" },
+      { src: "/assets/vissioon-2.png", alt: "Mobile App 3" },
+    ],
+  },
+  {
+    id: "9",
+    slug: "netifend",
+    title: "NetiFend",
+    image: "/assets/1.png",
+    shortDecription: "Boost Privacy & Cut Scam Risk",
+    client: "XYZ Company",
+    category: "Mobile App",
+    projectDate: "01 March, 2020",
+    url: "https://apps.apple.com/us/app/netifend/id6739185934",
+    description:
+      "NetiFend is an AI-powered security app designed to protect users from online scams. It offers real-time scam alerts, ad blocking, and personalized security tips, ensuring safer browsing experiences.",
+    featureHeading: "Key Features",
+    featureList: `<ul>
+  <li>Instantly analyzes search results to assess scam risks.</li>
+  <li>Blocks ads and trackers on Safari for better privacy and faster browsing.</li>
+  <li>Provides timely notifications about active scams.</li>
+  <li>Offers personalized security advice based on user preferences.</li>
+  <li>No technical setup required, the app activates immediately.</li>
+  <li>Runs seamlessly in the background for continuous protection.</li>
+  <li>Features a clean and simple design for ease of use.</li>
+  <li>Delivers round-the-clock security against online threats.</li>
+  <li>Offers a straightforward subscription plan with auto-renewal.</li>
+</ul>
+`,
+    additionalText:
+      "NetiFend is an AI-powered security app designed to enhance online privacy and protect users from scams. It offers real-time scam alerts, ad blocking, and personalized security tips to ensure safer browsing experiences.",
+    testimonial: {
+      text: "NetiFend has been a game-changer for my online security. The real-time scam alerts keep me informed, and the AI tips are incredibly helpful. I feel much safer browsing now.",
+      image: "/assets/testimonial-1.jpg",
+      name: "Patricia W. Hunte",
+      role: "Social Media Manager",
+    },
+    images: [
+      { src: "/assets/vissioon.png", alt: "Mobile App 1" },
+      { src: "/assets/vissioon-1.png", alt: "Mobile App 2" },
+      { src: "/assets/vissioon-2.png", alt: "Mobile App 3" },
+    ],
+  },
+  {
+    id: "10",
+    slug: "cruise-countdown-&-picker",
+    title: "Cruise Countdown & Picker",
+    image: "/assets/1.png",
+    shortDecription: "Royal Caribbean, Carnival, NCL",
+    client: "XYZ Company",
+    category: "Mobile App",
+    projectDate: "01 March, 2020",
+    url: "https://apps.apple.com/us/app/cruise-countdown-picker/id1072175149?ls=1",
+    description:
+      "Cruise Countdown Picker simplifies cruise planning by offering customizable countdown widgets, comprehensive cruise search and filtering options, price alerts, detailed itineraries, and insights into ship amenities and activities.",
+    featureHeading: "Key Features",
+    featureList: `<ul>
+  <li>Display countdowns on your home screen with customizable backgrounds and text.</li>
+  <li>Easily search and filter cruises by destination, departure port, cruise line, and travel dates.</li>
+  <li>Set unlimited price alerts for specific cruises and receive daily notifications on price changes.</li>
+  <li>Access curated deals such as last-minute offers, balcony deals, and discounts from major cruise lines.</li>
+  <li>View detailed itineraries, including destinations, arrival and departure times.</li>
+  <li>Explore onboard dining options, entertainment venues, and activities available on each ship.</li>
+  <li>Browse various cabin categories and their features.</li>
+  <li>Access deck maps for every ship to familiarize yourself with the ship's layout.</li>
+  <li>Enable dark mode for comfortable browsing during nighttime.</li>
+</ul>
+`,
+    additionalText:
+      "The Cruise Countdown Picker is a comprehensive cruise planning app that offers customizable countdown widgets, detailed cruise search and filtering, price alerts, curated deals, and insights into ship amenities and activities. It aims to simplify the process of planning and tracking your cruise journey.",
+    testimonial: {
+      text: "I love the countdown widgets! They keep me excited for my upcoming cruise. The price alerts are also a game-changer, helping me find the best deals effortlessly.",
+      image: "/assets/testimonial-1.jpg",
+      name: "James C. Farer",
+      role: "Business Devoloper",
     },
     images: [
       { src: "/assets/vissioon.png", alt: "Mobile App 1" },

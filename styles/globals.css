@@ -1782,3 +1782,6 @@ object-fit: cover; */
 .portfolio_detail li{
   margin-top: 10px;
 }
+.portfolio_detail a{
+      word-break: break-all;
+}
