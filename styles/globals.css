@@ -1602,6 +1602,9 @@ color: var(--wb-website-theme-secondary-color);
   background: #efefef;
   padding: 4px;
 }
+.form-btn:hover{
+  color: var(--wb-menu-hover-color);
+}
 .upload-files{
   outline: 2px dashed  rgba(0, 0, 0, 0.42);
   padding: 60px;
