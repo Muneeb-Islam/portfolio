@@ -11,14 +11,14 @@ export async function invokeApi({
   headers = {},
   queryParams = {},
   postData = {},
+  custom_api_url = null,
 }) {
   const reqObj = {
     method,
-    url: baseUri + path,
+    url: custom_api_url ? custom_api_url + path : baseUri + path,
     headers,
   };
 
-  console.log(baseUri, "baseUri");
   reqObj.params = queryParams;
 
   if (method === "POST") {
@@ -32,7 +32,9 @@ export async function invokeApi({
   }
 
   let results;
-
+  if (postData instanceof FormData) {
+    console.log(...postData, "<===REQUEST-DATA===>");
+  }
   console.log("<===REQUEST-OBJECT===>", reqObj);
 
   try {
@@ -41,17 +43,17 @@ export async function invokeApi({
     console.log(results.data, "--API SUCCESS");
     return results.data;
   } catch (error) {
-    // console.log("<===Api-Error===>", error.response.data);
+    console.log("<===Api-Error===>", error.response?.data);
     console.log(error.response, "--API ERROR");
 
-    if (error.response.status === 401) {
-      localStorage.clear();
-      window.location.reload();
-    }
+    // if (error.response?.status === 401) {
+    //   localStorage.clear();
+    //   window.location.reload();
+    // }
 
     return {
-      code: error.response.status,
-      message: error.response.data.message ? error.response.data.message : "",
+      code: error.response?.status,
+      message: error.response?.data.message ? error.response.data.message : "",
     };
   }
 }

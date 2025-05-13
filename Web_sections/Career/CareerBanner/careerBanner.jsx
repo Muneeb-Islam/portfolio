@@ -1,12 +1,85 @@
-import { TextField, Typography } from '@mui/material';
+import { _send_subscriber_email } from '@/DAL/Form';
+import { CircularProgress, TextField, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
+import { useSnackbar } from 'notistack';
 import { useState } from 'react';
 const CareerSection = () => {
     const [fileName, setFileName] = useState('');
+    const [fileRef, setFileRef] = useState("");
+    const { enqueueSnackbar } = useSnackbar();
+    const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
+    const [inputs, setInputs] = useState({
+        name: "",
+        mobile_number: "",
+        email: "",
+        cover_letter: "",
+        applied_position: "",
 
+    });
+    const handleChangeInputsState = (e) => {
+        const { name, value } = e.target;
+        if (name === "mobile_number") {
+            if (/^[\d+\-() ]*$/.test(value)) {
+                setInputs((prevState) => ({
+                    ...prevState,
+                    [name]: value,
+                }));
+            }
+        } else {
+            setInputs((prevState) => ({
+                ...prevState,
+                [name]: value,
+            }));
+        }
+    };
     const handleFileChange = (event) => {
         const file = event.target.files[0];
+        console.log(file, "eventfileeeeeeeeeeeeeeeeeee")
         setFileName(file ? file.name : '');
+        setFileRef(file);
     };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (!fileRef) {
+            enqueueSnackbar('Please upload a resume file before submitting.', { variant: 'error' });
+            return;
+        }
+        setIsLoading(true);
+
+        const formData = new FormData();
+        formData.append("form_type", "job_position");
+        formData.append("name", inputs.name);
+        formData.append("mobile_number", inputs.mobile_number);
+        formData.append("email", inputs.email);
+        formData.append("cover_letter", inputs.cover_letter);
+        formData.append("applied_position", inputs.applied_position);
+        if (fileRef) {
+            formData.append("file", fileRef);
+        }
+        console.log(...formData, "kjbjkbjk")
+        const resp = await _send_subscriber_email(formData);
+
+        if (resp.code === 200) {
+            enqueueSnackbar(resp.message, { variant: "success" });
+            router.push("/")
+        } else {
+            enqueueSnackbar(resp.message, { variant: "error" });
+            setIsLoading(false);
+        }
+    };
+    if (isLoading) {
+        return (
+            <div
+                className="d-flex justify-content-center align-items-center mt-5 pt-5"
+                style={{ minHeight: "80vh" }}
+            >
+                <CircularProgress sx={{ color: "#1b8e3d" }} />
+
+            </div>
+        );
+    }
 
     return (
         <section className="contact_1 main_section pt-2 pt-lg-5">
@@ -17,54 +90,75 @@ const CareerSection = () => {
                             <h6>Job Application Form</h6>
                             <h1>Please Fill Out the Form Below to Submit Your Job Application!</h1>
                         </div>
-                        <form action="">
+                        <form onSubmit={handleSubmit}>
                             <div className="row">
                                 <div className="col-md-6 wp-mt-20">
-                                    <TextField id="standard-basic" label="Enter Name" variant="standard" fullWidth required sx={{
-                                        '& .MuiInput-underline:after': {
-                                            borderBottomColor: '#ff7a3a',
-                                        },
-                                        '& .MuiInputLabel-root.Mui-focused': {
-                                            color: '#ff7a3a',
-                                        },
-                                    }} />
+
+                                    <TextField id="name" label="Enter Name" variant="standard" required fullWidth
+                                        name="name"
+                                        value={inputs.name}
+                                        onChange={handleChangeInputsState}
+                                        sx={{
+                                            '& .MuiInput-underline:after': {
+                                                borderBottomColor: '#ff7a3a',
+                                            },
+                                            '& .MuiInputLabel-root.Mui-focused': {
+                                                color: '#ff7a3a',
+                                            },
+                                        }} />
                                 </div>
-                                <div className="col-md-6  wp-mt-20">
-                                    <TextField id="standard-basic" label="Enter Email" variant="standard" fullWidth required sx={{
-                                        '& .MuiInput-underline:after': {
-                                            borderBottomColor: '#ff7a3a',
-                                        },
-                                        '& .MuiInputLabel-root.Mui-focused': {
-                                            color: '#ff7a3a',
-                                        },
-                                    }} />
-                                </div>
-                                <div className="col-md-6  wp-mt-20">
-                                    <TextField id="standard-basic" label="Enter Mobile" variant="standard" fullWidth required sx={{
-                                        '& .MuiInput-underline:after': {
-                                            borderBottomColor: '#ff7a3a',
-                                        },
-                                        '& .MuiInputLabel-root.Mui-focused': {
-                                            color: '#ff7a3a',
-                                        },
-                                    }} />
+                                <div className="col-md-6  wp-mt-20 ">
+
+                                    <TextField id="email" label="Enter Email" variant="standard"
+                                        name="email"
+                                        value={inputs.email}
+                                        onChange={handleChangeInputsState}
+                                        required fullWidth sx={{
+                                            '& .MuiInput-underline:after': {
+                                                borderBottomColor: '#ff7a3a',
+                                            },
+                                            '& .MuiInputLabel-root.Mui-focused': {
+                                                color: '#ff7a3a',
+                                            },
+                                        }} />
                                 </div>
                                 <div className="col-md-6  wp-mt-20">
 
-                                    <TextField id="standard-basic" label="Applied Position" variant="standard" fullWidth required sx={{
-                                        '& .MuiInput-underline:after': {
-                                            borderBottomColor: '#ff7a3a',
-                                        },
-                                        '& .MuiInputLabel-root.Mui-focused': {
-                                            color: '#ff7a3a',
-                                        },
-                                    }} />
+                                    <TextField id="outlined-basic"
+                                        name="mobile_number"
+                                        value={inputs.mobile_number}
+                                        onChange={handleChangeInputsState}
+
+                                        label="Enter Mobile" variant="standard" required fullWidth sx={{
+                                            '& .MuiInput-underline:after': {
+                                                borderBottomColor: '#ff7a3a',
+                                            },
+                                            '& .MuiInputLabel-root.Mui-focused': {
+                                                color: '#ff7a3a',
+                                            },
+                                        }} />
+                                </div>
+                                <div className="col-md-6  wp-mt-20">
+
+                                    <TextField label="Applied Position" variant="standard"
+                                        name='applied_position'
+                                        id="applied_position"
+                                        value={inputs?.applied_position}
+                                        onChange={handleChangeInputsState}
+                                        fullWidth required sx={{
+                                            '& .MuiInput-underline:after': {
+                                                borderBottomColor: '#ff7a3a',
+                                            },
+                                            '& .MuiInputLabel-root.Mui-focused': {
+                                                color: '#ff7a3a',
+                                            },
+                                        }} />
                                 </div>
                                 <div className='col-12 wp-mt-20'>
                                     <span style={{ fontWeight: "400" }}>Upload Resume *</span>
                                     <div className='upload-files mt-3'>
                                         <input
-                                            accept="*"
+                                            accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xlsx,.xls,.csv"
                                             style={{ display: 'none' }}
                                             id="upload-file"
                                             className=''
@@ -72,9 +166,9 @@ const CareerSection = () => {
                                             onChange={handleFileChange}
                                         />
                                         <label htmlFor="upload-file">
-                                            <button className='form-btn'>
+                                            <a className='form-btn'>
                                                 Choose File
-                                            </button>
+                                            </a>
                                         </label>
                                         <Typography variant="body2" className='ms-1' sx={{ fontWeight: "400", fontSize: "1rem" }}>
                                             {fileName || 'No file chosen'}
@@ -83,8 +177,12 @@ const CareerSection = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-12  wp-mt-20">
-                                    <TextField id="standard-basic" label="Cover Letter" variant="standard" fullWidth multiline
-                                        rows={4} required sx={{
+                                    <TextField id="cover_letter" label="Cover Letter" variant="standard"
+                                        name="cover_letter"
+                                        value={inputs.cover_letter}
+                                        onChange={handleChangeInputsState}
+                                        required fullWidth multiline
+                                        rows={4} sx={{
                                             '& .MuiInput-underline:after': {
                                                 borderBottomColor: '#ff7a3a',
                                             },
@@ -95,8 +193,14 @@ const CareerSection = () => {
 
                                 </div>
                             </div>
-                            <div className="row  wp-mt-20 text-center">
-                                <a href="#" class="mt-3 mt-lg-0 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18"><span>Submit</span></a>
+                            <div className="row justify-content-center wp-mt-20 text-center">
+                                <div className='col-6 col-md-12'>
+                                    <button type="submit" className="w-100 banner-solid-btn wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18 border-0">
+                                        <span>Submit</span>
+                                    </button>
+
+
+                                </div>
                             </div>
 
                         </form>
