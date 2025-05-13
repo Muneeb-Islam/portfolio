@@ -52,10 +52,10 @@ const CareerSection = () => {
             enqueueSnackbar('First letter of the Applied Position must be capitalized.', { variant: 'error' });
             return;
         }
-        if (!fileRef) {
-            enqueueSnackbar('Please upload a resume file before submitting.', { variant: 'error' });
-            return;
-        }
+        // if (!fileRef) {
+        //     enqueueSnackbar('Please upload a resume file before submitting.', { variant: 'error' });
+        //     return;
+        // }
         setIsLoading(true);
 
         const formData = new FormData();
@@ -165,7 +165,7 @@ const CareerSection = () => {
                                         }} />
                                 </div>
                                 <div className='col-12 wp-mt-20'>
-                                    <span style={{ fontWeight: "400" }}>Upload Resume *</span>
+                                    <span style={{ fontWeight: "400" }}>Upload Resume</span>
                                     <div className='upload-files mt-3'>
                                         <input
                                             accept=".pdf,.doc,.docx,.txt,.rtf,.odt,.xlsx,.xls,.csv"
