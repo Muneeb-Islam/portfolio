@@ -47,6 +47,11 @@ const ContactSection = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        const name = inputs.name.trim();
+        if (!name || name[0] !== name[0].toUpperCase()) {
+            enqueueSnackbar('First letter of the Name must be capitalized.', { variant: 'error' });
+            return;
+        }
         if (!fileRef) {
             enqueueSnackbar('Please upload a resume file before submitting.', { variant: 'error' });
             return;
@@ -63,11 +68,11 @@ const ContactSection = () => {
         if (fileRef) {
             formData.append("file", fileRef);
         }
-        console.log(...formData, "kjbjkbjk")
+        // console.log(...formData, "kjbjkbjk")
         const resp = await _send_subscriber_email(formData);
 
         if (resp.code === 200) {
-            enqueueSnackbar(resp.message, { variant: "success" });
+            enqueueSnackbar('Your question has been submitted successfully!', { variant: "success" });
             router.push("/")
         } else {
             enqueueSnackbar(resp.message, { variant: "error" });

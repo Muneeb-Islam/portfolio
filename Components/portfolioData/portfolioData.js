@@ -439,7 +439,7 @@ export const portfolioItems = [
     id: "9",
     slug: "positive-vibes",
     title: "PositiveVibes",
-    image: "/assets/1.png",
+    image: "/assets/positive-vibes.jpg",
     shortDecription: "Life Coach",
     client: "XYZ Company",
     category: "Mobile App",
@@ -487,9 +487,9 @@ export const portfolioItems = [
       role: "Social Media Manager",
     },
     images: [
-      { src: "/assets/vissioon.png", alt: "Mobile App 1" },
-      { src: "/assets/vissioon-1.png", alt: "Mobile App 2" },
-      { src: "/assets/vissioon-2.png", alt: "Mobile App 3" },
+      { src: "/assets/positive-vibes1.jpg", alt: "Mobile App 1" },
+      { src: "/assets/positive-vibes2.jpg", alt: "Mobile App 2" },
+      { src: "/assets/positive-vibes3.jpg", alt: "Mobile App 3" },
     ],
   },
   {

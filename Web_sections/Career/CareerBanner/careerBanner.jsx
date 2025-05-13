@@ -42,6 +42,16 @@ const CareerSection = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        const name = inputs.name.trim();
+        const appliedPosition = inputs.applied_position.trim();
+        if (!name || name[0] !== name[0].toUpperCase()) {
+            enqueueSnackbar('First letter of the Name must be capitalized.', { variant: 'error' });
+            return;
+        }
+        if (!appliedPosition || appliedPosition[0] !== appliedPosition[0].toUpperCase()) {
+            enqueueSnackbar('First letter of the Applied Position must be capitalized.', { variant: 'error' });
+            return;
+        }
         if (!fileRef) {
             enqueueSnackbar('Please upload a resume file before submitting.', { variant: 'error' });
             return;
@@ -58,11 +68,11 @@ const CareerSection = () => {
         if (fileRef) {
             formData.append("file", fileRef);
         }
-        console.log(...formData, "kjbjkbjk")
+        // console.log(...formData, "kjbjkbjk")
         const resp = await _send_subscriber_email(formData);
 
         if (resp.code === 200) {
-            enqueueSnackbar(resp.message, { variant: "success" });
+            enqueueSnackbar('Your job application has been submitted successfully!', { variant: "success" });
             router.push("/")
         } else {
             enqueueSnackbar(resp.message, { variant: "error" });

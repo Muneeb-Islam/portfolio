@@ -11,9 +11,8 @@ import {
   Brans_LogoSection,
   ExperianceSection,
   HowSection,
-  PricingSection,
   ServicesSection,
-  TestimonialSection,
+  TestimonialSection
 } from "@/Web_sections/Home";
 import { useEffect } from "react";
 export default function HomePage() {
@@ -33,7 +32,7 @@ export default function HomePage() {
       <AboutSection5 />
       <HowSection />
       <TestimonialSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <ExperianceSection />
       <ContactSection />
       <Footer />
