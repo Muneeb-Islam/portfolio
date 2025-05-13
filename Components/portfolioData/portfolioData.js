@@ -554,7 +554,7 @@ export const portfolioItems = [
     id: "11",
     slug: "cruise-countdown-&-picker",
     title: "Cruise Countdown & Picker",
-    image: "/assets/1.png",
+    image: "/assets/cruise-1.jpg",
     shortDecription: "Royal Caribbean, Carnival, NCL",
     client: "XYZ Company",
     category: "Mobile App",
@@ -603,9 +603,9 @@ export const portfolioItems = [
       role: "Business Devoloper",
     },
     images: [
-      { src: "/assets/vissioon.png", alt: "Mobile App 1" },
-      { src: "/assets/vissioon-1.png", alt: "Mobile App 2" },
-      { src: "/assets/vissioon-2.png", alt: "Mobile App 3" },
+      { src: "/assets/cruise-2.jpg", alt: "Mobile App 1" },
+      { src: "/assets/cruise-3.jpg", alt: "Mobile App 2" },
+      { src: "/assets/cruise-4.jpg", alt: "Mobile App 3" },
     ],
   },
 ];

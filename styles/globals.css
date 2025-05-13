@@ -1712,7 +1712,7 @@ object-fit: cover; */
   color: var(--wb-website-theme-secondary-color);
 }
 .portfolio-info h3 {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -1785,7 +1785,7 @@ object-fit: cover; */
 .portfolio_detail li{
   font-size: 1.125rem !important;
 }
-.portfolio_detail  li:not(:last-of-type) {
+.portfolio_detail  li:not(:first-of-type) {
     margin-top: 12px;
 }
 .portfolio_detail a{
