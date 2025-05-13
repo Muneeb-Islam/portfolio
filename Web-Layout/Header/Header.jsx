@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <header>
       <section
-        className="banner_154 main_section"
+        className="banner_154 pt-4"
         data-_id="67ab1283b9616f8ef8b9e29a"
         data-section_id="qbjenxbtom"
         data-section_title="Banner with menu box, content box with video modal and image"

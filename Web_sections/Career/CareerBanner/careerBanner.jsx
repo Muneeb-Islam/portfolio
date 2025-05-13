@@ -92,7 +92,7 @@ const CareerSection = () => {
     }
 
     return (
-        <section className="contact_1 main_section pt-2 pt-lg-5">
+        <section className="contact_1 main_section m-40">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-7">

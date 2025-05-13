@@ -2,7 +2,7 @@ const BannerSection = ({ detail }) => {
 
 
     return (
-        <section className="porfolio_banner breadcrumbs mt-3 mt-lg-5">
+        <section className="porfolio_banner breadcrumbs m-40">
             <div className="container">
                 <div className="row justify-content-center text-center">
                     <div className="col-lg-8">

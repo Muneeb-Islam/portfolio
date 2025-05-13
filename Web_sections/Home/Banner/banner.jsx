@@ -4,7 +4,7 @@ const BannerSection = () => {
 
   return (
     <section
-      className="banner_154"
+      className="banner_154 m-40"
       data-_id="67ab1283b9616f8ef8b9e29a"
       data-section_id="qbjenxbtom"
       data-section_title="Banner with menu box, content box with video modal and image"
@@ -16,7 +16,7 @@ const BannerSection = () => {
     >
       <div className="container">
 
-        <div className="row justify-content-center wp-pt-10">
+        <div className="row justify-content-center">
           <div className="col-12">
             <div
               className="wb-box banner-main-card wp-border-0"
