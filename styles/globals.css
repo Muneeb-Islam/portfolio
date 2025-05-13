@@ -263,6 +263,10 @@ p{
     }
     .service-list a{
       padding-left: 10px;
+
+    }
+    .service-list a:hover{
+      color: var(--wb-menu-hover-color);
     }
     .service-list li:first-child {
       border: none;
