@@ -11,7 +11,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const detail = portfolioItems.find((p) => p.slug === params.slug);
-  // const detail = portfolioItems.find(item => item.slug === slug);
 
   return {
     props: { detail },
