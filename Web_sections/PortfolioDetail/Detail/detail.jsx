@@ -2,6 +2,7 @@
 
 const DetailSection = ({ detail }) => {
     if (!detail) return null;
+    console.log(detail, "detaildetail")
 
     return (
         <section className="portfolio_detail m-40">
@@ -33,7 +34,11 @@ const DetailSection = ({ detail }) => {
                                 <li><span>Category</span> {detail.category}</li>
                                 {/* <li><span>Client</span> {detail.client}</li> */}
                                 {/* <li><span>detail date</span> {detail.detailDate}</li> */}
-                                <li><span>Project URL</span> <a href={detail.url} target="_blank" rel="noreferrer">{detail.url}</a></li>
+                                {detail?.title !== "Evom"
+                                    &&
+                                    <li><span>Project URL</span> <a href={detail.url} target="_blank" rel="noreferrer">{detail.url}</a></li>
+                                }
+
                                 {/* <li><a href={detail.url} target="_blank" rel="noreferrer" className="btn-visit align-self-start">Visit Website</a></li> */}
                             </ul>
                         </div>
