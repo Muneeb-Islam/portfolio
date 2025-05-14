@@ -213,7 +213,7 @@ export const portfolioItems = [
     client: "XYZ Company",
     category: "Website",
     projectDate: "01 March, 2020",
-    url: "https://lamovingstar.com/",
+    url: "https://evom.com/",
     description:
       "We provide reliable moving services in LA and beyond, with 24/7 availability, expert packing, and no hidden fees. From homes to offices, we ensure every move is efficient, safe, and hassle-free.",
     featureHeading: "Key Features",
