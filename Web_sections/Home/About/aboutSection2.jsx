@@ -16,8 +16,9 @@ const AboutSection2 = () => {
           <div className="col-12 col-lg-8">
             <div className="text-center">
               <h1>
-                Discover everything our platform has to offer
+                Smarter Tools. Better Decisions. One Platform.
               </h1>
+
             </div>
           </div>
         </div>
@@ -39,10 +40,10 @@ const AboutSection2 = () => {
           <div className="col-lg-6 wp-pt-40 text-center text-lg-start col-12" block-name="Block-2">
             <div className="wb-editor-block cuisina-whyus-main">
               <h2>
-                Powerful Data Insights
+                Advanced Data Intelligence
               </h2>
               <p>
-                Gain deep insights with our powerful analytics tools—uncover trends, spot opportunities, and refine your strategies for optimal success.
+                Harness the power of real-time analytics to identify trends, uncover growth opportunities, and optimize your strategy.
               </p>
             </div>
 
@@ -58,7 +59,7 @@ const AboutSection2 = () => {
                     Personalized Dashboards
                   </h3>
                   <p>
-                    Tailor your dashboard with a range of visualization options to suit your needs.
+                    Create dashboards tailored to your specific goals with drag-and-drop widgets, flexible layouts, and data filters.
                   </p>
                 </div>
               </div>
@@ -74,7 +75,7 @@ const AboutSection2 = () => {
                     Predictive Insights
                   </h3>
                   <p>
-                    Anticipate trends, stay ahead, and make data-driven decisions with confidence.
+                    Leverage AI-driven predictions to stay one step ahead. Make informed, forward-looking decisions with confidence.
                   </p>
                 </div>
               </div>

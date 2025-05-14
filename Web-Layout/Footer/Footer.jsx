@@ -66,11 +66,11 @@ const Footer = () => {
               </li>
               <li>
                 <span><i className="fas fa-phone-alt pe-2"></i></span>
-                <div><p>Phone </p><a href="tel:+923000800613">(+92)000 0000 000</a></div>
+                <div><p>Phone </p><a href="tel:+1 424-532-3898">+1 424-532-3898</a></div>
               </li>
               <li>
                 <span><i className="fas fa-map-marker-alt pe-2"></i></span>
-                <div><p>Address </p>Office #12, 2nd Floor, Lorem Plaza, Ipsum Street, Dolor City
+                <div><p>Address </p>14622 Ventura Blvd  Los Angeles CA 91403
                 </div>
               </li>
             </ul>

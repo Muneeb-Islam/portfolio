@@ -19,7 +19,7 @@
       --wb-menu-hover-color:#ff7a3a!important;
       
       --wb-website-text-font-family:'Moderustic', sans-serif!important;
-      --wb-theme-h1-font-size:2.500rem!important;
+      --wb-theme-h1-font-size:4.5rem!important;
       --wb-theme-h2-font-size:2.000rem!important;
       --wb-theme-h3-font-size:1.750rem!important;
       --wb-theme-h4-font-size:1.500rem!important;
@@ -113,7 +113,6 @@ p{
 }
 
 .banner_154 .saasnode-banner-main h1 {
-  font-size: 4.5rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   line-height: 1.2;
@@ -501,7 +500,6 @@ p{
   margin-bottom: 0.5rem;
 }
 .about_274 h1{
-  font-size: 4.5rem;
   line-height: 1.2;
 }
  h2{

@@ -206,8 +206,8 @@ export const portfolioItems = [
   },
   {
     id: "5",
-    slug: "la-moving-star",
-    title: "La Moving Star",
+    slug: "evom",
+    title: "Evom",
     image: "/assets/la-moving.jpg",
     shortDecription: "Responsive Website",
     client: "XYZ Company",

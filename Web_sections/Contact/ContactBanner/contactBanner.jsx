@@ -235,7 +235,7 @@ const ContactSection = () => {
                             </div>
                             <div className="info-body wb-editor-block">
                                 <p>Assistance hours: Monday – Friday, 9 am to 6 pm</p>
-                                <a href="tel:03044278167">(+92)000 0000 000</a>
+                                <a href="tel:+ 1 424-532-3898">+ 1 424-532-3898</a>
                             </div>
                         </div>
                         <div className="info-card mt-4">
@@ -254,7 +254,7 @@ const ContactSection = () => {
                                 <span className="mx-2">Address:</span>
                             </div>
                             <div className="info-body wb-editor-block">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, vitae?</p>
+                                <p>14622 Ventura Blvd  Los Angeles CA 91403</p>
                             </div>
                         </div>
                     </div>
