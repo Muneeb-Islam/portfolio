@@ -13,7 +13,7 @@ const AboutSection2 = () => {
     >
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-lg-8">
+          <div className="col-12 col-xl-10">
             <div className="text-center">
               <h1>
                 Transform the Way You Work with Our Platform.
