@@ -16,7 +16,7 @@ const AboutSection2 = () => {
           <div className="col-12 col-lg-8">
             <div className="text-center">
               <h1>
-                Smarter Tools. Better Decisions. One Platform.
+                Transform the Way You Work with Our Platform.
               </h1>
 
             </div>
