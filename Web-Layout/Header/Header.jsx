@@ -5,30 +5,42 @@ const sectionIds = ["xnvvxpvlbu", "services", "xlymldmuep"]; // IDs of sections 
 const Header = () => {
   const router = useRouter();
   const [activeSection, setActiveSection] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      let found = "";
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            found = id;
-            break;
-          }
-        }
-      }
-      setActiveSection(found);
-    };
 
-    if (router.pathname === "/") {
-      window.addEventListener("scroll", handleScroll);
-      handleScroll(); // initial check
+useEffect(() => {
+  const handleScroll = () => {
+    let found = "";
+
+    // Scroll background change logic
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
     }
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [router.pathname]);
+    // Active section logic
+    for (const id of sectionIds) {
+      const el = document.getElementById(id);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          found = id;
+          break;
+        }
+      }
+    }
+    setActiveSection(found);
+  };
+
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+  
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [router.pathname]);
+
 
   const handleNavClick = (hash) => {
     if (router.pathname === "/") {
@@ -42,7 +54,7 @@ const Header = () => {
   return (
     <header>
       <section
-        className="banner_154 pt-4"
+   className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""}`}
         data-_id="67ab1283b9616f8ef8b9e29a"
         data-section_id="qbjenxbtom"
         data-section_title="Banner with menu box, content box with video modal and image"
@@ -50,16 +62,14 @@ const Header = () => {
         id="qbjenxbtom"
         imgheight="1323"
         imgwidth="1828"
-        style={{ color: "rgb(20, 30, 39)" }}
       >
-        <div className="container">
+        <div className="container-fluid px-xl-5">
           <div className="row">
             <div className="col-12">
               <div
-                className="wb-box banner-menu-box"
+                className="wb-box"
                 imgheight="109"
                 imgwidth="1296"
-                style={{ boxShadow: "0px 0px 0px 0px", backgroundColor: "rgb(238, 237, 222)" }}
               >
                 <nav className="navbar navbar-expand-lg">
                   <a className="navbar-brand" href="/">
@@ -136,7 +146,7 @@ const Header = () => {
                       {/* <a href="#" className="mt-3 mt-lg-0 banner-login-btn wp-pb-14 wp-pt-14">
                         <span>Login</span>
                       </a> */}
-                      <a href="/contact" className="mt-3 mt-lg-0 ms-0 ms-lg-2 banner-solid-btn wp-pb-14 wp-pt-14 wp-pl-18 wp-pr-18">
+                      <a href="/contact" className="mt-3 mt-lg-0 ms-0 ms-lg-2 contained-button">
                         <span>Request A Quote</span>
                       </a>
                     </div>

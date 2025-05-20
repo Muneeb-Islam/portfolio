@@ -85,7 +85,7 @@ const ContactSection = () => {
                 className="d-flex justify-content-center align-items-center mt-5 pt-5"
                 style={{ minHeight: "80vh" }}
             >
-                <CircularProgress sx={{ color: "#1b8e3d" }} />
+                <CircularProgress sx={{ color: "var(--wb-website-theme-secondary-color)" }} />
 
             </div>
         );
@@ -98,7 +98,7 @@ const ContactSection = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-6">
                         <div className="wb-editor-block text-start form-main-wrapper">
-                            <h6>CONTACT NOW</h6>
+                            <h4>Contact Now</h4>
                             <h2>Have Question? Write a Message</h2>
                             <p>We will catch you as early as we receive the message</p>
                         </div>
@@ -112,10 +112,10 @@ const ContactSection = () => {
                                         onChange={handleChangeInputsState}
                                         sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
                                 </div>
@@ -127,10 +127,10 @@ const ContactSection = () => {
                                         onChange={handleChangeInputsState}
                                         required fullWidth sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
                                 </div>
@@ -143,20 +143,20 @@ const ContactSection = () => {
 
                                         label="Enter Mobile" variant="standard" required fullWidth sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
                                 </div>
                                 <div className="col-md-6  wp-mt-20">
                                     <FormControl fullWidth required sx={{
                                         '& .MuiInput-underline:after': {
-                                            borderBottomColor: '#ff7a3a',
+                                            borderBottomColor: 'var(--wb-menu-hover-color)',
                                         },
                                         '& .MuiInputLabel-root.Mui-focused': {
-                                            color: '#ff7a3a',
+                                            color: 'var(--wb-menu-hover-color)',
                                         },
                                     }}>
                                         <InputLabel id="demo-simple-select-label">Select Requirement</InputLabel>
@@ -205,10 +205,10 @@ const ContactSection = () => {
                                         required fullWidth multiline
                                         rows={4} sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
 
@@ -231,27 +231,27 @@ const ContactSection = () => {
                         <div className="info-card">
                             <div className="fw-bold font-size-md d-flex align-items-center"><i
                                 className="fas fa-phone-alt font-size-md"></i>
-                                <span className="mx-2">Phone:</span>
+                                <h4 className="mx-2 text-black mb-0">Phone:</h4>
                             </div>
                             <div className="info-body wb-editor-block">
                                 <p>Assistance hours: Monday – Friday, 9 am to 6 pm</p>
-                                <a href="tel:+ 1 424-532-3898">+ 1 424-532-3898</a>
+                                <h4 className='wb-fw-400'><a href="tel:+ 1 424-532-3898">+ 1 424-532-3898</a></h4>
                             </div>
                         </div>
                         <div className="info-card mt-4">
                             <div className="fw-bold font-size-md d-flex align-items-center"><i
                                 className="fas fa-envelope font-size-md"></i>
-                                <span className="mx-2">Email:</span>
+                                <h4 className="mx-2 text-black mb-0">Email:</h4>
                             </div>
                             <div className="info-body wb-editor-block">
                                 <p>Our support team will get back to you in 24-h during standard business hours.</p>
-                                <a href="mailto:bytepulse@gmail.com">bytepulse@gmail.com</a>
+                               <h4 className='wb-fw-400'> <a href="mailto:bytepulse@gmail.com">bytepulse@gmail.com</a></h4>
                             </div>
                         </div>
                         <div className="info-card mt-4">
                             <div className="fw-bold font-size-md d-flex align-items-center"><i
                                 className="fa fa-address-card font-size-md"></i>
-                                <span className="mx-2">Address:</span>
+                                <h4 className="mx-2 text-black mb-0">Address:</h4>
                             </div>
                             <div className="info-body wb-editor-block">
                                 <p>14622 Ventura Blvd  Los Angeles CA 91403</p>

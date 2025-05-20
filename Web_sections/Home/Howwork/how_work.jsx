@@ -2,7 +2,7 @@
 const HowSection = () => {
   return (
     <section
-      className="about_278 main_section wp-pb-80 m-40 wp-pt-60"
+      className="about_278 main_section wp-pb-80 m-40 wp-pt-60 bg-light-yellow"
       data-_id="67ab162db9616f8ef8b9e4e2"
       data-section_id="iqqtzvazmn"
       data-section_title="Workflow info steps tabs with shadow card, image and list text"
@@ -10,12 +10,6 @@ const HowSection = () => {
       id="iqqtzvazmn"
       imgheight="582"
       imgwidth="1828"
-      style={{
-        paddingTop: "0rem",
-        paddingBottom: "0rem",
-        marginTop: "0rem",
-        backgroundColor: "rgb(238, 237, 222)",
-      }}
     >
       <div className="container">
         <div className="row justify-content-center align-items-center">

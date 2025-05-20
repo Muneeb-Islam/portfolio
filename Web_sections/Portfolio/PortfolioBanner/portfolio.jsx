@@ -50,13 +50,13 @@ const PortfolioSection = () => {
                                                     backgroundColor: '#f9f9f9',
                                                     fontWeight: 500,
                                                     '&.Mui-selected': {
-                                                        backgroundColor: '#1b8e3d',
+                                                        backgroundColor: 'var(--wb-website-theme-secondary-color)',
                                                         color: '#fff',
-                                                        borderColor: '#1b8e3d',
+                                                        borderColor: 'var(--wb-website-theme-secondary-color)',
                                                     },
                                                     '&:hover': {
-                                                        backgroundColor: '#ff7a3a',
-                                                        borderColor: '#ff7a3a',
+                                                        backgroundColor: 'var(--wb-menu-hover-color)',
+                                                        borderColor: 'var(--wb-menu-hover-color)',
                                                     },
                                                 },
                                             }}

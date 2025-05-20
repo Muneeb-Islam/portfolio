@@ -3,6 +3,7 @@ import Header from "@/Web-Layout/Header/Header";
 import { CareerSection } from "@/Web_sections/Career";
 
 export default function CareerPage() {
+  
   return (
     <div>
       <Header />

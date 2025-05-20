@@ -13,7 +13,7 @@ const Footer = () => {
   };
   return (
     <section
-      className="footer_147 main_section py-3 py-md-5 m-40"
+      className="footer_147 main_section py-5 m-40"
       data-_id="67879e70b9616f8ef8b7e504"
       data-section_id="wfuwaaovth"
       data-section_title="Footer with newsletter, navigation, socials move up on hover"

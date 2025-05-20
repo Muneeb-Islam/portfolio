@@ -21,7 +21,7 @@ const ServicesSection = () => {
         <div className="row justify-content-center">
           {/* First Card */}
           <div className="col-md-6 col-lg-4 wp-pt-32 text-center text-md-start col-12" block-name="Block-2" imgheight="485" imgwidth="440">
-            <div className="wb-box mentor-flow-service-card h-100 position-relative wp-border-0 wp-pt-32 wp-pb-32 wp-pl-32 wp-pr-32" imgheight="453" imgwidth="416" style={{ backgroundColor: 'rgb(238, 237, 222)', padding: '0rem', boxShadow: '0px 0px 0px 0px' }}>
+            <div className="wb-box mentor-flow-service-card h-100 position-relative wp-border-0 wp-pt-32 wp-pb-32 wp-pl-32 wp-pr-32" imgheight="453" imgwidth="416">
               <div className="row justify-content-center justify-content-md-start">
                 <div className="wb-editor-block ">
                   <h3>
@@ -64,7 +64,7 @@ const ServicesSection = () => {
 
           {/* Second Card */}
           <div className="col-md-6 col-lg-4 wp-pt-32 text-center text-md-start col-12" block-name="Block-3" imgheight="485" imgwidth="440">
-            <div className="wb-box mentor-flow-service-card h-100 position-relative wp-border-0 wp-pt-32 wp-pb-32 wp-pl-32 wp-pr-32" imgheight="453" imgwidth="416" style={{ backgroundColor: 'rgb(238, 237, 222)', padding: '0rem', boxShadow: '0px 0px 0px 0px' }}>
+            <div className="wb-box mentor-flow-service-card h-100 position-relative wp-border-0 wp-pt-32 wp-pb-32 wp-pl-32 wp-pr-32" imgheight="453" imgwidth="416">
               <div className="row justify-content-center justify-content-md-start">
                 <h3>
                   Web Development
@@ -113,7 +113,7 @@ const ServicesSection = () => {
 
           {/* Third Card */}
           <div className="col-md-6 col-lg-4 wp-pt-32 text-center text-md-start col-12" block-name="Block-2" imgheight="485" imgwidth="440">
-            <div className="wb-box mentor-flow-service-card h-100 position-relative wp-border-0 wp-pt-32 wp-pb-32 wp-pl-32 wp-pr-32" imgheight="453" imgwidth="416" style={{ backgroundColor: 'rgb(238, 237, 222)', padding: '0rem', boxShadow: '0px 0px 0px 0px' }}>
+            <div className="wb-box mentor-flow-service-card h-100 position-relative wp-border-0 wp-pt-32 wp-pb-32 wp-pl-32 wp-pr-32" imgheight="453" imgwidth="416">
               <div className="row justify-content-center justify-content-md-start">
                 <h3>
                   Custom CMS & CRM

@@ -85,7 +85,7 @@ const CareerSection = () => {
                 className="d-flex justify-content-center align-items-center mt-5 pt-5"
                 style={{ minHeight: "80vh" }}
             >
-                <CircularProgress sx={{ color: "#1b8e3d" }} />
+                <CircularProgress sx={{ color: "var(--wb-website-theme-secondary-color)" }} />
 
             </div>
         );
@@ -97,8 +97,8 @@ const CareerSection = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-7">
                         <div className="wb-editor-block text-start form-main-wrapper">
-                            <h6>Job Application Form</h6>
-                            <h1>Please Fill Out the Form Below to Submit Your Job Application!</h1>
+                            <h4>Job Application Form</h4>
+                            <h2>Please Fill Out the Form Below to Submit Your Job Application!</h2>
                         </div>
                         <form onSubmit={handleSubmit}>
                             <div className="row">
@@ -110,10 +110,10 @@ const CareerSection = () => {
                                         onChange={handleChangeInputsState}
                                         sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
                                 </div>
@@ -125,10 +125,10 @@ const CareerSection = () => {
                                         onChange={handleChangeInputsState}
                                         required fullWidth sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
                                 </div>
@@ -141,10 +141,10 @@ const CareerSection = () => {
 
                                         label="Enter Mobile" variant="standard" required fullWidth sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
                                 </div>
@@ -157,10 +157,10 @@ const CareerSection = () => {
                                         onChange={handleChangeInputsState}
                                         fullWidth required sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
                                 </div>
@@ -194,10 +194,10 @@ const CareerSection = () => {
                                         required fullWidth multiline
                                         rows={4} sx={{
                                             '& .MuiInput-underline:after': {
-                                                borderBottomColor: '#ff7a3a',
+                                                borderBottomColor: 'var(--wb-menu-hover-color)',
                                             },
                                             '& .MuiInputLabel-root.Mui-focused': {
-                                                color: '#ff7a3a',
+                                                color: 'var(--wb-menu-hover-color)',
                                             },
                                         }} />
 

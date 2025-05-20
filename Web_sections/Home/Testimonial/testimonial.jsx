@@ -93,10 +93,9 @@ const TestimonialSection = () => {
             <ul className="list-unstyled mb-0 saasify-reviews-list">
               <li>
                 <div
-                  className="wb-box saasify-testimonial-card h-100 wp-border-0"
+                  className="wb-box saasify-testimonial-card h-100 wp-border-0 bg-light-yellow"
                   imgheight="141"
                   imgwidth="416"
-                  style={{ backgroundColor: "rgb(224, 221, 170)" }}
                 >
                   <div className="saasify-testimonial-flex-div">
                     <img

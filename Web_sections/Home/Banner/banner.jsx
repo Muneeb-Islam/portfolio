@@ -43,11 +43,10 @@ const BannerSection = () => {
                     </a>
                     <a
                       name="myModal1_id_qbjenxbtom"
-                      className="banner-video-btn wp-mt-16 wp-ml-10 wp-mr-10"
+                      className="banner-video-btn wp-mt-16 wp-ml-10 wp-mr-10 bg-yellow text-black"
                       type="button"
                       data-bs-toggle="modal"
                       data-bs-target="#myModal1_id_qbjenxbtom"
-                      style={{ backgroundColor: "rgb(248, 229, 89)", color: "rgb(20, 30, 39)" }}
                     >
                       <i className="fas fa-circle-play wp-mr-10"></i>
                       <span>Watch a demo</span>

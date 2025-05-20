@@ -62,17 +62,9 @@ const Brans_LogoSection = () => {
         <div className="row justify-content-center">
           <div className="text-center col-12 col-lg-12" data-block-name="Block-1">
             <div className="wb-editor-block online-health-hero-main">
-              <h2 style={{ lineHeight: "1.2" }}>
-                <span
-                  style={{
-                    color: "rgb(27, 142, 61)",
-                    fontSize: "1.375rem",
-                    fontWeight: 600,
-                  }}
-                >
+              <h3>
                   Partnered with 500+ respected companies
-                </span>
-              </h2>
+              </h3>
             </div>
           </div>
         </div>
