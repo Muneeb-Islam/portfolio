@@ -43,6 +43,7 @@ const achievementsData = [
   },
 ];
 
+import Link from "next/link";
 import CountUp from "react-countup";
 
 const Achievements = () => {
@@ -50,7 +51,7 @@ const Achievements = () => {
     <section className="achievement_wrapper mt-80" id="achievement">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6 text-center text-lg-start">
             <div>
               <h2>
                 Byte Pulse <span className="font-style"> Mobile App & Web Development </span> Company
@@ -64,10 +65,11 @@ const Achievements = () => {
             </div>
             <div className="mt-3">
               <p>Let's Start a New Project Together</p>
-              <a href="#contact_us" className="contained-button mt-2">
-                Request A Quote <i className="fas fa-chevron-right fa-icon"></i>
+              <Link href="/contact" className="contained-button mt-2">
+                Request A Quote 
+                {/* <i className="fas fa-chevron-right fa-icon"></i> */}
                 <span className="circle"></span>
-              </a>
+              </Link>
             </div>
           </div>
 

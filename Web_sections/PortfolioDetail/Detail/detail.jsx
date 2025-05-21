@@ -5,7 +5,7 @@ const DetailSection = ({ detail }) => {
     console.log(detail, "detaildetail")
 
     return (
-        <section className="portfolio_detail m-40">
+        <section className="portfolio_detail pt-60 pb-60">
             <div className="container">
                 <div className="row justify-content-between">
                     <div className="col-lg-8 feature_list">

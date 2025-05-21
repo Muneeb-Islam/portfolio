@@ -92,13 +92,13 @@ const CareerSection = () => {
     }
 
     return (
-        <section className="contact_1 main_section m-40">
+        <section className="contact_1 mt-3 mt-lg-4 pt-60 pb-60">
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-lg-7">
-                        <div className="wb-editor-block text-start form-main-wrapper">
+                    <div className="col-lg-8">
+                        <div className="text-center text-lg-start form-main-wrapper">
                             <h4>Job Application Form</h4>
-                            <h2>Please Fill Out the Form Below to Submit Your Job Application!</h2>
+                            <h2>Please <span className='font-style'>Fill Out the Form Below</span> to Submit Your <span className='font-style'>Job Application!</span></h2>
                         </div>
                         <form onSubmit={handleSubmit}>
                             <div className="row">
@@ -205,7 +205,7 @@ const CareerSection = () => {
                             </div>
                             <div className="row justify-content-center wp-mt-20 text-center">
                                 <div className='col-6 col-md-12'>
-                                    <button type="submit" className="w-100 banner-solid-btn wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18 border-0">
+                                    <button type="submit" className="w-100 contained-button  border-0">
                                         <span>Submit</span>
                                     </button>
 

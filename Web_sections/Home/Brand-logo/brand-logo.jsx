@@ -70,19 +70,19 @@ const Brans_LogoSection = () => {
 
         <Slider {...settings} className="pt-5">
           <div className="px-lg-5 d-flex align-items-center justify-content-center">
-            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/shape-logo-1.svg" alt="" className="img-fluid" data-width="20" data-height="40" imgheight="243" imgwidth="1196" data-image_name="shape-logo-1.svg" />
+            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/shape-logo-1.svg" alt="compnany logo 1" className="img-fluid" />
           </div>
           <div className="px-lg-5 d-flex align-items-center justify-content-center">
-            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/iconic-logo.svg" alt="" className="img-fluid" data-width="20" data-height="40" imgheight="243" imgwidth="2220" data-image_name="iconic-logo.svg" />
+            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/iconic-logo.svg" alt="compnany logo 2" className="img-fluid" />
           </div>
           <div className="px-lg-5 d-flex align-items-center justify-content-center">
-            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/shape-logo-2.svg" alt="" className="img-fluid" data-width="20" data-height="40" imgheight="243" imgwidth="1275" data-image_name="shape-logo-2.svg" />
+            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/shape-logo-2.svg" alt="compnany logo 3" className="img-fluid" />
           </div>
           <div className="px-lg-5 d-flex align-items-center justify-content-center">
-            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Visually-logo.svg" alt="" className="img-fluid" data-width="20" data-height="40" imgheight="243" imgwidth="1031" data-image_name="Visually-logo.svg" />
+            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Visually-logo.svg" alt="compnany logo 4" className="img-fluid"/>
           </div>
           <div className="px-lg-5 d-flex align-items-center justify-content-center">
-            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Vectra-logo.svg" alt="" className="img-fluid" data-width="20" data-height="40" imgheight="243" imgwidth="1031" data-image_name="Vectra-logo.svg" />
+            <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/Vectra-logo.svg" alt="compnany logo 5" className="img-fluid" />
           </div>
 
         </Slider>

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-const sectionIds = ["xnvvxpvlbu", "services", "xlymldmuep"]; // IDs of sections like Why Us, Services, Testimonial
+const sectionIds = ["achievement", "services", "testimonial"]; // IDs of sections like Why Us, Services, Testimonial
 
 const Header = () => {
   const router = useRouter();
@@ -61,7 +61,7 @@ useEffect(() => {
                     <img
                       src="/assets/logoo.png"
                       className="img-fluid brand-logo"
-                      alt=""
+                      alt="Brand Logo"
                     />
                   </a>
                   <button
@@ -91,8 +91,8 @@ useEffect(() => {
                       </li>
                       <li className="nav-item">
                         <a
-                          className={`nav-link ${activeSection === "xnvvxpvlbu" ? "active" : ""}`}
-                          onClick={() => handleNavClick("xnvvxpvlbu")}
+                          className={`nav-link ${activeSection === "achievement" ? "active" : ""}`}
+                          onClick={() => handleNavClick("achievement")}
                           style={{ cursor: "pointer" }}
                         >
                           Why Us
@@ -119,8 +119,8 @@ useEffect(() => {
                       </li>
                       <li className="nav-item">
                         <a
-                          className={`nav-link ${activeSection === "xlymldmuep" ? "active" : ""}`}
-                          onClick={() => handleNavClick("xlymldmuep")}
+                          className={`nav-link ${activeSection === "testimonial" ? "active" : ""}`}
+                          onClick={() => handleNavClick("testimonial")}
                           style={{ cursor: "pointer" }}
                         >
                           Testimonial

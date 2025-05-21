@@ -22,7 +22,7 @@ const PortfolioSection = () => {
         : portfolioItems.filter(item => item.category === value);
 
     return (
-        <section className='m-40 portfolio_wrapper'>
+        <section className='portfolio_wrapper mt-3 mt-lg-4 pb-60'>
             <div className="container">
                 <div className="row justify-content-center">
                     <div className='tab-heading text-center'>
@@ -80,9 +80,9 @@ const PortfolioSection = () => {
                                                 </a>
                                             </div>
                                             <div className="item-info">
-                                                <h4>
+                                                <h3>
                                                     <a href={`/portfolio/${item.slug}`} target="_blank">{item.title}</a>
-                                                </h4>
+                                                </h3>
                                                 <p>{item.shortDecription}</p>
                                             </div>
                                         </div>

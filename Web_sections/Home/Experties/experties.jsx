@@ -55,7 +55,7 @@ const Experties = () => {
               <div className="experties-card text-center">
                 <img src={item.img} alt={item.title} className="img-fluid" />
                 <h4 className="mt-3">{item.title}</h4>
-                <p className="small">{item.desc}</p>
+                <p >{item.desc}</p>
               </div>
             </div>
           ))}

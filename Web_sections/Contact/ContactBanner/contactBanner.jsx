@@ -93,15 +93,18 @@ const ContactSection = () => {
 
 
     return (
-        <section className="contact_1 main_section m-40" id="contact">
+        <section className="contact_1  mt-3 mt-lg-4 pt-60 pb-60" id="contact">
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-lg-6">
-                        <div className=" text-center text-lg-start form-main-wrapper">
-                            <h4>Contact Now</h4>
-                            <h2>Have Question? Write a Message</h2>
+                                        <div className="col-lg-8 text-center">
+                                             <div className="form-main-wrapper">
+                            <h2>Have Question? <span className='font-style'>Write a Message</span></h2>
                             <p>We will catch you as early as we receive the message</p>
                         </div>
+                    </div>
+                </div>
+                <div className="row justify-content-center align-items-center">
+                    <div className="col-lg-6">
                         <form onSubmit={handleSubmit}>
                             <div className="row">
                                 <div className="col-md-6 wp-mt-20">
@@ -227,7 +230,10 @@ const ContactSection = () => {
 
                         </form>
                     </div>
-                    <div className="col-lg-5 mt-4 mt-lg-0">
+                    <div className="col-lg-6 mt-4 mt-lg-0">
+                        <img src="/assets/app-img7.png" alt="Contact Us" className='img-fluid'/>
+                    </div>
+                    {/* <div className="col-lg-5 mt-4 mt-lg-0">
                         <div className="info-card">
                             <div className="fw-bold font-size-md d-flex align-items-center"><i
                                 className="fas fa-phone-alt font-size-md"></i>
@@ -257,7 +263,7 @@ const ContactSection = () => {
                                 <p>14622 Ventura Blvd  Los Angeles CA 91403</p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

@@ -1,7 +1,7 @@
 const HowSection = () => {
   return (
     <section
-      className="about_278 main_section wp-pb-80 m-40 wp-pt-60 bg-light-blue"
+      className="about_278 mt-80 pt-60 pb-60 bg-light-blue"
       id="iqqtzvazmn"
     >
       <div className="container">
@@ -21,7 +21,7 @@ const HowSection = () => {
                     <div className="col-md-5 wp-pt-32 tab-img-col">
                       <img
                         src="https://builder-templates-bucket.s3.amazonaws.com/67ab162db9616f8ef8b9e4e2/assets/tab-image-01.png"
-                        alt=""
+                        alt="Strategic Planning"
                         className="img-fluid"
                       />
                     </div>
@@ -43,7 +43,7 @@ const HowSection = () => {
                     <div className="col-md-5 wp-pt-32 tab-img-col">
                       <img
                         src="https://builder-templates-bucket.s3.amazonaws.com/67ab162db9616f8ef8b9e4e2/assets/tab-image-02.png"
-                        alt=""
+                        alt="Seamless Setup"
                         className="img-fluid"
                       />
                     </div>
@@ -66,7 +66,7 @@ const HowSection = () => {
                     <div className="col-md-5 wp-pt-32 tab-img-col">
                       <img
                         src="https://builder-templates-bucket.s3.amazonaws.com/67ab162db9616f8ef8b9e4e2/assets/tab-image-03.png"
-                        alt=""
+                        alt="Scale & Optimize"
                         className="img-fluid"
                       />
                     </div>

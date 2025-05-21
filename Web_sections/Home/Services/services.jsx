@@ -52,7 +52,7 @@ const ServicesSection = () => {
                   <ul className="service-card py-3">
                     {service.icons.map((icon, i) => (
                       <li key={i}>
-                        <img src={icon} alt="" className="img-fluid" />
+                        <img src={icon} alt={service?.title} className="img-fluid" />
                       </li>
                     ))}
                   </ul>
