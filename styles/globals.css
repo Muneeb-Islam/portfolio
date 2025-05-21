@@ -685,6 +685,9 @@ border: 1px solid rgba(191, 191, 191, 0.5);
 .experties-card h4{
   font-weight: 600;
 }
+.experties-card p{
+  font-size: 16px;
+}
 .experties-card img{
 width: 90px;
 }
