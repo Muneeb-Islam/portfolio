@@ -31,7 +31,7 @@ const AboutSection3 = () => {
               ].map((text, index) => (
                 <li key={index} className="d-flex align-items-baseline wp-mb-16" block-name={`Item-${index + 1}`}>
                   <i
-                    className="fas fa-chevron-circle-right wp-mr-10 font-size-lg text-yellow"
+                    className="fas fa-chevron-circle-right wp-mr-10 font-size-lg text-orange"
         
                   ></i>
                   <div className="wb-editor-block mentor-flow-about-list-text">

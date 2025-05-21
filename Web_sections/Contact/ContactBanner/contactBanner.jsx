@@ -217,7 +217,7 @@ const ContactSection = () => {
                             <div className="row justify-content-center wp-mt-20 text-center">
                                 <div className='col-6 col-md-12'>
                                     {/* <a href="#" class="w-100 banner-solid-btn wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18"><span>Submit</span></a> */}
-                                    <button type="submit" className="w-100 banner-solid-btn wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18 border-0">
+                                    <button type="submit" className="w-100 contained-button wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18 border-0">
                                         <span>Submit</span>
                                     </button>
 

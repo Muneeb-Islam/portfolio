@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 const Brans_LogoSection = () => {
   var settings = {
     dots: false,
+      arrows: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -57,19 +58,17 @@ const Brans_LogoSection = () => {
   };
   return (
 
-    <section className="hero_95 main_section wp-pt-65" data-_id="66bf8b86b711672becdea6a2" data-section_id="rgukwtzywr" data-section_title="Partners logo owl carousel with top and bottom border" data-section_name="66bf8b86b711672becdea6a2" id="rgukwtzywr" imgheight="104" imgwidth="1828" style={{ backgroundImage: "none" }}>
+    <section className="brand_logo_wrapper bg-light-blue pt-60 pb-60 mt-80" id="rgukwtzywr">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="text-center col-12 col-lg-12" data-block-name="Block-1">
-            <div className="wb-editor-block online-health-hero-main">
+          <div className="text-center col-12 col-lg-12">
               <h3>
                   Partnered with 500+ respected companies
               </h3>
-            </div>
           </div>
         </div>
 
-        <Slider {...settings} className="wp-pt-40">
+        <Slider {...settings} className="pt-5">
           <div className="px-lg-5 d-flex align-items-center justify-content-center">
             <img src="https://builder-templates-bucket.s3.amazonaws.com/67d111d85570996769fd3f35/assets/shape-logo-1.svg" alt="" className="img-fluid" data-width="20" data-height="40" imgheight="243" imgwidth="1196" data-image_name="shape-logo-1.svg" />
           </div>

@@ -54,24 +54,9 @@ useEffect(() => {
   return (
     <header>
       <section
-   className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""}`}
-        data-_id="67ab1283b9616f8ef8b9e29a"
-        data-section_id="qbjenxbtom"
-        data-section_title="Banner with menu box, content box with video modal and image"
-        data-section_name="67ab1283b9616f8ef8b9e29a"
-        id="qbjenxbtom"
-        imgheight="1323"
-        imgwidth="1828"
-      >
-        <div className="container-fluid px-xl-5">
-          <div className="row">
-            <div className="col-12">
-              <div
-                className="wb-box"
-                imgheight="109"
-                imgwidth="1296"
-              >
-                <nav className="navbar navbar-expand-lg">
+   className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""}`}>
+        <div className="container">
+            <nav className="navbar navbar-expand-lg">
                   <a className="navbar-brand" href="/">
                     <img
                       src="/assets/logoo.png"
@@ -93,7 +78,7 @@ useEffect(() => {
                     </span>
                   </button>
                   <div className="collapse navbar-collapse" id="navbarSupportedContent_id_qbjenxbtom">
-                    <ul className="navbar-nav mx-auto">
+                    <ul className="navbar-nav align-items-lg-center mx-auto ps-3 ps-lg-0">
                       <li className="nav-item">
                         <a
                           className={`nav-link ${router.pathname === "/" && !activeSection ? "active" : ""
@@ -141,20 +126,13 @@ useEffect(() => {
                           Testimonial
                         </a>
                       </li>
-                    </ul>
-                    <div className="saasnode-banner-btns">
-                      {/* <a href="#" className="mt-3 mt-lg-0 banner-login-btn wp-pb-14 wp-pt-14">
-                        <span>Login</span>
-                      </a> */}
-                      <a href="/contact" className="mt-3 mt-lg-0 ms-0 ms-lg-2 contained-button">
+                       <li><a href="/contact" className="mt-3 mt-lg-0 ms-0 ms-lg-3 contained-button">
                         <span>Request A Quote</span>
-                      </a>
-                    </div>
+                      </a></li>
+                    </ul>
+         
                   </div>
                 </nav>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </header>

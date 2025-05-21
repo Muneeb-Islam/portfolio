@@ -54,7 +54,7 @@ const ExperianceSection = () => {
               <li block-name="Item-1">
                 <i
                   className="far fa-check-circle wp-mr-10"
-                  style={{ color: "rgb(255, 122, 58)" }}
+                  
                 ></i>
                 <p>No credit card required</p>
               </li>
@@ -62,7 +62,7 @@ const ExperianceSection = () => {
               <li block-name="Item-2">
                 <i
                   className="far fa-check-circle wp-mr-10"
-                  style={{ color: "rgb(255, 122, 58)" }}
+                  
                 ></i>
                 <p>Free 30-day trial for all features</p>
               </li>

@@ -69,7 +69,7 @@ const AboutSection = () => {
 
             <ul className="list-unstyled mb-0 wp-mt-32 why-saasify-list">
               <li>
-                <i className="fas fa-circle-chevron-right wp-mr-10 text-yellow"></i>
+                <i className="fas fa-circle-chevron-right wp-mr-10 text-orange"></i>
                 <div className="wb-editor-block why-saasify-text">
                   <h3>Flexible &amp; Adaptive</h3>
                   <p>
@@ -80,7 +80,7 @@ const AboutSection = () => {
               </li>
 
               <li>
-                <i className="fas fa-circle-chevron-right wp-mr-10 text-yellow"></i>
+                <i className="fas fa-circle-chevron-right wp-mr-10 text-orange"></i>
                 <div className="wb-editor-block why-saasify-text">
                   <h3>Scalable Growth</h3>
                   <p>
@@ -91,7 +91,7 @@ const AboutSection = () => {
               </li>
 
               <li>
-                <i className="fas fa-circle-chevron-right wp-mr-10 text-yellow"></i>
+                <i className="fas fa-circle-chevron-right wp-mr-10 text-orange"></i>
                 <div className="wb-editor-block why-saasify-text">
                   <h3>Innovation-Driven</h3>
                   <p>

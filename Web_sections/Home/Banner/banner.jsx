@@ -4,67 +4,37 @@ const BannerSection = () => {
 
   return (
     <section
-      className="banner_154 m-40"
-      data-_id="67ab1283b9616f8ef8b9e29a"
-      data-section_id="qbjenxbtom"
-      data-section_title="Banner with menu box, content box with video modal and image"
-      data-section_name="67ab1283b9616f8ef8b9e29a"
-      id="qbjenxbtom"
-      imgheight="1323"
-      imgwidth="1828"
-      style={{ color: "rgb(20, 30, 39)" }}
-    >
+      className="banner_wrapper mt-3 mt-lg-4">
       <div className="container">
 
         <div className="row justify-content-center">
           <div className="col-12">
-            <div
-              className="wb-box banner-main-card wp-border-0"
-              imgheight="1161"
-              imgwidth="1296"
-              style={{ backgroundColor: "rgb(32, 50, 57)" }}
-            >
               <div className="row justify-content-center">
-                <div className="col-lg-10 text-center">
-                  <div className="wb-editor-block saasnode-banner-main wp-pb-20">
+                <div className="col-lg-10 col-xl-8 text-center">
                     <h1>
-                      Elevate your business with advanced solutions
+                      Elevate your business with <span className="font-style">advanced solutions</span>
                     </h1>
-                    <p>
-                      <span style={{ color: "rgb(238, 237, 222)" }}>
+                    <p>                    
                         Our advanced solutions are engineered to propel your business forward by optimizing processes,
                         enhancing efficiency, and driving innovation across every aspect.
-                      </span>
                     </p>
-                  </div>
-                  <div className="saasnode-banner-btns">
-                    <a href="#contact" className="wp-mt-16 banner-solid-btn">
-                      <span>Get Started</span>
+                    <a href="#contact" className="wp-mt-16 contained-button">
+                    Get Started
                     </a>
                     <a
                       name="myModal1_id_qbjenxbtom"
-                      className="banner-video-btn wp-mt-16 wp-ml-10 wp-mr-10 bg-yellow text-black"
+                      className="bg-orange wp-mt-16 wp-ml-10 wp-mr-10 contained-button"
                       type="button"
                       data-bs-toggle="modal"
                       data-bs-target="#myModal1_id_qbjenxbtom"
                     >
                       <i className="fas fa-circle-play wp-mr-10"></i>
-                      <span>Watch a demo</span>
+                      Watch a demo
                     </a>
-                  </div>
                 </div>
 
-                <div className="col-12 text-center wp-pt-32">
-                  <img
-                    src="https://builder-templates-bucket.s3.amazonaws.com/67ab1283b9616f8ef8b9e29a/assets/saasnode-banner-img.svg"
-                    alt=""
-                    className="img-fluid"
-                    data-width="20"
-                    data-height="40"
-                  />
-                </div>
               </div>
-            </div>
+
           </div>
         </div>
 

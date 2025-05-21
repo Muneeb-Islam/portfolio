@@ -7,9 +7,11 @@ import {
   AboutSection2,
   AboutSection3,
   AboutSection5,
+  Achievements,
   BannerSection,
   Brans_LogoSection,
   ExperianceSection,
+  Experties,
   HowSection,
   ServicesSection,
   TestimonialSection
@@ -24,16 +26,18 @@ export default function HomePage() {
       <Header />
       <BannerSection />
       <Brans_LogoSection />
-      <AboutSection />
-      <AboutSection2 />
-      <AboutSection3 />
+      <Achievements/>
+      {/* <AboutSection /> */}
+      {/* <AboutSection2 />
+      <AboutSection3 /> */}
       <ServicesSection />
       {/* <AboutSection4 /> */}
-      <AboutSection5 />
+      {/* <AboutSection5 /> */}
       <HowSection />
+      <Experties/>
       <TestimonialSection />
       {/* <PricingSection /> */}
-      <ExperianceSection />
+      {/* <ExperianceSection /> */}
       <ContactSection />
       <Footer />
     </div>

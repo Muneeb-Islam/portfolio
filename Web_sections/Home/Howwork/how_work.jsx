@@ -1,35 +1,21 @@
-
 const HowSection = () => {
   return (
     <section
-      className="about_278 main_section wp-pb-80 m-40 wp-pt-60 bg-light-yellow"
-      data-_id="67ab162db9616f8ef8b9e4e2"
-      data-section_id="iqqtzvazmn"
-      data-section_title="Workflow info steps tabs with shadow card, image and list text"
-      data-section_name="67ab162db9616f8ef8b9e4e2"
+      className="about_278 main_section wp-pb-80 m-40 wp-pt-60 bg-light-blue"
       id="iqqtzvazmn"
-      imgheight="582"
-      imgwidth="1828"
     >
       <div className="container">
         <div className="row justify-content-center align-items-center">
-
-          <div className="col-lg-7 wp-pt-40 pe-lg-5 col-12" block-name="Block-1" imgheight="462" imgwidth="770">
-            <div
-              className="wb-box saasify-tab-box"
-              imgheight="422"
-              imgwidth="710"
-              style={{ boxShadow: "0px 0px 0px 0px" }}
-            >
+          <div className="col-lg-7 wp-pt-40 pe-lg-5 col-12">
+            <div className="wb-box saasify-tab-box" style={{ boxShadow: "0px 0px 0px 0px" }}>
               <div className="nav nav-tabs justify-content-center">
-                <a className="nav-link active" data-bs-toggle="tab" href="#step1_id_iqqtzvazmn">Step 1</a>
-                <a className="nav-link" data-bs-toggle="tab" href="#step2_id_iqqtzvazmn">Step 2</a>
-                <a className="nav-link" data-bs-toggle="tab" href="#step3_id_iqqtzvazmn">Step 3</a>
+                <a className="nav-link active" data-bs-toggle="tab" href="#step1_id_iqqtzvazmn">Plan</a>
+                <a className="nav-link" data-bs-toggle="tab" href="#step2_id_iqqtzvazmn">Setup</a>
+                <a className="nav-link" data-bs-toggle="tab" href="#step4_id_iqqtzvazmn">Grow</a>
               </div>
 
               <div className="tab-content">
-
-                {/* Step 1 */}
+                {/* Step 1 - Plan */}
                 <div className="tab-pane fade active show" id="step1_id_iqqtzvazmn">
                   <div className="row justify-content-center align-items-center">
                     <div className="col-md-5 wp-pt-32 tab-img-col">
@@ -37,25 +23,21 @@ const HowSection = () => {
                         src="https://builder-templates-bucket.s3.amazonaws.com/67ab162db9616f8ef8b9e4e2/assets/tab-image-01.png"
                         alt=""
                         className="img-fluid"
-                        data-width="20"
-                        data-height="40"
                       />
                     </div>
                     <div className="col-md-7 wp-pt-32 ps-md-5">
-                      <div className="wb-editor-block saasify-tab-text">
-                        <h3>Integration</h3>
-                        <p>We begin with a structured implementation process, laying the foundation for seamless integration and long-term success.</p>
-                      </div>
+                      <h3>Strategic Planning</h3>
+                      <p>We assess your business needs and craft a tailored roadmap to align with your goals.</p>
                       <ul className="list-unstyled mb-0 wp-mt-16 saasify-tab-list">
-                        <li><i className="fas fa-circle wp-mr-10"></i> Centralized data</li>
-                        <li><i className="fas fa-circle wp-mr-10"></i> Customizable layout</li>
-                        <li><i className="fas fa-circle wp-mr-10"></i> Interactive visualizations</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> Needs analysis</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> Goal setting</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> Strategy blueprint</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                {/* Step 2 */}
+                {/* Step 2 - Setup */}
                 <div className="tab-pane fade" id="step2_id_iqqtzvazmn">
                   <div className="row justify-content-center align-items-center">
                     <div className="col-md-5 wp-pt-32 tab-img-col">
@@ -63,45 +45,38 @@ const HowSection = () => {
                         src="https://builder-templates-bucket.s3.amazonaws.com/67ab162db9616f8ef8b9e4e2/assets/tab-image-02.png"
                         alt=""
                         className="img-fluid"
-                        data-width="20"
-                        data-height="40"
                       />
                     </div>
                     <div className="col-md-7 wp-pt-32 ps-md-5">
-                      <div className="wb-editor-block saasify-tab-text">
-                        <h3>Configuration</h3>
-                        <p>If you're migrating from another system, we guide you through a hassle-free data transfer to ensure continuity and accuracy.</p>
-                      </div>
+                      <h3>Seamless Setup</h3>
+                      <p>We handle implementation, integrations, and configurations tailored to your workflow.</p>
                       <ul className="list-unstyled mb-0 wp-mt-16 saasify-tab-list">
-                        <li><i className="fas fa-circle wp-mr-10"></i> Customize settings</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> System integration</li>
                         <li><i className="fas fa-circle wp-mr-10"></i> Data migration</li>
-                        <li><i className="fas fa-circle wp-mr-10"></i> Security setup</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> Configuration</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                {/* Step 3 */}
-                <div className="tab-pane fade" id="step3_id_iqqtzvazmn">
+
+                {/* Step 4 - Grow */}
+                <div className="tab-pane fade" id="step4_id_iqqtzvazmn">
                   <div className="row justify-content-center align-items-center">
                     <div className="col-md-5 wp-pt-32 tab-img-col">
                       <img
                         src="https://builder-templates-bucket.s3.amazonaws.com/67ab162db9616f8ef8b9e4e2/assets/tab-image-03.png"
                         alt=""
                         className="img-fluid"
-                        data-width="20"
-                        data-height="40"
                       />
                     </div>
                     <div className="col-md-7 wp-pt-32 ps-md-5">
-                      <div className="wb-editor-block saasify-tab-text">
-                        <h3>Optimization</h3>
-                        <p>We provide expert insights, best practices, and performance enhancements to maximize efficiency and drive better results.</p>
-                      </div>
+                      <h3>Scale & Optimize</h3>
+                      <p>We help you monitor performance, gather insights, and scale operations for growth.</p>
                       <ul className="list-unstyled mb-0 wp-mt-16 saasify-tab-list">
-                        <li><i className="fas fa-circle wp-mr-10"></i> Scalability</li>
-                        <li><i className="fas fa-circle wp-mr-10"></i> Performance optimization</li>
-                        <li><i className="fas fa-circle wp-mr-10"></i> Feedback collection</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> Analytics & reports</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> Ongoing enhancements</li>
+                        <li><i className="fas fa-circle wp-mr-10"></i> Business scaling</li>
                       </ul>
                     </div>
                   </div>
@@ -111,18 +86,15 @@ const HowSection = () => {
             </div>
           </div>
 
-          <div className="col-lg-5 text-center text-lg-start wp-pt-40 col-12" block-name="Block-2" imgheight="400" imgwidth="550">
-            <h2>
-              Our Proven Workflow for Success
-            </h2>
+          <div className="col-lg-5 text-center text-lg-start wp-pt-40 col-12">
+           <h2>Our Workflow for<span className="font-style"> Success</span></h2>
             <p>We follow a structured approach to ensure seamless implementation, smooth configuration, and optimal performance—helping you get the most out of our platform.</p>
-            <div className="saasify-started-btn">
-              <a href="#contact" className="wp-mt-20">
+            <div className="">
+              <a href="#contact" className="wp-mt-20 contained-button">
                 <span>Get Started</span>
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
