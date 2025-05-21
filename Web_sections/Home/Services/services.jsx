@@ -21,7 +21,7 @@ const servicesData = [
 
 const ServicesSection = () => {
   return (
-     <section className="services_wrapper main_section m-40" id="services">
+     <section className="services_wrapper  mt-80" id="services">
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-6">

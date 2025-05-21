@@ -611,9 +611,7 @@ border: 1px solid rgba(191, 191, 191, 0.5);
   border-top: 0.063rem solid var(--wb-input-border-color);
 }
 /* ======================= services section css start ======================= */
-  .services_wrapper {
-  background: var(--wb-website-theme-primary-color);
-}
+ 
 
 
 .services_wrapper .main-service-card {
