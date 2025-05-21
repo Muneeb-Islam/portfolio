@@ -97,7 +97,7 @@ const ContactSection = () => {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-6">
-                        <div className="wb-editor-block text-start form-main-wrapper">
+                        <div className=" text-center text-lg-start form-main-wrapper">
                             <h4>Contact Now</h4>
                             <h2>Have Question? Write a Message</h2>
                             <p>We will catch you as early as we receive the message</p>
@@ -227,7 +227,7 @@ const ContactSection = () => {
 
                         </form>
                     </div>
-                    <div className="col-lg-5 mt-5 mt-lg-0">
+                    <div className="col-lg-5 mt-4 mt-lg-0">
                         <div className="info-card">
                             <div className="fw-bold font-size-md d-flex align-items-center"><i
                                 className="fas fa-phone-alt font-size-md"></i>

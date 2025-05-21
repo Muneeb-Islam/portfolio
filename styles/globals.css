@@ -1522,10 +1522,7 @@ color: var(--wb-website-theme-secondary-color);
   position: relative;
 }
 
-.contact_1 .form-main-wrapper h2 {
-  font-size: 2.625rem!important;
-  font-weight: bold;
-}
+
 .form-main-wrapper p{
   margin-top: 15px;
 }
