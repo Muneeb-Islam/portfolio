@@ -6,10 +6,11 @@ export default function Contact() {
     <>
       <HeaderController
         fav_icon="/assets/logo.png"
-        // image={s3baseUrl + brand_favicon}
+        image="/assets/logo.png"
         title=" Get in Touch"
-        description="Have a project in mind or just want to say hello? Feel free to reach out!"
-        // keywords={meta_keywords}
+        description="Have a project in mind or need expert guidance? Get in touch with Byte Pulse today. We’re here to help you build digital solutions that scale and succeed."
+        keywords="contact byte pulse, contact web development agency, get in touch, software development contact, app development agency contact, website design company, digital agency contact"
+        url="https://bytepulse.co/contact"
       />
       <ContactPage />
     </>

@@ -3,23 +3,28 @@ import { useRouter } from "next/router";
 const Footer = () => {
   const router = useRouter();
 
+ 
   const handleNavClick = (hash) => {
     if (router.pathname === "/") {
       const el = document.getElementById(hash);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      if (el) {
+        const headerOffset = 80; 
+        const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
     } else {
       router.push(`/#${hash}`);
     }
   };
   return (
     <section
-      className="footer_147 main_section py-5"
-      data-_id="67879e70b9616f8ef8b7e504"
-      data-section_id="wfuwaaovth"
-      data-section_title="Footer with newsletter, navigation, socials move up on hover"
-      data-section_name="67879e70b9616f8ef8b7e504"
+      className="footer_wrapper bg-light-blue pb-60 pt-60 mt-80"
       id="wfuwaaovth"
-      style={{ paddingTop: "0rem" }}
     >
       <div className="container">
         <div className="row justify-content-center justify-content-lg-between">
@@ -47,7 +52,7 @@ const Footer = () => {
             <h3 className="fw-600">Company</h3>
             <ul>
               <li><a href="/" >Home</a></li>
-              <li><a onClick={() => handleNavClick("achievements")} style={{ cursor: "pointer" }} >Why Us</a></li>
+              <li><a onClick={() => handleNavClick("achievement")} style={{ cursor: "pointer" }} >Why Us</a></li>
               <li><a onClick={() => handleNavClick("services")} style={{ cursor: "pointer" }} >Services</a></li>
               <li><a href="/portfolio" >Portfolio</a></li>
               <li><a href="/career" >Career</a></li>
@@ -83,7 +88,7 @@ const Footer = () => {
 
           <div className="col-lg-6 text-center text-lg-end">
             <p style={{ fontSize: "1.125rem", fontWeight: 400 }} className="mb-0">
-              Copyright © <span className="wb-copyright-year">2025</span> <span style={{ color: "rgb(27, 142, 61)" }}>Byte Pulse</span> - All Rights Reserved.
+              Copyright © <span className="wb-copyright-year">2025</span> <span >Byte Pulse</span> - All Rights Reserved.
             </p>
           </div>
         </div>

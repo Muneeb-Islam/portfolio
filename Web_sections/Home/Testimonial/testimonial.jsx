@@ -53,7 +53,7 @@ const settings = {
 };
 
 const TestimonialSlider = () => (
-<section className="testimonialSection mb-80" id='testimonial'>
+<section className="testimonialSection mb-80 pt-60" id='testimonial'>
   <div className="container">
     <h2>
       What Our <span className="font-style">Clients Say</span>

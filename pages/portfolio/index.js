@@ -6,10 +6,11 @@ export default function Portfolio() {
     <>
       <HeaderController
         fav_icon="/assets/logo.png"
-        // image={s3baseUrl + brand_favicon}
+        image="/assets/logo.png"
         title="Byte Pulse Portfolio"
-        description="Here are some of the projects that showcase our design and development skills. Each project reflects our commitment to clean code, intuitive user interfaces, and performance-driven experiences"
-        // keywords={meta_keywords}
+        description="Explore our diverse portfolio featuring powerful web and mobile applications including client management systems, responsive websites, meditation apps, planners, fitness timers, and privacy tools. From investigative services to wellness and productivity, we deliver tailored digital solutions."
+        keywords="web development portfolio, mobile app development, case management system, meditation app, fitness timer app, responsive websites, planner app, client admin management, wellness apps, scam prevention app, cruise countdown app, productivity apps, byte pulse portfolio"
+          url="https://bytepulse.co/portfolio"
       />
       <PortfolioPage />
     </>

@@ -63,9 +63,9 @@ const Achievements = () => {
                 Technical consultancy is one of our favorites services. We work closely with businesses to get rid of manual processes and help them improve their process using our CRM and CMS system.
               </p>
             </div>
-            <div className="mt-3">
-              <p>Let's Start a New Project Together</p>
-              <Link href="/contact" className="contained-button mt-2">
+            <div className="mt-3 mt-lg-4 achievement_content">
+              <h3>Let's Start a New Project <br /> Together</h3>
+              <Link href="/contact" className="contained-button mt-3 mt-lg-4 ">
                 Request A Quote 
                 {/* <i className="fas fa-chevron-right fa-icon"></i> */}
                 <span className="circle"></span>
@@ -73,10 +73,10 @@ const Achievements = () => {
             </div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 mt-3">
             <div className="row">
               {achievementsData.map((item, index) => (
-                <div key={index} className="col-md-6 col-lg-6 col-xl-4">
+                <div key={index} className="col-md-6 col-lg-6 col-xl-4 mt-4 mt-lg-0 mb-lg-4">
                   <div className={`achiement-card ${item.class}`}>
                     <img src={item.icon} alt={item.text} />
                     <span className="services-cuntr counter">

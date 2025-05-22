@@ -18,17 +18,17 @@ const BannerSection = () => {
                         Our advanced solutions are engineered to propel your business forward by optimizing processes,
                         enhancing efficiency, and driving innovation across every aspect.
                     </p>
-                    <a href="#contact" className="wp-mt-16 contained-button">
+                    <a href="#contact" className="mt-3 contained-button">
                     Get Started
                     </a>
                     <a
                       name="myModal1_id_qbjenxbtom"
-                      className="bg-orange wp-mt-16 wp-ml-10 wp-mr-10 contained-button"
+                      className="bg-orange mt-3 mx-2 mx-lg-3 contained-button"
                       type="button"
                       data-bs-toggle="modal"
                       data-bs-target="#myModal1_id_qbjenxbtom"
                     >
-                      <i className="fas fa-circle-play wp-mr-10"></i>
+                      <i className="fas fa-circle-play me-2"></i>
                       Watch a demo
                     </a>
                 </div>
@@ -39,7 +39,7 @@ const BannerSection = () => {
         </div>
 
         <div
-          className="modal fade wp-mt-50"
+          className="modal fade mt-80"
           id="myModal1_id_qbjenxbtom"
           tabIndex="-1"
           data-bs-backdrop="static"

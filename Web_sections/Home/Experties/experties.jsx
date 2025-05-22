@@ -1,6 +1,6 @@
 const Experties = () => {
   return (
-    <section className="experties_wrapper mt-80" id="experties">
+    <section className="experties_wrapper mt-80 pt-60 pb-60 bg-light-blue" id="experties">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-9 text-center">
@@ -54,7 +54,7 @@ const Experties = () => {
             <div className="col-md-6 col-lg-3 mt-3" key={idx}>
               <div className="experties-card text-center">
                 <img src={item.img} alt={item.title} className="img-fluid" />
-                <h4 className="mt-3">{item.title}</h4>
+                <h3>{item.title}</h3>
                 <p >{item.desc}</p>
               </div>
             </div>

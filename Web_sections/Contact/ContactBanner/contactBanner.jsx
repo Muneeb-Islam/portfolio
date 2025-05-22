@@ -93,7 +93,7 @@ const ContactSection = () => {
 
 
     return (
-        <section className="contact_1  mt-3 mt-lg-4 pt-60 pb-60" id="contact">
+        <section className="contact_wrapper  mt-3 mt-lg-4 " id="contact">
             <div className="container">
                 <div className="row justify-content-center">
                                         <div className="col-lg-8 text-center">
@@ -103,11 +103,12 @@ const ContactSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row justify-content-center align-items-center">
-                    <div className="col-lg-6">
-                        <form onSubmit={handleSubmit}>
+                <div className="row form-style justify-content-center mt-4 mt-lg-5">
+                    <div className="col-lg-7">
+                       <div className='form-left px-3 px-lg-5 pb-3 pb-lg-5'>
+                         <form onSubmit={handleSubmit}>
                             <div className="row">
-                                <div className="col-md-6 wp-mt-20">
+                                <div className="col-md-6 mt-4">
 
                                     <TextField id="name" label="Enter Name" variant="standard" required fullWidth
                                         name="name"
@@ -122,7 +123,7 @@ const ContactSection = () => {
                                             },
                                         }} />
                                 </div>
-                                <div className="col-md-6  wp-mt-20 ">
+                                <div className="col-md-6  mt-4 ">
 
                                     <TextField id="email" label="Enter Email" variant="standard"
                                         name="email"
@@ -137,7 +138,7 @@ const ContactSection = () => {
                                             },
                                         }} />
                                 </div>
-                                <div className="col-md-6  wp-mt-20">
+                                <div className="col-md-6  mt-4">
 
                                     <TextField id="outlined-basic"
                                         name="mobile_number"
@@ -153,7 +154,7 @@ const ContactSection = () => {
                                             },
                                         }} />
                                 </div>
-                                <div className="col-md-6  wp-mt-20">
+                                <div className="col-md-6  mt-4">
                                     <FormControl fullWidth required sx={{
                                         '& .MuiInput-underline:after': {
                                             borderBottomColor: 'var(--wb-menu-hover-color)',
@@ -178,7 +179,7 @@ const ContactSection = () => {
                                     </FormControl>
 
                                 </div>
-                                <div className='col-12 wp-mt-20'>
+                                <div className='col-12 mt-4'>
                                     <span style={{ fontWeight: "400" }}>Upload Resume</span>
                                     <div className='upload-files mt-3'>
                                         <input
@@ -200,7 +201,7 @@ const ContactSection = () => {
 
                                     </div>
                                 </div>
-                                <div className="col-md-12  wp-mt-20">
+                                <div className="col-md-12  mt-4">
                                     <TextField id="message" label="Enter Message" variant="standard"
                                         name="message"
                                         value={inputs.message}
@@ -217,10 +218,10 @@ const ContactSection = () => {
 
                                 </div>
                             </div>
-                            <div className="row justify-content-center wp-mt-20 text-center">
+                            <div className="row justify-content-center mt-4 text-center">
                                 <div className='col-6 col-md-12'>
-                                    {/* <a href="#" class="w-100 banner-solid-btn wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18"><span>Submit</span></a> */}
-                                    <button type="submit" className="w-100 contained-button wp-pb-18 wp-pt-18 wp-pl-18 wp-pr-18 border-0">
+                                    {/* <a href="#" class="w-100 banner-solid-btn"><span>Submit</span></a> */}
+                                    <button type="submit" className="w-100 contained-button  border-0">
                                         <span>Submit</span>
                                     </button>
 
@@ -229,9 +230,19 @@ const ContactSection = () => {
                             </div>
 
                         </form>
+                       </div>
                     </div>
-                    <div className="col-lg-6 mt-4 mt-lg-0">
-                        <img src="/assets/app-img7.png" alt="Contact Us" className='img-fluid'/>
+                    <div className="col-lg-5 mt-4 mt-lg-0 px-0">
+                         <div className="form-right animated-info">
+                        <h3>Why Contact Us?</h3>
+                        <ul>
+                        <li>🚀 Get personalized solutions</li>
+                        <li>💡 Free consultation on your idea</li>
+                        <li>⏱️ Fast and professional support</li>
+                        <li>🤝 Trusted by 100+ businesses</li>
+                        </ul>
+                    </div>
+                       
                     </div>
                     {/* <div className="col-lg-5 mt-4 mt-lg-0">
                         <div className="info-card">

@@ -1,6 +1,7 @@
 import HeaderController from "@/Components/Header-Controller/HeaderController";
 import { portfolioItems } from "@/Components/portfolioData/portfolioData";
 import { PortfolioDetailPage } from "@/Web_pages";
+
 export async function getStaticPaths() {
   const paths = portfolioItems.map((item) => ({
     params: { slug: item.slug },
@@ -18,14 +19,15 @@ export async function getStaticProps({ params }) {
 }
 
 export default function PortfolioDetail({ detail }) {
-  console.log(detail, "detaildetail");
   return (
     <div>
       <HeaderController
         fav_icon="/assets/logo.png"
-        // image={s3baseUrl + brand_favicon}
-        title="Byte Pulse Portfolio"
-        description="Here are some of the projects that showcase our design and development skills. Each project reflects our commitment to clean code, intuitive user interfaces, and performance-driven experiences"
+        image="/assets/logo.png"
+        title={`Byte Pulse | ${detail?.title || "Portfolio"}`}
+        description={`Check out ${detail?.title} — a showcase project by Byte Pulse. Discover how we combined clean UI/UX, functionality, and scalability to meet our client’s needs.`}
+        keywords="web development portfolio, mobile apps, responsive websites, case management system, planner apps, meditation apps, fitness apps, byte pulse"
+        url={`https://bytepulse.co/portfolio/${detail?.slug}`}
       />
       <PortfolioDetailPage detail={detail} />
     </div>

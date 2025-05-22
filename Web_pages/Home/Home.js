@@ -30,10 +30,10 @@ export default function HomePage() {
       {/* <AboutSection /> */}
       {/* <AboutSection2 />
       <AboutSection3 /> */}
+            <HowSection />
       <ServicesSection />
       {/* <AboutSection4 /> */}
       {/* <AboutSection5 /> */}
-      <HowSection />
       <Experties/>
       <TestimonialSection />
       {/* <PricingSection /> */}

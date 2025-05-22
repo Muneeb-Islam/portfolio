@@ -34,7 +34,7 @@ const ServicesSection = () => {
           {servicesData.map((service, index) => (
             <div
               key={index}
-              className="col-md-6 col-lg-4 wp-pt-32 text-center text-md-start col-12"
+              className="col-md-6 col-lg-4 mt-4 mt-lg-5 text-center text-md-start col-12"
               block-name={`Block-${index + 2}`}
               imgheight="485"
               imgwidth="440"

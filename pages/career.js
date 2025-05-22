@@ -7,11 +7,14 @@ export default function Career() {
       <HeaderController
         fav_icon="/assets/logo.png"
         // image={s3baseUrl + brand_favicon}
-        title="Byte Pulse"
-        description="Byte Pulse is a modern and dynamic portfolio website showcasing innovative projects, creative design, and cutting-edge development skills. Explore work samples, skills, and contact information all in one place"
-        // keywords={meta_keywords}
+        title=" Submit Your CV & Join Our Team"
+        description="Explore career opportunities at Byte Pulse. Submit your CV and become part of a dynamic team building innovative digital solutions for web and mobile platforms."
+        keywords="byte pulse careers, submit cv, tech jobs, join byte pulse, software developer jobs, UI/UX designer jobs, web development careers, mobile app development jobs, digital agency hiring"
+           url="https://bytepulse.co/career"
       />
       <CareerPage />
     </>
   );
 }
+  
+         

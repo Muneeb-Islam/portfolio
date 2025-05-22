@@ -92,17 +92,17 @@ const CareerSection = () => {
     }
 
     return (
-        <section className="contact_1 mt-3 mt-lg-4 pt-60 pb-60">
+        <section className="contact_1 mt-3 mt-lg-5">
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
                         <div className="text-center text-lg-start form-main-wrapper">
-                            <h4>Job Application Form</h4>
+                            <h4 className='text-blue'>Job Application Form</h4>
                             <h2>Please <span className='font-style'>Fill Out the Form Below</span> to Submit Your <span className='font-style'>Job Application!</span></h2>
                         </div>
                         <form onSubmit={handleSubmit}>
                             <div className="row">
-                                <div className="col-md-6 wp-mt-20">
+                                <div className="col-md-6 mt-4">
 
                                     <TextField id="name" label="Enter Name" variant="standard" required fullWidth
                                         name="name"
@@ -117,7 +117,7 @@ const CareerSection = () => {
                                             },
                                         }} />
                                 </div>
-                                <div className="col-md-6  wp-mt-20 ">
+                                <div className="col-md-6  mt-4 ">
 
                                     <TextField id="email" label="Enter Email" variant="standard"
                                         name="email"
@@ -132,7 +132,7 @@ const CareerSection = () => {
                                             },
                                         }} />
                                 </div>
-                                <div className="col-md-6  wp-mt-20">
+                                <div className="col-md-6  mt-4">
 
                                     <TextField id="outlined-basic"
                                         name="mobile_number"
@@ -148,7 +148,7 @@ const CareerSection = () => {
                                             },
                                         }} />
                                 </div>
-                                <div className="col-md-6  wp-mt-20">
+                                <div className="col-md-6  mt-4">
 
                                     <TextField label="Applied Position" variant="standard"
                                         name='applied_position'
@@ -164,7 +164,7 @@ const CareerSection = () => {
                                             },
                                         }} />
                                 </div>
-                                <div className='col-12 wp-mt-20'>
+                                <div className='col-12 mt-4'>
                                     <span style={{ fontWeight: "400" }}>Upload Resume</span>
                                     <div className='upload-files mt-3'>
                                         <input
@@ -186,7 +186,7 @@ const CareerSection = () => {
 
                                     </div>
                                 </div>
-                                <div className="col-md-12  wp-mt-20">
+                                <div className="col-md-12  mt-4">
                                     <TextField id="cover_letter" label="Cover Letter" variant="standard"
                                         name="cover_letter"
                                         value={inputs.cover_letter}
@@ -203,7 +203,7 @@ const CareerSection = () => {
 
                                 </div>
                             </div>
-                            <div className="row justify-content-center wp-mt-20 text-center">
+                            <div className="row justify-content-center mt-4 text-center">
                                 <div className='col-6 col-md-12'>
                                     <button type="submit" className="w-100 contained-button  border-0">
                                         <span>Submit</span>

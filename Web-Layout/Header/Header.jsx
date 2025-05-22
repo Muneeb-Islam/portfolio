@@ -42,25 +42,47 @@ useEffect(() => {
 }, [router.pathname]);
 
 
-  const handleNavClick = (hash) => {
-    if (router.pathname === "/") {
-      const el = document.getElementById(hash);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    } else {
-      router.push(`/#${hash}`);
+
+const handleNavClick = (hash) => {
+  const scrollToSection = () => {
+    const el = document.getElementById(hash);
+    if (el) {
+      const yOffset = -document.querySelector(".header_wrapper")?.offsetHeight || -80;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
+
+  if (router.pathname === "/") {
+    scrollToSection();
+  } else {
+    router.push(`/#${hash}`);
+  }
+};
+useEffect(() => {
+  const hash = window.location.hash.replace("#", "");
+  if (hash) {
+    setTimeout(() => {
+      const el = document.getElementById(hash);
+      if (el) {
+        const yOffset = -document.querySelector(".header_wrapper")?.offsetHeight || -80;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 300); // slightly increase timeout to ensure element is rendered
+  }
+}, []);
 
   return (
     <header>
       <section
    className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="container">
-            <nav className="navbar navbar-expand-lg">
+            <nav className="navbar navbar-expand-lg py-0">
                   <a className="navbar-brand" href="/">
                     <img
                       src="/assets/logoo.png"
-                      className="img-fluid brand-logo"
+                      className="img-fluid brand-logo mb-0"
                       alt="Brand Logo"
                     />
                   </a>
@@ -78,7 +100,7 @@ useEffect(() => {
                     </span>
                   </button>
                   <div className="collapse navbar-collapse" id="navbarSupportedContent_id_qbjenxbtom">
-                    <ul className="navbar-nav align-items-lg-center mx-auto ps-3 ps-lg-0">
+                    <ul className="navbar-nav align-items-lg-center mx-auto ps-3 ps-lg-0 py-0">
                       <li className="nav-item">
                         <a
                           className={`nav-link ${router.pathname === "/" && !activeSection ? "active" : ""
