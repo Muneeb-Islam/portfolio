@@ -6,7 +6,6 @@ import Image from 'next/image';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
 const testimonials = [
   {
     name: 'Sarah Johnson',
@@ -26,7 +25,20 @@ const testimonials = [
     image: '/assets/saasify-avatar-04.svg',
     quote: 'Working with Byte Pulse was a seamless and rewarding experience.',
   },
+  {
+    name: 'John Smith',
+    role: 'Founder at StartupX',
+    image: '/assets/testimonial-5.webp',
+    quote: 'Amazing service and support throughout the project.',
+  },
+  {
+    name: 'Anna Brown',
+    role: 'Marketing Head at Marketify',
+    image: '/assets/testimonial-3.jpg',
+    quote: 'Highly recommend Byte Pulse for digital transformation.',
+  }
 ];
+
 
 const settings = {
   dots: true,
@@ -34,7 +46,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 800,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
   pauseOnHover: true,
@@ -53,31 +65,31 @@ const settings = {
 };
 
 const TestimonialSlider = () => (
-<section className="testimonialSection mb-80 pt-60" id='testimonial'>
-  <div className="container">
-    <h2>
-      What Our <span className="font-style">Clients Say</span>
-    </h2>
-    <Slider {...settings}>
-      {testimonials.map((testimonial, index) => (
-        <div key={index} className="testimonial-slide pt-4 pb-1">
-          <div className="testimonial-card">
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              width={80}
-              height={80}
-              className="avatar"
-            />
-            <p>{testimonial.quote}</p>
-            <h3>{testimonial.name}</h3>
-            <p className='mt-0'>{testimonial.role}</p>
+  <section className="testimonialSection mb-80 pt-60" id='testimonial'>
+    <div className="container">
+      <h2>
+        What Our <span className="font-style">Clients Say</span>
+      </h2>
+      <Slider {...settings}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="testimonial-slide pt-4 pb-1">
+            <div className="testimonial-card">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                width={80}
+                height={80}
+                className="avatar"
+              />
+              <p>{testimonial.quote}</p>
+              <h3>{testimonial.name}</h3>
+              <p className='mt-0'>{testimonial.role}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </Slider>
-  </div>
-</section>
+        ))}
+      </Slider>
+    </div>
+  </section>
 
 );
 
