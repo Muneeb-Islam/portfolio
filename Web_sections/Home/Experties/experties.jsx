@@ -5,7 +5,7 @@ const Experties = () => {
     <section className="experties_wrapper mt-80 pt-60 pb-60 bg-light-blue" id="experties">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-9 text-center">
+          <div className="col-lg-9 text-center mb-lg-2">
             <h2>Our Industry <span className="font-style">Expertise</span></h2>
             <p>We empower diverse industries with scalable, data-driven solutions — enabling smarter decisions, seamless operations, and sustainable growth.</p>
           </div>
@@ -53,7 +53,7 @@ const Experties = () => {
               desc: "Delivering scalable digital solutions for user management, billing automation, and network analytics."
             }
           ].map((item, idx) => (
-            <div className="col-md-6 col-lg-3 mt-3" key={idx}>
+            <div className="col-md-6 col-lg-3 mt-4" key={idx}>
               <div className="experties-card text-center">
                 <img src={item.img} alt={item.title} className="img-fluid" />
                 <h3>{item.title}</h3>
@@ -62,11 +62,11 @@ const Experties = () => {
             </div>
           ))}
         </div>
-        <div className="text-center mt-3 mt-lg-5">
-           <Link href="/contact" className="contained-button">
-                        Request A Quote 
-                        <span className="circle"></span>
-                      </Link>
+        <div className="text-center mt-4">
+          <Link href="/contact" className="contained-button">
+            Request A Quote
+            <span className="circle"></span>
+          </Link>
         </div>
       </div>
     </section>
