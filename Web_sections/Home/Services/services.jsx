@@ -16,12 +16,41 @@ const servicesData = [
     description: "Our custom-built CMS and CRM systems help businesses get rid of manual processes and automate their business process to achieve rapid and sustainable growth.",
     techList: ["ReactJs", "NodeJs", "MongoDB"],
     icons: ["/assets/magento.png", "/assets/shopify.png", "/assets/wordpress.png"]
+  },
+  {
+    title: "Marketing",
+    description: "Our marketing solutions help brands grow digitally and traditionally through data-driven strategies including research, branding, advertising, SEO/SEM, and targeted promotions.",
+    techList: ["Research", "Branding", "Advertising", "SEO & SEM", "Sales Promotion"],
+    icons: [
+      "/assets/icon/research.png",
+      "/assets/icon/brand.png",
+      "/assets/icon/ads.png",
+      "/assets/icon/seo.png",
+      "/assets/icon/sales.png"
+    ]
+  },
+  {
+    title: "AI & Data",
+    description: "Leverage the power of AI and data science to unlock deep insights, automate tasks, and create smart, responsive solutions across your digital ecosystem.",
+    techList: [
+      "Machine Learning",
+      "Generative AI",
+      "Data Analytics",
+      "Predictive Modeling",
+
+    ],
+    icons: [
+      "/assets/icon/machine-learning.png",
+      "/assets/icon/generative-ai.png",
+      "/assets/icon/data-analytics.png",
+      "/assets/icon/predictive-models.png",
+    ]
   }
 ];
 
 const ServicesSection = () => {
   return (
-     <section className="services_wrapper  mt-80" id="services">
+    <section className="services_wrapper  mt-80" id="services">
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-lg-6">
@@ -57,11 +86,11 @@ const ServicesSection = () => {
                     ))}
                   </ul>
                 </div>
-                  <p>
-                    <span style={{ fontSize: '1.125rem', fontWeight: 400 }}>
-                      {service.description}
-                    </span>
-                  </p>
+                <p>
+                  <span style={{ fontSize: '1.125rem', fontWeight: 400 }}>
+                    {service.description}
+                  </span>
+                </p>
               </div>
             </div>
           ))}
