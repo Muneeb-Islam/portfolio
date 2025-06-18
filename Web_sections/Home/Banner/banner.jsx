@@ -9,31 +9,30 @@ const BannerSection = () => {
 
         <div className="row justify-content-center">
           <div className="col-12">
-              <div className="row justify-content-center">
-                <div className="col-lg-10 col-xl-8 text-center">
-                    <h1>
-                      Elevate your business with <span className="font-style">advanced solutions</span>
-                    </h1>
-                    <p>                    
-                        Our advanced solutions are engineered to propel your business forward by optimizing processes,
-                        enhancing efficiency, and driving innovation across every aspect.
-                    </p>
-                    <a href="#contact" className="mt-3 contained-button">
-                    Get Started
-                    </a>
-                    <a
-                      name="myModal1_id_qbjenxbtom"
-                      className="bg-orange mt-3 mx-2 mx-lg-3 contained-button"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#myModal1_id_qbjenxbtom"
-                    >
-                      <i className="fas fa-circle-play me-2"></i>
-                      Watch a demo
-                    </a>
-                </div>
-
+            <div className="row justify-content-center">
+              <div className="col-lg-10 col-xl-8 text-center">
+                <h1>
+                  Elevate your business with <span className="font-style">AI-powered solutions</span>
+                </h1>
+                <p>
+                  Our AI-powered advanced solutions are designed to transform your business by automating processes, boosting efficiency, and driving innovation through intelligent, data-driven decision-making across every area.
+                </p>
+                <a href="#contact" className="mt-3 contained-button">
+                  Get Started
+                </a>
+                <a
+                  name="myModal1_id_qbjenxbtom"
+                  className="bg-orange mt-3 mx-2 mx-lg-3 contained-button"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal1_id_qbjenxbtom"
+                >
+                  <i className="fas fa-circle-play me-2"></i>
+                  Watch a demo
+                </a>
               </div>
+
+            </div>
 
           </div>
         </div>
