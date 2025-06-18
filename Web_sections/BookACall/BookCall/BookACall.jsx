@@ -128,8 +128,8 @@ function BookACall() {
             </div>
           </div>
 
-          <div className="row justify-content-center align-items-center">
-            <div className="col-12 col-xl-6 pe-xl-4">
+          <div className="row justify-content-center justify-content-lg-between align-items-center">
+            <div className="col-12 col-xl-6">
               <div className="calendar-wrapper">
                 <Calendar
                   onChange={handleDateChange}
@@ -147,7 +147,7 @@ function BookACall() {
               </div>
             </div>
 
-            <div className="col-12 col-xl-6  text-center text-md-start">
+            <div className="col-12 col-xl-6 col-xxl-5  text-center text-md-start">
 
               {!selectedDate && (
                 <div className="mt-4">
@@ -159,13 +159,13 @@ function BookACall() {
               {selectedDate && (
                 <div className="book-a-call-slots mt-4 mt-lg-1">
 
-                  <div className="row justify-content-center ">
-                    <div className="col-md-5 col-lg-6">           <h3 className="mb-1">Time Slots:</h3>
+                  <div className="row justify-content-center px-xl-3 px-xxl-0">
+                    <div className="col-md-4 col-lg-6 ">           <h3 className="mb-1">Time Slots:</h3>
                       <p className="mb-2">
                         {moment(selectedDate).format("LL")}
                       </p>
                       {selectedSlot && (
-                        <div className="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
+                        <div className="d-flex align-items-center justify-content-center justify-content-md-start flex-wrap mb-3">
                           <p className="mb-0">{selectedSlot}</p>
                           <button
                             className="book-a-call-contained-button ms-3 border-0"
@@ -175,7 +175,7 @@ function BookACall() {
                           </button>
                         </div>
                       )}</div>
-                    <div className="col-md-4 col-xl-5 mb-3 mb-md-0">
+                    <div className="col-8 col-md-5 col-xl-6 mb-3 mb-md-0">
                       <FormControl fullWidth>
                         <Autocomplete
                           value={timeZoneValue}
