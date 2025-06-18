@@ -96,13 +96,13 @@ const Experties = () => {
             Request A Quote
             <span className="circle"></span>
           </Link>
-          <a
-            onClick={() => handleNavClick("bookACall")}
+          <Link
+            href="/book-a-call"
             className="mt-3 mt-lg-0 ms-0 ms-lg-3 contained-button"
             style={{ cursor: "pointer" }}
           >
             <span>Book A Call</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

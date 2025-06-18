@@ -75,12 +75,11 @@ const Header = () => {
   return (
     <header>
       <section
-        className={`header_wrapper sticky-navbar ${
-          isScrolled ? "scrolled" : ""
-        }`}
+        className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""
+          }`}
       >
         <div className="container">
-          <nav className="navbar navbar-expand-lg py-0">
+          <nav className="navbar navbar-expand-xl py-0">
             <a className="navbar-brand" href="/">
               <img
                 src="/assets/logoo.png"
@@ -105,12 +104,11 @@ const Header = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent_id_qbjenxbtom"
             >
-              <ul className="navbar-nav align-items-lg-center mx-auto ps-3 ps-lg-0">
+              <ul className="navbar-nav align-items-xl-center mx-auto ps-3 ps-xl-0">
                 <li className="nav-item">
                   <a
-                    className={`nav-link ${
-                      router.pathname === "/" && !activeSection ? "active" : ""
-                    }`}
+                    className={`nav-link ${router.pathname === "/" && !activeSection ? "active" : ""
+                      }`}
                     aria-current="page"
                     href="/"
                   >
@@ -119,9 +117,8 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a
-                    className={`nav-link ${
-                      activeSection === "achievement" ? "active" : ""
-                    }`}
+                    className={`nav-link ${activeSection === "achievement" ? "active" : ""
+                      }`}
                     onClick={() => handleNavClick("achievement")}
                     style={{ cursor: "pointer" }}
                   >
@@ -130,9 +127,8 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a
-                    className={`nav-link ${
-                      activeSection === "services" ? "active" : ""
-                    }`}
+                    className={`nav-link ${activeSection === "services" ? "active" : ""
+                      }`}
                     onClick={() => handleNavClick("services")}
                     style={{ cursor: "pointer" }}
                   >
@@ -141,9 +137,8 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a
-                    className={`nav-link ${
-                      router.pathname === "/portfolio" ? "active" : ""
-                    }`}
+                    className={`nav-link ${router.pathname === "/portfolio" ? "active" : ""
+                      }`}
                     href="/portfolio"
                   >
                     Portfolio
@@ -151,9 +146,8 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a
-                    className={`nav-link ${
-                      router.pathname === "/career" ? "active" : ""
-                    }`}
+                    className={`nav-link ${router.pathname === "/career" ? "active" : ""
+                      }`}
                     href="/career"
                   >
                     Careers
@@ -161,9 +155,8 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <a
-                    className={`nav-link ${
-                      activeSection === "testimonial" ? "active" : ""
-                    }`}
+                    className={`nav-link ${activeSection === "testimonial" ? "active" : ""
+                      }`}
                     onClick={() => handleNavClick("testimonial")}
                     style={{ cursor: "pointer" }}
                   >
@@ -173,15 +166,15 @@ const Header = () => {
                 <li>
                   <a
                     href="/contact"
-                    className="mt-3 mt-lg-0 ms-0 ms-lg-3 contained-button"
+                    className="mt-3 mt-xl-0 ms-0 ms-xl-3 contained-button"
                   >
                     <span>Request A Quote</span>
                   </a>
                 </li>
                 <li>
                   <a
-                    onClick={() => handleNavClick("bookACall")}
-                    className="mt-3 mt-lg-0 ms-0 ms-lg-3 contained-button"
+                    href="/book-a-call"
+                    className="mt-3 mt-xl-0 ms-0 ms-xl-3 contained-button"
                     style={{ cursor: "pointer" }}
                   >
                     <span>Book A Call</span>

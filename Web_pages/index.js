@@ -3,3 +3,4 @@ export { default as ContactPage } from "./Contact/Contact";
 export { default as HomePage } from "./Home/Home";
 export { default as PortfolioPage } from "./Portfolio/Portfolio";
 export { default as PortfolioDetailPage } from "./PortfolioDetail/PortfolioDetail";
+export { default as BookACallPage } from "./BookACall/BookACall";

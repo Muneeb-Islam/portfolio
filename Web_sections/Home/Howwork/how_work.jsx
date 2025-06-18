@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const HowSection = () => {
   return (
     <section
@@ -87,12 +89,19 @@ const HowSection = () => {
           </div>
 
           <div className="col-lg-5 text-center text-lg-start mt-4 mt-lg-0s ">
-           <h2 className="mb-3">Our Workflow for<span className="font-style"> Success</span></h2>
+            <h2 className="mb-3">Our Workflow for<span className="font-style"> Success</span></h2>
             <p>We follow a structured approach to ensure seamless implementation, smooth configuration, and optimal performance—helping you get the most out of our platform.</p>
             <div className="mt-4">
-              <a href="#contact" className="contained-button">
+              <Link href="#contact" className="contained-button">
                 <span>Get Started</span>
-              </a>
+              </Link>
+              <Link
+                href="/book-a-call"
+                className="mt-3 mt-lg-0 ms-0 ms-lg-3 contained-button"
+                style={{ cursor: "pointer" }}
+              >
+                <span>Book A Call</span>
+              </Link>
             </div>
           </div>
         </div>

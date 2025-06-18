@@ -11,7 +11,6 @@ import {
   ServicesSection,
   TestimonialSection,
 } from "@/Web_sections/Home";
-import BookACall from "@/Web_sections/Home/BookACall/BookACall";
 import { useEffect } from "react";
 export default function HomePage() {
   useEffect(() => {
@@ -25,7 +24,6 @@ export default function HomePage() {
       <Brans_LogoSection />
       <Achievements />
       <HowSection />
-      <BookACall />
       <ServicesSection />
       <Experties />
       <TestimonialSection />

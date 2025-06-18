@@ -1069,15 +1069,19 @@ object-fit: cover; */
   outline: none !important;
   border-radius: 0.5rem !important;
 }
-
+/* .calendar-wrapper{
+  background: rgb(255,134,20,.1);
+    padding: 16px;
+    border-radius: 16px;
+} */
 /* Wrapper */
-.calendar-wrapper {
+/* .calendar-wrapper {
   max-width: 100%;
   width: 500px;
   margin: 0 auto;
   padding: 16px;
   background: inherit
-}
+} */
 
 /* Remove calendar border */
 .react-calendar {
@@ -1093,6 +1097,7 @@ object-fit: cover; */
   justify-content: space-between;
   align-items: center;
   padding: 12px;
+  padding-top: 0px!important;
   background: none;
 }
 
@@ -1206,20 +1211,24 @@ object-fit: cover; */
 }
 
 /* Week container spacing */
-.react-calendar__month-view__days {
+/* .react-calendar__month-view__days {
   padding: 10px;
-}
+} */
 
 .book-a-call-slots{
-  padding-top: 33px;
+  padding-top: 16px;
 }
 
-.slots {
-  height: 406px;
+/* .slots {
+  height: 290px;
   overflow-y: scroll;
-  width: 100%;
-}
+ scrollbar-width: none;
+  scrollbar-color: transparent transparent;
 
+}
+.slots::-webkit-scrollbar{
+  display: none!important;
+} */
 .slot-btn {
   background-color: #f5f5f5;
   border: 1px solid #ccc;
@@ -1269,4 +1278,7 @@ object-fit: cover; */
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.book-a-call-wrapper span{
+  font-weight: 500;
 }
