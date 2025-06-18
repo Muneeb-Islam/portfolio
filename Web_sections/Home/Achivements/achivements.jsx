@@ -44,9 +44,29 @@ const achievementsData = [
 ];
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 import CountUp from "react-countup";
 
 const Achievements = () => {
+  const router = useRouter();
+
+  const handleNavClick = (hash) => {
+    const scrollToSection = () => {
+      const el = document.getElementById(hash);
+      if (el) {
+        const yOffset =
+          -document.querySelector(".header_wrapper")?.offsetHeight || -80;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    };
+    if (router.pathname === "/") {
+      scrollToSection();
+    } else {
+      router.push(`/#${hash}`);
+    }
+  };
+
   return (
     <section className="achievement_wrapper mt-80" id="achievement">
       <div className="container">
@@ -54,29 +74,49 @@ const Achievements = () => {
           <div className="col-lg-6 text-center text-lg-start">
             <div>
               <h2>
-                Byte Pulse <span className="font-style"> Mobile App & Web Development </span> Company
+                Byte Pulse{" "}
+                <span className="font-style">
+                  {" "}
+                  Mobile App & Web Development{" "}
+                </span>{" "}
+                Company
               </h2>
               <p>
-                Our mission is to provide stable, robust, and innovative web and mobile apps development solutions.
+                Our mission is to provide stable, robust, and innovative web and
+                mobile apps development solutions.
               </p>
               <p className="fw-600">
-                Technical consultancy is one of our favorites services. We work closely with businesses to get rid of manual processes and help them improve their process using our CRM and CMS system.
+                Technical consultancy is one of our favorites services. We work
+                closely with businesses to get rid of manual processes and help
+                them improve their process using our CRM and CMS system.
               </p>
             </div>
             <div className="mt-3 mt-lg-4 achievement_content">
-              <h3>Let's Start a New Project <br /> Together</h3>
+              <h3>
+                Let's Start a New Project <br /> Together
+              </h3>
               <Link href="/contact" className="contained-button mt-3 mt-lg-4 ">
-                Request A Quote 
+                Request A Quote
                 {/* <i className="fas fa-chevron-right fa-icon"></i> */}
                 <span className="circle"></span>
               </Link>
+              <a
+                onClick={() => handleNavClick("bookACall")}
+                className="mt-3 mt-lg-0 ms-0 ms-lg-3 contained-button"
+                style={{ cursor: "pointer" }}
+              >
+                <span>Book A Call</span>
+              </a>
             </div>
           </div>
 
           <div className="col-lg-6 mt-3">
             <div className="row">
               {achievementsData.map((item, index) => (
-                <div key={index} className="col-md-6 col-lg-6 col-xl-4 mt-4 mt-lg-0 mb-lg-4">
+                <div
+                  key={index}
+                  className="col-md-6 col-lg-6 col-xl-4 mt-4 mt-lg-0 mb-lg-4"
+                >
                   <div className={`achiement-card ${item.class}`}>
                     <img src={item.icon} alt={item.text} />
                     <span className="services-cuntr counter">
@@ -89,7 +129,6 @@ const Achievements = () => {
               ))}
             </div>
           </div>
-          
         </div>
       </div>
     </section>
@@ -97,4 +136,3 @@ const Achievements = () => {
 };
 
 export default Achievements;
-

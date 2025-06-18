@@ -23,7 +23,7 @@
       --wb-theme-font-weight-600:600;
        --wb-theme-font-weight-500:500;
       --wb-theme-font-weight-400:400;
-
+      --wb-theme-shadow-1: rgba(0, 0, 0, 0.16) 0px 0px 11px 1px;
     }
     body{
       font-family: var(--wb-website-text-font-family)!important;
@@ -1063,10 +1063,210 @@ object-fit: cover; */
   
 }
 
+.just-shadow {
+  box-shadow: var(--wb-theme-shadow-1) !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Wrapper */
+.calendar-wrapper {
+  max-width: 100%;
+  width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+  background: inherit
+}
+
+/* Remove calendar border */
+.react-calendar {
+  border: none;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+/* Header (June 2025) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: none;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Header title (month + year) */
+.react-calendar__navigation__label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Weekdays Row */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: none;
+}
+
+/* Weekdays Label (Sun, Mon...) */
+.react-calendar__month-view__weekdays__weekday {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Core tile style */
+.react-calendar__tile {
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  transition: background 0.3s;
+  color: #222;
+}
+
+/* Selected date */
+.react-calendar__tile.selected-date {
+  background-color: rgb(255, 134, 20) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Hover */
+.react-calendar__tile:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Disable past dates */
+.react-calendar__tile:disabled {
+  color: #bbb;
+  pointer-events: none;
+  background: none;
+}
+
+/* Weekday headers */
+.react-calendar__month-view__weekdays {
+  border-bottom: none !important;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* Calendar heading (June 2025) */
+.react-calendar__navigation__label {
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  background: none;
+}
+
+/* Month nav buttons */
+.react-calendar__navigation__arrow {
+  font-size: 18px;
+  padding: 4px 10px;
+  border: none;
+  background: none;
+}
 
 
+/* Hovered Date */
+.react-calendar__tile:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
 
 
+/* Disable today's highlight */
+.react-calendar__tile--now {
+  background: #f5f5f5;
+  color: #000;
+  font-weight: bold;
+}
 
+/* Week container spacing */
+.react-calendar__month-view__days {
+  padding: 10px;
+}
 
+.book-a-call-slots{
+  padding-top: 33px;
+}
 
+.slots {
+  height: 406px;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.slot-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 170px;
+}
+.slot-btn:hover {
+  background-color: #eee;
+}
+.selected-slot {
+  background-color: rgb(255, 134, 20);
+  color: black;
+  border-color: rgb(255, 134, 20);
+}
+
+.book-a-call-contained-button{
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+  background: var(--wb-website-theme-secondary-color);
+  color: var(--wb-website-text-secondary-color);
+}
+
+.book-a-call-contained-button:hover{
+  background: var(--wb-website-hover-background-color);
+  color: var(--wb-website-hover-text-color);
+}
+
+.form-slots{
+  border-right: 1px solid #dbd0d0;
+}
+
+@media (max-width: 768px) {
+.form-slots{
+  border-right: none;
+}
+}
+
+.book-a-call-thanx-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

@@ -9,22 +9,25 @@ import {
   Experties,
   HowSection,
   ServicesSection,
-  TestimonialSection
+  TestimonialSection,
 } from "@/Web_sections/Home";
+import BookACall from "@/Web_sections/Home/BookACall/BookACall";
 import { useEffect } from "react";
 export default function HomePage() {
   useEffect(() => {
     scrollToHash();
   }, []);
+
   return (
     <div>
       <Header />
       <BannerSection />
       <Brans_LogoSection />
-      <Achievements/>
-            <HowSection />
+      <Achievements />
+      <HowSection />
+      <BookACall />
       <ServicesSection />
-      <Experties/>
+      <Experties />
       <TestimonialSection />
       <ContactSection />
       <Footer />
