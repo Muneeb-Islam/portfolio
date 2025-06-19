@@ -168,7 +168,7 @@ function BookACall() {
                         <div className="d-flex align-items-center justify-content-center justify-content-md-start flex-wrap mb-3">
                           <p className="mb-0">{selectedSlot}</p>
                           <button
-                            className="book-a-call-contained-button ms-3 border-0"
+                            className="book-a-call-contained-button ms-1 border-0"
                             onClick={handleOpenNextForm}
                           >
                             Next
