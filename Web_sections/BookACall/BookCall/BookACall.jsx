@@ -198,7 +198,6 @@ function BookACall() {
                     </div>
                   </div>
 
-
                   {timeSlots.length === 0 ? (
                     <p>No slots available.</p>
                   ) : (
