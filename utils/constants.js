@@ -1,3 +1,8 @@
+import { Icon } from "@iconify/react";
+
+export function SlashIcon() {
+  return <Icon icon="heroicons:slash" />;
+}
 const convertCurrencyToSign = (currency) => {
   if (currency === "gbp" || currency === "GBP") {
     return "£";

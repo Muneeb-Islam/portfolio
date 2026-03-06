@@ -1,7 +1,7 @@
 import HeaderController from "@/Components/Header-Controller/HeaderController";
-import { HomePage } from "@/Web_pages";
+import { ProjectPage } from "@/Web_pages";
 
-export default function Home() {
+export default function Portfolio() {
   return (
     <>
       <HeaderController
@@ -15,7 +15,7 @@ export default function Home() {
                Hybrid (Job + Client focused)"
 
       />
-      <HomePage />
+      <ProjectPage />
     </>
   );
 }

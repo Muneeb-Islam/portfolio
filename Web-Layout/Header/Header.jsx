@@ -1,11 +1,16 @@
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-const sectionIds = ["achievement", "services", "testimonial", "bookACall"]; // IDs of sections like Why Us, Services, Testimonial
+import { useEffect, useRef, useState } from "react";
+const sectionIds = ["achievement", "services", "testimonial", "bookACall"];
 
 const Header = () => {
   const router = useRouter();
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  console.log(open, "openopen")
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,121 +76,60 @@ const Header = () => {
       }, 300); // slightly increase timeout to ensure element is rendered
     }
   }, []);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <header>
-      <section
-        className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""
-          }`}
-      >
-        <div className="container">
-          <nav className="navbar navbar-expand-xl py-0">
+    <header
+      className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""
+        }`}
+    >
+      <div className="container-fluid px-lg-5">
+        <nav className="navbar  py-0" >
+          <div className="logo-bg">
             <a className="navbar-brand" href="/">
               <img
-                src="/assets/logoo.png"
+                src="/assets/muneeb/profile.png"
                 className="img-fluid brand-logo mb-0"
                 alt="Brand Logo"
               />
-            </a>
+            </a></div>
+          <div className="d-flex justify-content-end">
+            <Link className="view-details-btn me-lg-4" href="">Curriculum Vitae | CV</Link>
             <button
-              className="navbar-toggler"
-              type="submit"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent_id_qbjenxbtom"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              className="toggle"
+              type="button"
+              onClick={() => setOpen(prev => !prev)}
             >
               <span className="navbar-toggler-icon">
-                <i className="fas fa-bars"></i>
+                <Icon icon="fa7-solid:bars-staggered" width={30} />
               </span>
             </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent_id_qbjenxbtom"
-            >
-              <ul className="navbar-nav align-items-xl-center mx-auto ps-3 ps-xl-0">
-                <li className="nav-item">
-                  <a
-                    className={`nav-link ${router.pathname === "/" && !activeSection ? "active" : ""
-                      }`}
-                    aria-current="page"
-                    href="/"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className={`nav-link ${activeSection === "achievement" ? "active" : ""
-                      }`}
-                    onClick={() => handleNavClick("achievement")}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Why Us
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className={`nav-link ${activeSection === "services" ? "active" : ""
-                      }`}
-                    onClick={() => handleNavClick("services")}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Services
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className={`nav-link ${router.pathname === "/portfolio" ? "active" : ""
-                      }`}
-                    href="/portfolio"
-                  >
-                    Portfolio
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className={`nav-link ${router.pathname === "/career" ? "active" : ""
-                      }`}
-                    href="/career"
-                  >
-                    Careers
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className={`nav-link ${activeSection === "testimonial" ? "active" : ""
-                      }`}
-                    onClick={() => handleNavClick("testimonial")}
-                    style={{ cursor: "pointer" }}
-                  >
-                    Testimonial
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/contact"
-                    className="mt-3 mt-xl-0 ms-0 ms-xl-3 contained-button"
-                  >
-                    <span>Request A Quote</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/book-a-call"
-                    className="mt-3 mt-xl-0 ms-0 ms-xl-3 contained-button"
-                    style={{ cursor: "pointer" }}
-                  >
-                    <span>Book A Call</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </section>
+          </div>
+          <div className={`radial-nav top-right ${open ? "open" : ""}`} ref={menuRef}>
+            <ul className="radial-menu">
+              <li className="disc l1"><span>Home</span></li>
+              <li className="disc l2"><span>My Self</span></li>
+              <li className="disc l3"><span>Experience</span></li>
+              <li className="disc l4"><span>My Work</span></li>
+              <li className="disc l5"><span>All Projects</span></li>
+              <li className="disc l6"><span>Reviews</span></li>
+              <li className="disc l7"><span>Certifications</span></li>
+              <li className="disc l8"><span>Contact</span></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
+
   );
 };
 

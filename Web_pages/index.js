@@ -1,6 +1,5 @@
-export { default as CareerPage } from "./Career/Career";
-export { default as ContactPage } from "./Contact/Contact";
+
 export { default as HomePage } from "./Home/Home";
-export { default as PortfolioPage } from "./Portfolio/Portfolio";
-export { default as PortfolioDetailPage } from "./PortfolioDetail/PortfolioDetail";
-export { default as BookACallPage } from "./BookACall/BookACall";
+export { default as ProjectPage } from "./Pojects/Projects";
+export { default as ProjectDetailPage } from "./ProjectDetail/ProjectDetail";
+

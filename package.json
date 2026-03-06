@@ -21,6 +21,7 @@
     "@mui/x-date-pickers": "^8.5.2",
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.2.0",
+    "aos": "^2.3.4",
     "axios": "^1.6.0",
     "env-cmd": "^10.1.0",
     "moment": "^2.30.1",
