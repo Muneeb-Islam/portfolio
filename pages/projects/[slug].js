@@ -1,10 +1,11 @@
 import HeaderController from "@/Components/Header-Controller/HeaderController";
-import { portfolioItems } from "@/Components/portfolioData/portfolioData";
-import { PortfolioDetailPage } from "@/Web_pages";
+import { projectsData } from "@/utils/projectsData";
+import FooterSection from "@/Web-Layout/Footer/Footer";
+import Header from "@/Web-Layout/Header/Header";
 import ProjectDetailPage from "@/Web_pages/ProjectDetail/ProjectDetail";
 
 export async function getStaticPaths() {
-  const paths = portfolioItems.map((item) => ({
+  const paths = projectsData.map((item) => ({
     params: { slug: item.slug },
   }));
 
@@ -12,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const detail = portfolioItems.find((p) => p.slug === params.slug);
+  const detail = projectsData.find((p) => p.slug === params.slug);
 
   return {
     props: { detail },
@@ -33,7 +34,9 @@ export default function PortfolioDetail({ detail }) {
                Hybrid (Job + Client focused)"
 
       />
+      <Header />
       <ProjectDetailPage detail={detail} />
+      <FooterSection />
     </div>
   );
 }

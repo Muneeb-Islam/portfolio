@@ -1,39 +1,33 @@
 import { scrollToHash } from "@/utils/constants";
+import FooterSection from "@/Web-Layout/Footer/Footer";
 import Header from "@/Web-Layout/Header/Header";
 import {
-  AboutMe,
   BannerSection,
-  Certification,
   GetInTouch,
-  ImageSection,
+  IndustrySection,
   OurProjects,
-  ReviewsSection,
-  WorkExperiance,
+  PerformanceSection,
+  PricingSection,
+  ProcessSection,
+  Qualification,
+  TeamSection,
+  TestimonialSection,
 } from "@/Web_sections/Home";
-import { useEffect, useState } from "react";
 export default function HomePage() {
-  const [bgColor, setBgColor] = useState("#ffffff");
-
-  useEffect(() => {
-    scrollToHash();
-  }, []);
-
-
-
   return (
-    <div style={{
-      backgroundColor: bgColor,
-      transition: "background-color 0.5s ease",
-    }}>
-      <Header setBgColor={setBgColor} />
-      <BannerSection setBgColor={setBgColor} />
-      <AboutMe setBgColor={setBgColor} />
-      <WorkExperiance setBgColor={setBgColor} />
-      <OurProjects setBgColor={setBgColor} />
-      <ReviewsSection setBgColor={setBgColor} />
-      <Certification setBgColor={setBgColor} />
-      <ImageSection setBgColor={setBgColor} />
-      <GetInTouch setBgColor={setBgColor} />
+    <div>
+      <Header />
+      <BannerSection />
+      <Qualification />
+      <OurProjects />
+      <IndustrySection />
+      <PerformanceSection />
+      <TestimonialSection />
+      <ProcessSection />
+      <PricingSection />
+      <TeamSection />
+      <GetInTouch />
+      <FooterSection />
 
     </div>
   );

@@ -1,5 +1,3 @@
-import { Icon } from "@iconify/react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 const sectionIds = ["achievement", "services", "testimonial", "bookACall"];
@@ -9,7 +7,7 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  console.log(open, "openopen")
+  console.log(open, "openopen");
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -89,47 +87,80 @@ const Header = () => {
 
   return (
     <header
-      className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""
-        }`}
+      className={`header_wrapper sticky-navbar ${isScrolled ? "scrolled" : ""}`}
     >
-      <div className="container-fluid px-lg-5">
-        <nav className="navbar  py-0" >
-          <div className="logo-bg">
-            <a className="navbar-brand" href="/">
-              <img
-                src="/assets/muneeb/profile.png"
-                className="img-fluid brand-logo mb-0"
-                alt="Brand Logo"
-              />
-            </a></div>
-          <div className="d-flex justify-content-end">
-            <Link className="view-details-btn me-lg-4" href="">Curriculum Vitae | CV</Link>
-            <button
-              className="toggle"
-              type="button"
-              onClick={() => setOpen(prev => !prev)}
-            >
-              <span className="navbar-toggler-icon">
-                <Icon icon="fa7-solid:bars-staggered" width={30} />
-              </span>
-            </button>
-          </div>
-          <div className={`radial-nav top-right ${open ? "open" : ""}`} ref={menuRef}>
-            <ul className="radial-menu">
-              <li className="disc l1"><span>Home</span></li>
-              <li className="disc l2"><span>My Self</span></li>
-              <li className="disc l3"><span>Experience</span></li>
-              <li className="disc l4"><span>My Work</span></li>
-              <li className="disc l5"><span>All Projects</span></li>
-              <li className="disc l6"><span>Reviews</span></li>
-              <li className="disc l7"><span>Certifications</span></li>
-              <li className="disc l8"><span>Contact</span></li>
+      <div class="container">
+        <nav class="navbar navbar-expand-xl d-flex align-items-center p-0">
+          <a class="navbar-brand d-flex align-items-center" href="/">
+            <span>MI</span>
+            <h5 class="px-0 fw-bold logo mb-0 ps-2">Muneeb Islam</h5>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="submit"
+            data-bs-toggle="collapse"
+            data-bs-target="#id_vesmsgjxog_navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="id_vesmsgjxog_navbarSupportedContent"
+          >
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/#qualification">
+                  Qualification
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="/#projects">
+                  Projects
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#industry" aria-disabled="true">
+                  Industry Area
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/#pricing">
+                  Pricing
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team" aria-disabled="true">
+                  Team
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" aria-disabled="true">
+                  Contact
+                </a>
+              </li>
             </ul>
+
+            <div class="text-start">
+              <a href="#contact" class="contained-btn">
+                <span>Let's Work Together</span>
+              </a>
+            </div>
           </div>
         </nav>
       </div>
     </header>
-
   );
 };
 

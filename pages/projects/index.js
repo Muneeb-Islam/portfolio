@@ -1,7 +1,7 @@
 import HeaderController from "@/Components/Header-Controller/HeaderController";
 import { ProjectPage } from "@/Web_pages";
 
-export default function Portfolio() {
+export default function Home() {
   return (
     <>
       <HeaderController

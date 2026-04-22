@@ -1,12 +1,20 @@
 import { projectsData } from "@/utils/projectsData";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 
 const OurProjects = () => {
   return (
-    <section className="project-section mt-60" id="projects">
+    <section className="project-section mt-sm-60" id="projects">
       <div className="container">
         <div className="row">
-          <div className="project-header col-lg-7">
+          <div className=" links-text mt-3 mb-3">
+            <Link href="/">
+              <span>Home</span>
+            </Link>
+            <Icon icon="heroicons:slash"></Icon>
+            <span>Projects</span>
+          </div>
+          <div className="project-header col-lg-7 mt-4">
             <div className="badge-pill">PROJECTS</div>
             <div className="project-header-content">
               <h2>Selected work across products, platforms, and systems.</h2>
@@ -17,10 +25,22 @@ const OurProjects = () => {
             </div>
           </div>
         </div>
-
         <div className="project-grid mt-4">
-          {projectsData.slice(0, 6).map((project, index) => (
-            <div className="project-card" key={project.id}>
+          {projectsData?.map((project, index) => (
+            <Link
+              href={`/projects/${project?.slug}`}
+              className="project-card"
+              key={project.id}
+            >
+              {project.image && (
+                <div className="project-image">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="img-fluid w-100 mb-3"
+                  />
+                </div>
+              )}
               <div className="project-card-header">
                 <h3>{project.title}</h3>
                 <span className="project-number">
@@ -46,13 +66,8 @@ const OurProjects = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </Link>
           ))}
-        </div>
-        <div className="d-flex justify-content-center mt-5">
-          <Link href="/projects">
-            <button className="contained-btn">View All Projects</button>
-          </Link>
         </div>
       </div>
     </section>
