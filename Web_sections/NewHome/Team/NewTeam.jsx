@@ -1,4 +1,4 @@
-export default function TeamSection() {
+export default function NewTeamSection() {
   return (
     <section className="industry-section team-section mt-60" id="team">
       <div className="container">

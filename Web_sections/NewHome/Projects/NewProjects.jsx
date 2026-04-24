@@ -1,7 +1,7 @@
 import { projectsData } from "@/utils/projectsData";
 import Link from "next/link";
 
-const OurProjects = () => {
+const NewOurProjects = () => {
   return (
     <section className="project-section mt-60" id="projects">
       <div className="container">
@@ -58,4 +58,4 @@ const OurProjects = () => {
   );
 };
 
-export default OurProjects;
+export default NewOurProjects;

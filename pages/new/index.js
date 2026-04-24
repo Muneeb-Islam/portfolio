@@ -1,7 +1,8 @@
 import HeaderController from "@/Components/Header-Controller/HeaderController";
 import FooterSection from "@/New-Web-Layout/Footer/Footer";
 import Header from "@/New-Web-Layout/Header/Header";
-import { BannerSection, GetInTouch, IndustrySection, OurProjects, PerformanceSection, PricingSection, ProcessSection, Qualification, TeamSection, TestimonialSection } from "@/Web_sections/NewHome";
+import { NewBannerSection, NewGetInTouch, NewIndustrySection, NewOurProjects, NewPerformanceSection, NewPricingSection, NewQualification, NewTeamSection, NewTestimonialSection } from "@/Web_sections/NewHome";
+import NewProcessSection from "@/Web_sections/NewHome/Process/NewProcess";
 
 export default function NewHome() {
   return (
@@ -18,16 +19,16 @@ export default function NewHome() {
 
       />
       <Header />
-      <BannerSection />
-      <Qualification />
-      <OurProjects />
-      <IndustrySection />
-      <PerformanceSection />
-      <TestimonialSection />
-      <ProcessSection />
-      <PricingSection />
-      <TeamSection />
-      <GetInTouch />
+      <NewBannerSection />
+      <NewQualification />
+      <NewOurProjects />
+      <NewIndustrySection />
+      <NewPerformanceSection />
+      <NewTestimonialSection />
+      <NewProcessSection />
+      <NewPricingSection />
+      <NewTeamSection />
+      <NewGetInTouch />
       <FooterSection />
     </>
   );

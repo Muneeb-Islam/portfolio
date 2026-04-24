@@ -1,4 +1,4 @@
-export default function PerformanceSection() {
+export default function NewPerformanceSection() {
   return (
     <section className="performance-section mt-60">
       <div className="container">
@@ -24,7 +24,7 @@ export default function PerformanceSection() {
                   <div className="metric-card">
                     <div className="metric-value">Structured</div>
                     <div className="metric-label">
-                     Clear execution flow
+                      Clear execution flow
                     </div>
                   </div>
 
@@ -55,7 +55,7 @@ export default function PerformanceSection() {
                     <div className="step-content">
                       <h3>Discovery & Scope</h3>
                       <p>
-                       Understand goals, technical needs, priorities, and delivery requirements before development begins.
+                        Understand goals, technical needs, priorities, and delivery requirements before development begins.
                       </p>
                     </div>
                   </div>

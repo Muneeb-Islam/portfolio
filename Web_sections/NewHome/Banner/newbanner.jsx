@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const BannerSection = () => {
+const NewBannerSection = () => {
   return (
     <section className="hero-section mt-sm-60 ">
       <div className="container">
@@ -118,4 +118,4 @@ const BannerSection = () => {
   );
 };
 
-export default BannerSection;
+export default NewBannerSection;

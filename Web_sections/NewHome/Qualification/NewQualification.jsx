@@ -1,4 +1,4 @@
-const Qualification = () => {
+const NewQualification = () => {
   return (
     <section className="qualification-section mt-60" id="qualification">
       <div className="container">
@@ -30,7 +30,7 @@ const Qualification = () => {
                 <li className="highlight-item">
                   <span className="bullet"></span>
                   <span className="highlight-text">
-                   Backend APIs, databases, and system integrations
+                    Backend APIs, databases, and system integrations
                   </span>
                 </li>
                 <li className="highlight-item">
@@ -100,4 +100,4 @@ const Qualification = () => {
   );
 };
 
-export default Qualification;
+export default NewQualification;

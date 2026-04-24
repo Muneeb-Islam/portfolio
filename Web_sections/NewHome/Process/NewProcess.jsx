@@ -1,4 +1,4 @@
-export default function ProcessSection() {
+export default function NewProcessSection() {
   return (
     <section className="process-section mt-60">
       <div className="container">

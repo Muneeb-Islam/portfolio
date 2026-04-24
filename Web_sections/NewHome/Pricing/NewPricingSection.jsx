@@ -1,4 +1,4 @@
-export default function PricingSection() {
+export default function NewPricingSection() {
   return (
     <section className="pricing-section mt-60" id="pricing">
       <div className="container">

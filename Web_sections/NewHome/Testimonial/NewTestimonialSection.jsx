@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-const TestimonialSection = () => {
+const NewTestimonialSection = () => {
   return (
     <section className="industry-section mt-60">
       <div className="container">
@@ -110,4 +110,4 @@ const TestimonialSection = () => {
   );
 };
 
-export default TestimonialSection;
+export default NewTestimonialSection;

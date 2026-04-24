@@ -1,4 +1,4 @@
-const GetInTouch = () => {
+const NewGetInTouch = () => {
   return (
     <section className="contact-section mt-60" id="contact">
       <div className="container">
@@ -109,4 +109,4 @@ const GetInTouch = () => {
   );
 };
 
-export default GetInTouch;
+export default NewGetInTouch;

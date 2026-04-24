@@ -1,4 +1,4 @@
-export default function IndustrySection() {
+export default function NewIndustrySection() {
   return (
     <section className="industry-section mt-60" id="industry">
       <div className="container">
@@ -21,7 +21,7 @@ export default function IndustrySection() {
             <div className="industry-number">01</div>
             <h3>SaaS Products</h3>
             <p>
-             Subscription-based platforms, internal systems, customer portals, dashboards, and scalable product architecture.
+              Subscription-based platforms, internal systems, customer portals, dashboards, and scalable product architecture.
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export default function IndustrySection() {
             <div className="industry-number">02</div>
             <h3>E-Commerce</h3>
             <p>
-             Backend workflows, product operations, integrations, secure logic, and performance-focused implementation.
+              Backend workflows, product operations, integrations, secure logic, and performance-focused implementation.
             </p>
           </div>
           <div className="industry-card">
