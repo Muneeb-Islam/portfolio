@@ -3,19 +3,19 @@ import React from 'react'
 
 const testimonials = [
   {
-    name: "Alex Thompson",
-    role: "Founder, TechFlow",
-    text: "He understood our requirements quickly and delivered a clean, scalable product.",
+    name: "Startup Founder",
+    role: "SaaS Product Client",
+    text: "He understood our product requirements quickly and delivered a clean, scalable web application with smooth performance.",
   },
   {
-    name: "Sarah Johnson",
-    role: "CEO, MarketLab",
-    text: "Communication was excellent, and the final product was smooth, fast, and reliable.",
+    name: "Business Owner",
+    role: "Web Application Client",
+    text: "Communication was clear throughout the project. The final product was delivered on time, well-structured, and easy to manage.",
   },
   {
-    name: "David Williams",
-    role: "CTO, Metro",
-    text: "He built our SaaS platform from scratch and made the whole process easy.",
+    name: "Product Lead",
+    role: "SaaS Platform Client",
+    text: "He helped us build a SaaS platform from scratch, including frontend, backend, dashboard, and deployment support.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function ProfTestmonials() {
               Testimonials
             </p>
             <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">
-              What Clients Say About Me
+              Client Feedback From SaaS, Web App & Mobile App Projects
             </h2>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">

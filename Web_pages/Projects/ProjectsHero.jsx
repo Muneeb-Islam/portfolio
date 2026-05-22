@@ -6,7 +6,7 @@ const stats = [
     id: 1,
     icon: "mdi:briefcase-outline",
     value: "20+",
-    label: "Projects Completed",
+    label: "Projects Delivered",
   },
   {
     id: 2,
@@ -33,18 +33,15 @@ export default function ProjectsHero() {
             All Projects
           </p>
 
-          <h1 className="mt-4 max-w-xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Projects That <br />
-            Create{" "}
+          <h1 className="mt-4 max-w-xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-5xl">
+            SaaS, Web App & Mobile App Projects That Create {" "}
             <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-              Impact
+              Real Impact
             </span>
           </h1>
 
           <p className="mt-6 max-w-lg text-base leading-8 text-slate-300 sm:text-lg">
-            Explore a collection of projects I’ve built for businesses and
-            startups. Each project reflects clean code, thoughtful design, and
-            real results.
+           Explore a collection of SaaS platforms, web applications, mobile apps, dashboards, and digital products I’ve built for startups and businesses. Each project reflects clean code, thoughtful design, scalable architecture, and real business value.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-6">
@@ -73,7 +70,7 @@ export default function ProjectsHero() {
 
           <div className="relative mx-auto aspect-[4/3] w-full max-w-xl">
             <Image
-              src="/assets/1.png"
+              src="/assets/4.png"
               alt="Projects page hero illustration"
               fill
               priority

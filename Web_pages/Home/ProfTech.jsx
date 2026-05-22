@@ -2,54 +2,62 @@ import { Icon } from '@iconify/react';
 import React from 'react'
 
 const techStack = [
-    {
-        name: "React",
-        icon: "logos:react",
-    },
-    {
-        name: "Next.js",
-        icon: "devicon:nextjs",
-    },
-    {
-        name: "Node.js",
-        icon: "logos:nodejs-icon",
-    },
-    {
-        name: "Express.js",
-        icon: "simple-icons:express",
-    },
-    {
-        name: "NestJS",
-        icon: "logos:nestjs",
-    },
-    {
-        name: "MongoDB",
-        icon: "devicon:mongodb",
-    },
-    {
-        name: "PostgreSQL",
-        icon: "logos:postgresql",
-    },
-    {
-        name: "MySQL",
-        icon: "logos:mysql",
-    },
-    {
-        name: "React Native",
-        icon: "logos:react",
-    },
-    {
-        name: "Flutter",
-        icon: "logos:flutter",
-    },
-    {
-        name: "AWS",
-        icon: "logos:aws",
-    },
-    {
-        name: "Docker",
-        icon: "logos:docker-icon",
-    },
+  {
+    name: "React",
+    icon: "logos:react",
+  },
+  {
+    name: "Next.js",
+    icon: "devicon:nextjs",
+  },
+//   {
+//     name: "TypeScript",
+//     icon: "logos:typescript-icon",
+//   },
+//   {
+//     name: "Tailwind CSS",
+//     icon: "logos:tailwindcss-icon",
+//   },
+  {
+    name: "Node.js",
+    icon: "logos:nodejs-icon",
+  },
+  {
+    name: "Express.js",
+    icon: "simple-icons:express",
+  },
+  {
+    name: "NestJS",
+    icon: "logos:nestjs",
+  },
+  {
+    name: "MongoDB",
+    icon: "devicon:mongodb",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "logos:postgresql",
+  },
+  {
+    name: "MySQL",
+    icon: "logos:mysql",
+  },
+  {
+    name: "React Native",
+    icon: "logos:react",
+  },
+  {
+    name: "Flutter",
+    icon: "logos:flutter",
+  },
+  {
+    name: "AWS",
+    icon: "logos:aws",
+  },
+  {
+    name: "Docker",
+    icon: "logos:docker-icon",
+  },
 ];
 
 export default function ProfTech() {
@@ -61,7 +69,7 @@ export default function ProfTech() {
                         Tech Stack
                     </p>
                     <h2 className="mt-3 text-3xl font-black text-slate-950">
-                        Technologies I Work With
+                        Tech Stack I Use to Build SaaS, Web Apps & Mobile Apps
                     </h2>
                 </div>
 

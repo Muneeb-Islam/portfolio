@@ -24,7 +24,7 @@ export default function ProjectDetailHero({ project }) {
               {project.sub_title || "Featured Project"}
             </p>
 
-            <h1 className="mt-4 max-w-2xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-2xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-5xl">
               {project.title}
             </h1>
 
@@ -32,7 +32,7 @@ export default function ProjectDetailHero({ project }) {
               {project.description}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            {/* <div className="mt-6 flex flex-wrap gap-2">
               {project.tags?.map((tag) => (
                 <span
                   key={tag}
@@ -41,7 +41,7 @@ export default function ProjectDetailHero({ project }) {
                   {tag}
                 </span>
               ))}
-            </div>
+            </div> */}
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {project.metrics?.map((metric) => (

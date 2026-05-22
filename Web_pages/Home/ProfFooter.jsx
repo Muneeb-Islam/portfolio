@@ -19,6 +19,10 @@ const quickLinks = [
     label: "Projects",
     href: "/projects",
   },
+   {
+    label: "Contact",
+    href: "/#contact",
+  },
 ];
 
 const servicesLinks = [
@@ -27,11 +31,11 @@ const servicesLinks = [
     href: "/services#saas-development",
   },
   {
-    label: "Web Apps",
+    label: "Web App Development",
     href: "/services#web-apps",
   },
   {
-    label: "Mobile Apps",
+    label: "Mobile App Development",
     href: "/services#mobile-apps",
   },
   {
@@ -79,8 +83,26 @@ export default function ProfFooter() {
           </Link>
 
           <p className="mt-4 text-sm leading-6 text-white/60">
-            Building scalable SaaS platforms, web apps, and mobile apps.
+            Building scalable SaaS platforms, web apps, mobile apps, and backend systems for startups and businesses.
           </p>
+        </div>
+
+        
+
+        <div>
+          <h4 className="font-bold">Services</h4>
+
+          <div className="mt-4 space-y-2 text-sm">
+            {servicesLinks.map((link) => (
+              <p
+                key={link.label}
+                // href={link.href}
+                className="block text-white/60 "
+              >
+                {link.label}
+              </p>
+            ))}
+          </div>
         </div>
 
         <div>
@@ -95,22 +117,6 @@ export default function ProfFooter() {
               >
                 {link.label}
               </Link>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h4 className="font-bold">Services</h4>
-
-          <div className="mt-4 space-y-2 text-sm">
-            {servicesLinks.map((link) => (
-              <p
-                key={link.label}
-                // href={link.href}
-                className="block text-white/60 "
-              >
-                {link.label}
-              </p>
             ))}
           </div>
         </div>

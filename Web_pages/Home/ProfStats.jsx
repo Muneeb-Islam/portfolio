@@ -23,7 +23,7 @@ const stats = [
     icon: "mdi:star-outline",
   },
   {
-    value: "24/7",
+    value: "Post Launch",
     label: "Support Available",
     icon: "mdi:headset",
   },

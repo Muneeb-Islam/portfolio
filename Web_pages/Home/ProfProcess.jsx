@@ -7,11 +7,11 @@ const processSteps = [
         icon: "mdi:lightbulb-on-outline",
     },
     {
-        title: "Plan Architecture",
+        title: "Plan Product Architecture",
         icon: "mdi:sitemap-outline",
     },
     {
-        title: "Design UI / UX Flow",
+        title: "Design UI/UX Flow",
         icon: "mdi:palette-outline",
     },
     {
@@ -27,7 +27,7 @@ const processSteps = [
         icon: "mdi:bug-check-outline",
     },
     {
-        title: "Deploy to Cloud",
+        title: "Cloud Deployment",
         icon: "mdi:cloud-upload-outline",
     },
     {
@@ -45,9 +45,12 @@ export default function ProfProcess() {
                         My Process
                     </p>
                     <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">
-                        How I Build Your Product
+                        My Product Development Process
                     </h2>
                 </div>
+                <p className=" leading-2 mt-4 text-slate-600 text-center">
+                    A clear step-by-step process to turn your idea into a scalable, secure, and production-ready digital product.
+                </p>
 
                 <div className="mt-14 relative grid gap-6 sm:grid-cols-2 lg:grid-cols-8">
                     <div className="absolute hidden lg:block left-0 w-full right-0 top-6  px-14">
