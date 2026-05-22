@@ -70,10 +70,10 @@ export default function ProfFooter() {
         <div>
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-indigo-400 text-lg font-bold">
-              A
+              M
             </div>
             <div>
-              <h3 className="text-sm font-bold">Ali Developer</h3>
+              <h3 className="text-sm font-bold">Muneeb Islam</h3>
               <p className="text-xs text-white/50">Full Stack Developer</p>
             </div>
           </Link>

@@ -7,11 +7,11 @@ export default function ProfHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-indigo-400 bg-white/10 text-lg font-bold text-white backdrop-blur">
-            A
+            M
           </div>
           <div>
             <h1 className="text-sm font-bold leading-none text-white">
-              Ali Developer
+              Muneeb Islam
             </h1>
             <p className="mt-1 text-xs text-white/60">
               Full Stack Developer
