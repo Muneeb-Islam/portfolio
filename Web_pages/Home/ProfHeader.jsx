@@ -39,10 +39,10 @@ export default function ProfHeader() {
           </Link>
         </nav>
         <Link
-          href="#contact"
+          href="/#contact"
           className="rounded-lg bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition hover:bg-indigo-400"
         >
-          Hire Me
+          Start a Project
         </Link>
       </div>
     </header>
