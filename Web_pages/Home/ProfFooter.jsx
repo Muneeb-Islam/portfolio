@@ -43,22 +43,22 @@ const servicesLinks = [
 const socialLinks = [
   {
     icon: "mdi:linkedin",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/m-muneeb-islam/",
     label: "LinkedIn",
   },
   {
     icon: "mdi:github",
-    href: "https://github.com/",
+    href: "https://github.com/Muneeb-Islam",
     label: "GitHub",
   },
-  {
-    icon: "mdi:twitter",
-    href: "https://twitter.com/",
-    label: "Twitter",
-  },
+  // {
+  //   icon: "mdi:twitter",
+  //   href: "https://twitter.com/",
+  //   label: "Twitter",
+  // },
   {
     icon: "mdi:email",
-    href: "mailto:hello@example.com",
+    href: "mailto:muneebch6@gmail.com",
     label: "Email",
   },
 ];

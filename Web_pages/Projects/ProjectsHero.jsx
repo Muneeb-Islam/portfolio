@@ -5,7 +5,7 @@ const stats = [
   {
     id: 1,
     icon: "mdi:briefcase-outline",
-    value: "12+",
+    value: "20+",
     label: "Projects Completed",
   },
   {

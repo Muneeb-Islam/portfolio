@@ -12,20 +12,18 @@ export default function ProfConnect() {
             <div className="mt-6 space-y-4 text-sm text-slate-600">
               <p className="flex items-center gap-3">
                 <Icon icon="mdi:email-outline" className="text-xl text-indigo-500" />
-                hello@example.com
+                muneebch6@gmail.com
               </p>
               <p className="flex items-center gap-3">
                 <Icon icon="mdi:phone-outline" className="text-xl text-indigo-500" />
-                +92 300 1234567
+                +92 303 4099186
               </p>
               <p className="flex items-center gap-3">
                 <Icon icon="mdi:map-marker-outline" className="text-xl text-indigo-500" />
-                Pakistan
+                <span className='flex-1'>House Number 54 , Satluj block, Main Shadman Road Sahiwal</span>
               </p>
             </div>
           </div>
-
-
 
           <form className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl">
             <h2 className="text-2xl font-black text-slate-950">
@@ -80,12 +78,10 @@ export default function ProfConnect() {
             </button>
           </form>
 
-
-
           <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6">
             <Icon icon="mdi:clock-outline" className="text-4xl text-indigo-500" />
             <h3 className="mt-4 text-xl font-black text-slate-950">
-              I usually reply within 24 hours
+              I usually reply within 4-6 HOURS
             </h3>
             <p className="mt-3 text-sm leading-6 text-slate-600">
               Let’s discuss how I can help you build your next big product.

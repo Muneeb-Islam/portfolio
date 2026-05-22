@@ -8,7 +8,7 @@ const stats = [
     icon: "mdi:calendar-star",
   },
   {
-    value: "50+",
+    value: "20+",
     label: "Projects Completed",
     icon: "mdi:rocket-launch-outline",
   },
