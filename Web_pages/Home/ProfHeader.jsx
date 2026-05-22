@@ -19,8 +19,6 @@ export default function ProfHeader() {
           </div>
         </Link>
 
-
-
         <nav className="hidden items-center gap-8 text-sm font-medium text-white/80 lg:flex">
           <Link href="/#about" className="hover:text-white">
             About
