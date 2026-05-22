@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
             description="I build production-ready SaaS platforms, web apps, mobile apps, admin dashboards, backend APIs, and cloud deployments for startups and businesses."
             url="https://muneebislam.devflips.com/"
             image="https://muneebislam.devflips.com/og-image.jpg"
-            fav_icon="/assets/favicon.png"
+            fav_icon="/favicon.ico"
             keywords="Muneeb Islam, SaaS developer, web app developer, mobile app developer, full stack developer, React developer, Next.js developer, Node.js developer, admin dashboard developer, backend API developer, cloud deployment, startup MVP developer, software developer portfolio"
             author="Muneeb Islam"
             publisher="Muneeb Islam"
