@@ -27,7 +27,7 @@ export default function ProjectDetailCTA() {
 
             <div className="flex flex-wrap justify-center gap-3">
               <Link
-                href="/contact"
+                href="/#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-500 px-6 py-3 text-sm font-black text-white shadow-lg shadow-indigo-500/25 transition hover:-translate-y-0.5 hover:bg-indigo-600"
               >
                 Start a Project

@@ -70,7 +70,7 @@ export default function ProjectsHero() {
 
           <div className="relative mx-auto aspect-[4/3] w-full max-w-xl">
             <Image
-              src="/assets/4.png"
+              src="/assets/8.png"
               alt="Projects page hero illustration"
               fill
               priority
