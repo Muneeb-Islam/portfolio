@@ -71,27 +71,48 @@ export default function ProfConnect() {
   async function handleFormSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    console.log("submitting........", formData, sendEmailKey);
+
     const email_body = {
       email_from: "muneebislamportfolio@devflips.com",
-      receiver: 'muneebch6@gmail.com',
-      subject: `New Project Inquiry | ${formData.project_type || "Project"} | ${formData.name || "Portfolio Lead"
-        }`,
-
+      receiver: "shahid-anwar@metalogixtech.com",
+      subject: `New Project Inquiry | ${formData.project_type || "Project"
+        } | ${formData.name || "Portfolio Lead"}`,
       html: tempHtml,
     };
-    sendMail(email_body, sendEmailKey)
-      .then(() => {
-        console.log("Obj", email_body);
-        enqueueSnackbar("Email Sent Succesfully", { variant: "success" });
-        setFormData(emptyFormData);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Error:', err);
-        setLoading(false);
-        enqueueSnackbar("Error Occured while sending Email", { variant: "error" });
+
+    try {
+      console.log("submitting........", email_body);
+
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(email_body),
       });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data?.message || "Email sending failed");
+      }
+
+      console.log("Email sent:", data);
+
+      enqueueSnackbar("Email Sent Successfully", {
+        variant: "success",
+      });
+
+      setFormData(emptyFormData);
+    } catch (err) {
+      console.error("Error:", err);
+
+      enqueueSnackbar("Error Occurred while sending Email", {
+        variant: "error",
+      });
+    } finally {
+      setLoading(false);
+    }
   }
 
   function onUpdatedForm(e) {
