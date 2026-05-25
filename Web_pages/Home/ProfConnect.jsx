@@ -1,8 +1,6 @@
 "use client";
-import { sendEmailKey } from '@/config/config';
 // import { send_email } from '@/DAL/Form';
 import { Icon } from '@iconify/react'
-import { sendMail } from 'mailcub';
 import { useSnackbar } from 'notistack';
 import React, { useState } from 'react'
 
@@ -74,7 +72,7 @@ export default function ProfConnect() {
 
     const email_body = {
       email_from: "muneebislamportfolio@devflips.com",
-      receiver: "shahid-anwar@metalogixtech.com",
+      receiver: "muneebch6@gmail.com",
       subject: `New Project Inquiry | ${formData.project_type || "Project"
         } | ${formData.name || "Portfolio Lead"}`,
       html: tempHtml,

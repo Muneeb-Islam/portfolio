@@ -8,7 +8,7 @@ export default async function handler(req, res) {
       message: "Method not allowed",
     });
   }
-
+  
   try {
     const emailBody = req.body;
 
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
 
     return res.status(500).json({
       success: false,
-      message: "Email sending failed",
+      message: error?.message || "Email sending failed",
     });
   }
 }
