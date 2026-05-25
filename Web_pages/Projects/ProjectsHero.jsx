@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 const stats = [
   {
@@ -26,14 +27,14 @@ export default function ProjectsHero() {
       <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-indigo-500/25 blur-3xl" />
       <div className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-violet-500/20 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-4 px-4 sm:px-6 lg:grid-cols-2 lg:gap-5 lg:px-8">
         {/* Left Content */}
         <div>
           <p className="text-sm font-black uppercase tracking-[0.25em] text-indigo-400">
             All Projects
           </p>
 
-          <h1 className="mt-4 max-w-xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-5xl">
+          <h1 className="mt-4 max-w-2xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-5xl">
             SaaS, Web App & Mobile App Projects That Create {" "}
             <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
               Real Impact
@@ -43,6 +44,21 @@ export default function ProjectsHero() {
           <p className="mt-6 max-w-lg text-base leading-8 text-slate-300 sm:text-lg">
            Explore a collection of SaaS platforms, web applications, mobile apps, dashboards, and digital products I’ve built for startups and businesses. Each project reflects clean code, thoughtful design, scalable architecture, and real business value.
           </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-2 rounded-xl bg-indigo-500 px-6 py-3 text-sm font-bold text-white shadow-xl shadow-indigo-500/30 transition hover:bg-indigo-400"
+            >
+              Start a Project
+              <Icon icon="mdi:arrow-right" className="text-lg" />
+            </Link>
+            {/* <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/10"
+            >
+              View My Work
+            </Link> */}
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-6">
             {stats.map((item) => (
